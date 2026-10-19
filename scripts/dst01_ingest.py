@@ -8,12 +8,13 @@ Test hooks: --crash-after N (hard exit with an open batch), --limit N, --reset (
 
 import argparse
 import json
+import os
 import sys
 import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))  # works under python -I
-from fineprint import bulk, db, ingest, net  # noqa: E402
+from fineprint import bulk, config, db, ingest, net  # noqa: E402
 from fineprint.manifest import write_json  # noqa: E402
 
 
@@ -32,6 +33,9 @@ def main(argv=None):
     a = ap.parse_args(argv)
 
     t0 = time.perf_counter()
+    pidfile = config.data_dir() / "runs" / f"ingest-{a.db}.pid"  # lets an operator (or a kill test) find us
+    pidfile.parent.mkdir(parents=True, exist_ok=True)
+    pidfile.write_text(str(os.getpid()), encoding="utf-8")
     conn = db.connect(a.db, autocommit=True)
     if a.reset:
         db.reset_national(conn)
@@ -91,6 +95,7 @@ def main(argv=None):
         if a.out:
             write_json(a.out, out)
         conn.close()
+        pidfile.unlink(missing_ok=True)
     print(json.dumps({"run_id": run_id, "status": status, "wall_seconds": out["wall_seconds"],
                       "table_counts": out["table_counts"]}, indent=1))
 

@@ -1,0 +1,302 @@
+{
+  "generated_at": "2026-10-19T21:32:35Z",
+  "release_page": {
+    "url": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm",
+    "sha256": "a8dee01d364b4ace1dc36ad4d4b981304a19c95254af5e9961b6192e95c7e3c6",
+    "retrieved_at": "2026-10-19T21:31:55Z",
+    "local_path": "raw/dailymed/pages/spl-resources-all-drug-labels.2026-10-19.html"
+  },
+  "zip_metadata": {
+    "advertised": {
+      "name": "dm_spl_zip_files_meta_data.zip",
+      "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_zip_files_meta_data.zip",
+      "advertised_number_of_files": 2,
+      "advertised_file_size": "7.32MB",
+      "advertised_md5": "4cfedfdb3e734f736435b7847db330de",
+      "advertised_last_modified": "2026-10-16"
+    },
+    "page_sha256": "cd35be5de5b5e07b0ac1780b5206f2342fa442e1023379a35e562a5dd9f9b39d",
+    "download": {
+      "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_zip_files_meta_data.zip",
+      "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_zip_files_meta_data.zip",
+      "etag": "\"4cfedfdb3e734f736435b7847db330de\"",
+      "last_modified": "Sat, 17 Oct 2026 01:06:05 GMT",
+      "x_amz_version_id": "pgTVzbksWnZLgzY0hGdxPswy.SopVWUa",
+      "content_length": 7670995,
+      "bytes": 7670995,
+      "sha256": "84e7cc7e8759faf69065281ac5c5d55828c1eb0959d939966cbd29fb9e44a8c1",
+      "md5": "4cfedfdb3e734f736435b7847db330de",
+      "expected_md5": "4cfedfdb3e734f736435b7847db330de",
+      "md5_matches_advertised": true,
+      "first_started_at": "2026-10-19T21:32:34Z",
+      "completed_at": "2026-10-19T21:32:35Z",
+      "segments": [
+        {
+          "started_at": "2026-10-19T21:32:34Z",
+          "from_byte": 0,
+          "to_byte": 7670995,
+          "seconds": 0.74,
+          "http_status": 200
+        }
+      ],
+      "resumed": false,
+      "transfer_seconds": 0.74,
+      "hash_seconds": 0.09,
+      "status": "downloaded"
+    },
+    "local_path": "raw/dailymed/human_rx_full/2026-10-16/dm_spl_zip_files_meta_data.zip"
+  },
+  "advertised_last_modified_values": [
+    "2026-10-16"
+  ],
+  "release_dir": "raw/dailymed/human_rx_full/2026-10-16",
+  "parts": [
+    {
+      "name": "dm_spl_release_human_rx_part1.zip",
+      "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part1.zip",
+      "advertised_number_of_files": 14989,
+      "advertised_file_size": "3.00GB",
+      "advertised_md5": "1db0117254ddc9d8da8d142dc155e374",
+      "advertised_last_modified": "2026-10-16",
+      "local_path": "raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part1.zip",
+      "download": {
+        "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part1.zip",
+        "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part1.zip",
+        "etag": "\"39e37a4dd6397b558f6c9ca579bd3d50-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:03:57 GMT",
+        "x_amz_version_id": "tBURFLaC3LtqidUXDfdM5lFYSD9wxAfL",
+        "content_length": 3221047745,
+        "bytes": 3221047745,
+        "sha256": "34b9add994bf41096b8b49620ec64205630f6c3f7385b9a4ae03fa1d07361656",
+        "md5": "1db0117254ddc9d8da8d142dc155e374",
+        "expected_md5": "1db0117254ddc9d8da8d142dc155e374",
+        "md5_matches_advertised": true,
+        "first_started_at": "2026-10-19T20:54:04Z",
+        "completed_at": "2026-10-19T21:12:18Z",
+        "segments": [
+          {
+            "started_at": "2026-10-19T20:54:04Z",
+            "from_byte": 0,
+            "to_byte": 3221047745,
+            "seconds": 1082.06,
+            "http_status": 200
+          }
+        ],
+        "resumed": false,
+        "transfer_seconds": 1082.06,
+        "hash_seconds": 12.09,
+        "status": "verified_existing",
+        "reverified_at": "2026-10-19T21:32:18Z",
+        "reverify_seconds": 20.85
+      },
+      "error": null
+    },
+    {
+      "name": "dm_spl_release_human_rx_part2.zip",
+      "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part2.zip",
+      "advertised_number_of_files": 9571,
+      "advertised_file_size": "3.00GB",
+      "advertised_md5": "4bd151131c67598c70da3325124aa8f1",
+      "advertised_last_modified": "2026-10-16",
+      "local_path": "raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part2.zip",
+      "download": {
+        "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part2.zip",
+        "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part2.zip",
+        "etag": "\"06ed76e883d5ad151c3aa7eb56c5d36c-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:04:10 GMT",
+        "x_amz_version_id": "gRQdimN1aDGnEpOJ_YuthgHieclUrpXI",
+        "content_length": 3221136100,
+        "bytes": 3221136100,
+        "sha256": "009b94ae787d9c537c96b7ddaff27ac95116a711b294d1beaf312096239d3f7c",
+        "md5": "4bd151131c67598c70da3325124aa8f1",
+        "expected_md5": "4bd151131c67598c70da3325124aa8f1",
+        "md5_matches_advertised": true,
+        "first_started_at": "2026-10-19T20:54:04Z",
+        "completed_at": "2026-10-19T21:12:45Z",
+        "segments": [
+          {
+            "started_at": "2026-10-19T20:54:04Z",
+            "from_byte": 0,
+            "to_byte": 3221136100,
+            "seconds": 1108.03,
+            "http_status": 200
+          }
+        ],
+        "resumed": false,
+        "transfer_seconds": 1108.03,
+        "hash_seconds": 12.83,
+        "status": "verified_existing",
+        "reverified_at": "2026-10-19T21:32:18Z",
+        "reverify_seconds": 21.1
+      },
+      "error": null
+    },
+    {
+      "name": "dm_spl_release_human_rx_part3.zip",
+      "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part3.zip",
+      "advertised_number_of_files": 9148,
+      "advertised_file_size": "3.00GB",
+      "advertised_md5": "d9e1584924416cf7a6336d6d4a75503f",
+      "advertised_last_modified": "2026-10-16",
+      "local_path": "raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part3.zip",
+      "download": {
+        "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part3.zip",
+        "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part3.zip",
+        "etag": "\"1b8d5e9f01030f32805363dea3c60baa-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:04:26 GMT",
+        "x_amz_version_id": "_WRrhCDuUBnJSxCHt_yY9PE.mGQI5E68",
+        "content_length": 3220969405,
+        "bytes": 3220969405,
+        "sha256": "1bcfe19f4dcb1ff5cc74b9891a38a87ba5cf76a207579b8222ddde9e2d059d04",
+        "md5": "d9e1584924416cf7a6336d6d4a75503f",
+        "expected_md5": "d9e1584924416cf7a6336d6d4a75503f",
+        "md5_matches_advertised": true,
+        "first_started_at": "2026-10-19T20:54:04Z",
+        "completed_at": "2026-10-19T21:12:52Z",
+        "segments": [
+          {
+            "started_at": "2026-10-19T20:54:04Z",
+            "from_byte": 0,
+            "to_byte": 3220969405,
+            "seconds": 1114.77,
+            "http_status": 200
+          }
+        ],
+        "resumed": false,
+        "transfer_seconds": 1114.77,
+        "hash_seconds": 12.9,
+        "status": "verified_existing",
+        "reverified_at": "2026-10-19T21:32:18Z",
+        "reverify_seconds": 20.99
+      },
+      "error": null
+    },
+    {
+      "name": "dm_spl_release_human_rx_part4.zip",
+      "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part4.zip",
+      "advertised_number_of_files": 8687,
+      "advertised_file_size": "3.00GB",
+      "advertised_md5": "558dd38de29423e9f1438a3f32994953",
+      "advertised_last_modified": "2026-10-16",
+      "local_path": "raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part4.zip",
+      "download": {
+        "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part4.zip",
+        "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part4.zip",
+        "etag": "\"ca6110e5de93ab71ebc590a15d98e38d-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:05:03 GMT",
+        "x_amz_version_id": "OvgNRnfSSe7l.oP6rdywh7KEnQPpt.J7",
+        "content_length": 3220592414,
+        "bytes": 3220592414,
+        "sha256": "134095a3ba03387429d9733904b85b6975ea8589805c3b163e12b3a45b662936",
+        "md5": "558dd38de29423e9f1438a3f32994953",
+        "expected_md5": "558dd38de29423e9f1438a3f32994953",
+        "md5_matches_advertised": true,
+        "first_started_at": "2026-10-19T21:12:19Z",
+        "completed_at": "2026-10-19T21:31:17Z",
+        "segments": [
+          {
+            "started_at": "2026-10-19T21:12:19Z",
+            "from_byte": 0,
+            "to_byte": 3220592414,
+            "seconds": 1124.15,
+            "http_status": 200
+          }
+        ],
+        "resumed": false,
+        "transfer_seconds": 1124.15,
+        "hash_seconds": 14.13,
+        "status": "verified_existing",
+        "reverified_at": "2026-10-19T21:32:33Z",
+        "reverify_seconds": 15.12
+      },
+      "error": null
+    },
+    {
+      "name": "dm_spl_release_human_rx_part5.zip",
+      "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part5.zip",
+      "advertised_number_of_files": 8358,
+      "advertised_file_size": "3.00GB",
+      "advertised_md5": "c9721041b8743467127caea506686e6c",
+      "advertised_last_modified": "2026-10-16",
+      "local_path": "raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part5.zip",
+      "download": {
+        "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part5.zip",
+        "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part5.zip",
+        "etag": "\"9d72cfaa38a0ad23a28698b2f71ac1c2-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:05:14 GMT",
+        "x_amz_version_id": "X.2e8exOXn2IN69Op8TCgiCYGtViQ.e9",
+        "content_length": 3220047655,
+        "bytes": 3220047655,
+        "sha256": "d9c41cbf5a4244b9033694f438a14468e2b4a71e7dcbb8bc67ce0d4e5fdc20e5",
+        "md5": "c9721041b8743467127caea506686e6c",
+        "expected_md5": "c9721041b8743467127caea506686e6c",
+        "md5_matches_advertised": true,
+        "first_started_at": "2026-10-19T21:12:45Z",
+        "completed_at": "2026-10-19T21:31:10Z",
+        "segments": [
+          {
+            "started_at": "2026-10-19T21:12:45Z",
+            "from_byte": 0,
+            "to_byte": 3220047655,
+            "seconds": 1090.84,
+            "http_status": 200
+          }
+        ],
+        "resumed": false,
+        "transfer_seconds": 1090.84,
+        "hash_seconds": 13.79,
+        "status": "verified_existing",
+        "reverified_at": "2026-10-19T21:32:33Z",
+        "reverify_seconds": 15.05
+      },
+      "error": null
+    },
+    {
+      "name": "dm_spl_release_human_rx_part6.zip",
+      "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+      "advertised_number_of_files": 4311,
+      "advertised_file_size": "1.75GB",
+      "advertised_md5": "060d1455cb1edc525d2a691947395e89",
+      "advertised_last_modified": "2026-10-16",
+      "local_path": "raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part6.zip",
+      "download": {
+        "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+        "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+        "etag": "\"222e16fde5780ba8e20d3da8cd67762d-224\"",
+        "last_modified": "Sat, 17 Oct 2026 01:05:31 GMT",
+        "x_amz_version_id": "4pL0QhKhd5BiXes5_FxIkDpOzxvokEcc",
+        "content_length": 1875296318,
+        "bytes": 1875296318,
+        "sha256": "7708d214430f756885fb6ad9165208c4e7e34366f33e2f40ce1458575acfc6ef",
+        "md5": "060d1455cb1edc525d2a691947395e89",
+        "expected_md5": "060d1455cb1edc525d2a691947395e89",
+        "md5_matches_advertised": true,
+        "first_started_at": "2026-10-19T20:53:19Z",
+        "completed_at": "2026-10-19T21:24:47Z",
+        "segments": [
+          {
+            "started_at": "2026-10-19T20:53:19Z",
+            "from_byte": 0,
+            "to_byte": 318767104,
+            "seconds": 33.29,
+            "interrupted": "test_hook"
+          },
+          {
+            "started_at": "2026-10-19T21:12:53Z",
+            "from_byte": 318767104,
+            "to_byte": 1875296318,
+            "seconds": 704.89,
+            "http_status": 206
+          }
+        ],
+        "resumed": true,
+        "transfer_seconds": 738.18,
+        "hash_seconds": 9.04,
+        "status": "verified_existing",
+        "reverified_at": "2026-10-19T21:32:27Z",
+        "reverify_seconds": 8.52
+      },
+      "error": null
+    }
+  ]
+}
