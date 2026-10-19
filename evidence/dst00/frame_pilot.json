@@ -1,0 +1,2551 @@
+{
+  "run": {
+    "started_at": "2026-10-19T19:52:26Z",
+    "finished_at": "2026-10-19T19:54:36Z",
+    "cutoff": "2023-07-18",
+    "plan": "docs/historical_panel_plan.md section 8"
+  },
+  "source_a": {
+    "query": {
+      "labeler": "Hospira"
+    },
+    "search_total_elements": 200,
+    "set_ids_returned": 200,
+    "set_ids_with_admissible_version": 189,
+    "set_ids_first_published_after_cutoff": 11,
+    "title_labelers": {
+      "HOSPIRA, INC.": 189,
+      "HOSPIRA, INC": 11
+    },
+    "title_labelers_with_admissible_version": {
+      "HOSPIRA, INC.": 180,
+      "HOSPIRA, INC": 9
+    },
+    "latest_admissible_published_year": {
+      "2006": 1,
+      "2007": 3,
+      "2019": 5,
+      "2020": 21,
+      "2021": 33,
+      "2022": 58,
+      "2023": 68
+    },
+    "caveat": "Set IDs DailyMed serves in 2026 only; set IDs retired before 2026 are invisible here (survivorship). Labeler segment 0409 is unknown until each admissible XML is fetched."
+  },
+  "source_a_rows": [
+    {
+      "set_id": "67578b56-7540-487e-1fba-481255620e78",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 39,
+      "versions_listed": 29,
+      "history_sha256": "e67911ab3e989a00145dcba2863489126946b606729bfa50f5e00bac1102ce40",
+      "latest_admissible": {
+        "version": 27,
+        "published_at": "2023-03-06"
+      },
+      "first_published": "2007-12-21"
+    },
+    {
+      "set_id": "be420e8b-bcb0-49b5-bb4d-1df8b9959809",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 19,
+      "history_sha256": "b4c06250afad62a98d24d1066791a29e5302ab8303505d1cede44b451b1fb4d0",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2023-04-04"
+      },
+      "first_published": "2011-11-18"
+    },
+    {
+      "set_id": "9822ca3f-aee2-46e5-8a96-495400e65d10",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 29,
+      "versions_listed": 21,
+      "history_sha256": "b566d3c7d1d87c83aa4a7f311e89d6b8e500e6e0dc780af298b5a55ac4b57844",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2023-02-02"
+      },
+      "first_published": "2007-01-05"
+    },
+    {
+      "set_id": "21e8e8e6-3f85-4fdd-8452-c9d14d2ef69a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 18,
+      "versions_listed": 16,
+      "history_sha256": "dbe617345985a6c28ecbd5369e28ecdbd8e36ed4ddaad049a869c349eed23259",
+      "latest_admissible": {
+        "version": 15,
+        "published_at": "2023-03-06"
+      },
+      "first_published": "2008-03-13"
+    },
+    {
+      "set_id": "277597b0-7d85-40a3-a34a-70c6a883fc6d",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 15,
+      "versions_listed": 15,
+      "history_sha256": "f3d22836004e93cbb2531a7d26882b8cb8b1d1e04438ff2f178edf2402acd3e5",
+      "latest_admissible": {
+        "version": 12,
+        "published_at": "2022-08-29"
+      },
+      "first_published": "2015-04-29"
+    },
+    {
+      "set_id": "681b5dc4-4fcf-4fab-ad78-02cb9a4a5dd0",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 15,
+      "history_sha256": "462bc4745f30b4244f9c0e063dcd3f482db48fe6d239835607f1d9dc1c9926ea",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2022-12-19"
+      },
+      "first_published": "2008-03-13"
+    },
+    {
+      "set_id": "bc2fa221-ea56-48b8-8304-42cd81b8463b",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 14,
+      "history_sha256": "03a6eaed56b17c7d174db612f4d257fcc988418f4cd5258be20ec61f4ff25a3b",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2022-12-19"
+      },
+      "first_published": "2008-03-13"
+    },
+    {
+      "set_id": "2f94f711-14c4-48ec-c5a3-c5ec4b8e8729",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 36,
+      "versions_listed": 28,
+      "history_sha256": "c6419d5457e32eea43be049f5b2ff8ff3d85fc4342f5972cdbc9748da6e48af8",
+      "latest_admissible": {
+        "version": 29,
+        "published_at": "2022-09-21"
+      },
+      "first_published": "2006-09-21"
+    },
+    {
+      "set_id": "abfc6b75-1ed5-41f1-0484-4597488237bc",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 30,
+      "versions_listed": 21,
+      "history_sha256": "98ca5f779334f134af6963c27bc881f28c1aa418d5d255a2fa4a547ee138504b",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2022-12-12"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "fb08161e-7711-406d-e7b3-ea4515c07983",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 31,
+      "versions_listed": 20,
+      "history_sha256": "c3437032467d7efe23f1e658bd0c4c8050850cd387e063db6c6fdc1d71b9c3f7",
+      "latest_admissible": {
+        "version": 28,
+        "published_at": "2023-05-08"
+      },
+      "first_published": "2006-09-01"
+    },
+    {
+      "set_id": "03ebeabb-8386-4af4-3086-bdf3c3fc4a5a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 33,
+      "versions_listed": 21,
+      "history_sha256": "a0388d7003889bee4a12acfa719b2ba853350ac67305392ff3966223986d527a",
+      "latest_admissible": {
+        "version": 25,
+        "published_at": "2023-07-18"
+      },
+      "first_published": "2009-01-05"
+    },
+    {
+      "set_id": "22ca78b4-f5a3-4144-cf89-5f633acf1e6d",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 31,
+      "versions_listed": 20,
+      "history_sha256": "8d5dd965639a0e2b8e70b8624adaf2aff5c428816165fdee8546489b1ed06a53",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2023-06-19"
+      },
+      "first_published": "2006-09-28"
+    },
+    {
+      "set_id": "c8c4edd2-ee9e-4558-6b8c-b83adc242a0a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 24,
+      "versions_listed": 24,
+      "history_sha256": "9d022eaec88e7fb0c121e0bef38cc1025723736731e50bb7dffc12758adbd9c8",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2023-07-13"
+      },
+      "first_published": "2007-12-12"
+    },
+    {
+      "set_id": "bfa8018a-4cbc-434b-e09e-782872b0340a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 35,
+      "versions_listed": 28,
+      "history_sha256": "8b573dfd2e72f9288644f4adade9a0375018675fc9512557c3cbb44ba1fc4739",
+      "latest_admissible": {
+        "version": 28,
+        "published_at": "2022-12-06"
+      },
+      "first_published": "2006-07-18"
+    },
+    {
+      "set_id": "ad1ef0a8-88db-4648-c098-d009eaeb4e5b",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 32,
+      "versions_listed": 23,
+      "history_sha256": "d05ef92a637d8d0acc8e33351a1245dc108439d58f846b0474534d7d4b2aa2bf",
+      "latest_admissible": {
+        "version": 25,
+        "published_at": "2021-12-01"
+      },
+      "first_published": "2006-09-21"
+    },
+    {
+      "set_id": "28d7ba00-f824-4e55-139a-03f509c099db",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 25,
+      "history_sha256": "80e8958f9773f51589ecba40a9f158fc85a54382aa7ab9f4c4dadbd183b8268e",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2023-02-27"
+      },
+      "first_published": "2008-01-25"
+    },
+    {
+      "set_id": "5e8bbfcd-3618-43ed-a158-9d524426fdc5",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 23,
+      "versions_listed": 11,
+      "history_sha256": "968007a08859e6abaac81d57bc86a8fdb42a06a0b34e224becdb417318e44d5d",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2023-07-07"
+      },
+      "first_published": "2017-01-12"
+    },
+    {
+      "set_id": "e51a62ba-d163-4c57-835c-8c86cf097e40",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 18,
+      "versions_listed": 17,
+      "history_sha256": "192e0fe817f1abc964560a2e3df0640c1051f70d5a08d3659426a64693ac5ec0",
+      "latest_admissible": {
+        "version": 13,
+        "published_at": "2021-08-16"
+      },
+      "first_published": "2009-11-24"
+    },
+    {
+      "set_id": "1abda8b8-48a8-4995-af86-39220d1aa240",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 35,
+      "versions_listed": 24,
+      "history_sha256": "637f788d856f593c14fe0358bd7a621edd31ce2eee6e55d7f28720af9003b486",
+      "latest_admissible": {
+        "version": 29,
+        "published_at": "2023-02-03"
+      },
+      "first_published": "2006-11-17"
+    },
+    {
+      "set_id": "b95415fa-17c2-42ab-a6b0-e628d01c94ed",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 19,
+      "versions_listed": 17,
+      "history_sha256": "415a3ad787f90db58b71a0f24e029b6045e7ab841deb372409e677e1dd2a712d",
+      "latest_admissible": {
+        "version": 15,
+        "published_at": "2023-02-03"
+      },
+      "first_published": "2016-06-22"
+    },
+    {
+      "set_id": "e8808230-2c44-44c6-8cab-8f29b6b34051",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 14,
+      "history_sha256": "5423de6e59c88292f755d0356284042b889ffef52320e897dd6f0552c31f5e77",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2021-07-28"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "3b2dd84e-cee8-4e58-d494-395a65a353a0",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 47,
+      "versions_listed": 38,
+      "history_sha256": "ef0ad09f48b1ef842f0da65228ae667a439d38e192bdd54c054a2e7225292db5",
+      "latest_admissible": {
+        "version": 38,
+        "published_at": "2023-05-22"
+      },
+      "first_published": "2006-10-05"
+    },
+    {
+      "set_id": "9c18eaf1-4a0b-4916-70b2-88a827494711",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 17,
+      "history_sha256": "b6cdd659d63c7a270670902b45fc3acdc8ddc8db975a9ebf7d32ec290036853b",
+      "latest_admissible": {
+        "version": 24,
+        "published_at": "2023-06-30"
+      },
+      "first_published": "2006-09-01"
+    },
+    {
+      "set_id": "4d3f4b69-b0b9-494f-9cda-4537fa420d47",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 30,
+      "versions_listed": 20,
+      "history_sha256": "0c1e2a8b381d075358eec0ce42033517f12e3ec6d29d1ce73d211ed7361d7c90",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2023-07-07"
+      },
+      "first_published": "2010-11-04"
+    },
+    {
+      "set_id": "a99fe500-f52b-483c-807c-178f1a78a02b",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 23,
+      "history_sha256": "7c162d601e167c52490ebe0b95585578dd45638095cfc2bf55860b4d6ad29e4d",
+      "latest_admissible": {
+        "version": 15,
+        "published_at": "2023-06-27"
+      },
+      "first_published": "2015-07-28"
+    },
+    {
+      "set_id": "b01aaa02-8f1d-4b57-96a5-337503428af1",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 19,
+      "versions_listed": 15,
+      "history_sha256": "92a06f251f8604e14ea955b2ff0af20affad5b691ed058fcdb35b44a91e85bca",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2022-12-23"
+      },
+      "first_published": "2014-05-05"
+    },
+    {
+      "set_id": "b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 38,
+      "versions_listed": 30,
+      "history_sha256": "2f0dfbac62ddee2d7d79f68abaf4679bd7a33a40c2d4a286556432a3d2c5a731",
+      "latest_admissible": {
+        "version": 29,
+        "published_at": "2022-11-18"
+      },
+      "first_published": "2007-02-26"
+    },
+    {
+      "set_id": "8accbb78-fc64-45d5-69b0-35c23a1d2a2e",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 36,
+      "versions_listed": 27,
+      "history_sha256": "7850b7964ebdad027a50dde13f3005646b01fb0d388a8dadaaef6d63da309d7d",
+      "latest_admissible": {
+        "version": 27,
+        "published_at": "2023-01-06"
+      },
+      "first_published": "2006-09-21"
+    },
+    {
+      "set_id": "1c993365-1b62-4524-e781-d307f28f63bc",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 18,
+      "history_sha256": "572704810002d14c5e0a088505608ae3cd46d7ff05a1c173ad4d5d5b53608b8b",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2022-05-25"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "4ed365da-4e62-4329-c1b9-c197ab4fb6e1",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 34,
+      "versions_listed": 24,
+      "history_sha256": "139e690462a995cf1bfeeabd47f528b0ca9951598b803fe8c5125a4c95395e20",
+      "latest_admissible": {
+        "version": 24,
+        "published_at": "2023-04-28"
+      },
+      "first_published": "2006-09-28"
+    },
+    {
+      "set_id": "20140b19-846b-425f-b191-670e17809945",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 28,
+      "versions_listed": 17,
+      "history_sha256": "1e44f9cafc5ef2553da7969d434f79e1255af760eed2fd1cddc375ad56ceb422",
+      "latest_admissible": {
+        "version": 26,
+        "published_at": "2023-05-04"
+      },
+      "first_published": "2006-09-01"
+    },
+    {
+      "set_id": "17e47845-daad-434c-a784-6d3875b0d704",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 16,
+      "history_sha256": "f4de0cbae15403ca53617fcffe094df354908eb7eb71f34617c419bb6c4e9d55",
+      "latest_admissible": {
+        "version": 24,
+        "published_at": "2023-06-29"
+      },
+      "first_published": "2006-07-31"
+    },
+    {
+      "set_id": "87d6e9dc-fe3b-4593-ac9a-d7493d1959c7",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 10,
+      "history_sha256": "0119db14cbf85640165dd34546ed40f825e8e76f5ea76f5e4891c2b4c1ac4b73",
+      "latest_admissible": {
+        "version": 18,
+        "published_at": "2020-10-27"
+      },
+      "first_published": "2006-08-29"
+    },
+    {
+      "set_id": "559a0a8c-a8fe-40a5-b196-21f9308780ab",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 15,
+      "history_sha256": "924b4bdb6ef780d994e2a29fe8f4525b446f11073b0a112c2754a6b3acc5f407",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2022-10-17"
+      },
+      "first_published": "2006-08-29"
+    },
+    {
+      "set_id": "674e0e6d-46ed-4868-9196-04019d667716",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 28,
+      "versions_listed": 18,
+      "history_sha256": "1c8f54b05b6e5f00768581b4cfcb9f4f4b85dd3f97322f94ed93027067993500",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2021-10-20"
+      },
+      "first_published": "2007-08-08"
+    },
+    {
+      "set_id": "ea28753a-8631-460a-bfdc-b101eb8ac84a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 33,
+      "versions_listed": 17,
+      "history_sha256": "57ffa151ac49776c1c24a66b988a508b3b4850192393a072a8e7a114c45cb63e",
+      "latest_admissible": {
+        "version": 27,
+        "published_at": "2021-05-10"
+      },
+      "first_published": "2008-03-13"
+    },
+    {
+      "set_id": "672264e3-9709-4bba-2a9d-12bf70c7396a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 15,
+      "history_sha256": "fd599d6d5aff0696b359e145e030b41b691ce6d3c2d9c671eb65d0efa276a3f7",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2021-07-14"
+      },
+      "first_published": "2006-11-17"
+    },
+    {
+      "set_id": "b4d01ebb-a36e-44b7-028c-43c0ab2d13b4",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 25,
+      "versions_listed": 15,
+      "history_sha256": "7f50038b679a3f83b6fd0060a82a2011aa08b95fe72016b1e2ff1c4a02f66c9b",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2021-06-30"
+      },
+      "first_published": "2006-10-27"
+    },
+    {
+      "set_id": "da207ca8-7836-4c66-92fe-36cc89baf773",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 11,
+      "versions_listed": 11,
+      "history_sha256": "41aad9141c45c670a5ebf5e8986821e1542ee09e7d71734200c817c4919b8aea",
+      "latest_admissible": {
+        "version": 8,
+        "published_at": "2021-06-30"
+      },
+      "first_published": "2016-06-15"
+    },
+    {
+      "set_id": "9679cc05-2f8a-4e88-53b5-6e9122c8b8c0",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 19,
+      "history_sha256": "7cc99466cb473b237424724df36c62412239b3e7c434891bb9b72d2c7719433f",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2023-06-29"
+      },
+      "first_published": "2006-07-25"
+    },
+    {
+      "set_id": "c401f1a8-cc37-461b-bfef-f2e156629bf8",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 21,
+      "versions_listed": 20,
+      "history_sha256": "c4aed8780b1a63304ea6383b9a4310920a48442986c0ce2b105786c4561cf630",
+      "latest_admissible": {
+        "version": 14,
+        "published_at": "2023-06-19"
+      },
+      "first_published": "2015-06-19"
+    },
+    {
+      "set_id": "92b7ddaa-e45a-4b64-a802-bb5df8771dd6",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 6,
+      "versions_listed": 6,
+      "history_sha256": "2f9086783f209b64bc4d20045f2c06c7d163c74e3e8e78ed75816fcb2b0bc46e",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2023-02-17"
+      },
+      "first_published": "2023-01-05"
+    },
+    {
+      "set_id": "4419162d-81d4-49bd-96de-1729440bdb74",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 13,
+      "versions_listed": 12,
+      "history_sha256": "f1b203651d985d8b2548fd747f1f90fc1955aeb60122600a66e97b2f6ddec933",
+      "latest_admissible": {
+        "version": 9,
+        "published_at": "2023-02-27"
+      },
+      "first_published": "2022-03-08"
+    },
+    {
+      "set_id": "9943a961-3b50-4847-8a84-d8414ce38daa",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 28,
+      "versions_listed": 19,
+      "history_sha256": "4998094bf804b5f0ed77c7ab684b9dbdc457c6d3cd8d2fbff63ac8104c6da3d6",
+      "latest_admissible": {
+        "version": 24,
+        "published_at": "2021-11-15"
+      },
+      "first_published": "2006-11-14"
+    },
+    {
+      "set_id": "10e98cb0-31a5-4ad1-3eaa-aa4af387a42d",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 19,
+      "history_sha256": "d3d7bae32d6e37047c639c1aa606888fd9f6b65d3ea628a6f78f0ac8fb5fb71c",
+      "latest_admissible": {
+        "version": 24,
+        "published_at": "2021-10-20"
+      },
+      "first_published": "2006-09-28"
+    },
+    {
+      "set_id": "20293943-46ff-4345-1aa4-929b4e017a25",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 32,
+      "versions_listed": 24,
+      "history_sha256": "64f0aaa7531594280a456c87acea8cc6bb2ec3546c01ecc7ab1bc7e184b7411c",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2021-12-16"
+      },
+      "first_published": "2006-11-17"
+    },
+    {
+      "set_id": "bb912318-2e22-4469-b0a2-774803ee1bb8",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 20,
+      "history_sha256": "348edabd80cdbff705548ef716c9719a061168ee239731be40cb75f42eb657fc",
+      "latest_admissible": {
+        "version": 16,
+        "published_at": "2022-09-05"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "e18ed1cb-7dd0-4001-bfda-17d1f4587fb8",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 11,
+      "versions_listed": 11,
+      "history_sha256": "2b7106a0fef90e3264f877fa84e8bd41229149863f0c7330c33c262bf86a4fcc",
+      "latest_admissible": {
+        "version": 8,
+        "published_at": "2020-03-11"
+      },
+      "first_published": "2014-05-05"
+    },
+    {
+      "set_id": "1f306ad2-3606-4525-5a8a-ce78f426c1a2",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 22,
+      "versions_listed": 14,
+      "history_sha256": "efb64e5d922b36a237b5f44690742f186d68f9cf25269e701a35a8c70c127d2c",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2020-05-21"
+      },
+      "first_published": "2009-01-05"
+    },
+    {
+      "set_id": "35a174f0-f0d7-4ec7-3f81-d3d572c059cf",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 14,
+      "history_sha256": "7754673201977f3591bea6800c2ca79de61e161449acb84977aeb64a3a43bd50",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2022-03-03"
+      },
+      "first_published": "2006-07-25"
+    },
+    {
+      "set_id": "4af52118-c12b-4ad5-30bb-959848357e8a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 21,
+      "versions_listed": 10,
+      "history_sha256": "dd76612cb3b6a16a288852ec2357f55ddbc18d3dfcfb1405a13aaea84923d15f",
+      "latest_admissible": {
+        "version": 18,
+        "published_at": "2020-06-25"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "67908e20-044d-454d-9c51-bf106e817bd0",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 15,
+      "versions_listed": 13,
+      "history_sha256": "72d0ab34ec5868b9de87aae8c3b090579d716db052073b48c930edb90e9e943e",
+      "latest_admissible": {
+        "version": 13,
+        "published_at": "2023-06-30"
+      },
+      "first_published": "2019-12-02"
+    },
+    {
+      "set_id": "8535cc84-ad4a-4d67-8480-fb5a2e3406f8",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 35,
+      "versions_listed": 22,
+      "history_sha256": "9d0f45e33d311afc6e694aaf248ede175dfc116eed3d02c58b69718f5796aa0d",
+      "latest_admissible": {
+        "version": 30,
+        "published_at": "2023-01-11"
+      },
+      "first_published": "2006-07-31"
+    },
+    {
+      "set_id": "89becb0c-da60-4f43-0a98-29ff7a9eca58",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 19,
+      "versions_listed": 12,
+      "history_sha256": "1e91ea33075ec907be3f0daf16ed810e068e0cd3f5d0c8b885da51c1b63888eb",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2021-12-10"
+      },
+      "first_published": "2009-01-22"
+    },
+    {
+      "set_id": "7c1f998a-233d-4feb-6ea2-457702abd0d2",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 29,
+      "versions_listed": 20,
+      "history_sha256": "9c9b40fce914eab41ff4ac50a2e67a94f7cff520dabbf217d496f9d1cadd19de",
+      "latest_admissible": {
+        "version": 25,
+        "published_at": "2022-05-18"
+      },
+      "first_published": "2008-10-30"
+    },
+    {
+      "set_id": "bba03666-ff4f-4bf6-fa92-78e1ec2d9073",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 21,
+      "versions_listed": 13,
+      "history_sha256": "d3042b7ba511af953bdc2aeb5deacb0a08c0c35055633cc0e2551f9b84cd32ce",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2023-01-18"
+      },
+      "first_published": "2006-08-29"
+    },
+    {
+      "set_id": "c00817bc-7b62-4abe-0280-e7930eda3f94",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 11,
+      "history_sha256": "2fa21e9982841d2f2a2bb611617f917811d8baf24fa00f3908a88b873302f197",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2020-10-30"
+      },
+      "first_published": "2006-09-21"
+    },
+    {
+      "set_id": "eede8a0c-5ae6-4166-84b3-12081405f08e",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 35,
+      "versions_listed": 25,
+      "history_sha256": "b8d6da728898c05cb5a06c39a8b10c88603c157f6e65049ad5fe3222091b0760",
+      "latest_admissible": {
+        "version": 27,
+        "published_at": "2023-07-14"
+      },
+      "first_published": "2010-08-04"
+    },
+    {
+      "set_id": "146803a1-199d-4789-b128-e974bdd03322",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 9,
+      "versions_listed": 9,
+      "history_sha256": "6caa5597870737afda9bc1df7f51401533723f1d8922ac0388d039b0bab457f1",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2022-12-19"
+      },
+      "first_published": "2022-11-16"
+    },
+    {
+      "set_id": "3c273512-84e2-2cea-b201-12345a6bd1fe",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 14,
+      "history_sha256": "f0f71d19cbbeb3b74ad32d163662b5ea9186a0996b6a90ac1ec131d2e09ae271",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2023-02-15"
+      },
+      "first_published": "2012-06-13"
+    },
+    {
+      "set_id": "5558a5f5-e821-473b-7d8a-5d33d09f0586",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 22,
+      "versions_listed": 13,
+      "history_sha256": "9c34f7a65d5fd95d4ba78de57bc65f490011ccc2a361faa5a1e290ba4384335b",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2020-09-01"
+      },
+      "first_published": "2006-11-17"
+    },
+    {
+      "set_id": "6a11f61b-2318-4382-2b91-4366e4bb53fa",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 34,
+      "versions_listed": 26,
+      "history_sha256": "a5d4890df9dea405a8741779c8ba480003bdb33e1538eadfb9f0a5e63af38a43",
+      "latest_admissible": {
+        "version": 27,
+        "published_at": "2022-02-01"
+      },
+      "first_published": "2008-04-18"
+    },
+    {
+      "set_id": "7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 17,
+      "history_sha256": "a6fc2d88aa3f7a3b9219cbd3f79140f610c299feb8086f4a7fed6e788a9715fc",
+      "latest_admissible": {
+        "version": 24,
+        "published_at": "2023-05-08"
+      },
+      "first_published": "2008-05-22"
+    },
+    {
+      "set_id": "89a4bd73-89f4-4fd7-2c9f-921e1da8f96b",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 24,
+      "versions_listed": 15,
+      "history_sha256": "5f8131c91cfa177a13bed68fb318da63badd5d3f62ef96d1b5e102962f7f16d7",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2021-08-03"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "9a663ef3-881f-48bd-2689-3713b24545c2",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 29,
+      "versions_listed": 16,
+      "history_sha256": "a1547c18eb0ea012c58f69f2a256cfebb482ee5bec183398c7315889adab1c46",
+      "latest_admissible": {
+        "version": 26,
+        "published_at": "2022-12-02"
+      },
+      "first_published": "2006-12-15"
+    },
+    {
+      "set_id": "b7ed5bf8-ba75-44dc-8f81-96b4ad5766be",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 18,
+      "history_sha256": "b7b2cacb3447ad6628ccdc442bfd6ec41166e44261269a7e3cbaca3995b3b317",
+      "latest_admissible": {
+        "version": 24,
+        "published_at": "2022-05-24"
+      },
+      "first_published": "2006-12-01"
+    },
+    {
+      "set_id": "d62cd60b-f87e-4825-bead-1d18bbc4e480",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 4,
+      "versions_listed": 4,
+      "history_sha256": "e0db882fbdc1407110b1c79f8f293f27db6872e20439a63aa08a75a24d67ece5",
+      "latest_admissible": null,
+      "first_published": "2024-12-18"
+    },
+    {
+      "set_id": "548a88c0-afda-427e-75ac-5af0cfa2224c",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 59,
+      "versions_listed": 39,
+      "history_sha256": "2cdac50f57ee9066898173a8bd29914e09f19bfa4e7e33be808ebaea53b0ca56",
+      "latest_admissible": {
+        "version": 44,
+        "published_at": "2022-12-28"
+      },
+      "first_published": "2007-05-17"
+    },
+    {
+      "set_id": "977180b3-a222-4282-d485-4a3217674305",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 22,
+      "versions_listed": 13,
+      "history_sha256": "6d7376b0dbb8092e04206fb914be50a2713bc000cdd548d95dd4ae74c63fea12",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2022-11-04"
+      },
+      "first_published": "2006-11-17"
+    },
+    {
+      "set_id": "fc79700c-6c3b-4998-8307-4dc8c81c5041",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 25,
+      "versions_listed": 15,
+      "history_sha256": "972dc9461a49672e5cb9ba13249ed20845f56a10f63139b0fbfbda274148eb0f",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2023-02-16"
+      },
+      "first_published": "2014-01-22"
+    },
+    {
+      "set_id": "39fd32f2-6bb7-4a65-d298-e48d26bc80c7",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 33,
+      "versions_listed": 24,
+      "history_sha256": "2d202f942d3e76f2048def62920f98352af639d8655e89cd74ca14fa372e1c52",
+      "latest_admissible": {
+        "version": 31,
+        "published_at": "2023-06-08"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "a2a964f7-c3ec-4dfb-e3a0-6d8136a80397",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 24,
+      "versions_listed": 16,
+      "history_sha256": "68ac44f333390f0bfd4c438fa19fe37585f53b6f2c760a7d0ae7be99b5d6f15f",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2020-10-30"
+      },
+      "first_published": "2006-09-28"
+    },
+    {
+      "set_id": "a84d61a4-8e7f-4be1-aba6-f633b334aafc",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 25,
+      "versions_listed": 11,
+      "history_sha256": "e7f5ae5c31400f45041d5eb4b2262be287f513a0a3cc7bbb72e3d7b34c593507",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2022-07-04"
+      },
+      "first_published": "2006-10-05"
+    },
+    {
+      "set_id": "aaced7a8-c3d7-4d66-8c07-aa407b8b3f35",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 16,
+      "versions_listed": 16,
+      "history_sha256": "17198430d800db8d7749c4e9e6f075cda6e828bf6818ded4632e74d7341dc64d",
+      "latest_admissible": {
+        "version": 13,
+        "published_at": "2023-06-08"
+      },
+      "first_published": "2016-02-24"
+    },
+    {
+      "set_id": "ad8916e7-206e-409e-2582-30d072845dd4",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 31,
+      "versions_listed": 20,
+      "history_sha256": "d152f3ed34ee39e38be22ec862063058d5497d11271f1d70c861f1fea1a7d768",
+      "latest_admissible": {
+        "version": 25,
+        "published_at": "2021-08-09"
+      },
+      "first_published": "2006-09-28"
+    },
+    {
+      "set_id": "3832ede8-d3fc-455d-ecab-3b77be5869f5",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 25,
+      "versions_listed": 16,
+      "history_sha256": "60ced89c96de03e3d9ca938336ca700d9fd5ad96b4925f7e30312b70f3a7f8bc",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2022-06-20"
+      },
+      "first_published": "2008-06-27"
+    },
+    {
+      "set_id": "9a1914a0-e195-4233-c1be-bc2075580eb8",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 21,
+      "versions_listed": 12,
+      "history_sha256": "f8191b08a18a5c28108920e56400af31516fe50eb992e235e0e6b1d40345b272",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2021-06-29"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "9b6a9a3b-71c9-4dcb-b857-5d1de25c3a23",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 24,
+      "versions_listed": 15,
+      "history_sha256": "0fd8b0f2a3ce8c058c55accb9557195492c625cd7676095eed276d8b1ed51264",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2021-04-28"
+      },
+      "first_published": "2008-03-05"
+    },
+    {
+      "set_id": "0413f511-6b34-4c15-e48b-3fad08baacbe",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 31,
+      "versions_listed": 23,
+      "history_sha256": "a4d17de437eafbb4475f7f29a8cc07a15cf8931b0b7d4785cec5bdf58013a42b",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2023-02-28"
+      },
+      "first_published": "2007-12-12"
+    },
+    {
+      "set_id": "08f23f6e-150d-45ea-098e-f2edf64c21a1",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 18,
+      "history_sha256": "663fb8d32be083625f39183f612648012a0c2ac9f9782004f3262d2e3e60d3fa",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2021-09-24"
+      },
+      "first_published": "2007-01-05"
+    },
+    {
+      "set_id": "32e34077-aff1-4ec7-f9b0-b8e240768fb8",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 34,
+      "versions_listed": 24,
+      "history_sha256": "6518740eacfae06a5e9f31bb3619d9b6b07295cfe89c238d0c6efbbc7ed5ceeb",
+      "latest_admissible": {
+        "version": 27,
+        "published_at": "2023-03-16"
+      },
+      "first_published": "2007-12-12"
+    },
+    {
+      "set_id": "40d48c5d-650e-461b-a67b-7e65772d1b92",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 16,
+      "versions_listed": 16,
+      "history_sha256": "ad9379c36e154d000f6dd75edd3701fc83140630ff32de0ad5ab55087d8e1693",
+      "latest_admissible": {
+        "version": 14,
+        "published_at": "2023-03-15"
+      },
+      "first_published": "2014-01-13"
+    },
+    {
+      "set_id": "6f044d16-295e-43ff-72a3-b045c387bc5c",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 18,
+      "versions_listed": 10,
+      "history_sha256": "a13c42b0b0d884b25b3522421c224fe162fa159b07a4a776320d97c07870a7b3",
+      "latest_admissible": {
+        "version": 15,
+        "published_at": "2020-09-16"
+      },
+      "first_published": "2006-10-12"
+    },
+    {
+      "set_id": "1957b6ce-7382-4a7b-bf02-3595948d09c6",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 6,
+      "versions_listed": 5,
+      "history_sha256": "0fc2944cc34d40c78ffa3925f997768334e2b425cd1946cb547595ffb4af63fd",
+      "latest_admissible": {
+        "version": 4,
+        "published_at": "2022-08-26"
+      },
+      "first_published": "2021-08-02"
+    },
+    {
+      "set_id": "3a6422e1-feee-4095-8883-2b0837039e6e",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 2,
+      "versions_listed": 2,
+      "history_sha256": "199c4776d4c0720740e92f942850d967a83e06663a2c39b957d4eb798314c7a1",
+      "latest_admissible": null,
+      "first_published": "2025-04-02"
+    },
+    {
+      "set_id": "1d181906-f3ec-4222-1883-e61577a3122e",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 29,
+      "versions_listed": 19,
+      "history_sha256": "19e4d1a2c44759f574e09ffd650d9d8f308c2713114abb53f716d8436157cfa0",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2022-11-29"
+      },
+      "first_published": "2006-07-31"
+    },
+    {
+      "set_id": "f65e93ec-4db6-44fa-bff1-8ae89aa8243f",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 6,
+      "versions_listed": 6,
+      "history_sha256": "b5741009f59dd246203563e71b0126a022531c39b42cbb897ced30f043fe1dea",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2023-05-08"
+      },
+      "first_published": "2022-06-13"
+    },
+    {
+      "set_id": "1c5bc1dd-e9ec-44c1-9281-67ad482315d9",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 13,
+      "history_sha256": "17415974f2b9092bcb52c0c562dfd30d3893b53ebd0449ff326597bb70b08d04",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2022-11-30"
+      },
+      "first_published": "2006-07-25"
+    },
+    {
+      "set_id": "70057a53-ca29-4848-ab3d-5e691e2a14a3",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 14,
+      "versions_listed": 9,
+      "history_sha256": "28e7357f07b555efdad292374ee5eee29074875e6ca85a9d4593504954116083",
+      "latest_admissible": {
+        "version": 10,
+        "published_at": "2022-05-25"
+      },
+      "first_published": "2018-12-19"
+    },
+    {
+      "set_id": "d64f961a-3e1f-4b04-cf83-604474af2775",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 17,
+      "history_sha256": "0045ea95f7c75da1dca9df3e14b0613dbc6ff0397ff3bd7f766d5a10b3c91c8d",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2022-08-17"
+      },
+      "first_published": "2013-02-08"
+    },
+    {
+      "set_id": "c58f8112-d587-493a-91b7-2b48c80bb7bf",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 10,
+      "versions_listed": 10,
+      "history_sha256": "4c1c26990e3e789b2cde2b5a0256ee6586d05838c880c156debbad9641d32850",
+      "latest_admissible": {
+        "version": 8,
+        "published_at": "2021-07-22"
+      },
+      "first_published": "2014-05-06"
+    },
+    {
+      "set_id": "c7eabefd-2781-439b-b8f4-cb3ea25a4720",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 10,
+      "versions_listed": 10,
+      "history_sha256": "8acbcc8dc529f7d6a797d68905372cf5b2109bb615539ed2f05e43d0d4f9f95e",
+      "latest_admissible": {
+        "version": 8,
+        "published_at": "2021-07-22"
+      },
+      "first_published": "2014-07-21"
+    },
+    {
+      "set_id": "dc02a23b-3ff9-4441-aa91-8e9e629a7315",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 28,
+      "versions_listed": 20,
+      "history_sha256": "4f14d6a5fa64e1b174dbd5a98b4c8f6305c69098ea000471900cc4793795a5c4",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2020-08-05"
+      },
+      "first_published": "2011-08-12"
+    },
+    {
+      "set_id": "e9772b82-1e2b-4c4b-aa47-677491dbf73c",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 8,
+      "versions_listed": 8,
+      "history_sha256": "50cffd8f23569b12db0672150b976f810aca3a8e38d21ab1639f9e9e38d80366",
+      "latest_admissible": {
+        "version": 6,
+        "published_at": "2019-12-05"
+      },
+      "first_published": "2010-10-15"
+    },
+    {
+      "set_id": "d4b5863a-efb9-4551-a9ad-2b06e8666d87",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 22,
+      "versions_listed": 15,
+      "history_sha256": "2aa0dcf31f20d4c1348123eee8ec5117ab0b09a7beadd2caf9adcd79da9a3065",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2023-07-18"
+      },
+      "first_published": "2006-07-31"
+    },
+    {
+      "set_id": "f9ab6b1c-98d0-4373-0e9b-b10cb4a67543",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 20,
+      "history_sha256": "db7e6b78a9536f95eab84ce723e2ff735327f877de44faf7d554c7b8cbdd2ad5",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2023-04-06"
+      },
+      "first_published": "2006-08-21"
+    },
+    {
+      "set_id": "8ad3145e-00e7-4412-b9a5-06f00f264f30",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 15,
+      "history_sha256": "f5831a3a556792004f8646d2c0cb6bb84a180bf2261d800429b3d1247300d65d",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2020-12-31"
+      },
+      "first_published": "2006-07-25"
+    },
+    {
+      "set_id": "6e979070-5035-4076-e09c-b52466be3c68",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 12,
+      "history_sha256": "354814f829fa1f70167f48e0c3904ebf7754d6f8564714e1f42c59b53ceb7ff5",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2021-04-14"
+      },
+      "first_published": "2006-11-09"
+    },
+    {
+      "set_id": "cccd40ca-5f08-4acb-8548-3cad558388bb",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 14,
+      "versions_listed": 14,
+      "history_sha256": "8d74c7c5c3a3f0456a02dbf8db79f98dda76b317e380feb79e4f7b0e6d825357",
+      "latest_admissible": {
+        "version": 11,
+        "published_at": "2020-11-27"
+      },
+      "first_published": "2014-12-19"
+    },
+    {
+      "set_id": "affecd4d-1f78-4bbe-5a8d-86849bbdc520",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 31,
+      "versions_listed": 22,
+      "history_sha256": "3dc164a3c14c57e489585559be83be862f614a2b1e06a1b8e13ca497f2feea72",
+      "latest_admissible": {
+        "version": 27,
+        "published_at": "2023-02-03"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "bb44c7e1-d911-4788-908f-09b7b271969b",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 21,
+      "versions_listed": 20,
+      "history_sha256": "58753d93e00ccfbd60b0b730e6b3caeca328ae7e7d15566aaa99623d085a1718",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2023-03-07"
+      },
+      "first_published": "2016-02-03"
+    },
+    {
+      "set_id": "373ba08b-33ad-49fc-28a7-928e89a65314",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 29,
+      "versions_listed": 22,
+      "history_sha256": "cf6613f89c57724a337d3e3f226d873a63b4444c0b64ef0567a2888c09d0ec4c",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2023-02-06"
+      },
+      "first_published": "2006-08-21"
+    },
+    {
+      "set_id": "c5a005b0-7b6f-4e30-df92-9a20b1ca66a1",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 22,
+      "versions_listed": 16,
+      "history_sha256": "d8ff0623fc4ed58959a2cb26a9731afc52d86db00e3e38478ff85367d8ba38f3",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2022-11-15"
+      },
+      "first_published": "2006-09-01"
+    },
+    {
+      "set_id": "1ed25b2c-334e-4021-ada1-3396f07630dc",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 17,
+      "versions_listed": 15,
+      "history_sha256": "d93ffa35ba261ed5bc941b331b7fda471bf48276494452b3e0ada4489f09c82f",
+      "latest_admissible": {
+        "version": 14,
+        "published_at": "2022-12-06"
+      },
+      "first_published": "2016-07-25"
+    },
+    {
+      "set_id": "8123cce8-42e3-49e4-a488-3bb836ecccd0",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 18,
+      "versions_listed": 10,
+      "history_sha256": "271f8c8b7d218cff06a15ebaa00a9b93a757f8893de00fd1b21e6b4ae132e28e",
+      "latest_admissible": {
+        "version": 16,
+        "published_at": "2019-12-05"
+      },
+      "first_published": "2006-11-17"
+    },
+    {
+      "set_id": "7a8d2539-4422-4312-0298-207ef1a2948e",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 29,
+      "versions_listed": 20,
+      "history_sha256": "a4c5004055878c795db6ee380fa78521e60493082fd95ce0090272d41f827c80",
+      "latest_admissible": {
+        "version": 26,
+        "published_at": "2022-12-19"
+      },
+      "first_published": "2006-08-21"
+    },
+    {
+      "set_id": "8664c7ce-707b-4c6c-9ce4-7160b5f877f8",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 6,
+      "versions_listed": 6,
+      "history_sha256": "97483ca3f65185c22d9825f0c059cd38ce8e98e04c812337af9f67479dd94a87",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2021-11-22"
+      },
+      "first_published": "2020-11-12"
+    },
+    {
+      "set_id": "ea9f4498-0d43-4043-8dd1-f22537841c21",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 11,
+      "versions_listed": 10,
+      "history_sha256": "c5e9510b83b8d7549f4d426de460d00eb355e6448e72516d87d5080db41e23cb",
+      "latest_admissible": {
+        "version": 6,
+        "published_at": "2020-06-10"
+      },
+      "first_published": "2016-03-14"
+    },
+    {
+      "set_id": "f2901045-904f-47bd-74a1-c561facd7f25",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 37,
+      "versions_listed": 29,
+      "history_sha256": "ca4122801d857956bf48a2f819db6e6929bc796a74892ea8f22ec946aaa82c76",
+      "latest_admissible": {
+        "version": 34,
+        "published_at": "2022-04-05"
+      },
+      "first_published": "2006-11-22"
+    },
+    {
+      "set_id": "376093e7-e09e-4a57-3199-195e45251866",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 15,
+      "history_sha256": "449bce41a6375a721b7378e4e5b9e7d5233fd4536bd506cc722d645c104e6ade",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2020-10-30"
+      },
+      "first_published": "2006-08-21"
+    },
+    {
+      "set_id": "c9ea31ec-4c26-452f-b07b-c5f894212cd5",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 11,
+      "versions_listed": 11,
+      "history_sha256": "abbb911fd75f734432346b8193d647e94fcb142ff6a79b4067d609f60bc83228",
+      "latest_admissible": {
+        "version": 9,
+        "published_at": "2022-04-05"
+      },
+      "first_published": "2014-05-05"
+    },
+    {
+      "set_id": "abc41ed1-9512-4bea-9295-1a9ca134b6c2",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 15,
+      "versions_listed": 13,
+      "history_sha256": "f1670888580c06097c3ad9b7f463eafddf278877612b587433cba3328e5bd535",
+      "latest_admissible": {
+        "version": 13,
+        "published_at": "2019-11-29"
+      },
+      "first_published": "2013-04-25"
+    },
+    {
+      "set_id": "c3be2468-45e8-4ecc-a30b-e966743a563f",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 12,
+      "versions_listed": 11,
+      "history_sha256": "479ac70e2ca54ab7dd6cfeea0c653223bd339a2e1f00da5c14b9aa284ea2f587",
+      "latest_admissible": {
+        "version": 10,
+        "published_at": "2021-05-12"
+      },
+      "first_published": "2014-10-31"
+    },
+    {
+      "set_id": "c91ede49-c7cc-47b7-0f93-e6841dd5916a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 19,
+      "versions_listed": 11,
+      "history_sha256": "e6cb08f64e409a4a97ce82bdaee5a1799af4443bc125ac2776ceff55c598399d",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2019-11-29"
+      },
+      "first_published": "2007-02-23"
+    },
+    {
+      "set_id": "ce9a7469-c4ba-4f60-8f7a-47ef0974316e",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 11,
+      "versions_listed": 10,
+      "history_sha256": "9d878c0dd084c9b3f50ca47b82fdec3324e7d5a3c9455e06b4f37fa73b79eac2",
+      "latest_admissible": {
+        "version": 9,
+        "published_at": "2021-05-12"
+      },
+      "first_published": "2014-07-22"
+    },
+    {
+      "set_id": "6c181d7e-aed2-4975-30ac-d39a94cca7ec",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 25,
+      "versions_listed": 16,
+      "history_sha256": "b3199448884c1b3479d617853a1794a5f9cf6d003769238f3c0f48903728a0a0",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2020-06-15"
+      },
+      "first_published": "2009-12-23"
+    },
+    {
+      "set_id": "2b9ea23a-f9e9-48a8-25b7-519e3bbd6828",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 10,
+      "versions_listed": 10,
+      "history_sha256": "c2dc68fadc82fbf7b5d3b0c033973776065f2deb6f932d41bab298a60fcc9110",
+      "latest_admissible": {
+        "version": 8,
+        "published_at": "2021-05-24"
+      },
+      "first_published": "2006-08-29"
+    },
+    {
+      "set_id": "018a8807-1331-41c3-4889-c7ec502a9043",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 24,
+      "versions_listed": 16,
+      "history_sha256": "5127b640c504147e885b73044638be1dd0c56853addecc1f6a3774fc8111c3b5",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2020-10-30"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "02a845c3-4521-4926-e397-25ab536e7cf6",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 39,
+      "versions_listed": 30,
+      "history_sha256": "a8e0f9f4f53f08500d6a0fdfdd6be1498518878dce5f1a1a333cdd01ee925b7e",
+      "latest_admissible": {
+        "version": 34,
+        "published_at": "2023-03-06"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "084f5572-8c1f-4802-b179-ca0cc838fc68",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 7,
+      "versions_listed": 5,
+      "history_sha256": "df7dbda21b5ea3c357020be45b672c6309d61362d00f443f64bf7cb1d0d12409",
+      "latest_admissible": {
+        "version": 3,
+        "published_at": "2021-03-05"
+      },
+      "first_published": "2021-03-05"
+    },
+    {
+      "set_id": "0c24b592-4bc8-456f-acac-9c9525844a06",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 10,
+      "versions_listed": 7,
+      "history_sha256": "8fdb434237d27c31f0f0a6d7dc65c831ed9a6db03f9328f9a9600fe607f88ff6",
+      "latest_admissible": {
+        "version": 7,
+        "published_at": "2020-08-31"
+      },
+      "first_published": "2017-01-03"
+    },
+    {
+      "set_id": "309aeb1b-8022-4df7-8194-ae6529e3395c",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 29,
+      "versions_listed": 19,
+      "history_sha256": "f1355832474cc243cf10dbfde3db70f0058b4b3a6604e014c7bfe3c10cd9f4ff",
+      "latest_admissible": {
+        "version": 26,
+        "published_at": "2020-11-27"
+      },
+      "first_published": "2010-06-02"
+    },
+    {
+      "set_id": "b22e4c8e-dbe1-4d4b-a026-e1812974071c",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 16,
+      "versions_listed": 16,
+      "history_sha256": "6454dc28b32d0dfcde1f63b022ac3beabefddb12021b940d47b6ac62873a13f5",
+      "latest_admissible": {
+        "version": 14,
+        "published_at": "2023-02-02"
+      },
+      "first_published": "2017-02-03"
+    },
+    {
+      "set_id": "e175d329-315f-4f3b-bb4c-06ad4e042967",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 16,
+      "versions_listed": 13,
+      "history_sha256": "f2b9eda52e317f733582fbbcbe853e6dab01fa3fd59be930f6249e909c44c3fd",
+      "latest_admissible": {
+        "version": 15,
+        "published_at": "2023-07-18"
+      },
+      "first_published": "2013-04-25"
+    },
+    {
+      "set_id": "f9ca2ef5-46d8-475a-a26e-f7c8becd6db7",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 12,
+      "versions_listed": 11,
+      "history_sha256": "f65e9f79d3f2bba5ea951bfe04526e920476c0ac6c1bb440e717a99464afe09a",
+      "latest_admissible": {
+        "version": 5,
+        "published_at": "2022-07-22"
+      },
+      "first_published": "2021-01-12"
+    },
+    {
+      "set_id": "c4c65e48-85f8-4dcf-6281-06e40959cc79",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 21,
+      "versions_listed": 13,
+      "history_sha256": "be505dfc2f26e6b4942f24f89e100ee47131cf41e5c9f43f79d3e478c1dc06a5",
+      "latest_admissible": {
+        "version": 18,
+        "published_at": "2023-06-06"
+      },
+      "first_published": "2006-07-18"
+    },
+    {
+      "set_id": "128bb292-d174-4769-b3e6-9f16617f31e3",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 21,
+      "versions_listed": 11,
+      "history_sha256": "bada254827ff8f3c866b4990030dbe582d94350782444ea00ab73a51c39de02f",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2022-04-28"
+      },
+      "first_published": "2010-09-30"
+    },
+    {
+      "set_id": "dc374fa4-350b-425d-a7db-7099fdc64cf1",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 23,
+      "versions_listed": 15,
+      "history_sha256": "849bef9e00698535311afbe087b2229c5fe06bcf0f77d728795ebad6537e4280",
+      "latest_admissible": {
+        "version": 21,
+        "published_at": "2023-01-16"
+      },
+      "first_published": "2007-10-04"
+    },
+    {
+      "set_id": "03283208-8616-4117-9d2b-aa8046017a4f",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 21,
+      "versions_listed": 11,
+      "history_sha256": "69904eb038c274988daf147e1159ebe202aa66123245dbdcc95585e0949aa236",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2022-05-09"
+      },
+      "first_published": "2010-09-15"
+    },
+    {
+      "set_id": "19141ccd-e66c-49a2-a794-0616028495a7",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 5,
+      "versions_listed": 5,
+      "history_sha256": "95b6672e00a213075cacc00eb46a2412eac06e1e0bb7d3530381494da0e8152c",
+      "latest_admissible": {
+        "version": 3,
+        "published_at": "2022-05-09"
+      },
+      "first_published": "2018-03-19"
+    },
+    {
+      "set_id": "365fc265-8e6c-432f-9fda-911f5f7fb451",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 23,
+      "versions_listed": 11,
+      "history_sha256": "36732c951f99caf6c222f38da00475f2314ae804ea8b28328ff1ac9910a37c08",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2022-05-02"
+      },
+      "first_published": "2010-09-03"
+    },
+    {
+      "set_id": "36c07ebf-b091-483e-b2c4-f0fc0c2b4186",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 4,
+      "versions_listed": 4,
+      "history_sha256": "84185f7cf3472d8aba64c6cbeeb22ebe08e5b51adc089d145386033f0cc04655",
+      "latest_admissible": {
+        "version": 3,
+        "published_at": "2022-05-02"
+      },
+      "first_published": "2018-03-16"
+    },
+    {
+      "set_id": "ee8057d1-ed12-4e18-9efa-d83504abf612",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 7,
+      "versions_listed": 7,
+      "history_sha256": "d866410ef6dff939ef085a4a7d9ced030da3b7ff30aacf2a2f2b26034c48b2e2",
+      "latest_admissible": null,
+      "first_published": "2023-11-20"
+    },
+    {
+      "set_id": "23aa1bb3-cecf-4e62-29bb-48488bb66fc3",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 12,
+      "history_sha256": "d6f873018d305064b1b74988db90b1a494e3c823591935276c5c53a4387cdd9f",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2022-11-04"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "49596de6-ab18-49d1-9e5b-30968fc21c36",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 28,
+      "versions_listed": 19,
+      "history_sha256": "b100f5241021fd5d9da8629d82d98af84a90c273315899a097b0e2fadbab8bce",
+      "latest_admissible": {
+        "version": 26,
+        "published_at": "2023-02-02"
+      },
+      "first_published": "2008-03-13"
+    },
+    {
+      "set_id": "6025e8d4-5083-4c3a-58a0-050e7b0b6150",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 34,
+      "versions_listed": 25,
+      "history_sha256": "de7c0ac9331f4abe398e54d02d408c89d979d4962d08e3606af39b5c6eb68e27",
+      "latest_admissible": {
+        "version": 27,
+        "published_at": "2023-06-16"
+      },
+      "first_published": "2006-07-25"
+    },
+    {
+      "set_id": "e9c9ef18-7dfc-4322-b2fc-29b934c30f8b",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 33,
+      "versions_listed": 24,
+      "history_sha256": "6a04f2e7bdfee22ef1beca7457a0bb3dc492886a3f53105b93ea107ffa22ae33",
+      "latest_admissible": {
+        "version": 24,
+        "published_at": "2021-11-22"
+      },
+      "first_published": "2011-12-09"
+    },
+    {
+      "set_id": "0e3f080d-b1fb-47ed-8cd3-90a4206fa704",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 4,
+      "versions_listed": 4,
+      "history_sha256": "82414c60e5798193267435cf16f0d5a5fa84771086110366f61c8e321a784f76",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2023-03-03"
+      },
+      "first_published": "2023-03-03"
+    },
+    {
+      "set_id": "49360d6f-c8b3-420e-af75-154cf7b05255",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 6,
+      "versions_listed": 5,
+      "history_sha256": "d464782b59a0f4a66dc8b6ad565dac27b08c7a26d4a16d6ad7e079caf685458c",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2022-12-01"
+      },
+      "first_published": "2021-12-13"
+    },
+    {
+      "set_id": "5a1534af-aa1c-4f1d-ba9f-9415b14e1af2",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 2,
+      "versions_listed": 2,
+      "history_sha256": "af428d21687c576ff0f16253019f5ae66b40187b4f1ec85cfcf784f47d4628a2",
+      "latest_admissible": null,
+      "first_published": "2024-05-20"
+    },
+    {
+      "set_id": "cbbbf939-3219-4515-a48e-ca264daa4d07",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 7,
+      "versions_listed": 6,
+      "history_sha256": "8d65f76f76d42d9b22ae367faf1ddfdf3d85adc8c008138dbd91e072001ae6b7",
+      "latest_admissible": {
+        "version": 5,
+        "published_at": "2023-07-12"
+      },
+      "first_published": "2022-12-23"
+    },
+    {
+      "set_id": "e0862c02-781f-4b10-ae50-9c9c4ca26f6d",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 1,
+      "versions_listed": 1,
+      "history_sha256": "0bcb556e1a9b120c302112ec50fc775c7b15909ac2a81322bcfb2bae8798730a",
+      "latest_admissible": null,
+      "first_published": "2025-12-02"
+    },
+    {
+      "set_id": "3ae68628-7ab0-4491-b3ae-6a8330b719c8",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 5,
+      "versions_listed": 4,
+      "history_sha256": "efed0df433336ea20a4a5b967ee211593363f2eadac54f1ad5e7d021274e458c",
+      "latest_admissible": {
+        "version": 4,
+        "published_at": "2022-07-20"
+      },
+      "first_published": "2022-07-07"
+    },
+    {
+      "set_id": "5c527c2e-9062-4afe-dbbb-f650db3a340f",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 17,
+      "history_sha256": "e384f507ba14c8f0e46bcee69a676e7c17aed32e5c3dab59310eeca721c70818",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2022-05-16"
+      },
+      "first_published": "2009-06-30"
+    },
+    {
+      "set_id": "a96c405f-bd70-4bb4-719e-ac6a79dcc213",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 25,
+      "versions_listed": 17,
+      "history_sha256": "f8efbd8d4c616df7271ee1f9d18089c4f5a07cdd7172faf50f083a14d5d39f9d",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2023-01-16"
+      },
+      "first_published": "2006-12-01"
+    },
+    {
+      "set_id": "af6aebad-ef03-4d19-9a40-18e5a278b812",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 8,
+      "versions_listed": 7,
+      "history_sha256": "5a9215c7b198976f299a6ecf82eb9a9fbc707622280cb0f2e14375ced0ba937f",
+      "latest_admissible": {
+        "version": 6,
+        "published_at": "2021-07-23"
+      },
+      "first_published": "2013-01-22"
+    },
+    {
+      "set_id": "ea20a5eb-641e-48cd-bcfa-74c04c45dfda",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 8,
+      "versions_listed": 3,
+      "history_sha256": "2c1a12b61d4914c32115b58f5481ab987e599d325066f22af8c36b10a34cc4de",
+      "latest_admissible": {
+        "version": 6,
+        "published_at": "2020-11-24"
+      },
+      "first_published": "2020-11-24"
+    },
+    {
+      "set_id": "2fcbc814-c7a4-469a-8b1d-6819b961bfb9",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 2,
+      "versions_listed": 1,
+      "history_sha256": "d6fb7ec31174abed916f8146e5337bf577bcb010f1b7b71f531a46e887a66425",
+      "latest_admissible": null,
+      "first_published": "2025-10-03"
+    },
+    {
+      "set_id": "813e8ca2-de54-4a7c-a2d2-8bd44396c341",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 7,
+      "versions_listed": 7,
+      "history_sha256": "2c370128c5a24b483e716f167a5af3593d880fc6be63e3960de8a713722178e1",
+      "latest_admissible": {
+        "version": 6,
+        "published_at": "2021-03-12"
+      },
+      "first_published": "2014-09-12"
+    },
+    {
+      "set_id": "0e30eaef-5a09-4104-8a11-c32933eadeab",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 17,
+      "versions_listed": 14,
+      "history_sha256": "403bdac929b9ef1408ae027ebc9d657f2673800e6ff4ddff6ddc6c7947819cd8",
+      "latest_admissible": {
+        "version": 13,
+        "published_at": "2022-08-22"
+      },
+      "first_published": "2014-11-19"
+    },
+    {
+      "set_id": "6909596e-4bf7-4e11-8029-b89740a30aec",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 10,
+      "versions_listed": 10,
+      "history_sha256": "5ae13c75ba629b4f5449c14e80306968f6bff600140d601c09f62c6f3ce098e0",
+      "latest_admissible": {
+        "version": 8,
+        "published_at": "2020-08-19"
+      },
+      "first_published": "2016-08-03"
+    },
+    {
+      "set_id": "accf9569-4b57-4e83-a7db-4e890a75d1ba",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 25,
+      "versions_listed": 19,
+      "history_sha256": "81ef43c30d975398da4cc4f93ee6efa2baa7fea112e203a4e8e11e5acab43b7b",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2022-04-20"
+      },
+      "first_published": "2008-03-13"
+    },
+    {
+      "set_id": "bd287e89-32f9-4396-95fa-4b562869f476",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 6,
+      "versions_listed": 6,
+      "history_sha256": "4df558a8339712d645fd5f13b922aebae3080b3ef3fb01197a7d514fb0d2a6c0",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2023-01-25"
+      },
+      "first_published": "2023-01-11"
+    },
+    {
+      "set_id": "2c7dd2b0-cc10-4db6-bf56-6eb154ebeb10",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 5,
+      "versions_listed": 4,
+      "history_sha256": "30f4c982255e9b0d2c8427d189fb852478b45e35d82798bc44fbf58f85a61f48",
+      "latest_admissible": null,
+      "first_published": "2024-03-12"
+    },
+    {
+      "set_id": "c4de72a8-2a75-4984-ce90-e4870226dc12",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 12,
+      "history_sha256": "b1dd86f9569bbc1e583ff43d5a37b11d7fd78898e3a27615da08b6ff78c44480",
+      "latest_admissible": {
+        "version": 18,
+        "published_at": "2020-11-04"
+      },
+      "first_published": "2008-12-16"
+    },
+    {
+      "set_id": "0d63ba29-b692-41b4-87e8-351265c8273f",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 19,
+      "versions_listed": 13,
+      "history_sha256": "0422e9950bb5adc90d784907eb65f1706d4f273b0e3460e46979176e80426e5e",
+      "latest_admissible": {
+        "version": 15,
+        "published_at": "2022-08-22"
+      },
+      "first_published": "2015-12-09"
+    },
+    {
+      "set_id": "e3a8c0e9-19ed-49b7-8464-11e8806f47fd",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 1,
+      "versions_listed": 1,
+      "history_sha256": "acc260148a5170109665c3393b0335ba8cf5420ae32be927686c8670537d7e70",
+      "latest_admissible": null,
+      "first_published": "2025-04-21"
+    },
+    {
+      "set_id": "6b9999bb-869e-4d25-838c-23c3ab280044",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 7,
+      "versions_listed": 6,
+      "history_sha256": "fc1ee47f4f37666d2cf4452f2f21800d0fbec6427d5092fb49e32043b778c206",
+      "latest_admissible": {
+        "version": 4,
+        "published_at": "2023-06-15"
+      },
+      "first_published": "2021-06-14"
+    },
+    {
+      "set_id": "00c61d11-d6b7-4618-b6f6-2592dbcc8af7",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 4,
+      "versions_listed": 4,
+      "history_sha256": "8fa8348d50599a4840c5c10db3dfa5600bff7c57030c2d9fb050f7993bc38002",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2023-06-15"
+      },
+      "first_published": "2022-01-10"
+    },
+    {
+      "set_id": "644c5035-20d2-4686-beaa-bef08e99051c",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 7,
+      "versions_listed": 6,
+      "history_sha256": "1e33bce74191861c4e7f2cb5790b1fc561ac12e54201b1b69c1d8ee39aa5f4e1",
+      "latest_admissible": {
+        "version": 4,
+        "published_at": "2023-06-15"
+      },
+      "first_published": "2021-06-14"
+    },
+    {
+      "set_id": "91c050cf-3b2d-48bc-7297-e8dc68225e5a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 29,
+      "versions_listed": 20,
+      "history_sha256": "bb2e2efd5b7cb8c0c274beebe86a02d76e2dfb575ff3a76095eb3b36ab48ab60",
+      "latest_admissible": {
+        "version": 28,
+        "published_at": "2022-12-23"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "22ebc3fb-ee81-44bd-a6e3-5e759ee724a8",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 2,
+      "versions_listed": 1,
+      "history_sha256": "f91c03cea4d9d923d0e3dc037328df015a131249613b38955e2556360eb4df08",
+      "latest_admissible": null,
+      "first_published": "2025-01-07"
+    },
+    {
+      "set_id": "9d1f630b-e759-4395-9d01-ddc90e4fea75",
+      "title_labeler": "HOSPIRA, INC",
+      "current_version": 20,
+      "versions_listed": 10,
+      "history_sha256": "c61ba6e3e738de7ee25ed9190f66bb7aeed1e1069cecf116150e75e7292064f9",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2022-04-28"
+      },
+      "first_published": "2010-09-30"
+    },
+    {
+      "set_id": "dc537761-d5f4-488d-24ab-b2bcd2b17b7a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 11,
+      "versions_listed": 11,
+      "history_sha256": "340cfce8404e3b101eb00e5c1ba67ad14150377c120569091727321ee9d8aeb8",
+      "latest_admissible": {
+        "version": 10,
+        "published_at": "2019-11-29"
+      },
+      "first_published": "2006-11-17"
+    },
+    {
+      "set_id": "092ebd9b-77a0-4877-afc3-dd8211730f71",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 7,
+      "versions_listed": 7,
+      "history_sha256": "0fdae080b3bdc2c82ac9a109a5e27211fd987fa6cb93a4cf1e858868080ed697",
+      "latest_admissible": {
+        "version": 5,
+        "published_at": "2022-11-09"
+      },
+      "first_published": "2019-10-15"
+    },
+    {
+      "set_id": "178a0356-4f6c-47fb-9913-f325a3c72f7b",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 3,
+      "versions_listed": 3,
+      "history_sha256": "170404f1bf9329d053a82f0c678622613d97e767f0aa04c70c6f894419f22e6e",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2023-01-17"
+      },
+      "first_published": "2020-10-21"
+    },
+    {
+      "set_id": "8eb172da-dcd4-4660-4a8f-ad44a14b4af7",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 26,
+      "versions_listed": 18,
+      "history_sha256": "56ce4417d3236ccd9562156cab8b729c3410f360995e0a55d9427e99cf82bc38",
+      "latest_admissible": {
+        "version": 25,
+        "published_at": "2022-11-23"
+      },
+      "first_published": "2006-08-21"
+    },
+    {
+      "set_id": "e80c27e2-164d-4836-ba24-c160d75dc5d3",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 4,
+      "versions_listed": 4,
+      "history_sha256": "004187c693d2a41c8238f651588a2977b13d36b0a12fcc8cc8392e88fdb49b22",
+      "latest_admissible": {
+        "version": 3,
+        "published_at": "2023-01-17"
+      },
+      "first_published": "2020-08-17"
+    },
+    {
+      "set_id": "e9b6555f-20a1-4415-bb80-3d034cfab95b",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 3,
+      "versions_listed": 3,
+      "history_sha256": "b99cffd30797f44687eb0cc81ecc57a668a31e1f0925d560b0d17f7efe53446d",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2022-12-08"
+      },
+      "first_published": "2022-12-08"
+    },
+    {
+      "set_id": "3104aab1-cd6e-4ad2-8e0a-286a0c5d1940",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 24,
+      "versions_listed": 21,
+      "history_sha256": "cdbe718d7d541fe1f0c35b60d91251aaf75bfc58693acee98371767eb497bcd6",
+      "latest_admissible": {
+        "version": 22,
+        "published_at": "2023-05-26"
+      },
+      "first_published": "2016-08-15"
+    },
+    {
+      "set_id": "a0ec4bcc-93ea-4c41-a4b6-95ec19491807",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 45,
+      "versions_listed": 25,
+      "history_sha256": "7613b5bd50b454e65bad0f663afe650e6327a0dc002b0abf71a3fb248cd321eb",
+      "latest_admissible": {
+        "version": 42,
+        "published_at": "2023-05-26"
+      },
+      "first_published": "2011-03-17"
+    },
+    {
+      "set_id": "a625c92b-c569-4b98-8d2e-2b3f5e12b34f",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 16,
+      "history_sha256": "f3857d1ab69566c2f069df0a5dd535c7af88aff3fd9846d8592f02b94747ac7d",
+      "latest_admissible": {
+        "version": 25,
+        "published_at": "2021-11-17"
+      },
+      "first_published": "2010-11-19"
+    },
+    {
+      "set_id": "d16907e7-a8c8-4039-ace4-cf4e24ba68c0",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 27,
+      "versions_listed": 15,
+      "history_sha256": "7396c8ae99e6d64cbe3828a6975b16d4a78a2d6f04d617a0b08bf08f999279fc",
+      "latest_admissible": {
+        "version": 25,
+        "published_at": "2020-07-24"
+      },
+      "first_published": "2011-07-26"
+    },
+    {
+      "set_id": "47677091-fd20-49af-933c-c9dd2be21de9",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 2,
+      "versions_listed": 2,
+      "history_sha256": "6748977619902b0384fdd873c72d8d1e4eb0f13b7a75264e3b3c45df6b6ef149",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2022-05-27"
+      },
+      "first_published": "2022-05-27"
+    },
+    {
+      "set_id": "3e087418-69ff-47fa-93c2-f28699309433",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 2,
+      "versions_listed": 2,
+      "history_sha256": "aad2637b628336dd4e10efd6f227b4c569f4061173aab51d046eb1c559d06f3c",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2023-02-02"
+      },
+      "first_published": "2023-02-02"
+    },
+    {
+      "set_id": "1ab5ae3e-e303-4499-4c89-472d7cc1e46c",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 30,
+      "versions_listed": 18,
+      "history_sha256": "bd2257f4b25d4436758ca0630b33680020133d83bfdc55c7d8fa1f16b0d9e14d",
+      "latest_admissible": {
+        "version": 29,
+        "published_at": "2023-03-13"
+      },
+      "first_published": "2006-09-28"
+    },
+    {
+      "set_id": "c3ae9880-44bb-4f4e-93d8-8a5e21708a30",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 16,
+      "versions_listed": 16,
+      "history_sha256": "44999d9971f2dc505ff8659f73229c20854db6e4e2b54227b383e2ca30bcaefd",
+      "latest_admissible": {
+        "version": 15,
+        "published_at": "2022-11-03"
+      },
+      "first_published": "2007-05-24"
+    },
+    {
+      "set_id": "d4500795-3b07-4a7d-b432-73cafbb3dbc6",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 3,
+      "versions_listed": 3,
+      "history_sha256": "f47dca0b4c593528b1d00e6dafd030c5bbdd816e6cfe955b0acb713bdefb7b0b",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2022-01-25"
+      },
+      "first_published": "2022-01-25"
+    },
+    {
+      "set_id": "f1935bc8-30ce-4b51-8a4c-0f12ce9000a6",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 6,
+      "versions_listed": 6,
+      "history_sha256": "2c102590fc1c489e460b5dfadb9fc5fe5fa2a7350322fa1af507778ab5e4e1fd",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2023-07-07"
+      },
+      "first_published": "2021-11-02"
+    },
+    {
+      "set_id": "ed1b74a8-2a9b-4315-b051-673c7941cb13",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 19,
+      "history_sha256": "c73e8c3e6cf9a9b0924e9ccef0191b56ce674ec4090c5a88ce9a361ee97466b9",
+      "latest_admissible": {
+        "version": 19,
+        "published_at": "2022-04-26"
+      },
+      "first_published": "2012-04-17"
+    },
+    {
+      "set_id": "e5054c6a-c54e-4ddf-8280-a154b90cac07",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 1,
+      "versions_listed": 1,
+      "history_sha256": "578ba1025b61c8e802ba0283c8776a9d1f1a8167b125a9b36c6c2d2e7706bdcd",
+      "latest_admissible": null,
+      "first_published": "2024-04-17"
+    },
+    {
+      "set_id": "41e3de39-8278-4a75-badf-601e4602080d",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 2,
+      "versions_listed": 2,
+      "history_sha256": "499855ee4b5f6c90bc09970d633970bf8001b0d09e1bead1c2eb34efb8912796",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2022-08-01"
+      },
+      "first_published": "2022-08-01"
+    },
+    {
+      "set_id": "93cf0914-de08-4ec6-8f8c-d663243b9958",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 5,
+      "versions_listed": 5,
+      "history_sha256": "d5ef5542103e7bc2f5559b87b22cc1cdd5f7fe217da2755141faed9b2ba82ce1",
+      "latest_admissible": {
+        "version": 3,
+        "published_at": "2023-03-07"
+      },
+      "first_published": "2022-09-08"
+    },
+    {
+      "set_id": "41044928-dd1f-40bf-1fa6-709dff559124",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 18,
+      "versions_listed": 18,
+      "history_sha256": "fdf5006c38aa5fd8920d65d96427fce96f13d0ad50dc47e6c7ea21d18d7253b1",
+      "latest_admissible": {
+        "version": 17,
+        "published_at": "2023-05-08"
+      },
+      "first_published": "2007-04-26"
+    },
+    {
+      "set_id": "de1c2dcd-295b-47ce-b7a1-a8be59939a54",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 12,
+      "versions_listed": 10,
+      "history_sha256": "72450bdc97ec7b9414b367c3bd99ca8b1d30a53ef1ead525bb6168dad2511a94",
+      "latest_admissible": {
+        "version": 11,
+        "published_at": "2022-11-09"
+      },
+      "first_published": "2012-10-25"
+    },
+    {
+      "set_id": "f01f9986-43f9-40e8-9506-11bfe78f9242",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 1,
+      "versions_listed": 1,
+      "history_sha256": "6ebfa95b1778642e3de8fde65aa5ca746195fe33981d4bb79344f9bab87760f3",
+      "latest_admissible": null,
+      "first_published": "2023-09-11"
+    },
+    {
+      "set_id": "c96726ef-f1fa-4ebb-ba33-3479c3902a8e",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 1,
+      "versions_listed": 1,
+      "history_sha256": "82c65b378ca7cc829b105894ca256bc2b55bff1f65bb687a4f3016bdab6404c4",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2023-07-17"
+      },
+      "first_published": "2023-07-17"
+    },
+    {
+      "set_id": "b598c237-032d-4bb5-0e92-50eabd863dac",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 13,
+      "history_sha256": "6d1b669d4d0ef46a8face8e7b522101cc26b17a27322b1e117e63d55064fedef",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2023-06-07"
+      },
+      "first_published": "2006-12-01"
+    },
+    {
+      "set_id": "9fdf6169-699f-40eb-bda1-760253062b3c",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 3,
+      "versions_listed": 3,
+      "history_sha256": "86266481acd4e17d196e7c1fca0d966826e7b5772b11f8702fbc256d52ecc68f",
+      "latest_admissible": {
+        "version": 3,
+        "published_at": "2023-03-08"
+      },
+      "first_published": "2022-05-20"
+    },
+    {
+      "set_id": "905e0984-2ce3-481c-b1a0-0ef0a616479a",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 10,
+      "history_sha256": "b049bfaddb29b55cd32ed16b75be1ae770734cb25c0f5efac18c2b9e7d1f0db3",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2022-08-29"
+      },
+      "first_published": "2008-03-13"
+    },
+    {
+      "set_id": "e629ba5a-4e08-4249-9551-af6dbd98a7e4",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 10,
+      "versions_listed": 7,
+      "history_sha256": "41d2e14c9423aae857b8c1b87659e3a6d38d0379bf26fb1e8ef6f9976c2e4320",
+      "latest_admissible": {
+        "version": 10,
+        "published_at": "2022-08-29"
+      },
+      "first_published": "2018-05-01"
+    },
+    {
+      "set_id": "5273ea17-6920-4bff-8c5b-20ea531a0423",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 2,
+      "versions_listed": 2,
+      "history_sha256": "532e14dbeaaf33cb2f487cdcdbc9fd930d763b2e6de48a1e01f63e7301092bde",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2022-04-04"
+      },
+      "first_published": "2021-10-22"
+    },
+    {
+      "set_id": "b9c7f0dc-988d-466e-8031-400ec4f60f21",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 9,
+      "versions_listed": 5,
+      "history_sha256": "7cf88dec0cad2630a7131b91bafe1bb18b91bb0ea0115efa46b3fbefb41c4ecf",
+      "latest_admissible": {
+        "version": 9,
+        "published_at": "2021-08-11"
+      },
+      "first_published": "2019-02-28"
+    },
+    {
+      "set_id": "d3579d45-a964-40fe-e3a2-a3a997c8b7b9",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 20,
+      "versions_listed": 13,
+      "history_sha256": "7cc16ffb5ad1f0e58dfb8a80167b9bdaadc20f513b243771fbaf8c16e97a8f91",
+      "latest_admissible": {
+        "version": 20,
+        "published_at": "2021-06-01"
+      },
+      "first_published": "2006-09-18"
+    },
+    {
+      "set_id": "1d4e1cce-c57e-4a8b-be96-f95a2778e221",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 23,
+      "versions_listed": 10,
+      "history_sha256": "b183203e4ee2be3b4528ace29a363d1d70775e71e72ceadf686b381b7f6c09c2",
+      "latest_admissible": {
+        "version": 23,
+        "published_at": "2021-02-03"
+      },
+      "first_published": "2011-02-11"
+    },
+    {
+      "set_id": "120aa498-4834-4855-b74c-a02a93d5cf7f",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 4,
+      "versions_listed": 4,
+      "history_sha256": "b80e8c0b882923e5e2109e20e4d26dc1d1cfb70f2de9ea26797f108d3ca6dfe5",
+      "latest_admissible": {
+        "version": 4,
+        "published_at": "2021-01-14"
+      },
+      "first_published": "2016-09-23"
+    },
+    {
+      "set_id": "999625d5-3a6b-4753-059a-4f19d04c85a5",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 2,
+      "versions_listed": 2,
+      "history_sha256": "5522240a4727cf73aa0806d1f9355d2d657caab803b2e44ab84e8e82986823f6",
+      "latest_admissible": {
+        "version": 2,
+        "published_at": "2007-09-14"
+      },
+      "first_published": "2006-10-20"
+    },
+    {
+      "set_id": "c80c810a-60e0-49bd-139c-95aec3a286fc",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 1,
+      "versions_listed": 1,
+      "history_sha256": "269f931eb3e4041f7c52d1aad019a23eaf7eaafef8dde7ce90cd298332edfda7",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2007-04-26"
+      },
+      "first_published": "2007-04-26"
+    },
+    {
+      "set_id": "290c3e9c-c0c6-440a-1a9c-46e3e2b07a77",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 1,
+      "versions_listed": 1,
+      "history_sha256": "de8afa971cc4b6db6cfe90fb298ecb1d093b0106b548b694e5c7151819b3f979",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2007-03-01"
+      },
+      "first_published": "2007-03-01"
+    },
+    {
+      "set_id": "8d589fed-78c4-41f8-3f89-468a367a6c79",
+      "title_labeler": "HOSPIRA, INC.",
+      "current_version": 1,
+      "versions_listed": 1,
+      "history_sha256": "220fa43000fe8fe73ae7f97406303b334bbd87ebe5bfaf016463b3cbc9ee627f",
+      "latest_admissible": {
+        "version": 1,
+        "published_at": "2006-09-18"
+      },
+      "first_published": "2006-09-18"
+    }
+  ],
+  "source_d": {
+    "captured_at": "2023-05-07T02:13:15Z",
+    "original_url": "https://www.accessdata.fda.gov/cder/ndcxls.zip",
+    "sha256": "7500410dbc6b1a17ef3bbf2e5686f8c68a1915d2b5ae74cecc2e3826962e9e4e",
+    "archive_digest_matches": true,
+    "zip_scan_flagged": {},
+    "member_mtimes": {
+      "package.xls": "2023-05-05T05:36:06",
+      "product.xls": "2023-05-05T05:36:04"
+    },
+    "packages_labeler_segment_0409": 477,
+    "distinct_package_ndcs_0409": 477,
+    "distinct_product_ndcs_0409": 339,
+    "distinct_spl_document_ids_0409": 213,
+    "packages_with_end_marketing_on_or_before_cutoff": 0,
+    "package_ndc_patterns": {
+      "4-4-2": 477
+    },
+    "product_type_of_0409_packages": {
+      "HUMAN PRESCRIPTION DRUG": 477
+    },
+    "labeler_names_of_0409_packages": {
+      "Hospira, Inc.": 446,
+      "Hospira, Inc": 29,
+      "Hospira Inc.": 2
+    },
+    "caveat": "Archived copy of the FDA NDC Directory (listed, finished, non-excluded products) ~2.5 months before cutoff; a listing census, not a DailyMed label census."
+  },
+  "sources": [
+    {
+      "kind": "dailymed_spls_search_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?labeler=Hospira&pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?labeler=Hospira&pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:52:26Z",
+      "bytes": 18711,
+      "sha256": "8e4b67dea37b65ce0678f0491ad2741573b36cecabf4d818dfc9fe80d4aff6be",
+      "md5": "1e586a92b1c79876a5dffb13bc39fc08",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "18711"
+      },
+      "local_path_in_data_dir": "search/labeler_Hospira_p1.json",
+      "query": {
+        "labeler": "Hospira",
+        "page": 1
+      }
+    },
+    {
+      "kind": "dailymed_spls_search_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?labeler=Hospira&pagesize=100&page=2",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?labeler=Hospira&pagesize=100&page=2",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:52:27Z",
+      "bytes": 18432,
+      "sha256": "05c4861a7a2e814dc06f8eddfaf2615431c1f265b710e0c0b1ee19dd906090ce",
+      "md5": "063eaf9235e68f7befdc16128233f1e4",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "18432"
+      },
+      "local_path_in_data_dir": "search/labeler_Hospira_p2.json",
+      "query": {
+        "labeler": "Hospira",
+        "page": 2
+      }
+    },
+    {
+      "kind": "internet_archive_cdx_listing",
+      "source_role": "documentation",
+      "url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndcxls.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndcxls.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:54:31Z",
+      "bytes": 421,
+      "sha256": "4fa8cd69eb0afad3cfb5503157d15ac67dfdee6a4ba88b162a4514aa1df43a37",
+      "md5": "f225c04bc790b17badbdbe998969f13e",
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "local_path_in_data_dir": null
+    },
+    {
+      "kind": "internet_archive_cdx_listing",
+      "source_role": "documentation",
+      "url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndctext.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndctext.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:54:31Z",
+      "bytes": 296,
+      "sha256": "6af4faca90d5ce2792651c619f1a95b46a062398fec8750fc1be00eec9794c4f",
+      "md5": "11eb8e8f7b84a0d000a0ff9ae20016f3",
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "local_path_in_data_dir": null
+    },
+    {
+      "kind": "fda_ndc_directory_archived_copy",
+      "source_role": "historical",
+      "url": "https://web.archive.org/web/20230507021315id_/https://www.accessdata.fda.gov/cder/ndcxls.zip",
+      "final_url": "https://web.archive.org/web/20230507021315id_/https://www.accessdata.fda.gov/cder/ndcxls.zip",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": "not stated; FDA member zip_mtime recorded",
+      "captured_at": "2023-05-07T02:13:15Z",
+      "retrieved_at": "2026-10-19T19:54:32Z",
+      "bytes": 10378640,
+      "sha256": "7500410dbc6b1a17ef3bbf2e5686f8c68a1915d2b5ae74cecc2e3826962e9e4e",
+      "md5": "1c5d77d27900a2ff45040b97c1506c0a",
+      "response_headers": {
+        "content-type": "application/x-zip-compressed",
+        "content-length": "10378640",
+        "accept-ranges": "bytes"
+      },
+      "local_path_in_data_dir": "ndc_archived/ndcxls.zip_20230507021315.zip",
+      "archive_cdx_digest_sha1_b32": "SXV5SZ3GP34NEZOSJ46B2QEWQCGLC6C7",
+      "archive_digest_matches": true,
+      "original_url": "https://www.accessdata.fda.gov/cder/ndcxls.zip",
+      "members": {
+        "package.xls": {
+          "bytes": 28634964,
+          "zip_mtime": "2023-05-05T05:36:06",
+          "sha256": "45f4b863d26259371cdd6f15a85b900a6347765759d295556f843ebffcac1fea"
+        },
+        "product.xls": {
+          "bytes": 37975761,
+          "zip_mtime": "2023-05-05T05:36:04",
+          "sha256": "2c0713a348953e854b13009175c1d52782c330063379ec7bc6d09fe93f50e805"
+        }
+      }
+    }
+  ]
+}

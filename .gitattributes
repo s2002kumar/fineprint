@@ -1,0 +1,6 @@
+# Source text normalized to LF everywhere.
+* text=auto eol=lf
+
+# Raw source fixtures and evidence are hashed byte-for-byte: never convert line endings.
+tests/fixtures/** -text
+evidence/** -text

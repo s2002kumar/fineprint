@@ -1,0 +1,1040 @@
+{
+  "generated_at": "2026-10-19T19:55:42Z",
+  "card": "DST-00",
+  "time_fields": "published_at = publisher-asserted date (null when not stated); captured_at = third-party archive capture; retrieved_at = our fetch. They are never substituted for each other.",
+  "bulk_release_parts": [
+    {
+      "kind": "dailymed_bulk_release_part",
+      "source_role": "current",
+      "name": "dm_spl_release_human_rx_part1.zip",
+      "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part1.zip",
+      "advertised": {
+        "name": "dm_spl_release_human_rx_part1.zip",
+        "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part1.zip",
+        "advertised_number_of_files": 14989,
+        "advertised_file_size": "3.00GB",
+        "advertised_md5": "1db0117254ddc9d8da8d142dc155e374",
+        "advertised_last_modified": "2026-10-16"
+      },
+      "head": {
+        "content_length": 3221047745,
+        "etag": "\"39e37a4dd6397b558f6c9ca579bd3d50-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:03:57 GMT",
+        "x_amz_version_id": "tBURFLaC3LtqidUXDfdM5lFYSD9wxAfL",
+        "retrieved_at": "2026-10-19T19:45:09Z"
+      },
+      "observed_members": 14989,
+      "members_match_advertised": true,
+      "downloaded_in_dst00": false,
+      "sha256": null,
+      "md5": null,
+      "md5_matches_advertised": null,
+      "note": "Not downloaded in DST-00: only central directory + 25 sampled members read by HTTP Range.",
+      "evidence_file": "evidence/dst00/bulk_probe.json"
+    },
+    {
+      "kind": "dailymed_bulk_release_part",
+      "source_role": "current",
+      "name": "dm_spl_release_human_rx_part2.zip",
+      "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part2.zip",
+      "advertised": {
+        "name": "dm_spl_release_human_rx_part2.zip",
+        "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part2.zip",
+        "advertised_number_of_files": 9571,
+        "advertised_file_size": "3.00GB",
+        "advertised_md5": "4bd151131c67598c70da3325124aa8f1",
+        "advertised_last_modified": "2026-10-16"
+      },
+      "head": {
+        "content_length": 3221136100,
+        "etag": "\"06ed76e883d5ad151c3aa7eb56c5d36c-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:04:10 GMT",
+        "x_amz_version_id": "gRQdimN1aDGnEpOJ_YuthgHieclUrpXI",
+        "retrieved_at": "2026-10-19T19:45:16Z"
+      },
+      "observed_members": 9571,
+      "members_match_advertised": true,
+      "downloaded_in_dst00": false,
+      "sha256": null,
+      "md5": null,
+      "md5_matches_advertised": null,
+      "note": "Not downloaded in DST-00: only central directory + 25 sampled members read by HTTP Range.",
+      "evidence_file": "evidence/dst00/bulk_probe.json"
+    },
+    {
+      "kind": "dailymed_bulk_release_part",
+      "source_role": "current",
+      "name": "dm_spl_release_human_rx_part3.zip",
+      "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part3.zip",
+      "advertised": {
+        "name": "dm_spl_release_human_rx_part3.zip",
+        "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part3.zip",
+        "advertised_number_of_files": 9148,
+        "advertised_file_size": "3.00GB",
+        "advertised_md5": "d9e1584924416cf7a6336d6d4a75503f",
+        "advertised_last_modified": "2026-10-16"
+      },
+      "head": {
+        "content_length": 3220969405,
+        "etag": "\"1b8d5e9f01030f32805363dea3c60baa-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:04:26 GMT",
+        "x_amz_version_id": "_WRrhCDuUBnJSxCHt_yY9PE.mGQI5E68",
+        "retrieved_at": "2026-10-19T19:45:23Z"
+      },
+      "observed_members": 9148,
+      "members_match_advertised": true,
+      "downloaded_in_dst00": false,
+      "sha256": null,
+      "md5": null,
+      "md5_matches_advertised": null,
+      "note": "Not downloaded in DST-00: only central directory + 25 sampled members read by HTTP Range.",
+      "evidence_file": "evidence/dst00/bulk_probe.json"
+    },
+    {
+      "kind": "dailymed_bulk_release_part",
+      "source_role": "current",
+      "name": "dm_spl_release_human_rx_part4.zip",
+      "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part4.zip",
+      "advertised": {
+        "name": "dm_spl_release_human_rx_part4.zip",
+        "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part4.zip",
+        "advertised_number_of_files": 8687,
+        "advertised_file_size": "3.00GB",
+        "advertised_md5": "558dd38de29423e9f1438a3f32994953",
+        "advertised_last_modified": "2026-10-16"
+      },
+      "head": {
+        "content_length": 3220592414,
+        "etag": "\"ca6110e5de93ab71ebc590a15d98e38d-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:05:03 GMT",
+        "x_amz_version_id": "OvgNRnfSSe7l.oP6rdywh7KEnQPpt.J7",
+        "retrieved_at": "2026-10-19T19:45:32Z"
+      },
+      "observed_members": 8687,
+      "members_match_advertised": true,
+      "downloaded_in_dst00": false,
+      "sha256": null,
+      "md5": null,
+      "md5_matches_advertised": null,
+      "note": "Not downloaded in DST-00: only central directory + 25 sampled members read by HTTP Range.",
+      "evidence_file": "evidence/dst00/bulk_probe.json"
+    },
+    {
+      "kind": "dailymed_bulk_release_part",
+      "source_role": "current",
+      "name": "dm_spl_release_human_rx_part5.zip",
+      "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part5.zip",
+      "advertised": {
+        "name": "dm_spl_release_human_rx_part5.zip",
+        "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part5.zip",
+        "advertised_number_of_files": 8358,
+        "advertised_file_size": "3.00GB",
+        "advertised_md5": "c9721041b8743467127caea506686e6c",
+        "advertised_last_modified": "2026-10-16"
+      },
+      "head": {
+        "content_length": 3220047655,
+        "etag": "\"9d72cfaa38a0ad23a28698b2f71ac1c2-384\"",
+        "last_modified": "Sat, 17 Oct 2026 01:05:14 GMT",
+        "x_amz_version_id": "X.2e8exOXn2IN69Op8TCgiCYGtViQ.e9",
+        "retrieved_at": "2026-10-19T19:45:41Z"
+      },
+      "observed_members": 8358,
+      "members_match_advertised": true,
+      "downloaded_in_dst00": false,
+      "sha256": null,
+      "md5": null,
+      "md5_matches_advertised": null,
+      "note": "Not downloaded in DST-00: only central directory + 25 sampled members read by HTTP Range.",
+      "evidence_file": "evidence/dst00/bulk_probe.json"
+    },
+    {
+      "kind": "dailymed_bulk_release_part",
+      "source_role": "current",
+      "name": "dm_spl_release_human_rx_part6.zip",
+      "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+      "advertised": {
+        "name": "dm_spl_release_human_rx_part6.zip",
+        "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+        "advertised_number_of_files": 4311,
+        "advertised_file_size": "1.75GB",
+        "advertised_md5": "060d1455cb1edc525d2a691947395e89",
+        "advertised_last_modified": "2026-10-16"
+      },
+      "head": {
+        "content_length": 1875296318,
+        "etag": "\"222e16fde5780ba8e20d3da8cd67762d-224\"",
+        "last_modified": "Sat, 17 Oct 2026 01:05:31 GMT",
+        "x_amz_version_id": "4pL0QhKhd5BiXes5_FxIkDpOzxvokEcc",
+        "retrieved_at": "2026-10-19T19:45:51Z"
+      },
+      "observed_members": 4311,
+      "members_match_advertised": true,
+      "downloaded_in_dst00": true,
+      "sha256": "7708d214430f756885fb6ad9165208c4e7e34366f33e2f40ce1458575acfc6ef",
+      "md5": "060d1455cb1edc525d2a691947395e89",
+      "md5_matches_advertised": true,
+      "note": null,
+      "evidence_file": "evidence/dst00/bulk_probe.json"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "dailymed_bulk_release_part_download",
+      "source_role": "current",
+      "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+      "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:24:11Z",
+      "bytes": 1875296318,
+      "sha256": "7708d214430f756885fb6ad9165208c4e7e34366f33e2f40ce1458575acfc6ef",
+      "md5": "060d1455cb1edc525d2a691947395e89",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "1875296318",
+        "last-modified": "Sat, 17 Oct 2026 01:05:31 GMT",
+        "etag": "\"222e16fde5780ba8e20d3da8cd67762d-224\"",
+        "x-amz-version-id": "4pL0QhKhd5BiXes5_FxIkDpOzxvokEcc",
+        "accept-ranges": "bytes"
+      },
+      "local_path_in_data_dir": "bulk/dm_spl_release_human_rx_part6.zip",
+      "evidence_file": "evidence/dst00/bulk_part6_download.json"
+    },
+    {
+      "kind": "dailymed_bulk_release_page",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:45:08Z",
+      "bytes": 112010,
+      "sha256": "a8dee01d364b4ace1dc36ad4d4b981304a19c95254af5e9961b6192e95c7e3c6",
+      "md5": "082b8d98328444712404377b7697cafe",
+      "response_headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "112010"
+      },
+      "local_path_in_data_dir": "pages/spl-resources-all-drug-labels.html",
+      "evidence_file": "evidence/dst00/bulk_probe.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/1c5bc1dd-e9ec-44c1-9281-67ad482315d9/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/1c5bc1dd-e9ec-44c1-9281-67ad482315d9/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:13Z",
+      "bytes": 1254,
+      "sha256": "17415974f2b9092bcb52c0c562dfd30d3893b53ebd0449ff326597bb70b08d04",
+      "md5": "eb97b1f65d275beceabcb33f80fdafe1",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1254"
+      },
+      "local_path_in_data_dir": "history/1c5bc1dd-e9ec-44c1-9281-67ad482315d9.p1.json",
+      "set_id": "1c5bc1dd-e9ec-44c1-9281-67ad482315d9",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/41044928-dd1f-40bf-1fa6-709dff559124/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/41044928-dd1f-40bf-1fa6-709dff559124/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:26Z",
+      "bytes": 1513,
+      "sha256": "fdf5006c38aa5fd8920d65d96427fce96f13d0ad50dc47e6c7ea21d18d7253b1",
+      "md5": "ade5441750e480483576a859f7071ebc",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1513"
+      },
+      "local_path_in_data_dir": "history/41044928-dd1f-40bf-1fa6-709dff559124.p1.json",
+      "set_id": "41044928-dd1f-40bf-1fa6-709dff559124",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/5558a5f5-e821-473b-7d8a-5d33d09f0586/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/5558a5f5-e821-473b-7d8a-5d33d09f0586/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:11Z",
+      "bytes": 1241,
+      "sha256": "9c34f7a65d5fd95d4ba78de57bc65f490011ccc2a361faa5a1e290ba4384335b",
+      "md5": "6ae26794ce7cccbfe2205db56c754526",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1241"
+      },
+      "local_path_in_data_dir": "history/5558a5f5-e821-473b-7d8a-5d33d09f0586.p1.json",
+      "set_id": "5558a5f5-e821-473b-7d8a-5d33d09f0586",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:24Z",
+      "bytes": 1466,
+      "sha256": "a6fc2d88aa3f7a3b9219cbd3f79140f610c299feb8086f4a7fed6e788a9715fc",
+      "md5": "5c6e98c3c0bf298f63892ecb0c431b3b",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1466"
+      },
+      "local_path_in_data_dir": "history/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f.p1.json",
+      "set_id": "7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/8535cc84-ad4a-4d67-8480-fb5a2e3406f8/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/8535cc84-ad4a-4d67-8480-fb5a2e3406f8/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:20Z",
+      "bytes": 1753,
+      "sha256": "9d0f45e33d311afc6e694aaf248ede175dfc116eed3d02c58b69718f5796aa0d",
+      "md5": "5ba9b59623101144e15a292c8fd6a87e",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1753"
+      },
+      "local_path_in_data_dir": "history/8535cc84-ad4a-4d67-8480-fb5a2e3406f8.p1.json",
+      "set_id": "8535cc84-ad4a-4d67-8480-fb5a2e3406f8",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/9a663ef3-881f-48bd-2689-3713b24545c2/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/9a663ef3-881f-48bd-2689-3713b24545c2/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:15Z",
+      "bytes": 1416,
+      "sha256": "a1547c18eb0ea012c58f69f2a256cfebb482ee5bec183398c7315889adab1c46",
+      "md5": "257c8d922e98074946d85914707144c1",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1416"
+      },
+      "local_path_in_data_dir": "history/9a663ef3-881f-48bd-2689-3713b24545c2.p1.json",
+      "set_id": "9a663ef3-881f-48bd-2689-3713b24545c2",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/ad8916e7-206e-409e-2582-30d072845dd4/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/ad8916e7-206e-409e-2582-30d072845dd4/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:16Z",
+      "bytes": 1639,
+      "sha256": "d152f3ed34ee39e38be22ec862063058d5497d11271f1d70c861f1fea1a7d768",
+      "md5": "59f674729af40b690f120d66dd51ab5a",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1639"
+      },
+      "local_path_in_data_dir": "history/ad8916e7-206e-409e-2582-30d072845dd4.p1.json",
+      "set_id": "ad8916e7-206e-409e-2582-30d072845dd4",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/b598c237-032d-4bb5-0e92-50eabd863dac/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/b598c237-032d-4bb5-0e92-50eabd863dac/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:22Z",
+      "bytes": 1259,
+      "sha256": "6d1b669d4d0ef46a8face8e7b522101cc26b17a27322b1e117e63d55064fedef",
+      "md5": "e58b9c4dc4960cf3f73a91d634e81015",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1259"
+      },
+      "local_path_in_data_dir": "history/b598c237-032d-4bb5-0e92-50eabd863dac.p1.json",
+      "set_id": "b598c237-032d-4bb5-0e92-50eabd863dac",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/c4c65e48-85f8-4dcf-6281-06e40959cc79/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/c4c65e48-85f8-4dcf-6281-06e40959cc79/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:18Z",
+      "bytes": 1254,
+      "sha256": "be505dfc2f26e6b4942f24f89e100ee47131cf41e5c9f43f79d3e478c1dc06a5",
+      "md5": "211ec776bfa36edef1bcbbd196d36fc3",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1254"
+      },
+      "local_path_in_data_dir": "history/c4c65e48-85f8-4dcf-6281-06e40959cc79.p1.json",
+      "set_id": "c4c65e48-85f8-4dcf-6281-06e40959cc79",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/f435e79d-dea3-49dc-8268-146c60ba52a1/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/f435e79d-dea3-49dc-8268-146c60ba52a1/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:28Z",
+      "bytes": 596,
+      "sha256": "daf393792a4a1e0a74355b010dd1147419e54eb7882bfe74bdad21937e5a54cc",
+      "md5": "9a12d16d8e25e12ae225e2b9430018ec",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "596"
+      },
+      "local_path_in_data_dir": "history/f435e79d-dea3-49dc-8268-146c60ba52a1.p1.json",
+      "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spls_search_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=diazepam&labeler=Hospira&pagesize=100",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=diazepam&labeler=Hospira&pagesize=100",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:24Z",
+      "bytes": 708,
+      "sha256": "7804a098eed6478b28ee75e61b066aec8f3aeffb24ac21bdc4cbd2aff9c072fa",
+      "md5": "2c46ad96fe0ec27bd236aeec43513130",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "708"
+      },
+      "local_path_in_data_dir": "search/diazepam_Hospira.json",
+      "query": {
+        "drug_name": "diazepam",
+        "labeler": "Hospira"
+      },
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spls_search_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=naloxone&labeler=Hospira&pagesize=100",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=naloxone&labeler=Hospira&pagesize=100",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:20Z",
+      "bytes": 736,
+      "sha256": "24c1f1bd4eede8f3c33aaeb93821b52172f86523a8979b9b5e81f4afa02a3adf",
+      "md5": "bf192ed61d76ae53bb54c5628d89d025",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "736"
+      },
+      "local_path_in_data_dir": "search/naloxone_Hospira.json",
+      "query": {
+        "drug_name": "naloxone",
+        "labeler": "Hospira"
+      },
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spls_search_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?labeler=Hospira&pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?labeler=Hospira&pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:52:26Z",
+      "bytes": 18711,
+      "sha256": "8e4b67dea37b65ce0678f0491ad2741573b36cecabf4d818dfc9fe80d4aff6be",
+      "md5": "1e586a92b1c79876a5dffb13bc39fc08",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "18711"
+      },
+      "local_path_in_data_dir": "search/labeler_Hospira_p1.json",
+      "query": {
+        "labeler": "Hospira",
+        "page": 1
+      },
+      "evidence_file": "evidence/dst00/frame_pilot.json"
+    },
+    {
+      "kind": "dailymed_spls_search_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?labeler=Hospira&pagesize=100&page=2",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?labeler=Hospira&pagesize=100&page=2",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:52:27Z",
+      "bytes": 18432,
+      "sha256": "05c4861a7a2e814dc06f8eddfaf2615431c1f265b710e0c0b1ee19dd906090ce",
+      "md5": "063eaf9235e68f7befdc16128233f1e4",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "18432"
+      },
+      "local_path_in_data_dir": "search/labeler_Hospira_p2.json",
+      "query": {
+        "labeler": "Hospira",
+        "page": 2
+      },
+      "evidence_file": "evidence/dst00/frame_pilot.json"
+    },
+    {
+      "kind": "documentation_page",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/app-support-web-services.cfm",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:55:41Z",
+      "bytes": 88569,
+      "sha256": "c636253edd8294037543604a2a73f3a1a5a880a69d00906536c960ad2426502b",
+      "md5": "f691c3f3cd8b8820a60731f58d2bdaee",
+      "response_headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "88569"
+      },
+      "local_path_in_data_dir": "doc_pages/app-support-web-services.cfm"
+    },
+    {
+      "kind": "documentation_page",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/archives/index.cfm",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/archives/index.cfm",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:55:41Z",
+      "bytes": 407747,
+      "sha256": "2f3870628361f506f6faac21f24c1dacb1a21098ae95ccb4f801af8df0c30691",
+      "md5": "5d8ab929d3485fc5e06161ad9b541700",
+      "response_headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-length": "407747"
+      },
+      "local_path_in_data_dir": "doc_pages/index.cfm"
+    },
+    {
+      "kind": "documentation_page",
+      "source_role": "documentation",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drug-establishments-current-registration-site-decrs",
+      "final_url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drug-establishments-current-registration-site-decrs",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:55:42Z",
+      "bytes": 34045,
+      "sha256": "8a9961d215f2116ee3db9c6d636c62dee3a70a31f838dd7d2ae24f8a4788f038",
+      "md5": "45b6f3c6f7ea5f9f07ff3f7d8c5ac4e6",
+      "response_headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "last-modified": "Mon, 19 Oct 2026 03:17:53 GMT",
+        "etag": "\"1792379873\"",
+        "content-length": "34045"
+      },
+      "local_path_in_data_dir": "doc_pages/drug-establishments-current-registration-site-decrs"
+    },
+    {
+      "kind": "internet_archive_cdx_listing",
+      "source_role": "documentation",
+      "url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/drls_reg.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/drls_reg.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:38:00Z",
+      "bytes": 412,
+      "sha256": "1f60267d05e94dad098d0b906da6ff795d83d63fb691fcf6cac7c30295fa7295",
+      "md5": "7122fd04571a299d9bbcf6f85ec75dcf",
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "local_path_in_data_dir": null,
+      "evidence_file": "evidence/dst00/identity_evidence.json"
+    },
+    {
+      "kind": "internet_archive_cdx_listing",
+      "source_role": "documentation",
+      "url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndctext.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndctext.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:54:31Z",
+      "bytes": 296,
+      "sha256": "6af4faca90d5ce2792651c619f1a95b46a062398fec8750fc1be00eec9794c4f",
+      "md5": "11eb8e8f7b84a0d000a0ff9ae20016f3",
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "local_path_in_data_dir": null,
+      "evidence_file": "evidence/dst00/frame_pilot.json"
+    },
+    {
+      "kind": "internet_archive_cdx_listing",
+      "source_role": "documentation",
+      "url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndcxls.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndcxls.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:54:31Z",
+      "bytes": 421,
+      "sha256": "4fa8cd69eb0afad3cfb5503157d15ac67dfdee6a4ba88b162a4514aa1df43a37",
+      "md5": "f225c04bc790b17badbdbe998969f13e",
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "local_path_in_data_dir": null,
+      "evidence_file": "evidence/dst00/frame_pilot.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9&version=17",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9&version=17",
+      "http_status": 200,
+      "published_at": "2022-11-30",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:14Z",
+      "bytes": 158999,
+      "sha256": "fb26d263781836d69d3a961caab8283281a041b59f2157691b395f3ee905b555",
+      "md5": "21631a30a30183e744bdf14f92026de7",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "158999",
+        "content-disposition": "attachment; filename=20221130_1c5bc1dd-e9ec-44c1-9281-67ad482315d9.zip"
+      },
+      "local_path_in_data_dir": "historical/1c5bc1dd-e9ec-44c1-9281-67ad482315d9_v17.zip",
+      "set_id": "1c5bc1dd-e9ec-44c1-9281-67ad482315d9",
+      "version": 17,
+      "content_disposition_filename": "20221130_1c5bc1dd-e9ec-44c1-9281-67ad482315d9.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=41044928-dd1f-40bf-1fa6-709dff559124&version=17",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=41044928-dd1f-40bf-1fa6-709dff559124&version=17",
+      "http_status": 200,
+      "published_at": "2023-05-08",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:27Z",
+      "bytes": 377628,
+      "sha256": "e77c3575021e0c2e8aac5fed97f61c7fd2a95f586ee46110241533c4d4740ad6",
+      "md5": "d69d08f3830694aa39d229ecd50ef207",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "377628",
+        "content-disposition": "attachment; filename=20230506_41044928-dd1f-40bf-1fa6-709dff559124.zip"
+      },
+      "local_path_in_data_dir": "historical/41044928-dd1f-40bf-1fa6-709dff559124_v17.zip",
+      "set_id": "41044928-dd1f-40bf-1fa6-709dff559124",
+      "version": 17,
+      "content_disposition_filename": "20230506_41044928-dd1f-40bf-1fa6-709dff559124.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=5558a5f5-e821-473b-7d8a-5d33d09f0586&version=19",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=5558a5f5-e821-473b-7d8a-5d33d09f0586&version=19",
+      "http_status": 200,
+      "published_at": "2020-09-01",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:12Z",
+      "bytes": 1301584,
+      "sha256": "37cb7fcfe5a738279f0414f4ce783251521d545ddb835ef4bc3f0be93a9dc89e",
+      "md5": "49b327cc3fbefe28bdbe69c0ab7a5490",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "1301584",
+        "content-disposition": "attachment; filename=20200901_5558a5f5-e821-473b-7d8a-5d33d09f0586.zip"
+      },
+      "local_path_in_data_dir": "historical/5558a5f5-e821-473b-7d8a-5d33d09f0586_v19.zip",
+      "set_id": "5558a5f5-e821-473b-7d8a-5d33d09f0586",
+      "version": 19,
+      "content_disposition_filename": "20200901_5558a5f5-e821-473b-7d8a-5d33d09f0586.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f&version=24",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f&version=24",
+      "http_status": 200,
+      "published_at": "2023-05-08",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:25Z",
+      "bytes": 574960,
+      "sha256": "03d50bec8f7b3cee6616e23e34a89280792856020e711f5fb6c051037911415c",
+      "md5": "80de310bc8c01f4c64d6a25ac7283aa7",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "574960",
+        "content-disposition": "attachment; filename=20230506_7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f.zip"
+      },
+      "local_path_in_data_dir": "historical/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f_v24.zip",
+      "set_id": "7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f",
+      "version": 24,
+      "content_disposition_filename": "20230506_7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=8535cc84-ad4a-4d67-8480-fb5a2e3406f8&version=30",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=8535cc84-ad4a-4d67-8480-fb5a2e3406f8&version=30",
+      "http_status": 200,
+      "published_at": "2023-01-11",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:21Z",
+      "bytes": 503647,
+      "sha256": "d065e6341e45ded55ca93d6adae7a98a70edfa46f1ecb09df2d5c534cc03bc46",
+      "md5": "11c016c7a4d48d8b2649c710ae0dda15",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "503647",
+        "content-disposition": "attachment; filename=20230111_8535cc84-ad4a-4d67-8480-fb5a2e3406f8.zip"
+      },
+      "local_path_in_data_dir": "historical/8535cc84-ad4a-4d67-8480-fb5a2e3406f8_v30.zip",
+      "set_id": "8535cc84-ad4a-4d67-8480-fb5a2e3406f8",
+      "version": 30,
+      "content_disposition_filename": "20230111_8535cc84-ad4a-4d67-8480-fb5a2e3406f8.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=9a663ef3-881f-48bd-2689-3713b24545c2&version=26",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=9a663ef3-881f-48bd-2689-3713b24545c2&version=26",
+      "http_status": 200,
+      "published_at": "2022-12-02",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:15Z",
+      "bytes": 644251,
+      "sha256": "5e900b271e2095da305b3fda4288da4d222ff2d1dda97f78599374d231b8a418",
+      "md5": "89d5e8d270b974b4892a5f70cae4d3f6",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "644251",
+        "content-disposition": "attachment; filename=20221202_9a663ef3-881f-48bd-2689-3713b24545c2.zip"
+      },
+      "local_path_in_data_dir": "historical/9a663ef3-881f-48bd-2689-3713b24545c2_v26.zip",
+      "set_id": "9a663ef3-881f-48bd-2689-3713b24545c2",
+      "version": 26,
+      "content_disposition_filename": "20221202_9a663ef3-881f-48bd-2689-3713b24545c2.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=ad8916e7-206e-409e-2582-30d072845dd4&version=25",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=ad8916e7-206e-409e-2582-30d072845dd4&version=25",
+      "http_status": 200,
+      "published_at": "2021-08-09",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:17Z",
+      "bytes": 976672,
+      "sha256": "13190564d390876efc7ead3e6a794eb1336ece2761b964376024cb1931eb5e80",
+      "md5": "696830d2682f8d7e84a5da91526c57c7",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "976672",
+        "content-disposition": "attachment; filename=20210807_ad8916e7-206e-409e-2582-30d072845dd4.zip"
+      },
+      "local_path_in_data_dir": "historical/ad8916e7-206e-409e-2582-30d072845dd4_v25.zip",
+      "set_id": "ad8916e7-206e-409e-2582-30d072845dd4",
+      "version": 25,
+      "content_disposition_filename": "20210807_ad8916e7-206e-409e-2582-30d072845dd4.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=b598c237-032d-4bb5-0e92-50eabd863dac&version=23",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=b598c237-032d-4bb5-0e92-50eabd863dac&version=23",
+      "http_status": 200,
+      "published_at": "2023-06-07",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:23Z",
+      "bytes": 219386,
+      "sha256": "b80eefa557705d3126561303b5bda5b5fcc5529777930f12c76137c5680457ea",
+      "md5": "75699953b740d237d8852ca18c8efde5",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "219386",
+        "content-disposition": "attachment; filename=20230607_b598c237-032d-4bb5-0e92-50eabd863dac.zip"
+      },
+      "local_path_in_data_dir": "historical/b598c237-032d-4bb5-0e92-50eabd863dac_v23.zip",
+      "set_id": "b598c237-032d-4bb5-0e92-50eabd863dac",
+      "version": 23,
+      "content_disposition_filename": "20230607_b598c237-032d-4bb5-0e92-50eabd863dac.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=c4c65e48-85f8-4dcf-6281-06e40959cc79&version=18",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=c4c65e48-85f8-4dcf-6281-06e40959cc79&version=18",
+      "http_status": 200,
+      "published_at": "2023-06-06",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:19Z",
+      "bytes": 545484,
+      "sha256": "2d68adad6c9fb31915c33ef433882cd324966091f89e42e762359cd334c8b279",
+      "md5": "ac68f19d73f76bd833fe3390b8060365",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "545484",
+        "content-disposition": "attachment; filename=20230606_c4c65e48-85f8-4dcf-6281-06e40959cc79.zip"
+      },
+      "local_path_in_data_dir": "historical/c4c65e48-85f8-4dcf-6281-06e40959cc79_v18.zip",
+      "set_id": "c4c65e48-85f8-4dcf-6281-06e40959cc79",
+      "version": 18,
+      "content_disposition_filename": "20230606_c4c65e48-85f8-4dcf-6281-06e40959cc79.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=5",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=5",
+      "http_status": 200,
+      "published_at": "2013-05-29",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:29Z",
+      "bytes": 1498,
+      "sha256": "32649e5d10e31704e30513ae06e36447d3fe8fea57c30a2272fea9b8b4cf1990",
+      "md5": "167e01756b797f6c9dee9c3acaf44c7e",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "1498",
+        "content-disposition": "attachment; filename=20130528_f435e79d-dea3-49dc-8268-146c60ba52a1.zip"
+      },
+      "local_path_in_data_dir": "historical/f435e79d-dea3-49dc-8268-146c60ba52a1_v5.zip",
+      "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+      "version": 5,
+      "content_disposition_filename": "20130528_f435e79d-dea3-49dc-8268-146c60ba52a1.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=7",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=7",
+      "http_status": 200,
+      "published_at": "2015-05-22",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:29Z",
+      "bytes": 1523,
+      "sha256": "94a530491845d53edfd6208429c5bdf0f70acaecb63a3db9164629d9aa6c2cdc",
+      "md5": "ea9d8ce7df9f72d68f677140986379c3",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "1523",
+        "content-disposition": "attachment; filename=20150522_f435e79d-dea3-49dc-8268-146c60ba52a1.zip"
+      },
+      "local_path_in_data_dir": "historical/f435e79d-dea3-49dc-8268-146c60ba52a1_v7.zip",
+      "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+      "version": 7,
+      "content_disposition_filename": "20150522_f435e79d-dea3-49dc-8268-146c60ba52a1.zip",
+      "evidence_file": "evidence/dst00/historical_spl.json"
+    },
+    {
+      "kind": "fda_ndc_directory_archived_copy",
+      "source_role": "historical",
+      "url": "https://web.archive.org/web/20230507021315id_/https://www.accessdata.fda.gov/cder/ndcxls.zip",
+      "final_url": "https://web.archive.org/web/20230507021315id_/https://www.accessdata.fda.gov/cder/ndcxls.zip",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": "not stated; FDA member zip_mtime recorded",
+      "captured_at": "2023-05-07T02:13:15Z",
+      "retrieved_at": "2026-10-19T19:54:32Z",
+      "bytes": 10378640,
+      "sha256": "7500410dbc6b1a17ef3bbf2e5686f8c68a1915d2b5ae74cecc2e3826962e9e4e",
+      "md5": "1c5d77d27900a2ff45040b97c1506c0a",
+      "response_headers": {
+        "content-type": "application/x-zip-compressed",
+        "content-length": "10378640",
+        "accept-ranges": "bytes"
+      },
+      "local_path_in_data_dir": "ndc_archived/ndcxls.zip_20230507021315.zip",
+      "archive_cdx_digest_sha1_b32": "SXV5SZ3GP34NEZOSJ46B2QEWQCGLC6C7",
+      "archive_digest_matches": true,
+      "original_url": "https://www.accessdata.fda.gov/cder/ndcxls.zip",
+      "members": {
+        "package.xls": {
+          "bytes": 28634964,
+          "zip_mtime": "2023-05-05T05:36:06",
+          "sha256": "45f4b863d26259371cdd6f15a85b900a6347765759d295556f843ebffcac1fea"
+        },
+        "product.xls": {
+          "bytes": 37975761,
+          "zip_mtime": "2023-05-05T05:36:04",
+          "sha256": "2c0713a348953e854b13009175c1d52782c330063379ec7bc6d09fe93f50e805"
+        }
+      },
+      "evidence_file": "evidence/dst00/frame_pilot.json"
+    },
+    {
+      "kind": "fda_decrs_drls_reg_zip",
+      "source_role": "identity_current",
+      "url": "https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "final_url": "https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": "not stated; see member zip_mtime",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:38:00Z",
+      "bytes": 2412991,
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "md5": "b2573008d4d8c4d93210e3c215d82db1",
+      "response_headers": {
+        "content-type": "application/x-zip-compressed",
+        "content-length": "2412991",
+        "last-modified": "Mon, 19 Oct 2026 07:00:37 GMT",
+        "accept-ranges": "bytes",
+        "etag": "\"f0be248b975fdd1:0\""
+      },
+      "local_path_in_data_dir": "decrs_current/drls_reg.zip",
+      "member": {
+        "name": "drls_reg.txt",
+        "bytes": 3580040,
+        "zip_mtime": "2026-10-19T03:00:34",
+        "sha256": "c30c1bd1894cf733f825dff96260cdb589914c38cd1c8c4def5584f439502386"
+      },
+      "documentation_url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drug-establishments-current-registration-site-decrs",
+      "evidence_file": "evidence/dst00/identity_evidence.json"
+    },
+    {
+      "kind": "fda_bla_review_pdf",
+      "source_role": "identity_historical",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/125545Orig1s000ChemR.pdf",
+      "final_url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/125545Orig1s000ChemR.pdf",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": "not stated in metadata; HTTP Last-Modified recorded",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:38:14Z",
+      "bytes": 25384852,
+      "sha256": "1053bf2c59025937d43b26ba760bb70172041cf7ff75c8b93087c730b02f2fb5",
+      "md5": "095540929f6e72fc0ef02681dc41bd6c",
+      "response_headers": {
+        "content-type": "application/pdf",
+        "content-length": "25384852",
+        "last-modified": "Thu, 13 Dec 2018 13:23:13 GMT",
+        "accept-ranges": "bytes",
+        "etag": "\"8036a9ffe692d41:0\""
+      },
+      "local_path_in_data_dir": "fda_pdf/125545Orig1s000ChemR.pdf",
+      "evidence_file": "evidence/dst00/identity_evidence.json"
+    },
+    {
+      "kind": "fda_decrs_drls_reg_zip_archived_copy",
+      "source_role": "identity_historical",
+      "url": "https://web.archive.org/web/20221014123457id_/https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "final_url": "https://web.archive.org/web/20221014123457id_/https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": "not stated; FDA member zip_mtime recorded",
+      "captured_at": "2022-10-14T12:34:57Z",
+      "retrieved_at": "2026-10-19T19:38:01Z",
+      "bytes": 2644407,
+      "sha256": "ee64289333b9284bff73bd042bdd76f994809371a281346ceb7cf3100a67b52b",
+      "md5": "8340cfabbb0500cf7bac6d5630d11483",
+      "response_headers": {
+        "content-type": "application/x-zip-compressed",
+        "content-length": "2644407",
+        "accept-ranges": "bytes"
+      },
+      "local_path_in_data_dir": "decrs_archived/drls_reg_20221014123457.zip",
+      "member": {
+        "name": "drls_reg.txt",
+        "bytes": 3809748,
+        "zip_mtime": "2022-10-13T06:15:16",
+        "sha256": "707b34c3b611a0703ffd04b041d043cc77935944e5bdfdd155dd14a19cc3e344"
+      },
+      "archive_cdx_digest_sha1_b32": "3SAEH3O5WNY7ZIBX7ZXXBW6GO5C2GPFV",
+      "archive_digest_matches": true,
+      "original_url": "https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "evidence_file": "evidence/dst00/identity_evidence.json"
+    }
+  ],
+  "sealed_sources": [
+    {
+      "kind": "pfizer_low_inventory_appendix",
+      "source_role": "outcome",
+      "url": "https://www.fda.gov/media/170647/download",
+      "status": "SEALED: not retrieved in DST-00; see docs/historical_panel_plan.md section 6"
+    }
+  ]
+}
