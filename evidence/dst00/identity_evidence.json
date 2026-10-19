@@ -1,0 +1,300 @@
+{
+  "run": {
+    "started_at": "2026-10-19T19:38:00Z",
+    "cutoff": "2023-07-18",
+    "finished_at": "2026-10-19T19:38:18Z"
+  },
+  "decrs_current": {
+    "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+    "retrieved_at": "2026-10-19T19:38:00Z",
+    "member": {
+      "name": "drls_reg.txt",
+      "bytes": 3580040,
+      "zip_mtime": "2026-10-19T03:00:34",
+      "sha256": "c30c1bd1894cf733f825dff96260cdb589914c38cd1c8c4def5584f439502386"
+    },
+    "columns": [
+      "FEI_NUMBER",
+      "DUNS_NUMBER",
+      "FIRM_NAME",
+      "ADDRESS",
+      "EXPIRATION_DATE",
+      "OPERATIONS",
+      "ESTABLISHMENT_CONTACT_NAME",
+      "ESTABLISHMENT_CONTACT_EMAIL",
+      "AGENT_DETAILS",
+      "REGISTRANT_NAME",
+      "REGISTRANT_DUNS",
+      "REGISTRANT_CONTACT_NAME",
+      "REGISTRANT_CONTACT_EMAIL",
+      "EXCLUSION_FLAG"
+    ],
+    "stats": {
+      "rows": 10416,
+      "rows_missing_duns": 0,
+      "rows_missing_fei": 190,
+      "distinct_duns": 10416,
+      "distinct_fei": 9871,
+      "duns_with_multiple_fei": 0,
+      "fei_with_multiple_duns": 264
+    },
+    "sites": {
+      "rocky_mount": {
+        "expected": {
+          "duns": "093132819",
+          "fei": "1021343"
+        },
+        "rows": [
+          {
+            "FEI_NUMBER": "1021343",
+            "DUNS_NUMBER": "093132819",
+            "FIRM_NAME": "Hospira, Inc.",
+            "ADDRESS": "Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA)",
+            "EXPIRATION_DATE": "12/31/2026",
+            "OPERATIONS": "ANALYSIS; LABEL; MANUFACTURE; PACK",
+            "REGISTRANT_NAME": "Hospira, Inc.",
+            "REGISTRANT_DUNS": "141588017",
+            "EXCLUSION_FLAG": "N"
+          }
+        ],
+        "exact_pair_present": true
+      },
+      "mcpherson": {
+        "expected": {
+          "duns": "030606222",
+          "fei": "1925262"
+        },
+        "rows": [
+          {
+            "FEI_NUMBER": "1925262",
+            "DUNS_NUMBER": "030606222",
+            "FIRM_NAME": "Hospira, Inc.",
+            "ADDRESS": "1776 North Centennial Drive, McPherson, Kansas (KS) 67460, United States (USA)",
+            "EXPIRATION_DATE": "12/31/2026",
+            "OPERATIONS": "ANALYSIS; LABEL; MANUFACTURE; PACK",
+            "REGISTRANT_NAME": "Hospira, Inc.",
+            "REGISTRANT_DUNS": "141588017",
+            "EXCLUSION_FLAG": "N"
+          }
+        ],
+        "exact_pair_present": true
+      }
+    },
+    "duns_index_path_in_data_dir": "decrs_current/duns_index.json"
+  },
+  "decrs_archive_captures_listed": [
+    {
+      "timestamp": "20220409231406",
+      "original": "http://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "statuscode": "-",
+      "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+      "length": "495"
+    },
+    {
+      "timestamp": "20221014123457",
+      "original": "https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "statuscode": "200",
+      "digest": "3SAEH3O5WNY7ZIBX7ZXXBW6GO5C2GPFV",
+      "length": "2645541"
+    },
+    {
+      "timestamp": "20231008203751",
+      "original": "http://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "statuscode": "301",
+      "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ",
+      "length": "417"
+    }
+  ],
+  "decrs_archived": {
+    "captured_at": "2022-10-14T12:34:57Z",
+    "original_url": "https://www.accessdata.fda.gov/cder/drls_reg.zip",
+    "sha256": "ee64289333b9284bff73bd042bdd76f994809371a281346ceb7cf3100a67b52b",
+    "archive_digest_matches": true,
+    "member": {
+      "name": "drls_reg.txt",
+      "bytes": 3809748,
+      "zip_mtime": "2022-10-13T06:15:16",
+      "sha256": "707b34c3b611a0703ffd04b041d043cc77935944e5bdfdd155dd14a19cc3e344"
+    },
+    "pre_cutoff": true,
+    "stats": {
+      "rows": 11448,
+      "rows_missing_duns": 0,
+      "rows_missing_fei": 1209,
+      "distinct_duns": 11448,
+      "distinct_fei": 9979,
+      "duns_with_multiple_fei": 0,
+      "fei_with_multiple_duns": 197
+    },
+    "sites": {
+      "rocky_mount": {
+        "expected": {
+          "duns": "093132819",
+          "fei": "1021343"
+        },
+        "rows": [
+          {
+            "FEI_NUMBER": "1021343",
+            "DUNS_NUMBER": "093132819",
+            "FIRM_NAME": "Hospira, Inc.",
+            "ADDRESS": "Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA)",
+            "EXPIRATION_DATE": "12/31/2022",
+            "OPERATIONS": "ANALYSIS; LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+            "REGISTRANT_NAME": "Hospira, Inc.",
+            "REGISTRANT_DUNS": "141588017",
+            "EXCLUSION_FLAG": "N"
+          }
+        ],
+        "exact_pair_present": true
+      },
+      "mcpherson": {
+        "expected": {
+          "duns": "030606222",
+          "fei": "1925262"
+        },
+        "rows": [
+          {
+            "FEI_NUMBER": "1925262",
+            "DUNS_NUMBER": "030606222",
+            "FIRM_NAME": "Hospira, Inc.",
+            "ADDRESS": "1776 North Centennial Drive, McPherson, Kansas (KS) 67460, United States (USA)",
+            "EXPIRATION_DATE": "12/31/2022",
+            "OPERATIONS": "ANALYSIS; LABEL; MANUFACTURE; PACK",
+            "REGISTRANT_NAME": "Hospira, Inc.",
+            "REGISTRANT_DUNS": "141588017",
+            "EXCLUSION_FLAG": "N"
+          }
+        ],
+        "exact_pair_present": true
+      }
+    },
+    "caveat": "Third-party archival copy of an FDA file; registrations listed expire 12/31 of the snapshot year."
+  },
+  "fda_2018_pdf": {
+    "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/125545Orig1s000ChemR.pdf",
+    "sha256": "1053bf2c59025937d43b26ba760bb70172041cf7ff75c8b93087c730b02f2fb5",
+    "last_modified": "Thu, 13 Dec 2018 13:23:13 GMT",
+    "pages": 405,
+    "hits": {
+      "(FEI=1925262)": [
+        {
+          "page": 315,
+          "excerpt": "eviewed:Original 351(k) BLA Manufacturing Sites: Hospira, Inc., 1776 N. Centennial Drive, McPherson, KS 67460 (FEI=1925262)"
+        }
+      ],
+      "030606222": [],
+      "093132819": [],
+      "1021343": [],
+      "Establishment Information": [
+        {
+          "page": 79,
+          "excerpt": null
+        },
+        {
+          "page": 207,
+          "excerpt": null
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "kind": "fda_decrs_drls_reg_zip",
+      "source_role": "identity_current",
+      "url": "https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "final_url": "https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": "not stated; see member zip_mtime",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:38:00Z",
+      "bytes": 2412991,
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "md5": "b2573008d4d8c4d93210e3c215d82db1",
+      "response_headers": {
+        "content-type": "application/x-zip-compressed",
+        "content-length": "2412991",
+        "last-modified": "Mon, 19 Oct 2026 07:00:37 GMT",
+        "accept-ranges": "bytes",
+        "etag": "\"f0be248b975fdd1:0\""
+      },
+      "local_path_in_data_dir": "decrs_current/drls_reg.zip",
+      "member": {
+        "name": "drls_reg.txt",
+        "bytes": 3580040,
+        "zip_mtime": "2026-10-19T03:00:34",
+        "sha256": "c30c1bd1894cf733f825dff96260cdb589914c38cd1c8c4def5584f439502386"
+      },
+      "documentation_url": "https://www.fda.gov/drugs/drug-approvals-and-databases/drug-establishments-current-registration-site-decrs"
+    },
+    {
+      "kind": "internet_archive_cdx_listing",
+      "source_role": "documentation",
+      "url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/drls_reg.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "final_url": "https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/drls_reg.zip&from=2022&to=2023&output=json&fl=timestamp,original,statuscode,digest,length",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:38:00Z",
+      "bytes": 412,
+      "sha256": "1f60267d05e94dad098d0b906da6ff795d83d63fb691fcf6cac7c30295fa7295",
+      "md5": "7122fd04571a299d9bbcf6f85ec75dcf",
+      "response_headers": {
+        "content-type": "application/json"
+      },
+      "local_path_in_data_dir": null
+    },
+    {
+      "kind": "fda_decrs_drls_reg_zip_archived_copy",
+      "source_role": "identity_historical",
+      "url": "https://web.archive.org/web/20221014123457id_/https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "final_url": "https://web.archive.org/web/20221014123457id_/https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": "not stated; FDA member zip_mtime recorded",
+      "captured_at": "2022-10-14T12:34:57Z",
+      "retrieved_at": "2026-10-19T19:38:01Z",
+      "bytes": 2644407,
+      "sha256": "ee64289333b9284bff73bd042bdd76f994809371a281346ceb7cf3100a67b52b",
+      "md5": "8340cfabbb0500cf7bac6d5630d11483",
+      "response_headers": {
+        "content-type": "application/x-zip-compressed",
+        "content-length": "2644407",
+        "accept-ranges": "bytes"
+      },
+      "local_path_in_data_dir": "decrs_archived/drls_reg_20221014123457.zip",
+      "member": {
+        "name": "drls_reg.txt",
+        "bytes": 3809748,
+        "zip_mtime": "2022-10-13T06:15:16",
+        "sha256": "707b34c3b611a0703ffd04b041d043cc77935944e5bdfdd155dd14a19cc3e344"
+      },
+      "archive_cdx_digest_sha1_b32": "3SAEH3O5WNY7ZIBX7ZXXBW6GO5C2GPFV",
+      "archive_digest_matches": true,
+      "original_url": "https://www.accessdata.fda.gov/cder/drls_reg.zip"
+    },
+    {
+      "kind": "fda_bla_review_pdf",
+      "source_role": "identity_historical",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/125545Orig1s000ChemR.pdf",
+      "final_url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/125545Orig1s000ChemR.pdf",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": "not stated in metadata; HTTP Last-Modified recorded",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:38:14Z",
+      "bytes": 25384852,
+      "sha256": "1053bf2c59025937d43b26ba760bb70172041cf7ff75c8b93087c730b02f2fb5",
+      "md5": "095540929f6e72fc0ef02681dc41bd6c",
+      "response_headers": {
+        "content-type": "application/pdf",
+        "content-length": "25384852",
+        "last-modified": "Thu, 13 Dec 2018 13:23:13 GMT",
+        "accept-ranges": "bytes",
+        "etag": "\"8036a9ffe692d41:0\""
+      },
+      "local_path_in_data_dir": "fda_pdf/125545Orig1s000ChemR.pdf"
+    }
+  ]
+}

@@ -1,0 +1,3256 @@
+{
+  "run": {
+    "started_at": "2026-10-19T19:49:11Z",
+    "cutoff": "2023-07-18",
+    "cutoff_rule": "An SPL version is admissible historical evidence iff its DailyMed history-service published_date is on or before the cutoff. The XML effectiveTime is recorded separately and never substituted.",
+    "finished_at": "2026-10-19T19:49:30Z"
+  },
+  "control_searches": [
+    {
+      "query": {
+        "drug_name": "naloxone",
+        "labeler": "Hospira"
+      },
+      "total_elements": 2,
+      "hits": [
+        {
+          "set_id": "8535cc84-ad4a-4d67-8480-fb5a2e3406f8",
+          "title": "NALOXONE HYDROCHLORIDE INJECTION, SOLUTION [HOSPIRA, INC.]",
+          "current_version": 35
+        },
+        {
+          "set_id": "b598c237-032d-4bb5-0e92-50eabd863dac",
+          "title": "NALOXONE HYDROCHLORIDE INJECTION, SOLUTION [HOSPIRA, INC.]",
+          "current_version": 23
+        }
+      ]
+    },
+    {
+      "query": {
+        "drug_name": "diazepam",
+        "labeler": "Hospira"
+      },
+      "total_elements": 2,
+      "hits": [
+        {
+          "set_id": "7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f",
+          "title": "DIAZEPAM INJECTION, SOLUTION [HOSPIRA, INC.]",
+          "current_version": 26
+        },
+        {
+          "set_id": "41044928-dd1f-40bf-1fa6-709dff559124",
+          "title": "DIAZEPAM INJECTION, SOLUTION [HOSPIRA, INC.]",
+          "current_version": 18
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "group": "rocky_mount_target",
+      "label": "acetylcysteine",
+      "set_id": "5558a5f5-e821-473b-7d8a-5d33d09f0586",
+      "version": 19,
+      "history_title": "ACETYLCYSTEINE SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2020-09-01",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 20,
+        "published_at": "2024-10-18"
+      },
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=5558a5f5-e821-473b-7d8a-5d33d09f0586&version=19",
+        "sha256": "37cb7fcfe5a738279f0414f4ce783251521d545ddb835ef4bc3f0be93a9dc89e",
+        "bytes": 1301584,
+        "retrieved_at": "2026-10-19T19:49:12Z",
+        "content_disposition_filename": "20200901_5558a5f5-e821-473b-7d8a-5d33d09f0586.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 8,
+        "compressed_bytes": 1300164,
+        "uncompressed_bytes": 1690143,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "7691b1e4-b6a3-4a20-aa62-48da78d412a9.xml"
+      ],
+      "xml": {
+        "member": "7691b1e4-b6a3-4a20-aa62-48da78d412a9.xml",
+        "sha256": "257d81d54367c7b356663c76f5144c40cbc36bf62b938fbf916f373e891b4c04",
+        "bytes": 156000
+      },
+      "document": {
+        "document_id": "7691b1e4-b6a3-4a20-aa62-48da78d412a9",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "5558a5f5-e821-473b-7d8a-5d33d09f0586",
+        "version": "19",
+        "effective_time": "20200831"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-3307",
+              "0409-3308"
+            ],
+            "LABEL (C84732)": [
+              "0409-3307",
+              "0409-3308"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-3307",
+              "0409-3308"
+            ],
+            "PACK (C84731)": [
+              "0409-3307",
+              "0409-3308"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "827731089"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-3307",
+              "0409-3308"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-3307",
+          "name": "Acetylcysteine",
+          "form": "SOLUTION",
+          "routes": [
+            "ORAL",
+            "RESPIRATORY (INHALATION)"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA073664",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-3307-11",
+              "form": "VIAL",
+              "level": 1,
+              "contains": "0409-3307",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-3307-03",
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-3307-11",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050430",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        },
+        {
+          "product_ndc_raw": "0409-3308",
+          "name": "Acetylcysteine",
+          "form": "SOLUTION",
+          "routes": [
+            "ORAL",
+            "RESPIRATORY (INHALATION)"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA074037",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[2]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-3308-11",
+              "form": "VIAL",
+              "level": 1,
+              "contains": "0409-3308",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-3308-03",
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-3308-11",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050601",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-3307",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              },
+              {
+                "product_code": "0409-3308",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-3307",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              },
+              {
+                "product_code": "0409-3308",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-3307",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[5]"
+              },
+              {
+                "product_code": "0409-3308",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-3307",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[7]"
+              },
+              {
+                "product_code": "0409-3308",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[8]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-3307",
+            "0409-3308"
+          ]
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {},
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/5558a5f5-e821-473b-7d8a-5d33d09f0586_v19.xml",
+      "fixture_sha256": "257d81d54367c7b356663c76f5144c40cbc36bf62b938fbf916f373e891b4c04"
+    },
+    {
+      "group": "rocky_mount_target",
+      "label": "aminocaproic acid",
+      "set_id": "1c5bc1dd-e9ec-44c1-9281-67ad482315d9",
+      "version": 17,
+      "history_title": "AMINOCAPROIC ACID INJECTION, SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2022-11-30",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 18,
+        "published_at": "2024-12-10"
+      },
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9&version=17",
+        "sha256": "fb26d263781836d69d3a961caab8283281a041b59f2157691b395f3ee905b555",
+        "bytes": 158999,
+        "retrieved_at": "2026-10-19T19:49:14Z",
+        "content_disposition_filename": "20221130_1c5bc1dd-e9ec-44c1-9281-67ad482315d9.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 4,
+        "compressed_bytes": 158271,
+        "uncompressed_bytes": 249712,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "549114bf-19dc-4781-a7f0-190c775d5817.xml"
+      ],
+      "xml": {
+        "member": "549114bf-19dc-4781-a7f0-190c775d5817.xml",
+        "sha256": "17866b25eb60d771bfc9c42a8a5177357bb36d5a1416ea7b92513d9bb31fe1b9",
+        "bytes": 45141
+      },
+      "document": {
+        "document_id": "549114bf-19dc-4781-a7f0-190c775d5817",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "1c5bc1dd-e9ec-44c1-9281-67ad482315d9",
+        "version": "17",
+        "effective_time": "20221129"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-4346"
+            ],
+            "LABEL (C84732)": [
+              "0409-4346"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-4346"
+            ],
+            "PACK (C84731)": [
+              "0409-4346"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "827731089"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-4346"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-4346",
+          "name": "Aminocaproic Acid",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA070010",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-4346-16",
+              "form": "VIAL, SINGLE-DOSE",
+              "level": 1,
+              "contains": "0409-4346",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-4346-73",
+              "form": "TRAY",
+              "level": 2,
+              "contains": "0409-4346-16",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20100512",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-4346",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-4346",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-4346",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-4346",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-4346"
+          ]
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {},
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/1c5bc1dd-e9ec-44c1-9281-67ad482315d9_v17.xml",
+      "fixture_sha256": "17866b25eb60d771bfc9c42a8a5177357bb36d5a1416ea7b92513d9bb31fe1b9"
+    },
+    {
+      "group": "rocky_mount_target",
+      "label": "aminophylline",
+      "set_id": "9a663ef3-881f-48bd-2689-3713b24545c2",
+      "version": 26,
+      "history_title": "AMINOPHYLLINE INJECTION, SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2022-12-02",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 27,
+        "published_at": "2023-08-28"
+      },
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=9a663ef3-881f-48bd-2689-3713b24545c2&version=26",
+        "sha256": "5e900b271e2095da305b3fda4288da4d222ff2d1dda97f78599374d231b8a418",
+        "bytes": 644251,
+        "retrieved_at": "2026-10-19T19:49:15Z",
+        "content_disposition_filename": "20221202_9a663ef3-881f-48bd-2689-3713b24545c2.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 7,
+        "compressed_bytes": 643013,
+        "uncompressed_bytes": 959434,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "681916fe-a2a0-422c-8df0-64e4c57cbc9b.xml"
+      ],
+      "xml": {
+        "member": "681916fe-a2a0-422c-8df0-64e4c57cbc9b.xml",
+        "sha256": "9fbae3bdd0fdde37d4ecf42224f6c8ca04bffe60cf23cd79d2949be36726aa02",
+        "bytes": 224221
+      },
+      "document": {
+        "document_id": "681916fe-a2a0-422c-8df0-64e4c57cbc9b",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "9a663ef3-881f-48bd-2689-3713b24545c2",
+        "version": "26",
+        "effective_time": "20221129"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-5921",
+              "0409-5922"
+            ],
+            "LABEL (C84732)": [
+              "0409-5921",
+              "0409-5922"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-5921",
+              "0409-5922"
+            ],
+            "PACK (C84731)": [
+              "0409-5921",
+              "0409-5922"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-5921",
+          "name": "Aminophylline",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA087242",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-5921-16",
+              "form": "VIAL, SINGLE-DOSE",
+              "level": 1,
+              "contains": "0409-5921",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-5921-01",
+              "form": "TRAY",
+              "level": 2,
+              "contains": "0409-5921-16",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050510",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        },
+        {
+          "product_ndc_raw": "0409-5922",
+          "name": "Aminophylline",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA087242",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[2]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-5922-16",
+              "form": "VIAL, SINGLE-DOSE",
+              "level": 1,
+              "contains": "0409-5922",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-5922-01",
+              "form": "TRAY",
+              "level": 2,
+              "contains": "0409-5922-16",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050228",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-5921",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              },
+              {
+                "product_code": "0409-5922",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-5921",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              },
+              {
+                "product_code": "0409-5922",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-5921",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[5]"
+              },
+              {
+                "product_code": "0409-5922",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-5921",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[7]"
+              },
+              {
+                "product_code": "0409-5922",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[8]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-5921",
+            "0409-5922"
+          ]
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {},
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/9a663ef3-881f-48bd-2689-3713b24545c2_v26.xml",
+      "fixture_sha256": "9fbae3bdd0fdde37d4ecf42224f6c8ca04bffe60cf23cd79d2949be36726aa02"
+    },
+    {
+      "group": "rocky_mount_target",
+      "label": "atropine",
+      "set_id": "ad8916e7-206e-409e-2582-30d072845dd4",
+      "version": 25,
+      "history_title": "ATROPINE SULFATE INJECTION, SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2021-08-09",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 26,
+        "published_at": "2024-10-31"
+      },
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=ad8916e7-206e-409e-2582-30d072845dd4&version=25",
+        "sha256": "13190564d390876efc7ead3e6a794eb1336ece2761b964376024cb1931eb5e80",
+        "bytes": 976672,
+        "retrieved_at": "2026-10-19T19:49:17Z",
+        "content_disposition_filename": "20210807_ad8916e7-206e-409e-2582-30d072845dd4.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 11,
+        "compressed_bytes": 974862,
+        "uncompressed_bytes": 1302117,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "77d2cecb-001f-4b7b-b8ee-94c8b6d89be5.xml"
+      ],
+      "xml": {
+        "member": "77d2cecb-001f-4b7b-b8ee-94c8b6d89be5.xml",
+        "sha256": "c7bbdc773075331838899104462e1667cc1a24f9067fd9faa6944c9ee2cf1c7d",
+        "bytes": 112089
+      },
+      "document": {
+        "document_id": "77d2cecb-001f-4b7b-b8ee-94c8b6d89be5",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "ad8916e7-206e-409e-2582-30d072845dd4",
+        "version": "25",
+        "effective_time": "20210805"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1630",
+              "0409-4910",
+              "0409-4911",
+              "0409-9630"
+            ],
+            "LABEL (C84732)": [
+              "0409-1630",
+              "0409-4910",
+              "0409-4911",
+              "0409-9630"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-1630",
+              "0409-4910",
+              "0409-4911",
+              "0409-9630"
+            ],
+            "PACK (C84731)": [
+              "0409-1630",
+              "0409-4910",
+              "0409-4911",
+              "0409-9630"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "827731089"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1630",
+              "0409-4910",
+              "0409-4911",
+              "0409-9630"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Rolabo Outsourcing S.L.",
+          "duns": [
+            "513603225"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/assignedOrganization",
+          "operations": {
+            "API MANUFACTURE (C82401)": [
+              "0409-1630",
+              "0409-4910",
+              "0409-4911",
+              "0409-9630"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Alcami Carolinas Corporation",
+          "duns": [
+            "831351445"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[4]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1630",
+              "0409-4910",
+              "0409-4911",
+              "0409-9630"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-1630",
+          "name": "Atropine Sulfate",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "NDA021146",
+              "category_code": "C73594",
+              "category": "NDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-1630-15",
+              "form": "SYRINGE, PLASTIC",
+              "level": 1,
+              "contains": "0409-1630",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": null,
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-1630-15",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-1630-10",
+              "form": "PACKAGE",
+              "level": 3,
+              "contains": null,
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20060119",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        },
+        {
+          "product_ndc_raw": "0409-9630",
+          "name": "Atropine Sulfate",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "NDA021146",
+              "category_code": "C73594",
+              "category": "NDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[2]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-9630-15",
+              "form": "SYRINGE, PLASTIC",
+              "level": 1,
+              "contains": "0409-9630",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": null,
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-9630-15",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-9630-05",
+              "form": "PACKAGE",
+              "level": 3,
+              "contains": null,
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20041231",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        },
+        {
+          "product_ndc_raw": "0409-4910",
+          "name": "Atropine Sulfate",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "NDA021146",
+              "category_code": "C73594",
+              "category": "NDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[3]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-4910-11",
+              "form": "SYRINGE, GLASS",
+              "level": 1,
+              "contains": "0409-4910",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": null,
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-4910-11",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-4910-34",
+              "form": "PACKAGE",
+              "level": 3,
+              "contains": null,
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050825",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        },
+        {
+          "product_ndc_raw": "0409-4911",
+          "name": "Atropine Sulfate",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "NDA021146",
+              "category_code": "C73594",
+              "category": "NDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[4]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-4911-11",
+              "form": "SYRINGE, GLASS",
+              "level": 1,
+              "contains": "0409-4911",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": null,
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-4911-11",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-4911-34",
+              "form": "PACKAGE",
+              "level": 3,
+              "contains": null,
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20051025",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-1630",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              },
+              {
+                "product_code": "0409-4910",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              },
+              {
+                "product_code": "0409-4911",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              },
+              {
+                "product_code": "0409-9630",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-1630",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[5]"
+              },
+              {
+                "product_code": "0409-4910",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]"
+              },
+              {
+                "product_code": "0409-4911",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[7]"
+              },
+              {
+                "product_code": "0409-9630",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[8]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-1630",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[9]"
+              },
+              {
+                "product_code": "0409-4910",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[10]"
+              },
+              {
+                "product_code": "0409-4911",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[11]"
+              },
+              {
+                "product_code": "0409-9630",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[12]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-1630",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[13]"
+              },
+              {
+                "product_code": "0409-4910",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[14]"
+              },
+              {
+                "product_code": "0409-4911",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[15]"
+              },
+              {
+                "product_code": "0409-9630",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[16]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-1630",
+            "0409-4910",
+            "0409-4911",
+            "0409-9630"
+          ]
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {},
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/ad8916e7-206e-409e-2582-30d072845dd4_v25.xml",
+      "fixture_sha256": "c7bbdc773075331838899104462e1667cc1a24f9067fd9faa6944c9ee2cf1c7d"
+    },
+    {
+      "group": "rocky_mount_target",
+      "label": "calcium chloride",
+      "set_id": "c4c65e48-85f8-4dcf-6281-06e40959cc79",
+      "version": 18,
+      "history_title": "CALCIUM CHLORIDE INJECTION, SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2023-06-06",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 19,
+        "published_at": "2024-12-23"
+      },
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=c4c65e48-85f8-4dcf-6281-06e40959cc79&version=18",
+        "sha256": "2d68adad6c9fb31915c33ef433882cd324966091f89e42e762359cd334c8b279",
+        "bytes": 545484,
+        "retrieved_at": "2026-10-19T19:49:19Z",
+        "content_disposition_filename": "20230606_c4c65e48-85f8-4dcf-6281-06e40959cc79.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 6,
+        "compressed_bytes": 544340,
+        "uncompressed_bytes": 729698,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "ffe34ef3-7abe-40fc-89d7-15cb8bceadc2.xml"
+      ],
+      "xml": {
+        "member": "ffe34ef3-7abe-40fc-89d7-15cb8bceadc2.xml",
+        "sha256": "45b2a4e3c929f7b018128b1a08a169d66859e2f96279e847d2eee0378107d245",
+        "bytes": 93934
+      },
+      "document": {
+        "document_id": "ffe34ef3-7abe-40fc-89d7-15cb8bceadc2",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "c4c65e48-85f8-4dcf-6281-06e40959cc79",
+        "version": "18",
+        "effective_time": "20230531"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1631",
+              "0409-4928"
+            ],
+            "LABEL (C84732)": [
+              "0409-1631",
+              "0409-4928"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-1631",
+              "0409-4928"
+            ],
+            "PACK (C84731)": [
+              "0409-1631",
+              "0409-4928"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira Worldwide, LLC",
+          "duns": [
+            "963711309"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1631"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-1631",
+          "name": "Calcium Chloride",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "NDA021117",
+              "category_code": "C73594",
+              "category": "NDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": null,
+              "form": "SYRINGE, PLASTIC",
+              "level": 1,
+              "contains": "0409-1631",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-1631-40",
+              "form": "CARTON",
+              "level": 2,
+              "contains": null,
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-1631-10",
+              "form": "CONTAINER",
+              "level": 3,
+              "contains": "0409-1631-40",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050914",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        },
+        {
+          "product_ndc_raw": "0409-4928",
+          "name": "Calcium Chloride",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAVENOUS",
+            "INTRAVENTRICULAR"
+          ],
+          "approvals": [
+            {
+              "id": null,
+              "category_code": "C73627",
+              "category": "Unapproved drug other"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[2]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": null,
+              "form": "SYRINGE",
+              "level": 1,
+              "contains": "0409-4928",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": null,
+              "form": "CARTON",
+              "level": 2,
+              "contains": null,
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-4928-34",
+              "form": "CONTAINER",
+              "level": 3,
+              "contains": null,
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20060124",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-1631",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              },
+              {
+                "product_code": "0409-4928",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-1631",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              },
+              {
+                "product_code": "0409-4928",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-1631",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[5]"
+              },
+              {
+                "product_code": "0409-4928",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-1631",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[7]"
+              },
+              {
+                "product_code": "0409-4928",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[8]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-1631",
+            "0409-4928"
+          ]
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {},
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/c4c65e48-85f8-4dcf-6281-06e40959cc79_v18.xml",
+      "fixture_sha256": "45b2a4e3c929f7b018128b1a08a169d66859e2f96279e847d2eee0378107d245"
+    },
+    {
+      "group": "mcpherson_control",
+      "label": "naloxone",
+      "set_id": "8535cc84-ad4a-4d67-8480-fb5a2e3406f8",
+      "version": 30,
+      "history_title": "NALOXONE HYDROCHLORIDE INJECTION, SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2023-01-11",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 31,
+        "published_at": "2023-11-21"
+      },
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=8535cc84-ad4a-4d67-8480-fb5a2e3406f8&version=30",
+        "sha256": "d065e6341e45ded55ca93d6adae7a98a70edfa46f1ecb09df2d5c534cc03bc46",
+        "bytes": 503647,
+        "retrieved_at": "2026-10-19T19:49:21Z",
+        "content_disposition_filename": "20230111_8535cc84-ad4a-4d67-8480-fb5a2e3406f8.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 9,
+        "compressed_bytes": 502153,
+        "uncompressed_bytes": 685754,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "e369da42-5d4b-47a5-bf1b-327ce4d13268.xml"
+      ],
+      "xml": {
+        "member": "e369da42-5d4b-47a5-bf1b-327ce4d13268.xml",
+        "sha256": "541f4d2b81a615709e475c38e56f951c0ffadff39078732733d92709d71e4098",
+        "bytes": 93157
+      },
+      "document": {
+        "document_id": "e369da42-5d4b-47a5-bf1b-327ce4d13268",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "8535cc84-ad4a-4d67-8480-fb5a2e3406f8",
+        "version": "30",
+        "effective_time": "20230110"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1212",
+              "0409-1215",
+              "0409-1219"
+            ],
+            "LABEL (C84732)": [
+              "0409-1212",
+              "0409-1215",
+              "0409-1219"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-1212",
+              "0409-1215",
+              "0409-1219"
+            ],
+            "PACK (C84731)": [
+              "0409-1212",
+              "0409-1215",
+              "0409-1219"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "827731089"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1212",
+              "0409-1215",
+              "0409-1219"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-1215",
+          "name": "Naloxone Hydrochloride",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAMUSCULAR",
+            "INTRAVENOUS",
+            "SUBCUTANEOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA070256",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-1215-21",
+              "form": "VIAL, SINGLE-DOSE",
+              "level": 1,
+              "contains": "0409-1215",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-1215-01",
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-1215-21",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050712",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        },
+        {
+          "product_ndc_raw": "0409-1219",
+          "name": "Naloxone Hydrochloride",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAMUSCULAR",
+            "INTRAVENOUS",
+            "SUBCUTANEOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA070257",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[2]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-1219-41",
+              "form": "VIAL, MULTI-DOSE",
+              "level": 1,
+              "contains": "0409-1219",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": null,
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-1219-41",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-1219-01",
+              "form": "CASE",
+              "level": 3,
+              "contains": null,
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050902",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        },
+        {
+          "product_ndc_raw": "0409-1212",
+          "name": "Naloxone Hydrochloride",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAMUSCULAR",
+            "INTRAVENOUS",
+            "SUBCUTANEOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA070254",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[3]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": null,
+              "form": "AMPULE",
+              "level": 1,
+              "contains": "0409-1212",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-1212-01",
+              "form": "TRAY",
+              "level": 2,
+              "contains": null,
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "completed",
+                  "low": "20050620",
+                  "high": "20120101"
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-1212",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              },
+              {
+                "product_code": "0409-1215",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              },
+              {
+                "product_code": "0409-1219",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-1212",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              },
+              {
+                "product_code": "0409-1215",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[5]"
+              },
+              {
+                "product_code": "0409-1219",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-1212",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[7]"
+              },
+              {
+                "product_code": "0409-1215",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[8]"
+              },
+              {
+                "product_code": "0409-1219",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[9]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-1212",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[10]"
+              },
+              {
+                "product_code": "0409-1215",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[11]"
+              },
+              {
+                "product_code": "0409-1219",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[12]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-1212",
+            "0409-1215",
+            "0409-1219"
+          ]
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {},
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/8535cc84-ad4a-4d67-8480-fb5a2e3406f8_v30.xml",
+      "fixture_sha256": "541f4d2b81a615709e475c38e56f951c0ffadff39078732733d92709d71e4098"
+    },
+    {
+      "group": "mcpherson_control",
+      "label": "naloxone",
+      "set_id": "b598c237-032d-4bb5-0e92-50eabd863dac",
+      "version": 23,
+      "history_title": "NALOXONE HYDROCHLORIDE INJECTION, SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2023-06-07",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": null,
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=b598c237-032d-4bb5-0e92-50eabd863dac&version=23",
+        "sha256": "b80eefa557705d3126561303b5bda5b5fcc5529777930f12c76137c5680457ea",
+        "bytes": 219386,
+        "retrieved_at": "2026-10-19T19:49:23Z",
+        "content_disposition_filename": "20230607_b598c237-032d-4bb5-0e92-50eabd863dac.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 6,
+        "compressed_bytes": 218366,
+        "uncompressed_bytes": 306560,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "568bacb5-8e96-46d9-8717-23951594a9fb.xml"
+      ],
+      "xml": {
+        "member": "568bacb5-8e96-46d9-8717-23951594a9fb.xml",
+        "sha256": "b63ac440d8c5aa285a21a5aeaf734785e92bc3ced44a70a15d6b84345bbbb862",
+        "bytes": 61923
+      },
+      "document": {
+        "document_id": "568bacb5-8e96-46d9-8717-23951594a9fb",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "b598c237-032d-4bb5-0e92-50eabd863dac",
+        "version": "23",
+        "effective_time": "20230604"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "030606222"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1782"
+            ],
+            "LABEL (C84732)": [
+              "0409-1782"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-1782"
+            ],
+            "PACK (C84731)": [
+              "0409-1782"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-1782",
+          "name": "Naloxone Hydrochloride",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAMUSCULAR",
+            "INTRAVENOUS",
+            "SUBCUTANEOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA070172",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-1782-03",
+              "form": "CARTRIDGE",
+              "level": 1,
+              "contains": "0409-1782",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-1782-69",
+              "form": "BOX",
+              "level": 2,
+              "contains": "0409-1782-03",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050923",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {},
+          "manufacture_product_codes": []
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-1782",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-1782",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-1782",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-1782",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-1782"
+          ]
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/b598c237-032d-4bb5-0e92-50eabd863dac_v23.xml",
+      "fixture_sha256": "b63ac440d8c5aa285a21a5aeaf734785e92bc3ced44a70a15d6b84345bbbb862"
+    },
+    {
+      "group": "mcpherson_control",
+      "label": "diazepam",
+      "set_id": "7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f",
+      "version": 24,
+      "history_title": "DIAZEPAM INJECTION, SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2023-05-08",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 25,
+        "published_at": "2024-12-20"
+      },
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f&version=24",
+        "sha256": "03d50bec8f7b3cee6616e23e34a89280792856020e711f5fb6c051037911415c",
+        "bytes": 574960,
+        "retrieved_at": "2026-10-19T19:49:25Z",
+        "content_disposition_filename": "20230506_7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 5,
+        "compressed_bytes": 574098,
+        "uncompressed_bytes": 739965,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "1bf7a9b5-8085-4e46-aa92-57516790ea78.xml"
+      ],
+      "xml": {
+        "member": "1bf7a9b5-8085-4e46-aa92-57516790ea78.xml",
+        "sha256": "96fd5a4db0ce59920cf70c11dad59ec065f89333b5fa67c769b6dc111c0278ae",
+        "bytes": 98772
+      },
+      "document": {
+        "document_id": "1bf7a9b5-8085-4e46-aa92-57516790ea78",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f",
+        "version": "24",
+        "effective_time": "20230412"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-3213"
+            ],
+            "LABEL (C84732)": [
+              "0409-3213"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-3213"
+            ],
+            "PACK (C84731)": [
+              "0409-3213"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "827731089"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-3213"
+            ]
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "030606222"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-3213"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-3213",
+          "name": "Diazepam",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAMUSCULAR",
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA071583",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-3213-11",
+              "form": "VIAL, MULTI-DOSE",
+              "level": 1,
+              "contains": "0409-3213",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-3213-12",
+              "form": "BOX",
+              "level": 2,
+              "contains": "0409-3213-11",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20071005",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-3213",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-3213",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-3213",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-3213",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-3213"
+          ]
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-3213",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/performance[1]"
+              }
+            ]
+          },
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f_v24.xml",
+      "fixture_sha256": "96fd5a4db0ce59920cf70c11dad59ec065f89333b5fa67c769b6dc111c0278ae"
+    },
+    {
+      "group": "mcpherson_control",
+      "label": "diazepam",
+      "set_id": "41044928-dd1f-40bf-1fa6-709dff559124",
+      "version": 17,
+      "history_title": "DIAZEPAM INJECTION, SOLUTION [HOSPIRA, INC.]",
+      "published_at": "2023-05-08",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 18,
+        "published_at": "2024-01-08"
+      },
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=41044928-dd1f-40bf-1fa6-709dff559124&version=17",
+        "sha256": "e77c3575021e0c2e8aac5fed97f61c7fd2a95f586ee46110241533c4d4740ad6",
+        "bytes": 377628,
+        "retrieved_at": "2026-10-19T19:49:27Z",
+        "content_disposition_filename": "20230506_41044928-dd1f-40bf-1fa6-709dff559124.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 5,
+        "compressed_bytes": 376766,
+        "uncompressed_bytes": 574147,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "30ced86a-4261-43de-9cf0-914586cd91d9.xml"
+      ],
+      "xml": {
+        "member": "30ced86a-4261-43de-9cf0-914586cd91d9.xml",
+        "sha256": "0b534e3149292abb584f0c93b0141c97b61e84d92104957d3fad75a9d148b4ce",
+        "bytes": 97375
+      },
+      "document": {
+        "document_id": "30ced86a-4261-43de-9cf0-914586cd91d9",
+        "document_type_code": "34391-3",
+        "document_type": "HUMAN PRESCRIPTION DRUG LABEL",
+        "set_id": "41044928-dd1f-40bf-1fa6-709dff559124",
+        "version": "17",
+        "effective_time": "20230413"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "030606222"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "ANALYSIS (C25391)": [
+              "0409-1273"
+            ],
+            "LABEL (C84732)": [
+              "0409-1273"
+            ],
+            "MANUFACTURE (C43360)": [
+              "0409-1273"
+            ],
+            "PACK (C84731)": [
+              "0409-1273"
+            ]
+          }
+        }
+      ],
+      "products": [
+        {
+          "product_ndc_raw": "0409-1273",
+          "name": "Diazepam",
+          "form": "INJECTION, SOLUTION",
+          "routes": [
+            "INTRAMUSCULAR",
+            "INTRAVENOUS"
+          ],
+          "approvals": [
+            {
+              "id": "ANDA072079",
+              "category_code": "C73584",
+              "category": "ANDA"
+            }
+          ],
+          "loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct",
+          "packages": [
+            {
+              "package_ndc_raw": "0409-1273-03",
+              "form": "CARTRIDGE",
+              "level": 1,
+              "contains": "0409-1273",
+              "marketing": []
+            },
+            {
+              "package_ndc_raw": "0409-1273-32",
+              "form": "CARTON",
+              "level": 2,
+              "contains": "0409-1273-03",
+              "marketing": [
+                {
+                  "code": "C53292",
+                  "status": "active",
+                  "low": "20050823",
+                  "high": null
+                }
+              ]
+            }
+          ],
+          "parts": 0
+        }
+      ],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {},
+          "manufacture_product_codes": []
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {
+            "ANALYSIS": [
+              {
+                "product_code": "0409-1273",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]"
+              }
+            ],
+            "MANUFACTURE": [
+              {
+                "product_code": "0409-1273",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]"
+              }
+            ],
+            "PACK": [
+              {
+                "product_code": "0409-1273",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]"
+              }
+            ],
+            "LABEL": [
+              {
+                "product_code": "0409-1273",
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]"
+              }
+            ]
+          },
+          "manufacture_product_codes": [
+            "0409-1273"
+          ]
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture": "tests/fixtures/historical/41044928-dd1f-40bf-1fa6-709dff559124_v17.xml",
+      "fixture_sha256": "0b534e3149292abb584f0c93b0141c97b61e84d92104957d3fad75a9d148b4ce"
+    },
+    {
+      "group": "identity_filing",
+      "label": "Hospira Rocky Mount establishment registration",
+      "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+      "version": 5,
+      "history_title": " ",
+      "published_at": "2013-05-29",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": {
+        "version": 7,
+        "published_at": "2015-05-22"
+      },
+      "is_latest_pre_cutoff_version": false,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=5",
+        "sha256": "32649e5d10e31704e30513ae06e36447d3fe8fea57c30a2272fea9b8b4cf1990",
+        "bytes": 1498,
+        "retrieved_at": "2026-10-19T19:49:29Z",
+        "content_disposition_filename": "20130528_f435e79d-dea3-49dc-8268-146c60ba52a1.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 1,
+        "compressed_bytes": 1286,
+        "uncompressed_bytes": 9980,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "0267c043-f1f6-3c2f-5dad-cfe385652954.xml"
+      ],
+      "xml": {
+        "member": "0267c043-f1f6-3c2f-5dad-cfe385652954.xml",
+        "sha256": "488b4a01c1f529f12ddbc1c1a4bfb48969898424957f57ea3f27e6bdda8a464f",
+        "bytes": 9980
+      },
+      "document": {
+        "document_id": "0267c043-f1f6-3c2f-5dad-cfe385652954",
+        "document_type_code": "72090-4",
+        "document_type": "Identification of CBER-regulated Generic Drug Facility",
+        "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+        "version": "5",
+        "effective_time": "20130528"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "012660999"
+          ],
+          "fei": [
+            "1628454"
+          ],
+          "address": {
+            "street": [
+              "3900 Howard Lane"
+            ],
+            "city": "Austin",
+            "state": "TX",
+            "postal_code": "78728",
+            "country": "USA"
+          },
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "FDF Manufacture (C101510)": []
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "827731089"
+          ],
+          "fei": [
+            "3004591926"
+          ],
+          "address": {
+            "street": [
+              "375 N. Field Drive"
+            ],
+            "city": "Lake Forest",
+            "state": "IL",
+            "postal_code": "60045",
+            "country": "USA"
+          },
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/assignedOrganization",
+          "operations": {
+            "API/FDF Analytical Testing (C101509)": []
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [
+            "1021343"
+          ],
+          "address": {
+            "street": [
+              "Highway 301 North"
+            ],
+            "city": "Rocky Mount",
+            "state": "NC",
+            "postal_code": "27801",
+            "country": "USA"
+          },
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/assignedOrganization",
+          "operations": {
+            "API/FDF Analytical Testing (C101509)": []
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira Worldwide, Inc.",
+          "duns": [
+            "963711309"
+          ],
+          "fei": [
+            "3005564767"
+          ],
+          "address": {
+            "street": [
+              "10501 80th Avenue"
+            ],
+            "city": "Pleasant Prairie",
+            "state": "WI",
+            "postal_code": "53158",
+            "country": "USA"
+          },
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[4]/assignedOrganization",
+          "operations": {
+            "API/FDF Analytical Testing (C101509)": []
+          }
+        }
+      ],
+      "products": [],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "API/FDF Analytical Testing": [
+              {
+                "product_code": null,
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/performance[1]"
+              }
+            ]
+          },
+          "manufacture_product_codes": []
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {},
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture_derivation": "contactParty elements removed; original XML sha256 is xml.sha256",
+      "fixture": "tests/fixtures/historical/f435e79d-dea3-49dc-8268-146c60ba52a1_v5.contacts-removed.xml",
+      "fixture_sha256": "9f809eb2be38ef9eb72edcfc2c39f92945ae8cc2c011620a078dc5588de18f59"
+    },
+    {
+      "group": "identity_filing",
+      "label": "Hospira Rocky Mount establishment registration",
+      "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+      "version": 7,
+      "history_title": " ",
+      "published_at": "2015-05-22",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "admissible_pre_cutoff": true,
+      "next_version": null,
+      "is_latest_pre_cutoff_version": true,
+      "zip": {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=7",
+        "sha256": "94a530491845d53edfd6208429c5bdf0f70acaecb63a3db9164629d9aa6c2cdc",
+        "bytes": 1523,
+        "retrieved_at": "2026-10-19T19:49:29Z",
+        "content_disposition_filename": "20150522_f435e79d-dea3-49dc-8268-146c60ba52a1.zip"
+      },
+      "failures": [],
+      "zip_scan": {
+        "members": 1,
+        "compressed_bytes": 1311,
+        "uncompressed_bytes": 10000,
+        "duplicate_names": [],
+        "flagged": {}
+      },
+      "xml_members": [
+        "1b7217fd-3093-49b7-b09a-514af6ae5418.xml"
+      ],
+      "xml": {
+        "member": "1b7217fd-3093-49b7-b09a-514af6ae5418.xml",
+        "sha256": "328c9ced7e0a95fbc10f025fa67d6b28563da95aebf60304de5db2ea5b048322",
+        "bytes": 10000
+      },
+      "document": {
+        "document_id": "1b7217fd-3093-49b7-b09a-514af6ae5418",
+        "document_type_code": "72090-4",
+        "document_type": "IDENTIFICATION OF CBER-REGULATED GENERIC DRUG FACILITY",
+        "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+        "version": "7",
+        "effective_time": "20150515"
+      },
+      "identity_check": {
+        "set_id_matches": true,
+        "version_matches": true
+      },
+      "organizations": [
+        {
+          "role": "labeler",
+          "name": null,
+          "duns": [],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "registrant",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "141588017"
+          ],
+          "fei": [],
+          "address": null,
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {}
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "012660999"
+          ],
+          "fei": [
+            "1628454"
+          ],
+          "address": {
+            "street": [
+              "3900 Howard Lane"
+            ],
+            "city": "Austin",
+            "state": "TX",
+            "postal_code": "78728",
+            "country": "USA"
+          },
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/assignedOrganization",
+          "operations": {
+            "FDF MANUFACTURE (C101510)": []
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "827731089"
+          ],
+          "fei": [
+            "3004591926"
+          ],
+          "address": {
+            "street": [
+              "375 N. Field Drive"
+            ],
+            "city": "Lake Forest",
+            "state": "IL",
+            "postal_code": "60045",
+            "country": "USA"
+          },
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/assignedOrganization",
+          "operations": {
+            "API/FDF ANALYTICAL TESTING (C101509)": []
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira, Inc.",
+          "duns": [
+            "093132819"
+          ],
+          "fei": [
+            "1021343"
+          ],
+          "address": {
+            "street": [
+              "Highway 301 North"
+            ],
+            "city": "Rocky Mount",
+            "state": "NC",
+            "postal_code": "27801",
+            "country": "USA"
+          },
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/assignedOrganization",
+          "operations": {
+            "API/FDF ANALYTICAL TESTING (C101509)": []
+          }
+        },
+        {
+          "role": "establishment",
+          "name": "Hospira Worldwide, Inc.",
+          "duns": [
+            "963711309"
+          ],
+          "fei": [
+            "3005564767"
+          ],
+          "address": {
+            "street": [
+              "10501 80th Avenue"
+            ],
+            "city": "Pleasant Prairie",
+            "state": "WI",
+            "postal_code": "53158",
+            "country": "USA"
+          },
+          "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[4]/assignedOrganization",
+          "operations": {
+            "API/FDF ANALYTICAL TESTING (C101509)": []
+          }
+        }
+      ],
+      "products": [],
+      "anomalies": [],
+      "site_findings": {
+        "rocky_mount": {
+          "duns": "093132819",
+          "operations": {
+            "API/FDF ANALYTICAL TESTING": [
+              {
+                "product_code": null,
+                "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/performance[1]"
+              }
+            ]
+          },
+          "manufacture_product_codes": []
+        },
+        "mcpherson": {
+          "duns": "030606222",
+          "operations": {},
+          "manufacture_product_codes": []
+        }
+      },
+      "products_without_any_manufacture_operation": [],
+      "fixture_derivation": "contactParty elements removed; original XML sha256 is xml.sha256",
+      "fixture": "tests/fixtures/historical/f435e79d-dea3-49dc-8268-146c60ba52a1_v7.contacts-removed.xml",
+      "fixture_sha256": "e3a44ef1db8e409d17da1e8cf75e30f1cf3a13492106de3218f6c9c36b95ea05"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/5558a5f5-e821-473b-7d8a-5d33d09f0586/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/5558a5f5-e821-473b-7d8a-5d33d09f0586/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:11Z",
+      "bytes": 1241,
+      "sha256": "9c34f7a65d5fd95d4ba78de57bc65f490011ccc2a361faa5a1e290ba4384335b",
+      "md5": "6ae26794ce7cccbfe2205db56c754526",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1241"
+      },
+      "local_path_in_data_dir": "history/5558a5f5-e821-473b-7d8a-5d33d09f0586.p1.json",
+      "set_id": "5558a5f5-e821-473b-7d8a-5d33d09f0586"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=5558a5f5-e821-473b-7d8a-5d33d09f0586&version=19",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=5558a5f5-e821-473b-7d8a-5d33d09f0586&version=19",
+      "http_status": 200,
+      "published_at": "2020-09-01",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:12Z",
+      "bytes": 1301584,
+      "sha256": "37cb7fcfe5a738279f0414f4ce783251521d545ddb835ef4bc3f0be93a9dc89e",
+      "md5": "49b327cc3fbefe28bdbe69c0ab7a5490",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "1301584",
+        "content-disposition": "attachment; filename=20200901_5558a5f5-e821-473b-7d8a-5d33d09f0586.zip"
+      },
+      "local_path_in_data_dir": "historical/5558a5f5-e821-473b-7d8a-5d33d09f0586_v19.zip",
+      "set_id": "5558a5f5-e821-473b-7d8a-5d33d09f0586",
+      "version": 19,
+      "content_disposition_filename": "20200901_5558a5f5-e821-473b-7d8a-5d33d09f0586.zip"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/1c5bc1dd-e9ec-44c1-9281-67ad482315d9/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/1c5bc1dd-e9ec-44c1-9281-67ad482315d9/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:13Z",
+      "bytes": 1254,
+      "sha256": "17415974f2b9092bcb52c0c562dfd30d3893b53ebd0449ff326597bb70b08d04",
+      "md5": "eb97b1f65d275beceabcb33f80fdafe1",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1254"
+      },
+      "local_path_in_data_dir": "history/1c5bc1dd-e9ec-44c1-9281-67ad482315d9.p1.json",
+      "set_id": "1c5bc1dd-e9ec-44c1-9281-67ad482315d9"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9&version=17",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=1c5bc1dd-e9ec-44c1-9281-67ad482315d9&version=17",
+      "http_status": 200,
+      "published_at": "2022-11-30",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:14Z",
+      "bytes": 158999,
+      "sha256": "fb26d263781836d69d3a961caab8283281a041b59f2157691b395f3ee905b555",
+      "md5": "21631a30a30183e744bdf14f92026de7",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "158999",
+        "content-disposition": "attachment; filename=20221130_1c5bc1dd-e9ec-44c1-9281-67ad482315d9.zip"
+      },
+      "local_path_in_data_dir": "historical/1c5bc1dd-e9ec-44c1-9281-67ad482315d9_v17.zip",
+      "set_id": "1c5bc1dd-e9ec-44c1-9281-67ad482315d9",
+      "version": 17,
+      "content_disposition_filename": "20221130_1c5bc1dd-e9ec-44c1-9281-67ad482315d9.zip"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/9a663ef3-881f-48bd-2689-3713b24545c2/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/9a663ef3-881f-48bd-2689-3713b24545c2/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:15Z",
+      "bytes": 1416,
+      "sha256": "a1547c18eb0ea012c58f69f2a256cfebb482ee5bec183398c7315889adab1c46",
+      "md5": "257c8d922e98074946d85914707144c1",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1416"
+      },
+      "local_path_in_data_dir": "history/9a663ef3-881f-48bd-2689-3713b24545c2.p1.json",
+      "set_id": "9a663ef3-881f-48bd-2689-3713b24545c2"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=9a663ef3-881f-48bd-2689-3713b24545c2&version=26",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=9a663ef3-881f-48bd-2689-3713b24545c2&version=26",
+      "http_status": 200,
+      "published_at": "2022-12-02",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:15Z",
+      "bytes": 644251,
+      "sha256": "5e900b271e2095da305b3fda4288da4d222ff2d1dda97f78599374d231b8a418",
+      "md5": "89d5e8d270b974b4892a5f70cae4d3f6",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "644251",
+        "content-disposition": "attachment; filename=20221202_9a663ef3-881f-48bd-2689-3713b24545c2.zip"
+      },
+      "local_path_in_data_dir": "historical/9a663ef3-881f-48bd-2689-3713b24545c2_v26.zip",
+      "set_id": "9a663ef3-881f-48bd-2689-3713b24545c2",
+      "version": 26,
+      "content_disposition_filename": "20221202_9a663ef3-881f-48bd-2689-3713b24545c2.zip"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/ad8916e7-206e-409e-2582-30d072845dd4/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/ad8916e7-206e-409e-2582-30d072845dd4/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:16Z",
+      "bytes": 1639,
+      "sha256": "d152f3ed34ee39e38be22ec862063058d5497d11271f1d70c861f1fea1a7d768",
+      "md5": "59f674729af40b690f120d66dd51ab5a",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1639"
+      },
+      "local_path_in_data_dir": "history/ad8916e7-206e-409e-2582-30d072845dd4.p1.json",
+      "set_id": "ad8916e7-206e-409e-2582-30d072845dd4"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=ad8916e7-206e-409e-2582-30d072845dd4&version=25",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=ad8916e7-206e-409e-2582-30d072845dd4&version=25",
+      "http_status": 200,
+      "published_at": "2021-08-09",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:17Z",
+      "bytes": 976672,
+      "sha256": "13190564d390876efc7ead3e6a794eb1336ece2761b964376024cb1931eb5e80",
+      "md5": "696830d2682f8d7e84a5da91526c57c7",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "976672",
+        "content-disposition": "attachment; filename=20210807_ad8916e7-206e-409e-2582-30d072845dd4.zip"
+      },
+      "local_path_in_data_dir": "historical/ad8916e7-206e-409e-2582-30d072845dd4_v25.zip",
+      "set_id": "ad8916e7-206e-409e-2582-30d072845dd4",
+      "version": 25,
+      "content_disposition_filename": "20210807_ad8916e7-206e-409e-2582-30d072845dd4.zip"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/c4c65e48-85f8-4dcf-6281-06e40959cc79/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/c4c65e48-85f8-4dcf-6281-06e40959cc79/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:18Z",
+      "bytes": 1254,
+      "sha256": "be505dfc2f26e6b4942f24f89e100ee47131cf41e5c9f43f79d3e478c1dc06a5",
+      "md5": "211ec776bfa36edef1bcbbd196d36fc3",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1254"
+      },
+      "local_path_in_data_dir": "history/c4c65e48-85f8-4dcf-6281-06e40959cc79.p1.json",
+      "set_id": "c4c65e48-85f8-4dcf-6281-06e40959cc79"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=c4c65e48-85f8-4dcf-6281-06e40959cc79&version=18",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=c4c65e48-85f8-4dcf-6281-06e40959cc79&version=18",
+      "http_status": 200,
+      "published_at": "2023-06-06",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:19Z",
+      "bytes": 545484,
+      "sha256": "2d68adad6c9fb31915c33ef433882cd324966091f89e42e762359cd334c8b279",
+      "md5": "ac68f19d73f76bd833fe3390b8060365",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "545484",
+        "content-disposition": "attachment; filename=20230606_c4c65e48-85f8-4dcf-6281-06e40959cc79.zip"
+      },
+      "local_path_in_data_dir": "historical/c4c65e48-85f8-4dcf-6281-06e40959cc79_v18.zip",
+      "set_id": "c4c65e48-85f8-4dcf-6281-06e40959cc79",
+      "version": 18,
+      "content_disposition_filename": "20230606_c4c65e48-85f8-4dcf-6281-06e40959cc79.zip"
+    },
+    {
+      "kind": "dailymed_spls_search_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=naloxone&labeler=Hospira&pagesize=100",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=naloxone&labeler=Hospira&pagesize=100",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:20Z",
+      "bytes": 736,
+      "sha256": "24c1f1bd4eede8f3c33aaeb93821b52172f86523a8979b9b5e81f4afa02a3adf",
+      "md5": "bf192ed61d76ae53bb54c5628d89d025",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "736"
+      },
+      "local_path_in_data_dir": "search/naloxone_Hospira.json",
+      "query": {
+        "drug_name": "naloxone",
+        "labeler": "Hospira"
+      }
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/8535cc84-ad4a-4d67-8480-fb5a2e3406f8/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/8535cc84-ad4a-4d67-8480-fb5a2e3406f8/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:20Z",
+      "bytes": 1753,
+      "sha256": "9d0f45e33d311afc6e694aaf248ede175dfc116eed3d02c58b69718f5796aa0d",
+      "md5": "5ba9b59623101144e15a292c8fd6a87e",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1753"
+      },
+      "local_path_in_data_dir": "history/8535cc84-ad4a-4d67-8480-fb5a2e3406f8.p1.json",
+      "set_id": "8535cc84-ad4a-4d67-8480-fb5a2e3406f8"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=8535cc84-ad4a-4d67-8480-fb5a2e3406f8&version=30",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=8535cc84-ad4a-4d67-8480-fb5a2e3406f8&version=30",
+      "http_status": 200,
+      "published_at": "2023-01-11",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:21Z",
+      "bytes": 503647,
+      "sha256": "d065e6341e45ded55ca93d6adae7a98a70edfa46f1ecb09df2d5c534cc03bc46",
+      "md5": "11c016c7a4d48d8b2649c710ae0dda15",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "503647",
+        "content-disposition": "attachment; filename=20230111_8535cc84-ad4a-4d67-8480-fb5a2e3406f8.zip"
+      },
+      "local_path_in_data_dir": "historical/8535cc84-ad4a-4d67-8480-fb5a2e3406f8_v30.zip",
+      "set_id": "8535cc84-ad4a-4d67-8480-fb5a2e3406f8",
+      "version": 30,
+      "content_disposition_filename": "20230111_8535cc84-ad4a-4d67-8480-fb5a2e3406f8.zip"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/b598c237-032d-4bb5-0e92-50eabd863dac/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/b598c237-032d-4bb5-0e92-50eabd863dac/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:22Z",
+      "bytes": 1259,
+      "sha256": "6d1b669d4d0ef46a8face8e7b522101cc26b17a27322b1e117e63d55064fedef",
+      "md5": "e58b9c4dc4960cf3f73a91d634e81015",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1259"
+      },
+      "local_path_in_data_dir": "history/b598c237-032d-4bb5-0e92-50eabd863dac.p1.json",
+      "set_id": "b598c237-032d-4bb5-0e92-50eabd863dac"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=b598c237-032d-4bb5-0e92-50eabd863dac&version=23",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=b598c237-032d-4bb5-0e92-50eabd863dac&version=23",
+      "http_status": 200,
+      "published_at": "2023-06-07",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:23Z",
+      "bytes": 219386,
+      "sha256": "b80eefa557705d3126561303b5bda5b5fcc5529777930f12c76137c5680457ea",
+      "md5": "75699953b740d237d8852ca18c8efde5",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "219386",
+        "content-disposition": "attachment; filename=20230607_b598c237-032d-4bb5-0e92-50eabd863dac.zip"
+      },
+      "local_path_in_data_dir": "historical/b598c237-032d-4bb5-0e92-50eabd863dac_v23.zip",
+      "set_id": "b598c237-032d-4bb5-0e92-50eabd863dac",
+      "version": 23,
+      "content_disposition_filename": "20230607_b598c237-032d-4bb5-0e92-50eabd863dac.zip"
+    },
+    {
+      "kind": "dailymed_spls_search_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=diazepam&labeler=Hospira&pagesize=100",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=diazepam&labeler=Hospira&pagesize=100",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:24Z",
+      "bytes": 708,
+      "sha256": "7804a098eed6478b28ee75e61b066aec8f3aeffb24ac21bdc4cbd2aff9c072fa",
+      "md5": "2c46ad96fe0ec27bd236aeec43513130",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "708"
+      },
+      "local_path_in_data_dir": "search/diazepam_Hospira.json",
+      "query": {
+        "drug_name": "diazepam",
+        "labeler": "Hospira"
+      }
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:24Z",
+      "bytes": 1466,
+      "sha256": "a6fc2d88aa3f7a3b9219cbd3f79140f610c299feb8086f4a7fed6e788a9715fc",
+      "md5": "5c6e98c3c0bf298f63892ecb0c431b3b",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1466"
+      },
+      "local_path_in_data_dir": "history/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f.p1.json",
+      "set_id": "7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f&version=24",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f&version=24",
+      "http_status": 200,
+      "published_at": "2023-05-08",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:25Z",
+      "bytes": 574960,
+      "sha256": "03d50bec8f7b3cee6616e23e34a89280792856020e711f5fb6c051037911415c",
+      "md5": "80de310bc8c01f4c64d6a25ac7283aa7",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "574960",
+        "content-disposition": "attachment; filename=20230506_7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f.zip"
+      },
+      "local_path_in_data_dir": "historical/7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f_v24.zip",
+      "set_id": "7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f",
+      "version": 24,
+      "content_disposition_filename": "20230506_7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f.zip"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/41044928-dd1f-40bf-1fa6-709dff559124/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/41044928-dd1f-40bf-1fa6-709dff559124/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:26Z",
+      "bytes": 1513,
+      "sha256": "fdf5006c38aa5fd8920d65d96427fce96f13d0ad50dc47e6c7ea21d18d7253b1",
+      "md5": "ade5441750e480483576a859f7071ebc",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "1513"
+      },
+      "local_path_in_data_dir": "history/41044928-dd1f-40bf-1fa6-709dff559124.p1.json",
+      "set_id": "41044928-dd1f-40bf-1fa6-709dff559124"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=41044928-dd1f-40bf-1fa6-709dff559124&version=17",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=41044928-dd1f-40bf-1fa6-709dff559124&version=17",
+      "http_status": 200,
+      "published_at": "2023-05-08",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:27Z",
+      "bytes": 377628,
+      "sha256": "e77c3575021e0c2e8aac5fed97f61c7fd2a95f586ee46110241533c4d4740ad6",
+      "md5": "d69d08f3830694aa39d229ecd50ef207",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "377628",
+        "content-disposition": "attachment; filename=20230506_41044928-dd1f-40bf-1fa6-709dff559124.zip"
+      },
+      "local_path_in_data_dir": "historical/41044928-dd1f-40bf-1fa6-709dff559124_v17.zip",
+      "set_id": "41044928-dd1f-40bf-1fa6-709dff559124",
+      "version": 17,
+      "content_disposition_filename": "20230506_41044928-dd1f-40bf-1fa6-709dff559124.zip"
+    },
+    {
+      "kind": "dailymed_spl_history_json",
+      "source_role": "documentation",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/f435e79d-dea3-49dc-8268-146c60ba52a1/history.json?pagesize=100&page=1",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/f435e79d-dea3-49dc-8268-146c60ba52a1/history.json?pagesize=100&page=1",
+      "http_status": 200,
+      "published_at": null,
+      "published_at_basis": null,
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:28Z",
+      "bytes": 596,
+      "sha256": "daf393792a4a1e0a74355b010dd1147419e54eb7882bfe74bdad21937e5a54cc",
+      "md5": "9a12d16d8e25e12ae225e2b9430018ec",
+      "response_headers": {
+        "content-type": "application/json",
+        "content-length": "596"
+      },
+      "local_path_in_data_dir": "history/f435e79d-dea3-49dc-8268-146c60ba52a1.p1.json",
+      "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=5",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=5",
+      "http_status": 200,
+      "published_at": "2013-05-29",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:29Z",
+      "bytes": 1498,
+      "sha256": "32649e5d10e31704e30513ae06e36447d3fe8fea57c30a2272fea9b8b4cf1990",
+      "md5": "167e01756b797f6c9dee9c3acaf44c7e",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "1498",
+        "content-disposition": "attachment; filename=20130528_f435e79d-dea3-49dc-8268-146c60ba52a1.zip"
+      },
+      "local_path_in_data_dir": "historical/f435e79d-dea3-49dc-8268-146c60ba52a1_v5.zip",
+      "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+      "version": 5,
+      "content_disposition_filename": "20130528_f435e79d-dea3-49dc-8268-146c60ba52a1.zip"
+    },
+    {
+      "kind": "dailymed_spl_version_zip",
+      "source_role": "historical",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=7",
+      "final_url": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=f435e79d-dea3-49dc-8268-146c60ba52a1&version=7",
+      "http_status": 200,
+      "published_at": "2015-05-22",
+      "published_at_basis": "DailyMed v2 /spls/{setid}/history published_date",
+      "captured_at": null,
+      "retrieved_at": "2026-10-19T19:49:29Z",
+      "bytes": 1523,
+      "sha256": "94a530491845d53edfd6208429c5bdf0f70acaecb63a3db9164629d9aa6c2cdc",
+      "md5": "ea9d8ce7df9f72d68f677140986379c3",
+      "response_headers": {
+        "content-type": "application/zip",
+        "content-length": "1523",
+        "content-disposition": "attachment; filename=20150522_f435e79d-dea3-49dc-8268-146c60ba52a1.zip"
+      },
+      "local_path_in_data_dir": "historical/f435e79d-dea3-49dc-8268-146c60ba52a1_v7.zip",
+      "set_id": "f435e79d-dea3-49dc-8268-146c60ba52a1",
+      "version": 7,
+      "content_disposition_filename": "20150522_f435e79d-dea3-49dc-8268-146c60ba52a1.zip"
+    }
+  ]
+}

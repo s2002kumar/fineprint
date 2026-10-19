@@ -1,0 +1,46 @@
+{
+  "release_page": {
+    "url": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm",
+    "final_url": "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm",
+    "status": 200,
+    "retrieved_at": "2026-10-19T19:24:10Z",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-length": "112010"
+    },
+    "bytes": 112010,
+    "sha256": "a8dee01d364b4ace1dc36ad4d4b981304a19c95254af5e9961b6192e95c7e3c6",
+    "md5": "082b8d98328444712404377b7697cafe",
+    "path": "<session-scratchpad>\\data_bulk\\pages\\spl-resources-all-drug-labels.html",
+    "elapsed_s": 0.4378879999858327
+  },
+  "advertised": {
+    "name": "dm_spl_release_human_rx_part6.zip",
+    "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+    "advertised_number_of_files": 4311,
+    "advertised_file_size": "1.75GB",
+    "advertised_md5": "060d1455cb1edc525d2a691947395e89",
+    "advertised_last_modified": "2026-10-16"
+  },
+  "download": {
+    "url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+    "final_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+    "status": 200,
+    "retrieved_at": "2026-10-19T19:24:11Z",
+    "headers": {
+      "content-type": "application/zip",
+      "content-length": "1875296318",
+      "last-modified": "Sat, 17 Oct 2026 01:05:31 GMT",
+      "etag": "\"222e16fde5780ba8e20d3da8cd67762d-224\"",
+      "x-amz-version-id": "4pL0QhKhd5BiXes5_FxIkDpOzxvokEcc",
+      "accept-ranges": "bytes"
+    },
+    "bytes": 1875296318,
+    "sha256": "7708d214430f756885fb6ad9165208c4e7e34366f33e2f40ce1458575acfc6ef",
+    "md5": "060d1455cb1edc525d2a691947395e89",
+    "path": "<session-scratchpad>\\data_bulk\\bulk\\dm_spl_release_human_rx_part6.zip",
+    "elapsed_s": 252.38684500003
+  },
+  "md5_matches_advertised": true,
+  "throughput_MBps": 7.43
+}

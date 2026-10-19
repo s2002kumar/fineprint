@@ -1,0 +1,13 @@
+[project]
+name = "fineprint"
+version = "0.0.1"
+description = "Which factory actually makes your medicine? Operation-aware, provenance-linked DailyMed SPL facility graph."
+requires-python = ">=3.11"
+dependencies = []  # DST-00 is stdlib-only on purpose
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

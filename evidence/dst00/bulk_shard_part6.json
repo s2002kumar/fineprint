@@ -1,0 +1,174 @@
+{
+  "run": {
+    "started_at": "2026-10-19T19:44:22Z",
+    "finished_at": "2026-10-19T19:45:07Z",
+    "limit": null,
+    "python": "3.14.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "cpu_count": 22
+  },
+  "source": {
+    "zip_name": "dm_spl_release_human_rx_part6.zip",
+    "zip_bytes": 1875296318,
+    "advertised": {
+      "name": "dm_spl_release_human_rx_part6.zip",
+      "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_release_human_rx_part6.zip",
+      "advertised_number_of_files": 4311,
+      "advertised_file_size": "1.75GB",
+      "advertised_md5": "060d1455cb1edc525d2a691947395e89",
+      "advertised_last_modified": "2026-10-16"
+    },
+    "download_sha256": "7708d214430f756885fb6ad9165208c4e7e34366f33e2f40ce1458575acfc6ef",
+    "md5_matches_advertised": true
+  },
+  "outer_directory": {
+    "members": 4311,
+    "directories": 0,
+    "compressed_bytes": 1874158192,
+    "uncompressed_bytes": 1874158192,
+    "duplicate_names": [],
+    "flagged": {}
+  },
+  "outer_members_match_advertised": true,
+  "performance": {
+    "wall_seconds": 45.04,
+    "read_seconds": 5.53,
+    "process_seconds": 38.92,
+    "members_per_second": 95.72,
+    "member_MB_per_second": 41.61,
+    "xml_MB_per_second": 18.12,
+    "largest_member_bytes": 11261970,
+    "peak_rss_bytes": 72761344
+  },
+  "records": {
+    "path": "part6_records.jsonl",
+    "sha256": "a5a4f55ff39d515b1d5a6c3ddf394756a4eeae6c4b45fb8234252e69e96d4c65",
+    "lines": 4311
+  },
+  "summary": {
+    "counts": {
+      "members": 4311,
+      "member_bytes": 1874158192,
+      "ok": 4311,
+      "xml_bytes": 815999887,
+      "n_products": 7498,
+      "n_products_without_code": 0,
+      "n_packages": 19936,
+      "n_packages_without_code": 3067,
+      "n_packages_not_matching_product_segments": 0,
+      "n_kit_parts": 533,
+      "n_establishments": 3145,
+      "n_establishments_without_duns": 0,
+      "establishment_fei_present": 0,
+      "establishment_address_present": 0,
+      "n_operation_edges": 10820,
+      "n_operation_edges_without_product_code": 0,
+      "products_with_manufacture_duns": 2569,
+      "products_without_manufacture_duns": 4929,
+      "operation_codes_not_in_products": 0,
+      "operation_codes_matching_kit_parts": 22,
+      "docs_with_unscoped_operation_edges": 0,
+      "docs_with_zero_establishments": 1979,
+      "docs_with_any_manufacture_duns": 1146
+    },
+    "failures_by_kind": {},
+    "document_types": {
+      "34391-3|HUMAN PRESCRIPTION DRUG LABEL": 4022,
+      "34391-3|Human Prescription Drug Label": 289
+    },
+    "operation_edges_by_code_and_name": {
+      "C25391|ANALYSIS": 1797,
+      "C43360|MANUFACTURE": 1768,
+      "C43360|manufacture": 1410,
+      "C25391|analysis": 880,
+      "C84731|PACK": 870,
+      "C73606|repack": 704,
+      "C84731|pack": 567,
+      "C84732|LABEL": 559,
+      "C73606|REPACK": 497,
+      "C73607|RELABEL": 432,
+      "C82401|API MANUFACTURE": 390,
+      "C84732|label": 377,
+      "C73607|relabel": 201,
+      "C82401|api manufacture": 140,
+      "C84382|STERILIZE": 75,
+      "C91403|POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION": 75,
+      "C84382|sterilize": 25,
+      "C84386|PARTICLE SIZE REDUCTION": 21,
+      "C91403|positron emission tomography drug production": 15,
+      "C201565|distribute": 5,
+      "C125710|transfill": 4,
+      "C43360|MANUFACTURE ": 3,
+      "C84731|PACK ": 3,
+      "C84386|particle size reduction": 2
+    },
+    "operation_codes_with_multiple_names": {
+      "C25391": {
+        "ANALYSIS": 1797,
+        "analysis": 880
+      },
+      "C84732": {
+        "LABEL": 559,
+        "label": 377
+      },
+      "C43360": {
+        "MANUFACTURE": 1768,
+        "manufacture": 1410,
+        "MANUFACTURE ": 3
+      },
+      "C84731": {
+        "PACK": 870,
+        "pack": 567,
+        "PACK ": 3
+      },
+      "C84382": {
+        "STERILIZE": 75,
+        "sterilize": 25
+      },
+      "C82401": {
+        "api manufacture": 140,
+        "API MANUFACTURE": 390
+      },
+      "C73607": {
+        "relabel": 201,
+        "RELABEL": 432
+      },
+      "C73606": {
+        "repack": 704,
+        "REPACK": 497
+      },
+      "C84386": {
+        "particle size reduction": 2,
+        "PARTICLE SIZE REDUCTION": 21
+      },
+      "C91403": {
+        "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION": 75,
+        "positron emission tomography drug production": 15
+      }
+    },
+    "anomalies": {},
+    "product_ndc_patterns": {
+      "5-3": 3912,
+      "5-4": 2209,
+      "4-4": 1377
+    },
+    "member_name_date_years": {
+      "2026": 4311
+    },
+    "distinct_set_ids": 4311,
+    "set_ids_seen_more_than_once": 0,
+    "distinct_establishment_duns": 860,
+    "distinct_manufacture_duns": 550,
+    "distinct_labeler_duns": 503,
+    "labeler_duns_also_establishment_duns": 106,
+    "current_decrs_resolution": {
+      "basis": "CURRENT FDA DECRS drls_reg (identity_current); not valid for historical claims",
+      "establishment_duns_found": 837,
+      "establishment_duns_total": 860,
+      "manufacture_duns_found": 548,
+      "manufacture_duns_total": 550,
+      "manufacture_duns_found_with_fei": 547
+    }
+  }
+}
