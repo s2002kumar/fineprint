@@ -1,0 +1,13 @@
+# Raw downloaded source data never goes in git; manifests record hashes + recipes.
+data/
+*.zip
+!tests/fixtures/**/*.zip
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
