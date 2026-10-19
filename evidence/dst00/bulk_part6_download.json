@@ -11,7 +11,7 @@
     "bytes": 112010,
     "sha256": "a8dee01d364b4ace1dc36ad4d4b981304a19c95254af5e9961b6192e95c7e3c6",
     "md5": "082b8d98328444712404377b7697cafe",
-    "path": "<session-scratchpad>\\data_bulk\\pages\\spl-resources-all-drug-labels.html",
+    "path": "<dst00-session-scratchpad>/data_bulk/pages/spl-resources-all-drug-labels.html",
     "elapsed_s": 0.4378879999858327
   },
   "advertised": {
@@ -38,7 +38,7 @@
     "bytes": 1875296318,
     "sha256": "7708d214430f756885fb6ad9165208c4e7e34366f33e2f40ce1458575acfc6ef",
     "md5": "060d1455cb1edc525d2a691947395e89",
-    "path": "<session-scratchpad>\\data_bulk\\bulk\\dm_spl_release_human_rx_part6.zip",
+    "path": "<dst00-session-scratchpad>/data_bulk/bulk/dm_spl_release_human_rx_part6.zip",
     "elapsed_s": 252.38684500003
   },
   "md5_matches_advertised": true,

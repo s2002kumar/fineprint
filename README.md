@@ -2,8 +2,23 @@
 
 **Which factory actually makes your medicine?**
 
-Status: **DST-00 feasibility spike complete, awaiting review.** See [feasibility_report.md](feasibility_report.md).
-Nothing has been ingested nationally yet; there is no database or CLI.
+Status: **DST-01 national ingest complete, awaiting review.** See [dst01_ingestion_report.md](dst01_ingestion_report.md)
+(DST-00: [feasibility_report.md](feasibility_report.md)). There is no facility-identity resolution or query CLI yet.
+
+## Reproduce DST-01 (current national ingest)
+Needs PostgreSQL 18 binaries and `psycopg[binary]==3.3.6` in a venv. `$FINEPRINT_DATA` defaults to
+`~/fineprint-data` and must be outside any synced folder (≈18 GB raw + ≈1.5 GB database).
+
+```sh
+python -I scripts/pg_local.py init && python -I scripts/pg_local.py start   # project cluster, 127.0.0.1:55432
+python -I scripts/pg_local.py createdb fineprint fineprint_test
+python -I scripts/dst01_fetch_release.py --out evidence/dst01/release_manifest.json   # resumable, MD5-verified
+python -I scripts/dst01_ingest.py --manifest evidence/dst01/release_manifest.json --db fineprint \
+    --out evidence/dst01/ingest_run.json                                             # idempotent; re-run to resume
+python -I scripts/dst01_coverage.py --db fineprint --out evidence/dst01/coverage.json
+python -I -m unittest discover -s tests -t .                                         # DB tests use fineprint_test
+```
+Set `FINEPRINT_DSN` to use another PostgreSQL server instead of the project cluster.
 
 - Spec: [docs/spec/](docs/spec/)
 - Pre-registered historical frame method: [docs/historical_panel_plan.md](docs/historical_panel_plan.md)

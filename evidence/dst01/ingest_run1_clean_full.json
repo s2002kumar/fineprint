@@ -9,7 +9,7 @@
     "dm_spl_release_human_rx_part1.zip": {
       "source_file_id": 2,
       "verify": {
-        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part1.zip",
+        "path": "$FINEPRINT_DATA/raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part1.zip",
         "verified": true,
         "verify_seconds": 15.49,
         "newly_registered": true
@@ -35,7 +35,7 @@
     "dm_spl_release_human_rx_part2.zip": {
       "source_file_id": 3,
       "verify": {
-        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part2.zip",
+        "path": "$FINEPRINT_DATA/raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part2.zip",
         "verified": true,
         "verify_seconds": 20.68,
         "newly_registered": true
@@ -61,7 +61,7 @@
     "dm_spl_release_human_rx_part3.zip": {
       "source_file_id": 4,
       "verify": {
-        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part3.zip",
+        "path": "$FINEPRINT_DATA/raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part3.zip",
         "verified": true,
         "verify_seconds": 16.54,
         "newly_registered": true
@@ -87,7 +87,7 @@
     "dm_spl_release_human_rx_part4.zip": {
       "source_file_id": 5,
       "verify": {
-        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part4.zip",
+        "path": "$FINEPRINT_DATA/raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part4.zip",
         "verified": true,
         "verify_seconds": 18.86,
         "newly_registered": true
@@ -113,7 +113,7 @@
     "dm_spl_release_human_rx_part5.zip": {
       "source_file_id": 6,
       "verify": {
-        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part5.zip",
+        "path": "$FINEPRINT_DATA/raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part5.zip",
         "verified": true,
         "verify_seconds": 15.79,
         "newly_registered": true
@@ -139,7 +139,7 @@
     "dm_spl_release_human_rx_part6.zip": {
       "source_file_id": 7,
       "verify": {
-        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part6.zip",
+        "path": "$FINEPRINT_DATA/raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part6.zip",
         "verified": true,
         "verify_seconds": 12.74,
         "newly_registered": true
@@ -166,7 +166,7 @@
   "sources": {
     "zip_metadata": {
       "source_file_id": 1,
-      "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_zip_files_meta_data.zip",
+      "path": "$FINEPRINT_DATA/raw/dailymed/human_rx_full/2026-10-16/dm_spl_zip_files_meta_data.zip",
       "verified": true,
       "verify_seconds": 0.04,
       "newly_registered": true,

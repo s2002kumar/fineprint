@@ -90,7 +90,7 @@ def finish_run(conn, run_id, status, stats):
 def register_source(conn, *, kind: str, advertised: dict, record: dict, path: Path, release_label: str,
                     verify: bool = True) -> tuple[int, dict]:
     """Insert (or find) a source_file row after re-verifying the bytes on disk."""
-    info = {"path": str(path), "verified": False}
+    info = {"verified": False}
     if not path.exists():
         raise FileNotFoundError(path)
     if verify:
@@ -110,6 +110,7 @@ def register_source(conn, *, kind: str, advertised: dict, record: dict, path: Pa
         rel = path.resolve().relative_to(config.data_dir()).as_posix()
     except ValueError:  # e.g. test fixtures in a temp dir
         rel = path.resolve().as_posix()
+    info["local_path"] = rel  # relative to $FINEPRINT_DATA: evidence never embeds a home directory
     with conn.transaction():
         row = conn.execute(
             """INSERT INTO national.source_file (kind, source_role, name, url, release_label, advertised_md5,

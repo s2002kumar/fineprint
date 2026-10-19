@@ -87,9 +87,16 @@ Q = {
         WHERE e.kind = 'product' AND e.version = (SELECT max(version) FROM national.spl_document x
                                                   WHERE x.set_id = e.set_id)
         GROUP BY 1 ORDER BY 2 DESC""",
-    "superseded_versions_without_published_date": """SELECT count(*) FROM national.spl_document d
-        WHERE d.published_date IS NULL AND d.version < (SELECT max(version) FROM national.spl_document x
-                                                         WHERE x.set_id = d.set_id)""",
+    "undated_documents_by_reason": """WITH mx AS (SELECT set_id, max(version) v FROM national.spl_document GROUP BY 1),
+             meta AS (SELECT lower(set_id) sid, max(spl_version) v FROM national.dailymed_zip_metadata GROUP BY 1),
+             u AS (SELECT d.version, mx.v AS max_v, meta.v AS meta_v FROM national.spl_document d JOIN mx USING (set_id)
+                   LEFT JOIN meta ON meta.sid = lower(d.set_id) WHERE d.published_date IS NULL)
+        SELECT count(*) undated,
+               count(*) FILTER (WHERE version < max_v) superseded_version_shipped_with_successor,
+               count(*) FILTER (WHERE version = max_v AND meta_v IS NULL) set_id_absent_from_metadata,
+               count(*) FILTER (WHERE version = max_v AND meta_v > version) metadata_lists_newer_version_not_in_release,
+               count(*) FILTER (WHERE version = max_v AND meta_v <= version) other
+        FROM u""",
     "documents_by_establishment_presence_and_manufacture": """SELECT has_establishment_block,
         EXISTS (SELECT 1 FROM national.operation_assertion a WHERE a.document_pk = d.document_pk
                 AND a.operation_code='C43360' AND a.duns IS NOT NULL) has_manufacture, count(*)

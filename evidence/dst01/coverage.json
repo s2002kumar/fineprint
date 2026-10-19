@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T22:08:34Z",
+  "generated_at": "2026-10-19T22:41:07Z",
   "database": "fineprint",
   "documents": {
     "total": 55064,
@@ -341,7 +341,13 @@
     "ONLY_UNSCOPED_OPERATIONS_IN_DOCUMENT": 7762,
     "ESTABLISHMENTS_LISTED_NOT_FOR_THIS_PRODUCT": 121
   },
-  "superseded_versions_without_published_date": 2317,
+  "undated_documents_by_reason": {
+    "undated": 3154,
+    "superseded_version_shipped_with_successor": 2317,
+    "set_id_absent_from_metadata": 730,
+    "metadata_lists_newer_version_not_in_release": 107,
+    "other": 0
+  },
   "documents_by_establishment_presence_and_manufacture": [
     [
       false,
@@ -372,7 +378,7 @@
     "operation_type": 32768,
     "dead_letter": 24576
   },
-  "database_bytes": 532649663,
+  "database_bytes": 532477631,
   "runs": [
     [
       1,
@@ -381,6 +387,14 @@
       "2026-10-19 17:56:03.182338-04:00",
       "3e82a6e281ed3da5cea9ae64cc8eb6773616082f",
       false
+    ],
+    [
+      2,
+      "completed",
+      "2026-10-19 18:33:59.379741-04:00",
+      "2026-10-19 18:35:44.703050-04:00",
+      "e48334a2bf71f75ec4ac1db3b0cec6baea5a8389",
+      true
     ]
   ],
   "fingerprint": {
@@ -415,7 +429,7 @@
   },
   "table_counts": {
     "source_file": 7,
-    "ingest_run": 1,
+    "ingest_run": 2,
     "dailymed_zip_metadata": 159373,
     "spl_document": 55064,
     "archive_member": 55064,

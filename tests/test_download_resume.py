@@ -108,6 +108,14 @@ class NoPersonalDataInRepoFixtures(unittest.TestCase):
                 and pat.search(p.read_bytes())]
         self.assertEqual(hits, [])
 
+    def test_evidence_has_no_home_directory_paths(self):
+        import re
+        root = Path(__file__).resolve().parents[1]
+        pat = re.compile(rb"[A-Za-z]:(?:\\\\|\\|/)+Users(?:\\\\|\\|/)+|/home/[^/\"]+/|/Users/[^/\"]+/")
+        hits = [str(p) for p in list((root / "evidence").rglob("*.json")) + [root / "source_manifest.json"]
+                if pat.search(p.read_bytes())]
+        self.assertEqual(hits, [])
+
 
 if __name__ == "__main__":
     unittest.main()
