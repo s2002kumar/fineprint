@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="5dd3723b-8f82-9f25-e063-6394a90a85f3"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>nitrous oxide</title>
+   <effectiveTime value="20261014"/>
+   <setId root="2b0b9cc4-fca7-4e84-8d9d-0f9852528579"/>
+   <versionNumber value="17"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="826169752"/>
+            <name>Nitrous Oxide</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="049509475"/>
+                        <name>NITROUS OXIDE CORP.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="54260-001" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="055761861"/>
+                        <name>Nitrous Oxide Corp</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="54260-001" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="5dd331ee-10d6-2e29-e063-6294a90a448f"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20261014"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="54260-001" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Nitrous Oxide</name>
+                        <formCode code="C42933" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="GAS"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Nitrous Oxide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mL" value="990"/>
+                              <denominator unit="L" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="K50XQU1029" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>NITROUS OXIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="K50XQU1029" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>NITROUS OXIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="8993600" unit="L"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="54260-001-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43189" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CYLINDER"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20000101"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA206009" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20000101"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38216" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="RESPIRATORY (INHALATION)"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="9dc2fabe-f7ac-4dc5-e053-2a95a90a7f12"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>Airgas</paragraph>
+                  <paragraph>2201</paragraph>
+                  <paragraph>Nitrous Oxide</paragraph>
+                  <paragraph>Refrigerated Liquid
+       
+ 
+  <renderMultiMedia referencedObject="MM1"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20181001"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>nitrous oxide</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="n2o.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

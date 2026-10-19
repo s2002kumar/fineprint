@@ -34,6 +34,24 @@ def package_belongs_to_product(package_raw: str, product_raw: str) -> bool:
     return len(p) == 3 and len(q) == 2 and p[:2] == q
 
 
+def to_product_5_4(raw: str) -> str | None:
+    """Hyphenated product NDC -> '5-4' (9-digit) form, else None. Never applied to packages.
+
+    '0409-3308' (4-4) -> '00409-3308'; '12345-678' (5-3) -> '12345-0678'.
+    """
+    segs = segments(raw)
+    if not all(s.isdigit() for s in segs):
+        return None
+    pat = pattern(raw)
+    if pat == "4-4":
+        return f"0{segs[0]}-{segs[1]}"
+    if pat == "5-3":
+        return f"{segs[0]}-0{segs[1]}"
+    if pat == "5-4":
+        return f"{segs[0]}-{segs[1]}"
+    return None
+
+
 def to_11_digit(raw: str) -> str | None:
     """Hyphenated 10-digit package NDC -> '5-4-2' 11-digit form, else None.
 

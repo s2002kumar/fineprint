@@ -54,53 +54,66 @@ def peak_rss_bytes() -> int | None:
 def process_nested_zip(member_name: str, data: bytes, limits: safezip.Limits = safezip.DEFAULT_LIMITS) -> dict:
     """Process one nested SPL ZIP; return a compact, JSON-serialisable record."""
     t0 = time.perf_counter()
-    rec = {"member": member_name, "member_bytes": len(data), "member_sha256": hashlib.sha256(data).hexdigest(),
-           "status": "ok", "failure": None}
-    m = MEMBER_NAME.match(member_name)
-    rec["name_date"] = m["date"] if m else None
-    rec["name_set_id"] = m["setid"].lower() if m else None
-    if not m:
-        rec["name_problem"] = "unexpected_member_name_pattern"
-    try:
-        zf = zipfile.ZipFile(io.BytesIO(data))
-    except zipfile.BadZipFile as e:
-        rec.update(status="failed", failure=f"bad_nested_zip:{e}")
+    opened = open_nested(member_name, data, limits)
+    doc = opened.pop("doc")
+    rec = {"member": member_name, "member_bytes": len(data), **opened}
+    if doc is None:
         return rec
-    with zf:
-        infos = zf.infolist()
-        if len(infos) > limits.max_nested_members:
-            rec.update(status="failed", failure="too_many_nested_members")
-            return rec
-        flagged = {i.filename: safezip.member_problems(i, limits) for i in infos}
-        flagged = {k: v for k, v in flagged.items() if v}
-        rec["nested_members"] = len(infos)
-        rec["nested_flagged"] = flagged
-        xmls = [i for i in infos if i.filename.lower().endswith(".xml")]
-        rec["xml_members"] = len(xmls)
-        if len(xmls) != 1:
-            rec.update(status="failed", failure=f"xml_member_count_{len(xmls)}")
-            return rec
-        info = xmls[0]
-        if info.filename in flagged:
-            rec.update(status="failed", failure=f"unsafe_xml_member:{flagged[info.filename]}")
-            return rec
-        try:
-            with safezip.open_member(zf, info, limits.max_xml_bytes) as fh:
-                doc = spl.parse_spl(fh, max_bytes=limits.max_xml_bytes)
-        except spl.SplRejected as e:
-            rec.update(status="failed", failure=f"rejected:{e}")
-            return rec
-        except ET.ParseError as e:
-            rec.update(status="failed", failure=f"xml_parse_error:{e}")
-            return rec
-        except (safezip.ZipSafetyError, zipfile.BadZipFile, EOFError, OSError) as e:
-            rec.update(status="failed", failure=f"member_read_error:{type(e).__name__}:{e}")
-            return rec
     rec.update(summarize_document(doc))
     if rec["name_set_id"] and doc["set_id"] and rec["name_set_id"] != doc["set_id"].lower():
         rec.setdefault("anomalies", []).append({"kind": "member_name_set_id_mismatch"})
     rec["parse_seconds"] = round(time.perf_counter() - t0, 4)
     return rec
+
+
+def open_nested(member_name: str, data: bytes, limits: safezip.Limits = safezip.DEFAULT_LIMITS) -> dict:
+    """Open one nested SPL ZIP and parse its single XML.
+
+    Returns ``status`` ('ok'|'failed'), ``failure`` and ``stage`` ('nested_zip'|'xml')
+    on failure, and the full parsed ``doc`` (None on failure).
+    """
+    out = {"member_sha256": hashlib.sha256(data).hexdigest(), "status": "ok", "failure": None, "stage": None,
+           "doc": None, "xml_member": None}
+    m = MEMBER_NAME.match(member_name)
+    out["name_date"] = m["date"] if m else None
+    out["name_set_id"] = m["setid"].lower() if m else None
+    if not m:
+        out["name_problem"] = "unexpected_member_name_pattern"
+
+    def fail(stage, failure):
+        out.update(status="failed", stage=stage, failure=failure)
+        return out
+
+    try:
+        zf = zipfile.ZipFile(io.BytesIO(data))
+    except zipfile.BadZipFile as e:
+        return fail("nested_zip", f"bad_nested_zip:{e}")
+    with zf:
+        infos = zf.infolist()
+        if len(infos) > limits.max_nested_members:
+            return fail("nested_zip", "too_many_nested_members")
+        flagged = {i.filename: safezip.member_problems(i, limits) for i in infos}
+        flagged = {k: v for k, v in flagged.items() if v}
+        out["nested_members"] = len(infos)
+        out["nested_flagged"] = flagged
+        xmls = [i for i in infos if i.filename.lower().endswith(".xml")]
+        out["xml_members"] = len(xmls)
+        if len(xmls) != 1:
+            return fail("nested_zip", f"xml_member_count_{len(xmls)}")
+        info = xmls[0]
+        out["xml_member"] = info.filename
+        if info.filename in flagged:
+            return fail("nested_zip", f"unsafe_xml_member:{flagged[info.filename]}")
+        try:
+            with safezip.open_member(zf, info, limits.max_xml_bytes) as fh:
+                out["doc"] = spl.parse_spl(fh, max_bytes=limits.max_xml_bytes)
+        except spl.SplRejected as e:
+            return fail("xml", f"rejected:{e}")
+        except ET.ParseError as e:
+            return fail("xml", f"xml_parse_error:{e}")
+        except (safezip.ZipSafetyError, zipfile.BadZipFile, EOFError, OSError) as e:
+            return fail("nested_zip", f"member_read_error:{type(e).__name__}:{e}")
+    return out
 
 
 def summarize_document(doc: dict) -> dict:

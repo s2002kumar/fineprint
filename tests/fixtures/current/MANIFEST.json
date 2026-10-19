@@ -1,0 +1,49 @@
+{
+  "source": {
+    "part": "dm_spl_release_human_rx_part6.zip",
+    "release_label": "2026-10-16",
+    "part_sha256": "7708d214430f756885fb6ad9165208c4e7e34366f33e2f40ce1458575acfc6ef"
+  },
+  "fixtures": [
+    {
+      "file": "tests/fixtures/current/2b0b9cc4-fca7-4e84-8d9d-0f9852528579.xml",
+      "member_name": "prescription/20261016_2b0b9cc4-fca7-4e84-8d9d-0f9852528579.zip",
+      "member_sha256": "fe6b971a25ebeec4ec48f6de670dba21a5ac37de1de95a5397f038279f94b585",
+      "xml_member": "5dd3723b-8f82-9f25-e063-6394a90a85f3.xml",
+      "xml_sha256": "7f9858bb73f67940dc61e53fad7d348bf26333412e4f52add82613bb2b0339db",
+      "bytes": 8914,
+      "why": "lowercase manufacture at two establishments",
+      "personal_contact_pattern_found": false
+    },
+    {
+      "file": "tests/fixtures/current/3c5101a0-0c7e-4078-8dc3-a57beb9a0e92.xml",
+      "member_name": "prescription/20260930_3c5101a0-0c7e-4078-8dc3-a57beb9a0e92.zip",
+      "member_sha256": "5f442111695c5ec1fad27838b7ff12e8d76f8ebffdabaa4a8cfd1105dbe2795c",
+      "xml_member": "ca35e789-adaa-45b2-8ec1-b52f2ff13ce2.xml",
+      "xml_sha256": "e8d82e64f29d7cd58cb86e2af4d15de9ef55abdc4c9c0e793ce568a6ac0c4b7a",
+      "bytes": 219792,
+      "why": "six establishments incl. API MANUFACTURE/ANALYSIS/LABEL",
+      "personal_contact_pattern_found": false
+    },
+    {
+      "file": "tests/fixtures/current/99da5233-2760-46f6-8fb3-d9df5da70bfb.xml",
+      "member_name": "prescription/20260729_99da5233-2760-46f6-8fb3-d9df5da70bfb.zip",
+      "member_sha256": "27379fcf5871d57d393709efd9d64c429514d79470d5993ac9160ee920daf0ab",
+      "xml_member": "dd1923f9-0c47-4df0-8d99-8a13a80f623b.xml",
+      "xml_sha256": "146f513bb4355a230275ac364a990d1cda2adf204b46ebf379314426e50272a6",
+      "bytes": 33653,
+      "why": "no establishment block (labeler only)",
+      "personal_contact_pattern_found": false
+    },
+    {
+      "file": "tests/fixtures/current/3bda5cd1-df3c-4b4c-9868-cbc41f66f5a6.xml",
+      "member_name": "prescription/20260808_3bda5cd1-df3c-4b4c-9868-cbc41f66f5a6.zip",
+      "member_sha256": "cfebea3b3d7208902618529282ab4784707e0e20afaea990772e9ff889a47a7e",
+      "xml_member": "126bc791-2442-4528-9e20-a9f3d7324ada.xml",
+      "xml_sha256": "b313360f9ac06cc44f36eeb32644dc9550dde628c973239894298999f06137bb",
+      "bytes": 25922,
+      "why": "kit with MANUFACTURE scoped to a kit-part code",
+      "personal_contact_pattern_found": false
+    }
+  ]
+}

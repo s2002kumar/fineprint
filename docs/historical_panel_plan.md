@@ -84,4 +84,26 @@ Enumerate source A (set IDs + histories only) and count `0409` packages in sourc
 No package-level frame is frozen in DST-00.
 
 ## Amendments
-_None._
+**A1 (2026-10-19, at reviewer request, committed before the run).** Investigate the
+source-A (189 admissible set IDs) vs source-D (213 SPL document IDs) discrepancy:
+1. For every set ID returned by source A, take the latest version with history
+   `published_date` ≤ **2023-05-05** (the FDA generation date of the D snapshot), fetch that
+   exact version, and record its document ID and its `0409` product/package NDCs.
+2. Match each D document ID (`PRODUCTID` suffix) to those A document IDs. Each unmatched D document is then classified:
+   - **(a) product-NDC present in A at a different version.** For these, the next admissible version is also fetched once.
+   - **(b) product NDC absent from every A set.** Each such product NDC is looked up once in the DailyMed
+     `spls.json?ndc=` search, and the set ID(s) it returns today are recorded.
+3. A set IDs with no D document are reported by reason: no `0409` NDC, first published after the
+   snapshot, or listed under another document.
+This is a coverage diagnosis only. It freezes no frame, adds no package to any panel, and uses no outcome data.
+
+**A2 (2026-10-19). Identity ≠ registration status.** The 2022-10-13 DECRS snapshot (archived
+2022-10-14) establishes the DUNS ↔ FEI ↔ address identity of Rocky Mount and McPherson *as of
+that record*. It does **not** establish that either establishment held a current registration
+in 2023: the listed registrations expire 12/31/2022, and no pre-event 2023 registration record
+has been found. Historical outputs must say "identity per the 2022 registration record", never
+"registered in 2023".
+
+**A3 (2026-10-19). B3 unavailable.** B3 ("already-short stays short") stays **NOT EVALUABLE**
+until a dated, pre-cutoff shortage-state source with package-level (or exactly mappable)
+granularity is identified and recorded here before unsealing. No substitute baseline will be used.

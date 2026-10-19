@@ -11,3 +11,10 @@ venv/
 *.egg-info/
 build/
 dist/
+
+# Local secrets / environment (database passwords live under $FINEPRINT_DATA/secrets, never here)
+secrets/
+*.pgpass
+pgpass.conf
+.env
+.env.*

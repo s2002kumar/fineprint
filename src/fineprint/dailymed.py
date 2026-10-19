@@ -62,6 +62,29 @@ def parse_release_parts(page_html: str, prefix: str = HUMAN_RX_PREFIX) -> list[d
     return parts
 
 
+MAPPING_PAGE = "https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-mapping-files.cfm"
+ZIP_METADATA_FILE = "dm_spl_zip_files_meta_data.zip"
+
+
+def parse_advertised_file(page_html: str, filename: str) -> dict | None:
+    """Advertised entry for one exactly-named file on a DailyMed resources page."""
+    text = _page_text(page_html)
+    pat = re.compile(_PART_TEXT.pattern.replace("(?P<name>{prefix}\\d+\\.zip)", "(?P<name>{name})")
+                     .format(name=re.escape(filename)))
+    m = pat.search(text)
+    if not m:
+        return None
+    href = re.search(r'href="(https://[^"]+/%s)"' % re.escape(filename), page_html)
+    return {
+        "name": filename,
+        "https_url": href.group(1) if href else None,
+        "advertised_number_of_files": int(m["files"].replace(",", "")),
+        "advertised_file_size": m["size"],
+        "advertised_md5": m["md5"].lower(),
+        "advertised_last_modified": _dt.datetime.strptime(m["modified"], "%b %d, %Y").date().isoformat(),
+    }
+
+
 def parse_history_date(s: str) -> str:
     """'Sep 01, 2020' -> '2020-09-01' (DailyMed history API format)."""
     return _dt.datetime.strptime(s, "%b %d, %Y").date().isoformat()
