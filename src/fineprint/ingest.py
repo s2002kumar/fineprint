@@ -14,6 +14,7 @@ Nothing here resolves facility identity or infers missing facilities.
 from __future__ import annotations
 
 import datetime as dt
+import io
 import json
 import os
 import platform
@@ -133,29 +134,31 @@ def load_zip_metadata(conn, source_file_id: int, path: Path) -> dict:
                               (source_file_id,)).fetchone()[0]
     if n_existing:
         return {"rows": n_existing, "loaded_now": 0}
+    bad = n = 0
     with zipfile.ZipFile(path) as zf:
         txt = [i for i in zf.infolist() if i.filename.lower().endswith("meta_data.txt")]
         if len(txt) != 1:
             raise RuntimeError(f"unexpected metadata archive layout: {[i.filename for i in zf.infolist()]}")
-        raw = safezip.read_member(zf, txt[0], 256 << 20).decode("utf-8", "replace")
-    lines = raw.splitlines()
-    if lines[0].strip() != "SETID|ZIP_FILE_NAME|UPLOAD_DATE|SPL_VERSION|TITLE":
-        raise RuntimeError(f"unexpected metadata header: {lines[0]!r}")
-    bad, rows = 0, []
-    for ln in lines[1:]:
-        f = ln.split("|", 4)
-        if len(f) != 5:
-            bad += 1
-            continue
-        ver = int(f[3]) if f[3].strip().isdigit() else None
-        rows.append((source_file_id, f[1].strip(), f[0].strip(), ver, f[2].strip(), _mdy(f[2].strip()), f[4]))
-    with conn.transaction():
-        with conn.cursor() as cur:
-            with cur.copy("COPY national.dailymed_zip_metadata (source_file_id, zip_file_name, set_id, spl_version, "
-                          "upload_date_raw, upload_date, title) FROM STDIN") as cp:
-                for r in rows:
-                    cp.write_row(r)
-    return {"rows": len(rows), "loaded_now": len(rows), "malformed_lines": bad}
+        # Stream line by line from the (byte-capped) member straight into COPY: bounded memory.
+        with io.TextIOWrapper(safezip.open_member(zf, txt[0], 256 << 20), encoding="utf-8",
+                              errors="replace", newline="") as lines:
+            header = next(lines).rstrip("\r\n")
+            if header.strip() != "SETID|ZIP_FILE_NAME|UPLOAD_DATE|SPL_VERSION|TITLE":
+                raise RuntimeError(f"unexpected metadata header: {header!r}")
+            with conn.transaction():
+                with conn.cursor() as cur:
+                    with cur.copy("COPY national.dailymed_zip_metadata (source_file_id, zip_file_name, set_id, "
+                                  "spl_version, upload_date_raw, upload_date, title) FROM STDIN") as cp:
+                        for ln in lines:
+                            f = ln.rstrip("\r\n").split("|", 4)
+                            if len(f) != 5:
+                                bad += 1
+                                continue
+                            ver = int(f[3]) if f[3].strip().isdigit() else None
+                            cp.write_row((source_file_id, f[1].strip(), f[0].strip(), ver, f[2].strip(),
+                                          _mdy(f[2].strip()), f[4]))
+                            n += 1
+    return {"rows": n, "loaded_now": n, "malformed_lines": bad}
 
 
 def _prepare(doc: dict) -> dict:
