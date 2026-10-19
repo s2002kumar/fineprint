@@ -13,7 +13,9 @@ Nothing here resolves facility identity or infers missing facilities.
 
 from __future__ import annotations
 
+import copy
 import datetime as dt
+import gc
 import io
 import json
 import os
@@ -286,7 +288,8 @@ def _dead_letter(cur, run_id, source_file_id, info, member_sha, stage, error_kin
 
 def ingest_part(conn, *, source_file_id: int, path: Path, run_id: int, batch_size: int = 200,
                 retry_failed: bool = False, limit: int | None = None, crash_after: int | None = None,
-                limits: safezip.Limits = safezip.DEFAULT_LIMITS, log=print) -> dict:
+                limits: safezip.Limits = safezip.DEFAULT_LIMITS, memory_retries: int = 3,
+                memory_backoff_s: float = 30.0, log=print) -> dict:
     t_start = time.perf_counter()
     if retry_failed:
         with conn.transaction():
@@ -309,27 +312,23 @@ def ingest_part(conn, *, source_file_id: int, path: Path, run_id: int, batch_siz
         if limit is not None:
             todo = todo[:limit]
         for b0 in range(0, len(todo), batch_size):
-            with conn.transaction():
-                with conn.cursor() as cur:
-                    for idx, info in todo[b0:b0 + batch_size]:
-                        if crash_after is not None and st["processed"] >= crash_after:
-                            log(f"CRASH HOOK: hard exit with an open, uncommitted batch after "
-                                f"{st['processed']} members")
-                            sys.stdout.flush()
-                            sys.stderr.flush()
-                            os._exit(137)
-                        st["processed"] += 1
-                        st["member_bytes_processed"] += info.file_size
-                        status, stage, kind, detail, member_sha, doc_pk = _process_one(
-                            conn, cur, zf, info, source_file_id, run_id, limits, st)
-                        if status == "failed":
-                            st["failed"] += 1
-                            st["failed_by_stage"][stage] = st["failed_by_stage"].get(stage, 0) + 1
-                            st["failed_by_kind"][kind] = st["failed_by_kind"].get(kind, 0) + 1
-                            _dead_letter(cur, run_id, source_file_id, info, member_sha, stage, kind, detail)
-                        else:
-                            st[status] += 1
-                        _record_member(cur, source_file_id, info, idx, member_sha, status, doc_pk, run_id)
+            for attempt in range(1, memory_retries + 2):
+                snapshot = copy.deepcopy(st)
+                try:
+                    _run_batch(conn, zf, todo[b0:b0 + batch_size], source_file_id, run_id, limits, st,
+                               crash_after, log)
+                    break
+                except MemoryError:
+                    # Machine-wide allocation failure (e.g. Windows commit limit), not a bad document:
+                    # the batch was rolled back; restore its stats and retry, else fail the run loudly.
+                    st.clear()
+                    st.update(snapshot)
+                    if attempt > memory_retries:
+                        raise
+                    st["memory_error_batch_retries"] = st.get("memory_error_batch_retries", 0) + 1
+                    log(f"{path.name}: MemoryError in batch at {b0}; rolled back, retry {attempt}/{memory_retries}")
+                    gc.collect()
+                    time.sleep(memory_backoff_s * attempt)
             done_n = st["already_done"] + st["processed"]
             if (b0 // batch_size) % 10 == 9 or b0 + batch_size >= len(todo):
                 el = time.perf_counter() - t_start
@@ -342,6 +341,30 @@ def ingest_part(conn, *, source_file_id: int, path: Path, run_id: int, batch_siz
         st["members_per_second"] = round(st["processed"] / st["wall_seconds"], 2)
         st["member_MB_per_second"] = round(st["member_bytes_processed"] / st["wall_seconds"] / 1e6, 2)
     return st
+
+
+def _run_batch(conn, zf, batch, source_file_id, run_id, limits, st, crash_after, log):
+    """One committed unit: documents + their archive_member/dead_letter rows, all or nothing."""
+    with conn.transaction():
+        with conn.cursor() as cur:
+            for idx, info in batch:
+                if crash_after is not None and st["processed"] >= crash_after:
+                    log(f"CRASH HOOK: hard exit with an open, uncommitted batch after {st['processed']} members")
+                    sys.stdout.flush()
+                    sys.stderr.flush()
+                    os._exit(137)
+                st["processed"] += 1
+                st["member_bytes_processed"] += info.file_size
+                status, stage, kind, detail, member_sha, doc_pk = _process_one(
+                    conn, cur, zf, info, source_file_id, run_id, limits, st)
+                if status == "failed":
+                    st["failed"] += 1
+                    st["failed_by_stage"][stage] = st["failed_by_stage"].get(stage, 0) + 1
+                    st["failed_by_kind"][kind] = st["failed_by_kind"].get(kind, 0) + 1
+                    _dead_letter(cur, run_id, source_file_id, info, member_sha, stage, kind, detail)
+                else:
+                    st[status] += 1
+                _record_member(cur, source_file_id, info, idx, member_sha, status, doc_pk, run_id)
 
 
 def _process_one(conn, cur, zf, info, source_file_id, run_id, limits, st):
@@ -368,6 +391,8 @@ def _process_one(conn, cur, zf, info, source_file_id, run_id, limits, st):
         with conn.transaction():  # SAVEPOINT: a bad document cannot poison its batch
             pk, status = _store_document(cur, source_file_id=source_file_id, member_name=info.filename,
                                          opened=opened, run_id=run_id)
+    except MemoryError:
+        raise  # resource exhaustion is not a document defect: never dead-letter it
     except Exception as e:  # isolate ANY per-document failure; kind + detail are kept in dead_letter
         st["db_seconds"] += time.perf_counter() - t2
         return "failed", "db_insert", type(e).__name__, str(e), opened["member_sha256"], None

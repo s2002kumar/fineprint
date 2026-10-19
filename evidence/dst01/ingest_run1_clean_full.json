@@ -1,0 +1,340 @@
+{
+  "run_id": 1,
+  "database": "fineprint",
+  "migrations_applied_now": [
+    "001_national_ingest.sql"
+  ],
+  "started_at": "2026-10-19T21:32:52Z",
+  "parts": {
+    "dm_spl_release_human_rx_part1.zip": {
+      "source_file_id": 2,
+      "verify": {
+        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part1.zip",
+        "verified": true,
+        "verify_seconds": 15.49,
+        "newly_registered": true
+      },
+      "members_in_archive": 14989,
+      "already_done": 0,
+      "processed": 14989,
+      "loaded": 14989,
+      "duplicate": 0,
+      "failed": 0,
+      "failed_by_stage": {},
+      "failed_by_kind": {},
+      "member_bytes_processed": 3218677393,
+      "read_seconds": 38.99,
+      "parse_seconds": 133.38,
+      "db_seconds": 105.17,
+      "duplicate_member_names": 0,
+      "wall_seconds": 287.51,
+      "members_per_second": 52.13,
+      "member_MB_per_second": 11.2,
+      "advertised_number_of_files": 14989
+    },
+    "dm_spl_release_human_rx_part2.zip": {
+      "source_file_id": 3,
+      "verify": {
+        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part2.zip",
+        "verified": true,
+        "verify_seconds": 20.68,
+        "newly_registered": true
+      },
+      "members_in_archive": 9571,
+      "already_done": 0,
+      "processed": 9571,
+      "loaded": 9571,
+      "duplicate": 0,
+      "failed": 0,
+      "failed_by_stage": {},
+      "failed_by_kind": {},
+      "member_bytes_processed": 3218609334,
+      "read_seconds": 24.18,
+      "parse_seconds": 94.21,
+      "db_seconds": 65.16,
+      "duplicate_member_names": 0,
+      "wall_seconds": 189.69,
+      "members_per_second": 50.46,
+      "member_MB_per_second": 16.97,
+      "advertised_number_of_files": 9571
+    },
+    "dm_spl_release_human_rx_part3.zip": {
+      "source_file_id": 4,
+      "verify": {
+        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part3.zip",
+        "verified": true,
+        "verify_seconds": 16.54,
+        "newly_registered": true
+      },
+      "members_in_archive": 9148,
+      "already_done": 0,
+      "processed": 9148,
+      "loaded": 9148,
+      "duplicate": 0,
+      "failed": 0,
+      "failed_by_stage": {},
+      "failed_by_kind": {},
+      "member_bytes_processed": 3218554311,
+      "read_seconds": 30.86,
+      "parse_seconds": 102.04,
+      "db_seconds": 71.84,
+      "duplicate_member_names": 0,
+      "wall_seconds": 211.09,
+      "members_per_second": 43.34,
+      "member_MB_per_second": 15.25,
+      "advertised_number_of_files": 9148
+    },
+    "dm_spl_release_human_rx_part4.zip": {
+      "source_file_id": 5,
+      "verify": {
+        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part4.zip",
+        "verified": true,
+        "verify_seconds": 18.86,
+        "newly_registered": true
+      },
+      "members_in_archive": 8687,
+      "already_done": 0,
+      "processed": 8687,
+      "loaded": 8687,
+      "duplicate": 0,
+      "failed": 0,
+      "failed_by_stage": {},
+      "failed_by_kind": {},
+      "member_bytes_processed": 3218299024,
+      "read_seconds": 43.77,
+      "parse_seconds": 111.72,
+      "db_seconds": 92.52,
+      "duplicate_member_names": 0,
+      "wall_seconds": 255.12,
+      "members_per_second": 34.05,
+      "member_MB_per_second": 12.61,
+      "advertised_number_of_files": 8687
+    },
+    "dm_spl_release_human_rx_part5.zip": {
+      "source_file_id": 6,
+      "verify": {
+        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part5.zip",
+        "verified": true,
+        "verify_seconds": 15.79,
+        "newly_registered": true
+      },
+      "members_in_archive": 8358,
+      "already_done": 0,
+      "processed": 8358,
+      "loaded": 8358,
+      "duplicate": 0,
+      "failed": 0,
+      "failed_by_stage": {},
+      "failed_by_kind": {},
+      "member_bytes_processed": 3217841121,
+      "read_seconds": 22.88,
+      "parse_seconds": 97.56,
+      "db_seconds": 61.13,
+      "duplicate_member_names": 0,
+      "wall_seconds": 186.97,
+      "members_per_second": 44.7,
+      "member_MB_per_second": 17.21,
+      "advertised_number_of_files": 8358
+    },
+    "dm_spl_release_human_rx_part6.zip": {
+      "source_file_id": 7,
+      "verify": {
+        "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_release_human_rx_part6.zip",
+        "verified": true,
+        "verify_seconds": 12.74,
+        "newly_registered": true
+      },
+      "members_in_archive": 4311,
+      "already_done": 0,
+      "processed": 4311,
+      "loaded": 4311,
+      "duplicate": 0,
+      "failed": 0,
+      "failed_by_stage": {},
+      "failed_by_kind": {},
+      "member_bytes_processed": 1874158192,
+      "read_seconds": 18.82,
+      "parse_seconds": 66.45,
+      "db_seconds": 42.87,
+      "duplicate_member_names": 0,
+      "wall_seconds": 131.34,
+      "members_per_second": 32.82,
+      "member_MB_per_second": 14.27,
+      "advertised_number_of_files": 4311
+    }
+  },
+  "sources": {
+    "zip_metadata": {
+      "source_file_id": 1,
+      "path": "~\\fineprint-data\\raw\\dailymed\\human_rx_full\\2026-10-16\\dm_spl_zip_files_meta_data.zip",
+      "verified": true,
+      "verify_seconds": 0.04,
+      "newly_registered": true,
+      "rows": 159373,
+      "loaded_now": 159373,
+      "malformed_lines": 0
+    }
+  },
+  "release_label": "2026-10-16",
+  "published_dates": {
+    "updated_now": 51910,
+    "documents_with_published_date": 51910,
+    "documents_without_published_date": 3154,
+    "without_date_but_zip_name_listed_with_mismatched_set_or_version": 0
+  },
+  "operation_types": [
+    {
+      "code": "C43360",
+      "canonical_name": "MANUFACTURE",
+      "assertions": 35785,
+      "raw_variants": 4,
+      "distinct_normalized_names": [
+        "MANUFACTURE"
+      ]
+    },
+    {
+      "code": "C73606",
+      "canonical_name": "REPACK",
+      "assertions": 27410,
+      "raw_variants": 3,
+      "distinct_normalized_names": [
+        "REPACK"
+      ]
+    },
+    {
+      "code": "C25391",
+      "canonical_name": "ANALYSIS",
+      "assertions": 22408,
+      "raw_variants": 3,
+      "distinct_normalized_names": [
+        "ANALYSIS"
+      ]
+    },
+    {
+      "code": "C73607",
+      "canonical_name": "RELABEL",
+      "assertions": 18441,
+      "raw_variants": 2,
+      "distinct_normalized_names": [
+        "RELABEL"
+      ]
+    },
+    {
+      "code": "C84731",
+      "canonical_name": "PACK",
+      "assertions": 12732,
+      "raw_variants": 5,
+      "distinct_normalized_names": [
+        "PACK"
+      ]
+    },
+    {
+      "code": "C84732",
+      "canonical_name": "LABEL",
+      "assertions": 8133,
+      "raw_variants": 3,
+      "distinct_normalized_names": [
+        "LABEL"
+      ]
+    },
+    {
+      "code": "C82401",
+      "canonical_name": "API MANUFACTURE",
+      "assertions": 3423,
+      "raw_variants": 3,
+      "distinct_normalized_names": [
+        "API MANUFACTURE"
+      ]
+    },
+    {
+      "code": "C84382",
+      "canonical_name": "STERILIZE",
+      "assertions": 909,
+      "raw_variants": 2,
+      "distinct_normalized_names": [
+        "STERILIZE"
+      ]
+    },
+    {
+      "code": "C91403",
+      "canonical_name": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+      "assertions": 431,
+      "raw_variants": 3,
+      "distinct_normalized_names": [
+        "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION"
+      ]
+    },
+    {
+      "code": "C125710",
+      "canonical_name": "TRANSFILL",
+      "assertions": 180,
+      "raw_variants": 1,
+      "distinct_normalized_names": [
+        "TRANSFILL"
+      ]
+    },
+    {
+      "code": "C84386",
+      "canonical_name": "PARTICLE SIZE REDUCTION",
+      "assertions": 67,
+      "raw_variants": 2,
+      "distinct_normalized_names": [
+        "PARTICLE SIZE REDUCTION"
+      ]
+    },
+    {
+      "code": "C201565",
+      "canonical_name": "DISTRIBUTE",
+      "assertions": 21,
+      "raw_variants": 1,
+      "distinct_normalized_names": [
+        "DISTRIBUTE"
+      ]
+    },
+    {
+      "code": "C101510",
+      "canonical_name": "FDF MANUFACTURE",
+      "assertions": 7,
+      "raw_variants": 1,
+      "distinct_normalized_names": [
+        "FDF MANUFACTURE"
+      ]
+    },
+    {
+      "code": "C112113",
+      "canonical_name": "HUMAN DRUG COMPOUNDING OUTSOURCING FACILITY",
+      "assertions": 3,
+      "raw_variants": 2,
+      "distinct_normalized_names": [
+        "HUMAN DRUG COMPOUNDING OUTSOURCING FACILITY"
+      ]
+    },
+    {
+      "code": "C70827",
+      "canonical_name": "RECOVERY",
+      "assertions": 2,
+      "raw_variants": 1,
+      "distinct_normalized_names": [
+        "RECOVERY"
+      ]
+    }
+  ],
+  "wall_seconds": 1387.32,
+  "peak_rss_bytes": 73252864,
+  "database_bytes": 532472335,
+  "table_counts": {
+    "source_file": 7,
+    "ingest_run": 1,
+    "dailymed_zip_metadata": 159373,
+    "spl_document": 55064,
+    "archive_member": 55064,
+    "dead_letter": 0,
+    "organization_mention": 158291,
+    "product": 88501,
+    "package": 233934,
+    "operation_assertion": 129952,
+    "operation_type": 15
+  },
+  "status": "completed",
+  "finished_at": "2026-10-19T21:56:03Z"
+}

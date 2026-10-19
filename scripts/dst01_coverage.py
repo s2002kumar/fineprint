@@ -73,10 +73,23 @@ Q = {
     "assertions_by_operation": """SELECT a.operation_code || ' ' || coalesce(t.canonical_name,'?'), count(*)
         FROM national.operation_assertion a LEFT JOIN national.operation_type t USING (operation_code)
         GROUP BY 1 ORDER BY 2 DESC""",
-    "operation_types": """SELECT operation_code, canonical_name, assertions, jsonb_object_length(observed_names),
-        observed_names FROM national.operation_type ORDER BY assertions DESC""",
+    "operation_types": """SELECT operation_code, canonical_name, assertions,
+        (SELECT count(*) FROM jsonb_object_keys(observed_names)) raw_variants, observed_names
+        FROM national.operation_type ORDER BY assertions DESC""",
     "product_evidence_status": """SELECT evidence_status, count(*) FROM national.v_product_establishment_evidence
         WHERE kind = 'product' GROUP BY 1 ORDER BY 2 DESC""",
+    # Sensitivity only (NOT the DST-02 snapshot rule): restrict to the highest version per set_id,
+    # because the full release ships some superseded versions alongside their successors.
+    "highest_version_documents": """SELECT count(*) FROM national.spl_document d
+        WHERE d.version = (SELECT max(version) FROM national.spl_document x WHERE x.set_id = d.set_id)""",
+    "product_evidence_status_highest_version_only": """SELECT e.evidence_status, count(*)
+        FROM national.v_product_establishment_evidence e
+        WHERE e.kind = 'product' AND e.version = (SELECT max(version) FROM national.spl_document x
+                                                  WHERE x.set_id = e.set_id)
+        GROUP BY 1 ORDER BY 2 DESC""",
+    "superseded_versions_without_published_date": """SELECT count(*) FROM national.spl_document d
+        WHERE d.published_date IS NULL AND d.version < (SELECT max(version) FROM national.spl_document x
+                                                         WHERE x.set_id = d.set_id)""",
     "documents_by_establishment_presence_and_manufacture": """SELECT has_establishment_block,
         EXISTS (SELECT 1 FROM national.operation_assertion a WHERE a.document_pk = d.document_pk
                 AND a.operation_code='C43360' AND a.duns IS NOT NULL) has_manufacture, count(*)

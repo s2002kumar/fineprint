@@ -1,0 +1,429 @@
+{
+  "generated_at": "2026-10-19T22:08:34Z",
+  "database": "fineprint",
+  "documents": {
+    "total": 55064,
+    "with_establishment_block": 43138,
+    "without_establishment_block": 11926,
+    "with_published_date": 51910,
+    "effective_date_unparsed": 0,
+    "member_date_equals_published": 36926,
+    "with_anomalies": 306,
+    "distinct_set_ids": 52747,
+    "xml_bytes": 8433319864
+  },
+  "document_types": {
+    "34391-3 | HUMAN PRESCRIPTION DRUG LABEL": 54851,
+    "34391-3 | HUMAN PRESCRIPTION DRUG LABELING": 192,
+    "45129-4 | HUMAN PRESCRIPTION DRUG LABEL WITH HIGHLIGHTS": 15,
+    "45129-4 | HUMAN PRESCRIPTION DRUG LABELING WITH HIGHLIGHTS": 3,
+    "34391-3 | HUMAN PRESCRIPTION DRUG LABEL ": 1,
+    "45129-4 | HUMAN PRESCRIPTION DRUG LABEL.PLR": 1,
+    "53404-0 | VACCINE LABEL": 1
+  },
+  "anomaly_kinds": {
+    "product_outside_product_data_section": 602,
+    "duplicate_product_code_in_document": 9,
+    "duplicate_operation_product_code": 2
+  },
+  "version_conflicts": 0,
+  "sets_with_multiple_versions": 2311,
+  "members_by_source_and_status": [
+    [
+      "dm_spl_release_human_rx_part1.zip",
+      "loaded",
+      14989
+    ],
+    [
+      "dm_spl_release_human_rx_part2.zip",
+      "loaded",
+      9571
+    ],
+    [
+      "dm_spl_release_human_rx_part3.zip",
+      "loaded",
+      9148
+    ],
+    [
+      "dm_spl_release_human_rx_part4.zip",
+      "loaded",
+      8687
+    ],
+    [
+      "dm_spl_release_human_rx_part5.zip",
+      "loaded",
+      8358
+    ],
+    [
+      "dm_spl_release_human_rx_part6.zip",
+      "loaded",
+      4311
+    ]
+  ],
+  "members_vs_advertised": [
+    [
+      "dm_spl_release_human_rx_part1.zip",
+      14989,
+      14989
+    ],
+    [
+      "dm_spl_release_human_rx_part2.zip",
+      9571,
+      9571
+    ],
+    [
+      "dm_spl_release_human_rx_part3.zip",
+      9148,
+      9148
+    ],
+    [
+      "dm_spl_release_human_rx_part4.zip",
+      8687,
+      8687
+    ],
+    [
+      "dm_spl_release_human_rx_part5.zip",
+      8358,
+      8358
+    ],
+    [
+      "dm_spl_release_human_rx_part6.zip",
+      4311,
+      4311
+    ]
+  ],
+  "dead_letters_by_stage_kind": {},
+  "dead_letters": [],
+  "products": {
+    "total": 88501,
+    "products": 84467,
+    "kit_parts": 4034,
+    "without_ndc": 1869,
+    "ndc_not_normalizable": 11,
+    "distinct_product_5_4": 79536
+  },
+  "product_ndc_patterns": {
+    "5-3": 47344,
+    "5-4": 28486,
+    "4-4": 8637
+  },
+  "product_codes_in_multiple_documents": 4664,
+  "packages": {
+    "total": 233934,
+    "without_ndc": 27025,
+    "ndc_not_normalizable": 21,
+    "distinct_package_11": 195191,
+    "segments_mismatch_product": 28
+  },
+  "package_ndc_patterns": {
+    "5-3-2": 118226,
+    "5-4-1": 72892,
+    "<none>": 27025,
+    "4-4-2": 15787,
+    "14": 3,
+    "13": 1
+  },
+  "package_codes_in_multiple_documents": 10196,
+  "organizations_by_role": {
+    "labeler": 55058,
+    "establishment": 52158,
+    "registrant": 51075
+  },
+  "establishments": {
+    "mentions": 52158,
+    "without_duns": 0,
+    "multiple_duns": 0,
+    "distinct_duns": 4347,
+    "with_fei": 0,
+    "with_address": 0
+  },
+  "distinct_labeler_duns": 2559,
+  "duns_as_both_labeler_and_establishment": 1265,
+  "assertions": {
+    "total": 129952,
+    "without_duns": 0,
+    "without_operation_code": 0,
+    "distinct_manufacture_duns": 3352,
+    "documents_with_assertions": 43138
+  },
+  "assertions_by_scope": {
+    "product": 123364,
+    "no_product_scope": 6060,
+    "kit_part": 528
+  },
+  "assertions_by_operation": {
+    "C43360 MANUFACTURE": 35785,
+    "C73606 REPACK": 27410,
+    "C25391 ANALYSIS": 22408,
+    "C73607 RELABEL": 18441,
+    "C84731 PACK": 12732,
+    "C84732 LABEL": 8133,
+    "C82401 API MANUFACTURE": 3423,
+    "C84382 STERILIZE": 909,
+    "C91403 POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION": 431,
+    "C125710 TRANSFILL": 180,
+    "C84386 PARTICLE SIZE REDUCTION": 67,
+    "C201565 DISTRIBUTE": 21,
+    "C101510 FDF MANUFACTURE": 7,
+    "C112113 HUMAN DRUG COMPOUNDING OUTSOURCING FACILITY": 3,
+    "C70827 RECOVERY": 2
+  },
+  "operation_types": [
+    [
+      "C43360",
+      "MANUFACTURE",
+      35785,
+      4,
+      {
+        "MANUFACTURE": 17588,
+        "Manufacture": 42,
+        "manufacture": 18152,
+        "MANUFACTURE ": 3
+      }
+    ],
+    [
+      "C73606",
+      "REPACK",
+      27410,
+      3,
+      {
+        "REPACK": 13014,
+        "Repack": 264,
+        "repack": 14132
+      }
+    ],
+    [
+      "C25391",
+      "ANALYSIS",
+      22408,
+      3,
+      {
+        "ANALYSIS": 14340,
+        "Analysis": 34,
+        "analysis": 8034
+      }
+    ],
+    [
+      "C73607",
+      "RELABEL",
+      18441,
+      2,
+      {
+        "RELABEL": 12298,
+        "relabel": 6143
+      }
+    ],
+    [
+      "C84731",
+      "PACK",
+      12732,
+      5,
+      {
+        "PACK": 7797,
+        "PACk": 2,
+        "Pack": 25,
+        "pack": 4905,
+        "PACK ": 3
+      }
+    ],
+    [
+      "C84732",
+      "LABEL",
+      8133,
+      3,
+      {
+        "LABEL": 4857,
+        "Label": 18,
+        "label": 3258
+      }
+    ],
+    [
+      "C82401",
+      "API MANUFACTURE",
+      3423,
+      3,
+      {
+        "API MANUFACTURE": 2162,
+        "API Manufacture": 1,
+        "api manufacture": 1260
+      }
+    ],
+    [
+      "C84382",
+      "STERILIZE",
+      909,
+      2,
+      {
+        "STERILIZE": 620,
+        "sterilize": 289
+      }
+    ],
+    [
+      "C91403",
+      "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+      431,
+      3,
+      {
+        "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION": 258,
+        "positron emission tomography drug production": 172,
+        "positron emission tomography drug production ": 1
+      }
+    ],
+    [
+      "C125710",
+      "TRANSFILL",
+      180,
+      1,
+      {
+        "transfill": 180
+      }
+    ],
+    [
+      "C84386",
+      "PARTICLE SIZE REDUCTION",
+      67,
+      2,
+      {
+        "PARTICLE SIZE REDUCTION": 50,
+        "particle size reduction": 17
+      }
+    ],
+    [
+      "C201565",
+      "DISTRIBUTE",
+      21,
+      1,
+      {
+        "distribute": 21
+      }
+    ],
+    [
+      "C101510",
+      "FDF MANUFACTURE",
+      7,
+      1,
+      {
+        "FDF MANUFACTURE": 7
+      }
+    ],
+    [
+      "C112113",
+      "HUMAN DRUG COMPOUNDING OUTSOURCING FACILITY",
+      3,
+      2,
+      {
+        "HUMAN DRUG COMPOUNDING OUTSOURCING FACILITY": 1,
+        "human drug compounding outsourcing facility": 2
+      }
+    ],
+    [
+      "C70827",
+      "RECOVERY",
+      2,
+      1,
+      {
+        "recovery": 2
+      }
+    ]
+  ],
+  "product_evidence_status": {
+    "OTHER_OPERATIONS_ONLY": 28888,
+    "EXPLICIT_MANUFACTURE": 27648,
+    "NO_ESTABLISHMENT_BLOCK": 20045,
+    "ONLY_UNSCOPED_OPERATIONS_IN_DOCUMENT": 7762,
+    "ESTABLISHMENTS_LISTED_NOT_FOR_THIS_PRODUCT": 124
+  },
+  "highest_version_documents": 52747,
+  "product_evidence_status_highest_version_only": {
+    "OTHER_OPERATIONS_ONLY": 28157,
+    "EXPLICIT_MANUFACTURE": 26015,
+    "NO_ESTABLISHMENT_BLOCK": 18453,
+    "ONLY_UNSCOPED_OPERATIONS_IN_DOCUMENT": 7762,
+    "ESTABLISHMENTS_LISTED_NOT_FOR_THIS_PRODUCT": 121
+  },
+  "superseded_versions_without_published_date": 2317,
+  "documents_by_establishment_presence_and_manufacture": [
+    [
+      false,
+      false,
+      11926
+    ],
+    [
+      true,
+      false,
+      27809
+    ],
+    [
+      true,
+      true,
+      15329
+    ]
+  ],
+  "table_bytes": {
+    "package": 159768576,
+    "organization_mention": 76554240,
+    "operation_assertion": 76193792,
+    "spl_document": 69435392,
+    "product": 68009984,
+    "dailymed_zip_metadata": 55877632,
+    "archive_member": 17408000,
+    "ingest_run": 49152,
+    "source_file": 49152,
+    "operation_type": 32768,
+    "dead_letter": 24576
+  },
+  "database_bytes": 532649663,
+  "runs": [
+    [
+      1,
+      "completed",
+      "2026-10-19 17:32:52.161282-04:00",
+      "2026-10-19 17:56:03.182338-04:00",
+      "3e82a6e281ed3da5cea9ae64cc8eb6773616082f",
+      false
+    ]
+  ],
+  "fingerprint": {
+    "spl_document": {
+      "rows": 55064,
+      "md5": "04bf4b5d3b57f3742af9558f840c3e95"
+    },
+    "organization_mention": {
+      "rows": 158291,
+      "md5": "c69b6faf19eb80d3f19d7774b2e49447"
+    },
+    "product": {
+      "rows": 88501,
+      "md5": "f186be0f14782ab00747cb0d343e8dc0"
+    },
+    "package": {
+      "rows": 233934,
+      "md5": "d048095ddb44df6b44fb5e6a1e508004"
+    },
+    "operation_assertion": {
+      "rows": 129952,
+      "md5": "03ffb65cd00a45b8a4b4c782f882c437"
+    },
+    "archive_member": {
+      "rows": 55064,
+      "md5": "ab72339af535b8f28fe175cff7cb3af0"
+    },
+    "dead_letter": {
+      "rows": 0,
+      "md5": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+  },
+  "table_counts": {
+    "source_file": 7,
+    "ingest_run": 1,
+    "dailymed_zip_metadata": 159373,
+    "spl_document": 55064,
+    "archive_member": 55064,
+    "dead_letter": 0,
+    "organization_mention": 158291,
+    "product": 88501,
+    "package": 233934,
+    "operation_assertion": 129952,
+    "operation_type": 15
+  }
+}

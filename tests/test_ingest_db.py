@@ -130,6 +130,50 @@ class IngestDb(unittest.TestCase):
         self.assertEqual(rows, [("part_b.zip", "duplicate")])
         self.assertEqual(self.q("SELECT count(*) FROM national.spl_document WHERE set_id = %s", rb.FIX["no_est"])[0][0], 1)
 
+    def _ingest_in_process(self, read_member, **kw):
+        with db.connect(TEST_DB, autocommit=True) as c:
+            db.migrate(c)
+            p = ingest.release_inputs(self.manifest)["parts"][0]
+            run_id = ingest.start_run(c, {"test": "memory"})
+            sid, _ = ingest.register_source(c, kind="dailymed_human_rx_full_part", advertised=p["advertised"],
+                                            record=p["record"], path=p["path"], release_label="test", verify=False)
+            real = ingest.safezip.read_member
+            ingest.safezip.read_member = read_member(real)
+            try:
+                return ingest.ingest_part(c, source_file_id=sid, path=p["path"], run_id=run_id, batch_size=3,
+                                          memory_backoff_s=0, log=lambda m: None, **kw)
+            finally:
+                ingest.safezip.read_member = real
+                ingest.finish_run(c, run_id, "completed", {})
+
+    def test_6_memory_error_retries_batch_and_never_dead_letters(self):
+        self.fresh()
+        calls = {"n": 0}
+
+        def flaky_once(real):
+            def f(*a, **k):
+                calls["n"] += 1
+                if calls["n"] == 2:
+                    raise MemoryError("injected")
+                return real(*a, **k)
+            return f
+        st = self._ingest_in_process(flaky_once)
+        self.assertEqual(st["memory_error_batch_retries"], 1)
+        self.assertEqual((st["loaded"], st["failed"], st["processed"]), (5, 3, 8))
+        self.assertEqual(self.q("SELECT count(*) FROM national.dead_letter WHERE error_kind = 'MemoryError'")[0][0], 0)
+
+    def test_7_persistent_memory_error_fails_run_without_partial_batch(self):
+        self.fresh()
+
+        def always(real):
+            def f(*a, **k):
+                raise MemoryError("injected")
+            return f
+        with self.assertRaises(MemoryError):
+            self._ingest_in_process(always, memory_retries=1)
+        self.assertEqual(self.q("SELECT count(*) FROM national.archive_member")[0][0], 0)
+        self.assertEqual(self.q("SELECT count(*) FROM national.dead_letter")[0][0], 0)
+
     def test_5_migration_reapply_is_noop(self):
         with db.connect(TEST_DB, autocommit=True) as c:
             db.migrate(c)
