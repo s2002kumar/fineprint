@@ -22,6 +22,8 @@ was pre-registered and frozen before the outcome was unsealed.
 | Products in current labels | 80,508: **30.6% DIRECT** site · 0.5% tentative · 1.2% unknown site · 67.6% no manufacture evidence (broken down by reason) |
 | Manufacturing DUNS resolved to a registered FDA facility | **76.9%** (2,562 of 3,333); 19.7% not found, 3.3% stale |
 | Query latency | 3–32 ms per lookup; `evidence --raw` re-reads the 3 GB source and verifies its hashes in 81 ms |
+| Incremental refresh (official 2026-10-19 daily update) | 207 labels in 42 s → 80 edges added, 89 removed (withdrawn per DailyMed's deletion list), 624 carried forward to newer versions; re-applying it: **0 changes** |
+| Clean-clone reproduction | every table fingerprint, frozen historical file and evaluation result **identical** |
 
 | Rocky Mount 2023 replay (pre-registered, frozen, then scored) | Candidates | Pfizer warnings recovered |
 |---|---|---|

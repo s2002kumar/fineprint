@@ -7,7 +7,7 @@
 | DST-04B unseal + score | done | Seal check passed (6 frozen files = tagged blobs). Text-extraction-only amendments A5.1/A5.2 after unsealing, disclosed. P = 65 validated |
 | DST-05 release | done | Clean-clone reproduction: all DB fingerprints, frozen files and evaluation results identical; 73/73 tests in the clone; CI workflow added (not executed: no push) |
 | Privacy / history | done | Verified backup (bundle + mirror, restore-tested) outside the repo; 5 blobs sanitized; identity noreply on all 33 commits; HEAD tree and frozen-file hashes unchanged; seal re-verified on the rewritten tag; old→new IDs in docs/history/COMMIT_ID_MAP.md |
-| DST-06 (optional) | pending | |
+| DST-06 (optional) | done | Fixture test (add/supersede/retract/re-apply) passes; real 2026-10-19 daily update on a DB copy: +80/−89/0/624 edges, re-apply 0 changes; main graph fingerprints unchanged after migration 003 |
 
 **Blockers and caveats carried forward**
 - DailyMed's 2023-07-18 all-labels export was never requested, so the frame is not proven complete.

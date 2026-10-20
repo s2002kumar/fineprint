@@ -1,0 +1,66 @@
+{
+  "refresh_id": 2,
+  "source_file_id": 20,
+  "verify": {
+    "verified": true,
+    "verify_seconds": 0.56,
+    "local_path": "raw/dailymed/updates/dm_spl_daily_update_10192026.zip",
+    "newly_registered": false
+  },
+  "ingest": {
+    "members_in_archive": 207,
+    "already_done": 207,
+    "processed": 0,
+    "loaded": 0,
+    "duplicate": 0,
+    "failed": 0,
+    "failed_by_stage": {},
+    "failed_by_kind": {},
+    "member_bytes_processed": 0,
+    "read_seconds": 0.0,
+    "parse_seconds": 0.0,
+    "db_seconds": 0.0,
+    "skipped_by_prefix": 177,
+    "duplicate_member_names": 0,
+    "wall_seconds": 0.01
+  },
+  "retractions": {
+    "listed": 553,
+    "in_scope": 196,
+    "loaded_now": 0
+  },
+  "build_before": 9,
+  "build_after": 10,
+  "changes": {
+    "added": 0,
+    "removed": 0,
+    "modified": 0,
+    "carried_forward": 0
+  },
+  "selection_status": {
+    "MULTI_VERSION_METADATA_SELECTED": 2281,
+    "SINGLE_VERSION_METADATA_LISTS_OTHER": 107,
+    "UPDATE_NEWER_VERSION": 207,
+    "SINGLE_VERSION_NOT_IN_METADATA": 729,
+    "SINGLE_VERSION_METADATA_CONFIRMED": 49433
+  },
+  "examples": {
+    "added": [],
+    "removed": [],
+    "modified": [],
+    "carried_forward": []
+  },
+  "download": {
+    "status": "verified_existing",
+    "bytes": 164786938,
+    "sha256": "9008db69e63e9be613cbea0983b5f82773efa314f88cb2e9aa2c9082d4a677fe",
+    "md5_matches_advertised": true
+  },
+  "advertised": {
+    "name": "dm_spl_daily_update_10192026.zip",
+    "https_url": "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_daily_update_10192026.zip",
+    "advertised_number_of_labels": 381,
+    "advertised_file_size": "157.15MB",
+    "advertised_md5": "8222882bad76ffd0052ae150ca4d505e"
+  }
+}

@@ -85,6 +85,18 @@ def parse_advertised_file(page_html: str, filename: str) -> dict | None:
     }
 
 
+def parse_advertised_update(page_html: str, filename: str) -> dict | None:
+    """Daily/weekly update entry: 'NAME [ HTTPS / FTP ] Number of labels: N File size: X MD5 checksum: H'."""
+    m = re.search(re.escape(filename) + r"\s*\[\s*HTTPS\s*/\s*FTP\s*\]\s*Number of labels:\s*([\d,]+)\s*"
+                  r"File size:\s*([\d.]+\s*[KMGT]?B)\s*MD5 checksum:\s*([0-9a-fA-F]{32})", _page_text(page_html))
+    if not m:
+        return None
+    href = re.search(r'href="(https://[^"]+/%s)"' % re.escape(filename), page_html)
+    return {"name": filename, "https_url": href.group(1) if href else None,
+            "advertised_number_of_labels": int(m.group(1).replace(",", "")), "advertised_file_size": m.group(2),
+            "advertised_md5": m.group(3).lower()}
+
+
 def parse_history_date(s: str) -> str:
     """'Sep 01, 2020' -> '2020-09-01' (DailyMed history API format)."""
     return _dt.datetime.strptime(s, "%b %d, %Y").date().isoformat()

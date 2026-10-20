@@ -76,6 +76,17 @@ It runs the following and exits non-zero on any difference:
 - **Every DST-01 and graph table fingerprint, all 6 frozen historical files (byte-identical) and the evaluation
   results were identical to the reference.** 73/73 tests passed in the clone.
 
+## Optional: incremental refresh (DST-06)
+```sh
+# work on a copy so the release build stays the reference
+psql -c "CREATE DATABASE fineprint_refresh TEMPLATE fineprint"      # or any equivalent
+python -I scripts/dst06_refresh.py --db fineprint_refresh --update dm_spl_daily_update_10192026.zip --out /tmp/refresh.json
+```
+**Measured 2026-10-20:**
+- First pass: 42 s. It loaded 207 prescription labels and applied 196 in-scope retractions. Edges: +80 / −89 / 0 modified / 624 carried forward.
+- Second pass: 19 s, 0 changes.
+- Evidence: `evidence/dst06/`. Updates are advertised on the DailyMed page only for a short window, and older ones disappear.
+
 ## 4. Tests and CI
 - `python -I -m unittest discover -s tests -t .` runs the stdlib-only tests; the database tests skip.
 - With psycopg and a test database, the same command runs the full suite: real ingest semantics, crash/kill/resume, graph rules, CLI answers, historical rules and the repo privacy guards.

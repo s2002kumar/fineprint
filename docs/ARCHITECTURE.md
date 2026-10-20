@@ -59,6 +59,15 @@ flowchart LR
   - **UNKNOWN**: no registration evidence, no DUNS, or no product scope.
 - **Never inferred.** No facility comes from a labeler, company name, address string or product name. PACK and LABEL are never MANUFACTURE.
 
+## Incremental refresh (DST-06, manual; no scheduler)
+`scripts/dst06_refresh.py --db <db> --update <dm_spl_daily|weekly_update_*.zip>` handles one official update archive:
+1. It downloads the archive (MD5 must match the advertised value) and ingests only its `prescription/` members, through the same idempotent path as the full release.
+2. It loads the update's `files_deleted.txt` into `release_retraction`.
+3. It rebuilds the graph over **active** documents, meaning members no later update retracted. A newer version from an update is selected as `UPDATE_NEWER_VERSION`.
+4. It records `refresh_run` / `refresh_change`, classifying each edge (keyed by set, product code, DUNS and operation) as added, removed, modified or carried forward.
+
+Re-applying the same archive changes nothing. With no updates loaded, graph fingerprints equal the release build (migration `003` is additive). Two limits remain: updates must be applied in chronological order, and documents added by updates have no `published_date`, because the official metadata file is only refreshed with full releases.
+
 ## Reliability mechanisms
 - Downloads resume with Range + If-Range on the ETag, so a changed object restarts rather than splicing. MD5 must match the advertised value before a file is accepted.
 - Ingest processes one member at a time under hard byte caps; peak RSS was 73 MB for 18 GB.

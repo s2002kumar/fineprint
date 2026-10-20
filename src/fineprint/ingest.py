@@ -290,7 +290,7 @@ def _dead_letter(cur, run_id, source_file_id, info, member_sha, stage, error_kin
 def ingest_part(conn, *, source_file_id: int, path: Path, run_id: int, batch_size: int = 200,
                 retry_failed: bool = False, limit: int | None = None, crash_after: int | None = None,
                 limits: safezip.Limits = safezip.DEFAULT_LIMITS, memory_retries: int = 3,
-                memory_backoff_s: float = 30.0, log=print) -> dict:
+                memory_backoff_s: float = 30.0, member_prefix: str | None = None, log=print) -> dict:
     t_start = time.perf_counter()
     if retry_failed:
         with conn.transaction():
@@ -306,6 +306,9 @@ def ingest_part(conn, *, source_file_id: int, path: Path, run_id: int, batch_siz
     with zipfile.ZipFile(path) as zf:
         scan = safezip.scan_directory(zf, limits)
         infos = [i for i in zf.infolist() if not i.is_dir()]
+        if member_prefix is not None:  # e.g. update archives mix prescription/otc/animal members and .txt lists
+            st["skipped_by_prefix"] = sum(1 for i in infos if not i.filename.startswith(member_prefix))
+            infos = [i for i in infos if i.filename.startswith(member_prefix)]
         st["members_in_archive"] = len(infos)
         st["duplicate_member_names"] = len(scan["duplicate_names"])
         todo = [(idx, i) for idx, i in enumerate(infos) if i.filename not in done]

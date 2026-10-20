@@ -24,13 +24,22 @@ CONFIRMED = {"SINGLE_VERSION_METADATA_CONFIRMED": "confirmed", "MULTI_VERSION_ME
              "SINGLE_VERSION_NOT_IN_METADATA": "unconfirmed", "SINGLE_VERSION_METADATA_LISTS_OTHER": "ambiguous",
              "MULTI_VERSION_HIGHEST_NO_METADATA": "ambiguous",
              "MULTI_VERSION_HIGHEST_METADATA_LISTS_OTHER": "ambiguous",
-             "UNRESOLVED_SAME_VERSION_CONFLICT": "unresolved"}
+             "UNRESOLVED_SAME_VERSION_CONFLICT": "unresolved", "UPDATE_NEWER_VERSION": "confirmed"}
 
 
-def select_version(docs: list[tuple[int, int, str]], metadata_version: int | None) -> dict:
-    """Pure rule. docs = [(document_pk, version, xml_sha256)] for one set."""
+def select_version(docs: list[tuple[int, int, str]], metadata_version: int | None,
+                   update_pks: frozenset = frozenset()) -> dict:
+    """Pure rule. docs = [(document_pk, version, xml_sha256)] of one set's ACTIVE documents.
+
+    DST-06: when the highest active version arrived in an official update archive and is newer
+    than the release metadata's version, it is selected as UPDATE_NEWER_VERSION. With no updates
+    loaded, this branch never runs and the release rule is unchanged.
+    """
     versions = sorted({v for _, v, _ in docs})
-    if metadata_version is not None and metadata_version in versions:
+    upd = [v for pk, v, _ in docs if pk in update_pks]
+    if upd and max(upd) == versions[-1] and (metadata_version is None or max(upd) > metadata_version):
+        target, status = versions[-1], "UPDATE_NEWER_VERSION"
+    elif metadata_version is not None and metadata_version in versions:
         target = metadata_version
         status = "SINGLE_VERSION_METADATA_CONFIRMED" if len(versions) == 1 else "MULTI_VERSION_METADATA_SELECTED"
     elif len(versions) == 1:
@@ -125,16 +134,26 @@ def build(conn, *, log=print) -> dict:
         sets = defaultdict(list)
         names = {}
         pub = {}
+        # ACTIVE documents only: present in some archive member that no LATER update retracted (DST-06).
+        active_sql = """EXISTS (SELECT 1 FROM national.archive_member m WHERE m.document_pk = d.document_pk
+                          AND NOT EXISTS (SELECT 1 FROM national.release_retraction r
+                                          WHERE r.member_basename = regexp_replace(m.member_name, '^.*/', '')
+                                            AND r.update_source_file_id > m.source_file_id))"""
         for pk, set_id, version, sha, pdate in conn.execute(
-                "SELECT document_pk, set_id, version, xml_sha256, published_date FROM national.spl_document"):
+                f"SELECT d.document_pk, d.set_id, d.version, d.xml_sha256, d.published_date "
+                f"FROM national.spl_document d WHERE {active_sql}"):
             key = set_id.lower()
             sets[key].append((pk, version, sha))
             names.setdefault(key, set_id)
             pub[pk] = pdate
+        update_pks = frozenset(r[0] for r in conn.execute(
+            """SELECT DISTINCT m.document_pk FROM national.archive_member m
+               JOIN national.source_file s USING (source_file_id)
+               WHERE s.kind = 'dailymed_spl_update' AND m.document_pk IS NOT NULL"""))
         sel_rows = []
         for key in sorted(sets):
             mv, md = meta.get(key, (None, None))
-            r = select_version(sets[key], mv)
+            r = select_version(sets[key], mv, update_pks)
             sel_rows.append((key, names[key], r["document_pk"], r["selected_version"], r["versions"], len(sets[key]),
                              mv, md, r["status"], r["class"], pub.get(r["document_pk"]), build_id))
         with conn.cursor() as cur:
