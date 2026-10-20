@@ -96,6 +96,7 @@ python -I scripts/export_explorer.py --db fineprint --verify   # a fresh export 
 python -I scripts/verify_explorer_csv.py --db fineprint        # browser CSV code (run under Node) vs independent SQL
 python -I scripts/export_explorer.py --check                   # no database: files vs manifest checksums
 python -I scripts/make_human_audit_worksheet.py                # regenerate the seeded human audit sample
+node scripts/check_live_explorer.mjs <chrome> https://s2002kumar.github.io/fineprint/   # headless browser check of the deployed site
 ```
 On the reference database, `--verify` reported all 101 data files identical. 34,494 CSV rows matched the graph on all
 28 fields (`evidence/explorer/csv_verification.json`).

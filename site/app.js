@@ -72,7 +72,7 @@ async function home() {
   const fac = facilityIndex(idx);
   setTitle("");
   const results = h("div", { "aria-live": "polite" });
-  const input = h("input", { id: "q", type: "search", autocomplete: "off", placeholder: "e.g. 093132819, FEI 1021343, Hospira" });
+  const input = h("input", { id: "q", type: "search", autocomplete: "off", placeholder: "e.g. 093132819, FEI 1021343, Hospira, Rocky Mount" });
   const run = () => {
     const t = input.value.trim().toLowerCase().replace(/^fei[:\s]*/, "");
     results.replaceChildren();
@@ -80,6 +80,7 @@ async function home() {
     const hits = [];
     for (const f of fac.values()) {
       if (f.duns.includes(t) || (f.fei && f.fei === t) || (f.firm_name || "").toLowerCase().includes(t)
+          || (f.address || "").toLowerCase().includes(t)
           || f.spl_names.some((n) => n.toLowerCase().includes(t))) hits.push(f);
     }
     hits.sort((x, y) => (y.mfg_direct + y.mfg_tentative + y.mfg_unknown) - (x.mfg_direct + x.mfg_tentative + x.mfg_unknown)
@@ -108,9 +109,9 @@ async function home() {
     h("p", {}, `All ${fmt(fac.size)} establishment DUNS named in the current labels are searchable. MANUFACTURE `
       + "assertions are exported for every one of them; the two examples above also include packing, labeling and "
       + "testing operations."),
-    h("label", { for: "q" }, "DUNS, FEI or name"), input,
-    h("p", { class: "note" }, "Names match both FDA-registered firm names and the names labels use. A shared name "
-      + "does not mean the same facility; identity comes only from DUNS and FEI."),
+    h("label", { for: "q" }, "DUNS, FEI, name or registered address"), input,
+    h("p", { class: "note" }, "Text matches FDA-registered firm names and addresses and the names labels use. A "
+      + "shared name or town does not mean the same facility; identity comes only from DUNS and FEI."),
     results,
     h("h2", {}, "Historical case study"),
     h("p", {}, a("#/rocky-mount-2023", "Rocky Mount, July 2023"),

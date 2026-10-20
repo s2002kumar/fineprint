@@ -1,6 +1,6 @@
 [project]
 name = "fineprint"
-version = "0.0.1"
+version = "1.1.0"
 description = "Which factory actually makes your medicine? Operation-aware, provenance-linked DailyMed SPL facility graph."
 requires-python = ">=3.11"
 license = "MIT"  # code only; third-party data terms in NOTICE.md
