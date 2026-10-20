@@ -1,0 +1,134 @@
+{
+  "generated_at": "2026-10-20T02:50:32Z",
+  "scope": "every blob reachable from every local ref + commit author/committer metadata",
+  "refs": [
+    "dst-00 04df3b0",
+    "dst-01 8514aaf",
+    "dst-02-03-04a 5e595d9",
+    "main 6766255"
+  ],
+  "blobs_scanned": 135,
+  "remotes": [
+    "origin"
+  ],
+  "project_db_password_found_in_history": false,
+  "project_db_password_paths": [],
+  "findings": {
+    "contact_markup": {
+      "scripts/audit_git_history.py": {
+        "history_blobs": 1,
+        "in_HEAD": true,
+        "masked_examples": [
+          "<contactPart***",
+          "mailto:***"
+        ]
+      },
+      "scripts/dst00_historical.py": {
+        "history_blobs": 1,
+        "in_HEAD": true,
+        "masked_examples": [
+          "<contactPart***"
+        ]
+      },
+      "tests/test_download_resume.py": {
+        "history_blobs": 3,
+        "in_HEAD": true,
+        "masked_examples": [
+          "<contactPart***",
+          "mailto:***"
+        ]
+      }
+    },
+    "local_username": {
+      "dst01_ingestion_report.md": {
+        "history_blobs": 1,
+        "in_HEAD": false,
+        "masked_examples": [
+          "<username>"
+        ]
+      },
+      "evidence/dst00/bulk_part6_download.json": {
+        "history_blobs": 1,
+        "in_HEAD": false,
+        "masked_examples": [
+          "<username>"
+        ]
+      },
+      "evidence/dst01/ingest_run1_clean_full.json": {
+        "history_blobs": 1,
+        "in_HEAD": false,
+        "masked_examples": [
+          "<username>"
+        ]
+      },
+      "evidence/dst01/restart_test_final_resume.json": {
+        "history_blobs": 1,
+        "in_HEAD": false,
+        "masked_examples": [
+          "<username>"
+        ]
+      }
+    },
+    "posix_home_path": {
+      "scripts/audit_git_history.py": {
+        "history_blobs": 1,
+        "in_HEAD": true,
+        "masked_examples": [
+          "/Users/)[***",
+          "/c/Users/|***",
+          "/home/|***"
+        ]
+      },
+      "tests/test_download_resume.py": {
+        "history_blobs": 2,
+        "in_HEAD": true,
+        "masked_examples": [
+          "/Users/[^***",
+          "/home/[^***"
+        ]
+      }
+    },
+    "secret_like": {
+      "scripts/audit_git_history.py": {
+        "history_blobs": 1,
+        "in_HEAD": true,
+        "masked_examples": [
+          "PGPASSWORD=***"
+        ]
+      }
+    },
+    "windows_home_path": {
+      "dst01_ingestion_report.md": {
+        "history_blobs": 1,
+        "in_HEAD": false,
+        "masked_examples": [
+          "C:\\Users\\<redacted>"
+        ]
+      },
+      "evidence/dst00/bulk_part6_download.json": {
+        "history_blobs": 1,
+        "in_HEAD": false,
+        "masked_examples": [
+          "C:\\\\Users\\\\<redacted>"
+        ]
+      },
+      "evidence/dst01/ingest_run1_clean_full.json": {
+        "history_blobs": 1,
+        "in_HEAD": false,
+        "masked_examples": [
+          "C:\\\\Users\\\\<redacted>"
+        ]
+      },
+      "evidence/dst01/restart_test_final_resume.json": {
+        "history_blobs": 1,
+        "in_HEAD": false,
+        "masked_examples": [
+          "C:\\\\Users\\\\<redacted>"
+        ]
+      }
+    }
+  },
+  "commit_identity_emails_masked": [
+    "<redacted-email>"
+  ]
+}
