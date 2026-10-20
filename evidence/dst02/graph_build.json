@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-10-20T02:28:19Z",
+  "database": "fineprint",
+  "rule_version": "dst02-v1",
+  "builds": [
+    {
+      "build_id": 1,
+      "seconds": 6.39,
+      "fingerprint": {
+        "set_version_selection": {
+          "rows": 52747,
+          "md5": "72501b8f199b1e2922572e7fd053ebd7"
+        },
+        "duns_identity": {
+          "rows": 4314,
+          "md5": "e33f31c51d86decd5d4ae89570f3a137"
+        },
+        "facility": {
+          "rows": 3444,
+          "md5": "1b80520b74caa184360d9a65203d2939"
+        },
+        "operation_edge": {
+          "rows": 123200,
+          "md5": "a301d92d3d87d4cebdada4aa4ebe35c2"
+        }
+      }
+    },
+    {
+      "build_id": 2,
+      "seconds": 6.22,
+      "fingerprint": {
+        "set_version_selection": {
+          "rows": 52747,
+          "md5": "72501b8f199b1e2922572e7fd053ebd7"
+        },
+        "duns_identity": {
+          "rows": 4314,
+          "md5": "e33f31c51d86decd5d4ae89570f3a137"
+        },
+        "facility": {
+          "rows": 3444,
+          "md5": "1b80520b74caa184360d9a65203d2939"
+        },
+        "operation_edge": {
+          "rows": 123200,
+          "md5": "a301d92d3d87d4cebdada4aa4ebe35c2"
+        }
+      }
+    }
+  ],
+  "summary": {
+    "selection_status": {
+      "MULTI_VERSION_METADATA_SELECTED": 2311,
+      "SINGLE_VERSION_METADATA_LISTS_OTHER": 107,
+      "SINGLE_VERSION_NOT_IN_METADATA": 730,
+      "SINGLE_VERSION_METADATA_CONFIRMED": 49599
+    },
+    "selection_class": {
+      "ambiguous": 107,
+      "confirmed": 51910,
+      "unconfirmed": 730
+    },
+    "identity_status": {
+      "NOT_FOUND": 772,
+      "CURRENT_REGISTERED_NO_FEI": 6,
+      "STALE_REGISTERED": 170,
+      "CURRENT_REGISTERED": 3366
+    },
+    "facilities": [
+      3444,
+      3300
+    ],
+    "edges_by_confidence": {
+      "DIRECT": 106800,
+      "TENTATIVE": 3327,
+      "UNKNOWN": 13073
+    },
+    "manufacture_edges_by_confidence": {
+      "DIRECT": 30015,
+      "TENTATIVE": 553,
+      "UNKNOWN": 3008
+    }
+  },
+  "dst01_base_unchanged": true,
+  "peak_rss_bytes": 129646592,
+  "rebuild_fingerprints_equal": true
+}

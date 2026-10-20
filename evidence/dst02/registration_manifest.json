@@ -1,0 +1,117 @@
+{
+  "generated_at": "2026-10-20T02:26:29Z",
+  "rule": "latest HTTP-200 Internet Archive capture of drls_reg.zip in each calendar year from 2024 to last year, plus the latest capture this year that precedes the current FDA file",
+  "files": [
+    {
+      "kind": "fda_decrs_registration",
+      "source_file_id": 15,
+      "newly_registered": true,
+      "rows_loaded_now": 10416,
+      "rows": 10416,
+      "url": "https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "bytes": 2412991,
+      "generated_at": "2026-10-19T03:00:34",
+      "captured_at": null,
+      "archive_digest_verified": false,
+      "member": {
+        "name": "drls_reg.txt",
+        "bytes": 3580040,
+        "sha256": "c30c1bd1894cf733f825dff96260cdb589914c38cd1c8c4def5584f439502386",
+        "generated_at": "2026-10-19T03:00:34"
+      },
+      "with_fei": 10226,
+      "distinct_duns": 10416
+    },
+    {
+      "kind": "fda_decrs_excluded",
+      "source_file_id": 16,
+      "newly_registered": true,
+      "rows_loaded_now": 23,
+      "rows": 23,
+      "url": "https://www.accessdata.fda.gov/cder/drls_excluded.zip",
+      "sha256": "a8b13856f77d705547ff31d67ed6bd6321f9b3911eb7c5678fd66d51c0d1ab37",
+      "bytes": 5574,
+      "generated_at": "2026-10-19T03:00:32",
+      "captured_at": null,
+      "archive_digest_verified": false,
+      "member": {
+        "name": "drls_excluded.txt",
+        "bytes": 3054,
+        "sha256": "82a084bf61f91c285ae6720610054140ae8fbcc7759f9bee7426b1a2ded911b7",
+        "generated_at": "2026-10-19T03:00:32"
+      },
+      "with_fei": 7,
+      "distinct_duns": 23
+    },
+    {
+      "kind": "fda_decrs_registration_archived",
+      "source_file_id": 17,
+      "newly_registered": true,
+      "rows_loaded_now": 10724,
+      "rows": 10724,
+      "url": "https://web.archive.org/web/20241224060947id_/https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "sha256": "f4b85118acdf108fda80c2d2d6b2489bf55e9c913778c75e732df58076dee745",
+      "bytes": 2464869,
+      "generated_at": "2024-12-23T06:00:54",
+      "captured_at": "2024-12-24T06:09:47Z",
+      "archive_digest_verified": true,
+      "member": {
+        "name": "drls_reg.txt",
+        "bytes": 3641764,
+        "sha256": "6b96d83b914743ca0fde3c6f17d1feed0fdf88b57f1c9be7d9e7c200474d8d18",
+        "generated_at": "2024-12-23T06:00:54"
+      },
+      "with_fei": 10405,
+      "distinct_duns": 10724
+    },
+    {
+      "kind": "fda_decrs_registration_archived",
+      "source_file_id": 18,
+      "newly_registered": true,
+      "rows_loaded_now": 10690,
+      "rows": 10690,
+      "url": "https://web.archive.org/web/20251215163821id_/https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "sha256": "a543898abc3735bc03b9b345a24f0a3af92e29927bbaed91c19e1cf9c2bb535b",
+      "bytes": 2467188,
+      "generated_at": "2025-12-05T03:00:38",
+      "captured_at": "2025-12-15T16:38:21Z",
+      "archive_digest_verified": true,
+      "member": {
+        "name": "drls_reg.txt",
+        "bytes": 3656141,
+        "sha256": "2d339116e42fb720e63a47eda309a216d655bbb7ce64987f1a3b3e2281eb05d2",
+        "generated_at": "2025-12-05T03:00:38"
+      },
+      "with_fei": 10400,
+      "distinct_duns": 10690
+    },
+    {
+      "kind": "fda_decrs_registration_archived",
+      "source_file_id": 19,
+      "newly_registered": true,
+      "rows_loaded_now": 10420,
+      "rows": 10420,
+      "url": "https://web.archive.org/web/20260823071118id_/https://www.accessdata.fda.gov/cder/drls_reg.zip",
+      "sha256": "d135dbc795644ea0619d6e7cc4cb0b399fbf98b43b41295186204a81180c470a",
+      "bytes": 2400274,
+      "generated_at": "2026-08-21T03:15:08",
+      "captured_at": "2026-08-23T07:11:18Z",
+      "archive_digest_verified": true,
+      "member": {
+        "name": "drls_reg.txt",
+        "bytes": 3575017,
+        "sha256": "65f2199b6863c3449643ce747d6acf53f2f98592ccb0014b06c0591d693d862f",
+        "generated_at": "2026-08-21T03:15:08"
+      },
+      "with_fei": 10213,
+      "distinct_duns": 10420
+    }
+  ],
+  "archive_captures_listed": 15,
+  "archive_captures_chosen": [
+    "20241224060947",
+    "20251215163821",
+    "20260823071118"
+  ]
+}
