@@ -209,6 +209,11 @@ normalization rule is applied. The text holds exactly 65 occurrences of `00409`,
 Nothing else changed: cohorts, classifications, baselines, audit and metric definitions are exactly as frozen at
 `dst04b-freeze`.
 
+**A5.2 (2026-10-20, AFTER unsealing; text extraction only).** Validation against the 65 `00409`
+occurrences found one row rendered `00409-114 1-02`, with a stray space inside the product segment.
+A single space inside a 5-4-2-shaped NDC is removed **only when the result is exactly 5-4-2**. No
+method, cohort or metric definition changed.
+
 **A3 (2026-10-19). B3 unavailable.** B3 ("already-short stays short") stays **NOT EVALUABLE**
 until a dated, pre-cutoff shortage-state source with package-level (or exactly mappable)
 granularity is identified and recorded here before unsealing. No substitute baseline will be used.

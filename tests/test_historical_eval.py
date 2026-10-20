@@ -61,6 +61,12 @@ class OutcomeNdc(unittest.TestCase):
         text = "Chain NDC 00409 - 3308 - 03 Acetylcysteine 6 g/30 mL 00409 - 4911 - 34 0.1 mg/mL; call 844 - 646 - 4398"
         self.assertEqual(he.extract_ndc_tokens(text), ["00409-3308-03", "00409-4911-34"])
 
+    def test_stray_space_inside_segment_only_when_exactly_542(self):
+        self.assertEqual(he.extract_ndc_tokens("needle 00409-114 1-02 23.4% Sodium"), ["00409-1141-02"])
+        self.assertEqual(he.extract_ndc_tokens("00409-11 41-0 2 x"), ["00409-1141-02"])
+        self.assertEqual(he.extract_ndc_tokens("00409-114 12-02"), [])          # would be 5-5-2: refused
+        self.assertEqual(he.extract_ndc_tokens("lot 12345-6789-01 2026"), ["12345-6789-01"])
+
     def test_token_regex(self):
         text = "NDC 0409-4888-02 and 00409-1234-01; lot 1234-567; 00409123401x"
         self.assertEqual(he.NDC_TOKEN.findall(text), ["0409-4888-02", "00409-1234-01"])
