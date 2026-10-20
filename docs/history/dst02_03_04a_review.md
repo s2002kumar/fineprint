@@ -1,3 +1,5 @@
+> **Point-in-time record (DST-02/03/04A combined gate, 2026-10-20).** Kept for the audit trail of the pre-registered workflow. Counts, test totals and file paths reflect that stage; current results are in the README and `docs/`.
+
 # fineprint — combined review: DST-02, DST-03, DST-04A (2026-10-20)
 
 **Stopped at the gate.** DST-04B, refresh automation, ML and public release were not started.

@@ -113,8 +113,7 @@ class NoPersonalDataInRepoFixtures(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         pat = re.compile(rb"[A-Za-z]:(?:\\\\|\\|/)+Users(?:\\\\|\\|/)+|/home/[^/\"]+/|/Users/[^/\"]+/")
         docs = [p for p in root.glob("*.md")] + list((root / "docs").rglob("*.md"))
-        hits = [str(p) for p in list((root / "evidence").rglob("*.json")) + [root / "source_manifest.json"] + docs
-                if pat.search(p.read_bytes())]
+        hits = [str(p) for p in list((root / "evidence").rglob("*.json")) + docs if pat.search(p.read_bytes())]
         self.assertEqual(hits, [])
 
 

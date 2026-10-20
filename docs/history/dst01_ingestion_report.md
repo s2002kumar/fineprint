@@ -1,3 +1,5 @@
+> **Point-in-time record (DST-01 ingestion gate, 2026-10-19).** Kept for the audit trail of the pre-registered workflow. Counts, test totals and file paths reflect that stage; current results are in the README and `docs/`.
+
 # fineprint DST-01 ingestion report — 2026-10-19
 
 **Status: DST-01 complete; stopped at the review gate (DST-02 not started).**

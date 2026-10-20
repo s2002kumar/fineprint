@@ -4,7 +4,7 @@ Also records the six bulk parts as observed by HEAD/central directory (SHA-256 o
 where a part was actually downloaded) and lists the outcome source as SEALED.
 
 Usage:
-  python -I scripts/build_manifest.py --evidence evidence/dst00 --data-dir <dir> --out source_manifest.json
+  python -I scripts/build_manifest.py --evidence evidence/dst00 --data-dir <dir> --out evidence/dst00/source_manifest.json
 """
 
 import argparse

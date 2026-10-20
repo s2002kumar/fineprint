@@ -1,8 +1,10 @@
+> **Point-in-time record (DST-00 feasibility gate, 2026-10-19).** Kept for the audit trail of the pre-registered workflow. Counts, test totals and file paths reflect that stage; current results are in the README and `docs/`.
+
 # fineprint DST-00 feasibility report — 2026-10-19
 
 **Decisions: national ingest = GO · historical evaluation = NARROW** (target evidence and site
 identity pass; frame completeness unproven). Every number below is from a run recorded in
-`evidence/dst00/*.json`; full URLs, SHA-256s and dates are in `source_manifest.json`.
+`evidence/dst00/*.json`; full URLs, SHA-256s and dates are in `evidence/dst00/source_manifest.json`.
 Machine: Windows 11, Python 3.14.5 (stdlib only), 22 logical CPUs, 16 GB RAM.
 
 ## 1. Five archived Rocky Mount targets: all pass
