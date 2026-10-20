@@ -70,7 +70,9 @@ def main(argv=None):
         for kind, pat in PATTERNS.items():
             for m in pat.finditer(data):
                 v = m.group(0).decode("utf-8", "replace").lower()
-                if kind == "email" and (v in ALLOWED_EMAILS or v.endswith((".invalid", "example.com"))):
+                # GitHub noreply addresses are the deliberate, privacy-safe public identity
+                if kind == "email" and (v in ALLOWED_EMAILS or v.endswith((".invalid", "example.com",
+                                                                           "@users.noreply.github.com"))):
                     continue
                 hits[kind].add(mask(m.group(0), kind))
         if user and user.encode().lower() in data.lower():
