@@ -127,6 +127,12 @@ touches outcomes.
 
 The output is marked **DRAFT — NOT FROZEN**. The freeze (plan §6) happens only in DST-04B.
 
+**A4.1 (2026-10-20, before the re-run).** The first A4 run stopped because `getFile` returned
+HTTP 404 for a cutoff version that the history service lists. Such a set is now recorded as
+`cutoff_version_not_retrievable`. The one exception: a document already retrieved by document ID
+with the **identical set ID and version** is used, labelled `cutoff_version_by_document_id`. An older
+or different version is never substituted.
+
 **A3 (2026-10-19). B3 unavailable.** B3 ("already-short stays short") stays **NOT EVALUABLE**
 until a dated, pre-cutoff shortage-state source with package-level (or exactly mappable)
 granularity is identified and recorded here before unsealing. No substitute baseline will be used.
