@@ -1,0 +1,282 @@
+{
+  "generated_at": "2026-10-20T02:40:55Z",
+  "database": "fineprint",
+  "repeat": 5,
+  "peak_rss_bytes": 53186560,
+  "queries": [
+    {
+      "argv": [
+        "product",
+        "0409-4346"
+      ],
+      "ms_min": 15.4,
+      "ms_median": 16.0,
+      "ms_max": 138.4,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "00409-4346  Aminocaproic Acid  INJECTION, SOLUTION  [labeler: Hospira, Inc. — a labeler is not a facility]",
+        "  set 1c5bc1dd-e9ec-44c1-9281-67ad482315d9 v20  published 2026-05-04  version selection: confirmed (SINGLE_VERSION_METADATA_CONFIRMED); versions in release [20]",
+        "  MANUFACTURE DIRECT: ",
+        "    093132819  FEI 1021343 — Hospira, Inc., Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA)  [evidence 105515]",
+        "    860037912  FEI 3008316085 — Pfizer Healthcare India Private Limited, Plot No. 116, 117, 118, 119, 111 (Part) and 123 (Part), Jawaharlal Nehru Pharma City (SEZ), Parawada Mandal, Anakapalli, Andhra Pradesh 531019, India (IND)  [evidence 105517]",
+        "  MANUFACTURE TENTATIVE: none",
+        "  MANUFACTURE UNKNOWN: none",
+        "  other operations (not manufacture): ANALYSIS 093132819 DIRECT [105513]; LABEL 093132819 DIRECT [105514]; PACK 093132819 DIRECT [105516]; ANALYSIS 860037912 DIRECT [105518]; PACK 860037912 DIRECT [105519]; LABEL 860037912 DIRECT [105520]",
+        "",
+        "(14.5 ms)"
+      ]
+    },
+    {
+      "argv": [
+        "product",
+        "00409-1782-03"
+      ],
+      "ms_min": 14.4,
+      "ms_median": 14.9,
+      "ms_max": 24.1,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "00409-1782  Naloxone Hydrochloride  INJECTION, SOLUTION  [labeler: Hospira, Inc. — a labeler is not a facility]",
+        "  set b598c237-032d-4bb5-0e92-50eabd863dac v23  published 2023-06-07  version selection: confirmed (SINGLE_VERSION_METADATA_CONFIRMED); versions in release [23]",
+        "  MANUFACTURE DIRECT: ",
+        "    030606222  FEI 1925262 — Hospira, Inc., 1776 North Centennial Drive, McPherson, Kansas (KS) 67460, United States (USA)  [evidence 32943]",
+        "  MANUFACTURE TENTATIVE: none",
+        "  MANUFACTURE UNKNOWN: none",
+        "  other operations (not manufacture): ANALYSIS 030606222 DIRECT [32942]; PACK 030606222 DIRECT [32944]; LABEL 030606222 DIRECT [32945]",
+        "",
+        "(13.7 ms)"
+      ]
+    },
+    {
+      "argv": [
+        "facility",
+        "093132819"
+      ],
+      "ms_min": 4.8,
+      "ms_median": 5.0,
+      "ms_max": 18.6,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "DUNS 093132819: CURRENT_REGISTERED, FEI 1021343, Hospira, Inc., Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA) (registration file 2026-10-19, expires 2026-12-31)",
+        "  MANUFACTURE DIRECT: 180 product edge(s)",
+        "    00409-0007  Lidocaine Hydrochloride and Epinephrine  set 2f94f711-14c4-48ec-c5a3-c5ec4b8e8729 v36  [evidence 126734]",
+        "    00409-0009  Ondansetron  set d62cd60b-f87e-4825-bead-1d18bbc4e480 v4  [evidence 108882]",
+        "    00409-0024  Sterile Water  set 3a6422e1-feee-4095-8883-2b0837039e6e v2  [evidence 106288]",
+        "    00409-0032  Potassium Phosphates  set 2fcbc814-c7a4-469a-8b1d-6819b961bfb9 v2  [evidence 79632]",
+        "    00409-0147  Lidocaine Hydrochloride and Epinephrine  set 2f94f711-14c4-48ec-c5a3-c5ec4b8e8729 v36  [evidence 126735]",
+        "    00409-0155  Precedex  set 92b7ddaa-e45a-4b64-a802-bb5df8771dd6 v6  [evidence 113221]",
+        "    00409-1093  Bacteriostatic Water  set 87d6e9dc-fe3b-4593-ac9a-d7493d1959c7 v20  [evidence 116468]",
+        "    00409-1141  SODIUM CHLORIDE  set af6aebad-ef03-4d19-9a40-18e5a278b812 v8  [evidence 95166]",
+        "    00409-1144  Verapamil Hydrochloride  set 1c993365-1b62-4524-e781-d307f28f63bc v26  [evidence 117274]",
+        "    00409-1144  Verapamil Hydrochloride  set 70057a53-ca29-4848-ab3d-5e691e2a14a3 v14  [evidence 105425]"
+      ]
+    },
+    {
+      "argv": [
+        "facility",
+        "FEI:1925262"
+      ],
+      "ms_min": 3.6,
+      "ms_median": 4.2,
+      "ms_max": 11.0,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "DUNS 030606222: CURRENT_REGISTERED, FEI 1925262, Hospira, Inc., 1776 North Centennial Drive, McPherson, Kansas (KS) 67460, United States (USA) (registration file 2026-10-19, expires 2026-12-31)",
+        "  MANUFACTURE DIRECT: 122 product edge(s)",
+        "    00069-0293  Nivestym  set d23ab39c-b6ec-41cf-a529-9dd2852c9d9a v18  [evidence 75182]",
+        "    00069-0294  Nivestym  set d23ab39c-b6ec-41cf-a529-9dd2852c9d9a v18  [evidence 75183]",
+        "    00069-1305  RETACRIT  set 3af26b0d-8ad0-44e1-a538-8bdb5ab39374 v19  [evidence 71617]",
+        "    00069-1306  RETACRIT  set 3af26b0d-8ad0-44e1-a538-8bdb5ab39374 v19  [evidence 71618]",
+        "    00069-1307  RETACRIT  set 3af26b0d-8ad0-44e1-a538-8bdb5ab39374 v19  [evidence 71619]",
+        "    00069-1308  RETACRIT  set 3af26b0d-8ad0-44e1-a538-8bdb5ab39374 v19  [evidence 71620]",
+        "    00069-1309  RETACRIT  set 3af26b0d-8ad0-44e1-a538-8bdb5ab39374 v19  [evidence 71621]",
+        "    00069-1311  RETACRIT  set 3af26b0d-8ad0-44e1-a538-8bdb5ab39374 v19  [evidence 71622]",
+        "    00069-1318  RETACRIT  set 3af26b0d-8ad0-44e1-a538-8bdb5ab39374 v19  [evidence 71623]",
+        "    00115-1694  epinephrine  set e13f05f1-7d21-49bb-b8d5-24bf9301c3d7 v16  [evidence 100273]"
+      ]
+    },
+    {
+      "argv": [
+        "compare",
+        "093132819",
+        "030606222",
+        "--labeler",
+        "141588017"
+      ],
+      "ms_min": 2.9,
+      "ms_median": 3.6,
+      "ms_max": 8.5,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "MANUFACTURE at 093132819 vs 030606222 (labeler 141588017): {'only_a': 144, 'only_b': 62, 'both': 27}",
+        "  only_a:",
+        "    00409-0009  Ondansetron  set d62cd60b-f87e-4825-bead-1d18bbc4e480  ['DIRECT']",
+        "    00409-0024  Sterile Water  set 3a6422e1-feee-4095-8883-2b0837039e6e  ['DIRECT']",
+        "    00409-0032  Potassium Phosphates  set 2fcbc814-c7a4-469a-8b1d-6819b961bfb9  ['DIRECT']",
+        "    00409-1093  Bacteriostatic Water  set 87d6e9dc-fe3b-4593-ac9a-d7493d1959c7  ['DIRECT']",
+        "    00409-1141  SODIUM CHLORIDE  set af6aebad-ef03-4d19-9a40-18e5a278b812  ['DIRECT']",
+        "    00409-1144  Verapamil Hydrochloride  set 1c993365-1b62-4524-e781-d307f28f63bc  ['DIRECT']",
+        "    00409-1144  Verapamil Hydrochloride  set 70057a53-ca29-4848-ab3d-5e691e2a14a3  ['DIRECT']",
+        "    00409-1159  Bupivacaine Hydrochloride  set 02a845c3-4521-4926-e397-25ab536e7cf6  ['DIRECT']",
+        "    00409-1159  BUPIVACAINE HYDROCHLORIDE  set bb44c7e1-d911-4788-908f-09b7b271969b  ['DIRECT']",
+        "    00409-1160  Bupivacaine Hydrochloride  set 02a845c3-4521-4926-e397-25ab536e7cf6  ['DIRECT']"
+      ]
+    },
+    {
+      "argv": [
+        "labeler",
+        "141588017"
+      ],
+      "ms_min": 6.9,
+      "ms_median": 7.3,
+      "ms_max": 13.5,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "Labeler DUNS 141588017: 400 products in 201 current sets. A product made at several sites is counted under each site.",
+        "    171  DIRECT     093132819  FEI 1021343 Hospira, Inc., Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA)",
+        "     89  DIRECT     030606222  FEI 1925262 Hospira, Inc., 1776 North Centennial Drive, McPherson, Kansas (KS) 67460, United States (USA)",
+        "     77  DIRECT     860037912  FEI 3008316085 Pfizer Healthcare India Private Limited, Plot No. 116, 117, 118, 119, 111 (Part) and 123 (Part), Jawaharlal Nehru Pharma City (SEZ), Parawada Mandal, Anakapalli, Andhra Pradesh 531019, India (IND)",
+        "     68  -          -          NO_MANUFACTURE_EVIDENCE",
+        "     39  DIRECT     676190889  FEI 3007869619 Zydus Hospira Oncology Private Limited, Plot No.3, Pharmez, Special Economic Zone, Sarkhej Bavla Highway, Village Matoda, Taluka Sanand, Ahmedabad, Gujarat 382213, India (IND)",
+        "     23  DIRECT     758967652  FEI 3001174929 Hospira Australia Pty Ltd, 1-39 Lexia Pl, Mulgrave, Victoria 3170, Australia (AUS)",
+        "      8  DIRECT     681561866  FEI 3010600744 INFOMED FLUIDS SRL, B-DUL THEODOR PALLADY NR. 50, SECTORUL 3,, Bucuresti,  032266, Romania (ROU)",
+        "      6  DIRECT     858971074  FEI 3009864167 GLAND PHARMA LIMITED, Plot no: 42-52, 54, 55, 64-68, Sy. No. 166, 171, 172 & 177, Phase III, TSIIC, Pashamylaram Village, Patancheru Mandal, Sangareddy District, Hyderabad, Telangana 502307, India (IND)",
+        "      5  DIRECT     918601238  FEI 3002647489 GLAND PHARMA LIMITED, Survey No. 143 - 148, 150 & 151, Near Gandimaisamma Cross Roads, D. P. Pally, Dundigal Post, Dundigal - Gandimaisamma Mandal, Medchal - Malkajgiri District, Hyderabad, Telangana 500043, India (IND)",
+        "      3  DIRECT     650540227  FEI 3009056604 Gland Pharma Limited, Unit I & Unit II, Block C, Phase I, Visakhapatnam Special Economic Zone (VSEZ ), Duvvada, Visakhapatnam, Andhra Pradesh 530049, India (IND)",
+        "      2  DIRECT     233649834  FEI 3002545766 Terumo BCT Ltd, Old Belfast Road, Millbrook, Larne,  BT40 2SH, United Kingdom (GBR)"
+      ]
+    },
+    {
+      "argv": [
+        "search",
+        "naloxone hydrochloride"
+      ],
+      "ms_min": 29.4,
+      "ms_median": 31.5,
+      "ms_max": 93.1,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "Name matches are listed one product at a time. A shared name does NOT mean the same product, labeler or manufacturing site.",
+        "  00404-9773  NALOXONE HYDROCHLORIDE  [Henry Schein, Inc.]  set ddeebc32-9aab-4a2f-8c87-74335d17d5ef  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)",
+        "  00404-9920  Naloxone Hydrochloride  [Henry Schein, Inc.]  set d39635a4-ddb3-4d32-8211-eb84c78e9f59  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)",
+        "  00404-9922  NALOXONE HYDROCHLORIDE  [Henry Schein, Inc]  set bd65e3fe-cd7a-4855-8f55-8cc3a0921ccc  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)",
+        "  00406-8005  Buprenorphine Hydrochloride and Naloxone Hydrochloride Dihydrate  [SpecGx LLC]  set 62abde41-46cb-4e90-a798-23d6531bf9aa  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)",
+        "  00406-8020  Buprenorphine Hydrochloride and Naloxone Hydrochloride Dihydrate  [SpecGx LLC]  set 62abde41-46cb-4e90-a798-23d6531bf9aa  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)",
+        "  00409-1215  Naloxone Hydrochloride  [Hospira, Inc.]  set 8535cc84-ad4a-4d67-8480-fb5a2e3406f8  manufacturing: DIRECT (1 DUNS)",
+        "  00409-1219  Naloxone Hydrochloride  [Hospira, Inc.]  set 8535cc84-ad4a-4d67-8480-fb5a2e3406f8  manufacturing: DIRECT (1 DUNS)",
+        "  00409-1782  Naloxone Hydrochloride  [Hospira, Inc.]  set b598c237-032d-4bb5-0e92-50eabd863dac  manufacturing: DIRECT (1 DUNS)",
+        "  00641-6132  Naloxone Hydrochloride  [Hikma Pharmaceuticals USA Inc.]  set 8cc25cf1-008c-4808-baec-49f35a887fae  manufacturing: DIRECT (1 DUNS)",
+        "  00641-6193  Naloxone Hydrochloride  [Hikma Pharmaceuticals USA Inc.]  set e6467385-6990-498c-8a0e-f4a40ef33cb7  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)",
+        "  00641-6205  Naloxone Hydrochloride  [Hikma Pharmaceuticals USA Inc.]  set e6467385-6990-498c-8a0e-f4a40ef33cb7  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)"
+      ]
+    },
+    {
+      "argv": [
+        "facility",
+        "080105003"
+      ],
+      "ms_min": 5.6,
+      "ms_median": 5.8,
+      "ms_max": 19.6,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "DUNS 080105003: NOT_FOUND",
+        "  also LABELER on 204 current labels (company role; not counted as manufacturing)",
+        "  MANUFACTURE DIRECT: 0 product edge(s)",
+        "  MANUFACTURE TENTATIVE: 0 product edge(s)",
+        "  MANUFACTURE UNKNOWN: 203 product edge(s)",
+        "    72934-1002  ADAPALENE 0.1% / BENZOYL PEROXIDE 2.5% / CLINDAMYCIN 1%  set 887ae1db-bcb4-2e8b-e053-2a95a90abc08 v2  [evidence 18936]  (identity:NOT_FOUND)",
+        "    72934-1003  ADAPALENE 0.1% / BENZOYL PEROXIDE 2.5% / NIACINAMIDE 4%  set 887a6d0f-d351-48b9-e053-2a95a90af2a0 v2  [evidence 18935]  (identity:NOT_FOUND)",
+        "    72934-1004  ADAPALENE 0.3% / BENZOYL PEROXIDE 2.5% / CLINDAMYCIN 1%  set 87391cb8-def2-a107-e053-2991aa0a561b v2  [evidence 18932]  (identity:NOT_FOUND)",
+        "    72934-1005  ADAPALENE 0.3% / BENZOYL PEROXIDE 2.5% / NIACINAMIDE 4%  set 87391cb8-def0-a107-e053-2991aa0a561b v2  [evidence 18931]  (identity:NOT_FOUND)",
+        "    72934-1006  ADAPALENE 0.3% / NIACINAMIDE 4%  set 88798d2c-ae6a-2a2d-e053-2995a90a7f9f v1  [evidence 16150]  (identity:NOT_FOUND)",
+        "    72934-1011  IMIQUIMOD 5% / LEVOCETIRIZINE DIHYDROCHLORIDE 1% / TRETINOIN 0.05%  set 87390498-2694-6a5c-e053-2991aa0ab647 v1  [evidence 16009]  (identity:NOT_FOUND)",
+        "    72934-1012  BENZOYL PEROXIDE 2.5%, CLINDAMYCIN PHOSPHATE 1%, NIACINAMIDE 2% / TRETINOIN 0.05%  set 8800e662-acb9-a842-e053-2a95a90a18d4 v1  [evidence 16089]  (identity:NOT_FOUND)"
+      ]
+    },
+    {
+      "argv": [
+        "unresolved",
+        "--limit",
+        "25"
+      ],
+      "ms_min": 29.9,
+      "ms_median": 30.5,
+      "ms_max": 33.0,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "NOT_FOUND 772, STALE_REGISTERED 170, CURRENT_REGISTERED_NO_FEI 6",
+        "NOT_FOUND = no registration evidence in any loaded snapshot; STALE = listed only in an older snapshot; no identity is inferred from names or addresses.",
+        "  080105003  NOT_FOUND                   203 products    SPL names: Sincerus FLorida, LLC; Sincerus Floida, LLC; Sincerus Flordia, LLC; …",
+        "  147681894  STALE_REGISTERED            104 products  FEI 7700044472 as of 2024-12-23  SPL names: H J Harkins Company, Inc.; H. J . Harkins Company Inc.; H. J. Harkins Co., Inc.; …",
+        "  676257570  NOT_FOUND                    67 products    SPL names: WOCKHARDT LIMITED; Wockhardt Limited",
+        "  011036910  NOT_FOUND                    50 products    SPL names: Teligent Pharma, Inc.; Teligent, Inc.",
+        "  117696832  NOT_FOUND                    49 products    SPL names: Akorn",
+        "  117696873  NOT_FOUND                    46 products    SPL names: Akorn; Akorn Operating Company LLC",
+        "  791142354  STALE_REGISTERED             30 products  FEI 1930436 as of 2025-12-05  SPL names: Nostrum Laboratories Inc.; Nostrum Laboratories, Inc.",
+        "  244249012  NOT_FOUND                    30 products    SPL names: Ross Healthcare Inc.; Ross Healthcare, Inc.",
+        "  969028351  NOT_FOUND                    29 products    SPL names: Nesher Pharmaceuticals (USA) LLC",
+        "  117696840  NOT_FOUND                    28 products    SPL names: Akorn"
+      ]
+    },
+    {
+      "argv": [
+        "coverage"
+      ],
+      "ms_min": 794.5,
+      "ms_median": 1206.6,
+      "ms_max": 1462.6,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "Documents in release 55064 | sets 52747 | canonical documents 52747 (confirmed 51910, unconfirmed 730, ambiguous 107, unresolved 0)",
+        "Products in canonical documents: 80508",
+        "  NO_MANUFACTURE_EVIDENCE      54457   67.6%",
+        "  DIRECT                       24614   30.6%",
+        "  UNKNOWN_SITE                  1002    1.2%",
+        "  TENTATIVE                      435    0.5%",
+        "    no evidence: OTHER_OPERATIONS_ONLY                      28123",
+        "    no evidence: NO_ESTABLISHMENT_BLOCK                     18453",
+        "    no evidence: ONLY_UNSCOPED_OPERATIONS_IN_DOCUMENT        7762",
+        "    no evidence: ESTABLISHMENTS_LISTED_NOT_FOR_THIS_PRODUCT     119",
+        "Sets with a DIRECT manufacture edge: 12477 of 52747; with any manufacture edge: 14500",
+        "Manufacturing DUNS by identity status (of 3333):"
+      ]
+    },
+    {
+      "argv": [
+        "evidence",
+        "105515",
+        "--raw"
+      ],
+      "ms_min": 84.8,
+      "ms_median": 92.4,
+      "ms_max": 219.7,
+      "output_head": [
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "",
+        "  evidence_id: 105515",
+        "  set_id: 1c5bc1dd-e9ec-44c1-9281-67ad482315d9",
+        "  version: 20",
+        "  document_id: eddf1507-1869-4ac6-9751-4cb12bdce2c1",
+        "  document_type_name: HUMAN PRESCRIPTION DRUG LABEL",
+        "  effective_time_raw: 20260430",
+        "  published_date: 2026-05-04",
+        "  selection_status: SINGLE_VERSION_METADATA_CONFIRMED",
+        "  xml_sha256: 7c342e8bc47018bb10ee9c0c1a7c97acdee449384036c9256d5d9a68d9913193",
+        "  xml_member_name: eddf1507-1869-4ac6-9751-4cb12bdce2c1.xml",
+        "  member_name: prescription/20260503_1c5bc1dd-e9ec-44c1-9281-67ad482315d9.zip",
+        "  member_sha256: acc53755f309fb133ca6f4355acc0e61ad3eaf60eb64cc58741f3bc8f63b69b4"
+      ]
+    }
+  ]
+}

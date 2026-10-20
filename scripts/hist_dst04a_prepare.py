@@ -91,6 +91,16 @@ def main(argv=None):
             row.update(cutoff_status="cutoff_version_unverified" if best else "missing", document=best,
                        basis="FDA SPL by document ID, listed in NDC Directory generated " + snap if best else None)
         sets[sid] = row
+    # A4.2: recover not-retrievable cutoff versions from DailyMed monthly archives (range reads only)
+    missing = {sid: r["cutoff_version"] for sid, r in sets.items()
+               if r["cutoff_status"] == "cutoff_version_not_retrievable"}
+    monthly = None
+    if missing:
+        first = min(sets[s]["cutoff_version_published"] for s in missing)
+        monthly = historical.recover_from_monthly(f, missing, historical.months_between(first, cutoff),
+                                                  labeler_segment=LABELER)
+        for sid, doc in monthly["recovered"].items():
+            sets[sid].update(cutoff_status="cutoff_version_from_monthly_archive", document=doc)
     print("sets", len(sets), dict(Counter(r["cutoff_status"] for r in sets.values())), file=sys.stderr)
 
     # 3. packages in scope, with exclusions and mappings
@@ -138,7 +148,8 @@ def main(argv=None):
         if sid is None:
             d_cov["document_not_retrievable"] += 1
             unresolved.append({"package": pkg, "reason": "D document not retrievable by ID", "document_id": docid})
-        elif sets[sid]["cutoff_status"] not in ("fetched", "cutoff_version_unverified", "cutoff_version_by_document_id"):
+        elif sets[sid]["cutoff_status"] not in ("fetched", "cutoff_version_unverified", "cutoff_version_by_document_id",
+                                                "cutoff_version_from_monthly_archive"):
             d_cov[f"set_{sets[sid]['cutoff_status']}"] += 1
             unresolved.append({"package": pkg, "reason": f"set {sets[sid]['cutoff_status']}", "set_id": sid})
         elif pkg in spl_pkg_index:
@@ -186,7 +197,8 @@ def main(argv=None):
                                                      "failure": v.get("failure"),
                                                      "served_matches_request": v.get("served_matches_request")}
                                                  for k, v in d_docs.items()},
-                       "previously_absent_resolution": recovered})
+                       "previously_absent_resolution": recovered,
+                       "monthly_archive_recovery": monthly})
     write_json(a.manifest_out, {"generated_at": net.utc_now(), "domain": "historical (pre-2023-07-18 evidence)",
                                 "cutoff": cutoff, "sealed": list(historical.SEALED),
                                 "ndc_directory_capture": {k: D[k] for k in ("capture", "zip_sha256",

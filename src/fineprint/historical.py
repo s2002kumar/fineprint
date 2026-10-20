@@ -125,6 +125,66 @@ def fetch_by_document_id(f: Fetcher, docid: str, *, labeler_segment: str) -> dic
     return s
 
 
+MONTHLY = "https://dailymed-data.nlm.nih.gov/public-release-files/dm_spl_monthly_update_{mon}{year}.zip"
+MONTHS = ("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec")
+
+
+def months_between(first_iso: str, last_iso: str) -> list[tuple[str, str]]:
+    y, m = int(first_iso[:4]), int(first_iso[5:7])
+    out = []
+    while (y, m) <= (int(last_iso[:4]), int(last_iso[5:7])):
+        out.append((MONTHS[m - 1], str(y)))
+        y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return out
+
+
+def recover_from_monthly(f: Fetcher, wanted: dict[str, int], months: list[tuple[str, str]], *,
+                         labeler_segment: str) -> dict:
+    """Plan A4.2: find exact set+version members in DailyMed monthly archives via HTTP Range only."""
+    out = {"archives": [], "recovered": {}, "rejected": []}
+    for mon, year in months:
+        url = MONTHLY.format(mon=mon, year=year)
+        reader = net.HttpRangeReader(url)
+        arch = {"url": url, "etag": reader.etag, "last_modified": reader.head.headers.get("last-modified"),
+                "content_length": reader.size}
+        with zipfile.ZipFile(reader) as zf:
+            infos = [i for i in zf.infolist() if not i.is_dir()]
+            arch["members"] = len(infos)
+            for info in infos:
+                low = info.filename.lower()
+                for sid, ver in wanted.items():
+                    if sid in out["recovered"] or sid not in low:
+                        continue
+                    cache = f.root / "monthly" / f"{mon}{year}" / info.filename.replace("/", "__")
+                    if cache.exists():
+                        data = cache.read_bytes()
+                    else:
+                        data = safezip.read_member(zf, info, safezip.DEFAULT_LIMITS.max_member_bytes)
+                        cache.parent.mkdir(parents=True, exist_ok=True)
+                        cache.write_bytes(data)
+                    sha = hashlib.sha256(data).hexdigest()
+                    opened = bulk.open_nested(info.filename, data)
+                    doc = opened["doc"]
+                    hit = {"archive": url, "member": info.filename, "member_sha256": sha}
+                    if doc and (doc["set_id"] or "").lower() == sid and str(doc["version"]) == str(ver):
+                        s = summarize(doc, labeler_segment=labeler_segment)
+                        s.update(hit, archive_last_modified=arch["last_modified"], served_matches_request=True)
+                        out["recovered"][sid] = s
+                    else:
+                        out["rejected"].append({**hit, "set_id": sid, "wanted_version": ver,
+                                                "found_version": doc["version"] if doc else None,
+                                                "failure": opened["failure"]})
+                    f.log.append({"url": f"{url}#{info.filename}", "role": "historical", "sha256": sha,
+                                  "bytes": len(data), "retrieved_at": net.utc_now(), "missing": False,
+                                  "status": 206})
+        arch.update(range_stats=reader.stats())
+        out["archives"].append(arch)
+        f.log.append({"url": url, "role": "documentation", "sha256": None, "bytes": reader.bytes_fetched,
+                      "retrieved_at": reader.head.retrieved_at, "missing": False, "status": 206,
+                      "note": "central directory and selected members read by HTTP Range; container not downloaded"})
+    return out
+
+
 def load_ndc_directory(f: Fetcher, cutoff: str, labeler_segment: str) -> dict:
     cdx_url = ("https://web.archive.org/cdx/search/cdx?url=accessdata.fda.gov/cder/ndcxls.zip"
                f"&from={int(cutoff[:4]) - 1}&to={cutoff[:4]}&output=json&fl=timestamp,original,statuscode,digest,length")

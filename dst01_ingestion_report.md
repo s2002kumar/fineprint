@@ -11,7 +11,7 @@ Every number below comes from a recorded run in `evidence/dst01/`. Machine: Wind
 
 ## 1. What was implemented
 - **Project PostgreSQL cluster** (`scripts/pg_local.py`).
-  - Data lives under `$FINEPRINT_DATA` (`~\fineprint-data`, outside OneDrive); the server listens on 127.0.0.1:55432 only.
+  - Data lives under `$FINEPRINT_DATA` (default `~/fineprint-data`, outside OneDrive); the server listens on 127.0.0.1:55432 only.
   - The generated password is stored in `$FINEPRINT_DATA/secrets`.
   - The existing PostgreSQL service is untouched.
   - Override with `FINEPRINT_DSN`.
