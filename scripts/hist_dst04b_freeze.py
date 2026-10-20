@@ -75,7 +75,10 @@ def load_document(root: Path, sid: str, row: dict):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", required=True, type=Path)
+    ap.add_argument("--out-dir", type=Path, default=OUT,
+                    help="write elsewhere to re-derive the freeze without touching the sealed files")
     a = ap.parse_args(argv)
+    out_dir = a.out_dir
     cutoff = json.loads(a.config.read_text(encoding="utf-8"))["cutoff"]
     cut8 = cutoff.replace("-", "")
     draft_bytes = DRAFT.read_bytes()
@@ -179,7 +182,7 @@ def main(argv=None):
         "may_listing_present_but_marketing_ended_by_cutoff": len(listed_marketing_ended),
         "may_listing_without_admissible_document": len(m_excluded),
     }
-    OUT.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     common = {"plan": "docs/historical_panel_plan.md amendment A5", "cutoff": cutoff,
               "status": "FROZEN before outcome retrieval"}
     files = {
@@ -195,11 +198,11 @@ def main(argv=None):
                                 "draft_sha256": sha256(draft_bytes)},
     }
     for name, obj in files.items():
-        write_json(OUT / name, obj)
+        write_json(out_dir / name, obj)
     manifest = {"generated_at": net.utc_now(), **common, "draft_input_sha256": sha256(draft_bytes),
-                "files": {name: sha256((OUT / name).read_bytes()) for name in files},
+                "files": {name: sha256((out_dir / name).read_bytes()) for name in files},
                 "psycopg_loaded": "psycopg" in sys.modules}
-    write_json(OUT / "FREEZE_MANIFEST.json", manifest)
+    write_json(out_dir / "FREEZE_MANIFEST.json", manifest)
     if manifest["psycopg_loaded"] or leakage:
         raise SystemExit(f"leakage guard failed: psycopg_loaded={manifest['psycopg_loaded']} leakage={leakage}")
     print(json.dumps({"reconciliation": reconciliation, "E": summary(cohort_e), "M": summary(cohort_m),
