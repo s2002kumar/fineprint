@@ -108,11 +108,13 @@ Full guide, offline re-verification, reference fingerprints and the one-command 
 | `migrations/` | PostgreSQL schema (additive, checksummed) |
 | `scripts/` | Pipeline steps (`dst01_*`, `dst02_*`, `hist_*`), CLI `fp.py`, reproduction tools |
 | `evidence/` | Committed run evidence: manifests, coverage, benchmarks, frozen historical cohorts, audit, results |
-| `docs/` | Architecture, evaluation report, reproducibility guide, pre-registered plan, progress log, gate history |
+| `docs/` | Architecture, evaluation report, reproducibility guide, pre-registered plan and the protocol it cites |
 | `tests/` | Unit, PostgreSQL integration, crash/resume, CLI, historical rules, privacy guards |
 
-## Data and attribution
-DailyMed (NLM) SPL documents and FDA files are U.S. government works. Personal contact fields in FDA
-registration data are dropped at parse time. All requests use a generic User-Agent. Prior art includes
+## License, data and attribution
+Code: [MIT](LICENSE). Third-party data keeps its own terms: see [NOTICE.md](NOTICE.md). DailyMed data
+courtesy of the U.S. National Library of Medicine; the snapshots used here do not reflect the most
+current/accurate data available from NLM. fineprint is independent and not endorsed by NLM or FDA.
+Personal contact fields in FDA registration data are dropped at parse time. All requests use a generic User-Agent. Prior art includes
 ProPublica's Rx Inspector data; fineprint's contribution is reproducible national ingestion,
 operation-aware provenance, explicit unresolved identity, and a leakage-controlled historical test.

@@ -3,13 +3,15 @@ name = "fineprint"
 version = "0.0.1"
 description = "Which factory actually makes your medicine? Operation-aware, provenance-linked DailyMed SPL facility graph."
 requires-python = ">=3.11"
+license = "MIT"  # code only; third-party data terms in NOTICE.md
+license-files = ["LICENSE"]
 dependencies = []  # parsing/download core is stdlib-only on purpose
 
 [project.optional-dependencies]
 db = ["psycopg[binary]==3.3.6"]  # DST-01 PostgreSQL ingest (tested with PostgreSQL 18.0)
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]  # PEP 639 license fields
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]

@@ -1,3 +1,9 @@
-# Original specification (v1.3)
+# Evaluation protocol as written before data work
 
-These two documents are the research question and evaluation protocol as written **before** any data work. They are kept because the pre-registered plan (`docs/historical_panel_plan.md`) cites them. Where later evidence refined a statement, the correction is in `docs/EVALUATION_REPORT.md` and `docs/history/`. The internal research log, task cards and kickoff notes were removed from the release tree; they remain in git history.
+`02_EVALUATION_AND_KILL_TEST.md` is the historical evaluation protocol as it was written **before** any data
+was collected. It is kept verbatim because the pre-registered plan
+([`docs/historical_panel_plan.md`](../historical_panel_plan.md), §6) cites its metric definitions by path.
+Its "DST-00" section was the work plan for the initial feasibility spike.
+
+Where later evidence refined a statement, the plan's dated amendments and
+[`docs/EVALUATION_REPORT.md`](../EVALUATION_REPORT.md) are authoritative.
