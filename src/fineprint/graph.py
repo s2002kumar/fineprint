@@ -233,7 +233,8 @@ def build(conn, *, log=print) -> dict:
                ) x""", {"mfg": MANUFACTURE, "build": build_id})
         outputs = summary(conn)
         outputs["fingerprint"] = fingerprint(conn)
-        conn.execute("UPDATE national.graph_build SET status = 'completed', finished_at = now(), outputs = %s, "
+        # clock_timestamp(): now() is frozen at transaction start, which would record a zero duration
+        conn.execute("UPDATE national.graph_build SET status = 'completed', finished_at = clock_timestamp(), outputs = %s, "
                      "inputs = %s WHERE build_id = %s",
                      (Jsonb(outputs), Jsonb(inputs(conn)), build_id))
     return {"build_id": build_id, **outputs}

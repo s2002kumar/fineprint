@@ -1,103 +1,103 @@
 {
- "scope": {
-  "dailymed_release": "2026-10-16",
-  "release_parts": 6,
-  "registration_as_of": "2026-10-19",
-  "graph_build": 2,
-  "note": "Current release only; not a historical state. Labeler != facility; PACK/LABEL != MANUFACTURE."
- },
- "documents_and_sets": {
-  "documents_in_release": 55064,
-  "sets": 52747,
-  "canonical_documents": 52747,
-  "confirmed": 51910,
-  "unconfirmed": 730,
-  "ambiguous": 107,
-  "unresolved": 0
- },
- "products_by_manufacturing_status": [
-  {
-   "manufacturing_status": "NO_MANUFACTURE_EVIDENCE",
-   "products": 54457
+  "scope": {
+    "dailymed_release": "2026-10-16",
+    "release_parts": 6,
+    "registration_as_of": "2026-10-19",
+    "graph_build": 4,
+    "note": "Current release only; not a historical state. Labeler != facility; PACK/LABEL != MANUFACTURE."
   },
-  {
-   "manufacturing_status": "DIRECT",
-   "products": 24614
+  "documents_and_sets": {
+    "documents_in_release": 55064,
+    "sets": 52747,
+    "canonical_documents": 52747,
+    "confirmed": 51910,
+    "unconfirmed": 730,
+    "ambiguous": 107,
+    "unresolved": 0
   },
-  {
-   "manufacturing_status": "UNKNOWN_SITE",
-   "products": 1002
+  "products_by_manufacturing_status": [
+    {
+      "manufacturing_status": "NO_MANUFACTURE_EVIDENCE",
+      "products": 54457
+    },
+    {
+      "manufacturing_status": "DIRECT",
+      "products": 24614
+    },
+    {
+      "manufacturing_status": "UNKNOWN_SITE",
+      "products": 1002
+    },
+    {
+      "manufacturing_status": "TENTATIVE",
+      "products": 435
+    }
+  ],
+  "products_without_manufacture_evidence_by_reason": [
+    {
+      "evidence_status": "OTHER_OPERATIONS_ONLY",
+      "products": 28123
+    },
+    {
+      "evidence_status": "NO_ESTABLISHMENT_BLOCK",
+      "products": 18453
+    },
+    {
+      "evidence_status": "ONLY_UNSCOPED_OPERATIONS_IN_DOCUMENT",
+      "products": 7762
+    },
+    {
+      "evidence_status": "ESTABLISHMENTS_LISTED_NOT_FOR_THIS_PRODUCT",
+      "products": 119
+    }
+  ],
+  "sets": {
+    "sets_with_direct_manufacture": 12477,
+    "sets_with_any_manufacture_edge": 14500
   },
-  {
-   "manufacturing_status": "TENTATIVE",
-   "products": 435
-  }
- ],
- "products_without_manufacture_evidence_by_reason": [
-  {
-   "evidence_status": "OTHER_OPERATIONS_ONLY",
-   "products": 28123
+  "establishment_duns_by_identity_status": [
+    {
+      "status": "CURRENT_REGISTERED",
+      "duns": 3366,
+      "manufacture_duns": 2562
+    },
+    {
+      "status": "NOT_FOUND",
+      "duns": 772,
+      "manufacture_duns": 656
+    },
+    {
+      "status": "STALE_REGISTERED",
+      "duns": 170,
+      "manufacture_duns": 109
+    },
+    {
+      "status": "CURRENT_REGISTERED_NO_FEI",
+      "duns": 6,
+      "manufacture_duns": 6
+    }
+  ],
+  "facilities": {
+    "facilities": 3444,
+    "currently_registered": 3300,
+    "shared_by_multiple_duns": 73
   },
-  {
-   "evidence_status": "NO_ESTABLISHMENT_BLOCK",
-   "products": 18453
-  },
-  {
-   "evidence_status": "ONLY_UNSCOPED_OPERATIONS_IN_DOCUMENT",
-   "products": 7762
-  },
-  {
-   "evidence_status": "ESTABLISHMENTS_LISTED_NOT_FOR_THIS_PRODUCT",
-   "products": 119
-  }
- ],
- "sets": {
-  "sets_with_direct_manufacture": 12477,
-  "sets_with_any_manufacture_edge": 14500
- },
- "establishment_duns_by_identity_status": [
-  {
-   "status": "CURRENT_REGISTERED",
-   "duns": 3366,
-   "manufacture_duns": 2562
-  },
-  {
-   "status": "NOT_FOUND",
-   "duns": 772,
-   "manufacture_duns": 656
-  },
-  {
-   "status": "STALE_REGISTERED",
-   "duns": 170,
-   "manufacture_duns": 109
-  },
-  {
-   "status": "CURRENT_REGISTERED_NO_FEI",
-   "duns": 6,
-   "manufacture_duns": 6
-  }
- ],
- "facilities": {
-  "facilities": 3444,
-  "currently_registered": 3300,
-  "shared_by_multiple_duns": 73
- },
- "manufacture_edges": [
-  {
-   "operation_name": "MANUFACTURE",
-   "confidence": "DIRECT",
-   "edges": 30015
-  },
-  {
-   "operation_name": "MANUFACTURE",
-   "confidence": "TENTATIVE",
-   "edges": 553
-  },
-  {
-   "operation_name": "MANUFACTURE",
-   "confidence": "UNKNOWN",
-   "edges": 3008
-  }
- ],
- "elapsed_ms": 814.8
+  "manufacture_edges": [
+    {
+      "operation_name": "MANUFACTURE",
+      "confidence": "DIRECT",
+      "edges": 30015
+    },
+    {
+      "operation_name": "MANUFACTURE",
+      "confidence": "TENTATIVE",
+      "edges": 553
+    },
+    {
+      "operation_name": "MANUFACTURE",
+      "confidence": "UNKNOWN",
+      "edges": 3008
+    }
+  ],
+  "elapsed_ms": 842.9
 }

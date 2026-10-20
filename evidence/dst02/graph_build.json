@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-20T02:28:19Z",
+  "generated_at": "2026-10-20T02:49:07Z",
   "database": "fineprint",
   "rule_version": "dst02-v1",
   "builds": [
     {
-      "build_id": 1,
-      "seconds": 6.39,
+      "build_id": 3,
+      "seconds": 14.06,
       "fingerprint": {
         "set_version_selection": {
           "rows": 52747,
@@ -26,8 +26,8 @@
       }
     },
     {
-      "build_id": 2,
-      "seconds": 6.22,
+      "build_id": 4,
+      "seconds": 11.98,
       "fingerprint": {
         "set_version_selection": {
           "rows": 52747,
@@ -56,14 +56,14 @@
       "SINGLE_VERSION_METADATA_CONFIRMED": 49599
     },
     "selection_class": {
-      "ambiguous": 107,
       "confirmed": 51910,
+      "ambiguous": 107,
       "unconfirmed": 730
     },
     "identity_status": {
-      "NOT_FOUND": 772,
-      "CURRENT_REGISTERED_NO_FEI": 6,
       "STALE_REGISTERED": 170,
+      "CURRENT_REGISTERED_NO_FEI": 6,
+      "NOT_FOUND": 772,
       "CURRENT_REGISTERED": 3366
     },
     "facilities": [
@@ -82,6 +82,6 @@
     }
   },
   "dst01_base_unchanged": true,
-  "peak_rss_bytes": 129646592,
+  "peak_rss_bytes": 132141056,
   "rebuild_fingerprints_equal": true
 }
