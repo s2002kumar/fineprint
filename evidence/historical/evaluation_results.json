@@ -12,11 +12,11 @@
     "retrieved_at": "2026-10-20T04:15:38Z",
     "last_modified": "Thu, 27 Jul 2023 19:57:32 GMT",
     "pages": 5,
-    "tokens_found": 64,
-    "distinct_package_ndc_11": 64,
+    "tokens_found": 65,
+    "distinct_package_ndc_11": 65,
     "unparsed_tokens": [],
     "labeler_segments": {
-      "00409": 64
+      "00409": 65
     },
     "duplicate_mentions": {},
     "text_layer_chars": 12629
@@ -27,48 +27,49 @@
         "B1_all_hospira_00409": {
           "N": 890,
           "cohort_size": 890,
-          "positives": 64,
-          "positives_in_cohort": 62,
-          "X": 62,
-          "recall_named": 0.9688,
+          "positives": 65,
+          "positives_in_cohort": 63,
+          "X": 63,
+          "recall_named": 0.9692,
           "recall_panel_conditional": 1.0,
           "reduction_vs_B1": 0.0,
-          "overlap_density": 0.0697,
+          "overlap_density": 0.0708,
           "expected_size_to_match_graph_recall": 890.0
         },
         "B2_injectables": {
           "N": 886,
           "cohort_size": 890,
-          "positives": 64,
-          "positives_in_cohort": 62,
-          "X": 61,
-          "recall_named": 0.9531,
-          "recall_panel_conditional": 0.9839,
+          "positives": 65,
+          "positives_in_cohort": 63,
+          "X": 62,
+          "recall_named": 0.9538,
+          "recall_panel_conditional": 0.9841,
           "reduction_vs_B1": 0.0045,
-          "overlap_density": 0.0688,
-          "expected_size_to_match_graph_recall": 886.0
+          "overlap_density": 0.07,
+          "expected_size_to_match_graph_recall": "unreachable"
         },
         "graph_rocky_mount_direct": {
           "N": 480,
           "cohort_size": 890,
-          "positives": 64,
-          "positives_in_cohort": 62,
-          "X": 62,
-          "recall_named": 0.9688,
+          "positives": 65,
+          "positives_in_cohort": 63,
+          "X": 63,
+          "recall_named": 0.9692,
           "recall_panel_conditional": 1.0,
           "reduction_vs_B1": 0.4607,
-          "overlap_density": 0.1292
+          "overlap_density": 0.1313
         }
       },
       "B3_already_short": "NOT EVALUABLE (plan A5 §5)",
       "positives_in_cohort_by_class": {
-        "DIRECT": 62
+        "DIRECT": 63
       },
       "positives_in_cohort_not_flagged_by_class": {},
-      "flagged_not_listed": 418,
+      "flagged_not_listed": 417,
       "positives_in_cohort": [
         "00409-1134-03",
         "00409-1134-05",
+        "00409-1141-02",
         "00409-1209-01",
         "00409-1215-01",
         "00409-1323-05",
@@ -137,48 +138,49 @@
         "B1_all_hospira_00409": {
           "N": 469,
           "cohort_size": 469,
-          "positives": 64,
-          "positives_in_cohort": 62,
-          "X": 62,
-          "recall_named": 0.9688,
+          "positives": 65,
+          "positives_in_cohort": 63,
+          "X": 63,
+          "recall_named": 0.9692,
           "recall_panel_conditional": 1.0,
           "reduction_vs_B1": 0.0,
-          "overlap_density": 0.1322,
+          "overlap_density": 0.1343,
           "expected_size_to_match_graph_recall": 469.0
         },
         "B2_injectables": {
           "N": 467,
           "cohort_size": 469,
-          "positives": 64,
-          "positives_in_cohort": 62,
-          "X": 61,
-          "recall_named": 0.9531,
-          "recall_panel_conditional": 0.9839,
+          "positives": 65,
+          "positives_in_cohort": 63,
+          "X": 62,
+          "recall_named": 0.9538,
+          "recall_panel_conditional": 0.9841,
           "reduction_vs_B1": 0.0043,
-          "overlap_density": 0.1306,
-          "expected_size_to_match_graph_recall": 467.0
+          "overlap_density": 0.1328,
+          "expected_size_to_match_graph_recall": "unreachable"
         },
         "graph_rocky_mount_direct": {
           "N": 235,
           "cohort_size": 469,
-          "positives": 64,
-          "positives_in_cohort": 62,
-          "X": 62,
-          "recall_named": 0.9688,
+          "positives": 65,
+          "positives_in_cohort": 63,
+          "X": 63,
+          "recall_named": 0.9692,
           "recall_panel_conditional": 1.0,
           "reduction_vs_B1": 0.4989,
-          "overlap_density": 0.2638
+          "overlap_density": 0.2681
         }
       },
       "B3_already_short": "NOT EVALUABLE (plan A5 §5)",
       "positives_in_cohort_by_class": {
-        "DIRECT": 62
+        "DIRECT": 63
       },
       "positives_in_cohort_not_flagged_by_class": {},
-      "flagged_not_listed": 173,
+      "flagged_not_listed": 172,
       "positives_in_cohort": [
         "00409-1134-03",
         "00409-1134-05",
+        "00409-1141-02",
         "00409-1209-01",
         "00409-1215-01",
         "00409-1323-05",
@@ -242,6 +244,20 @@
       ],
       "missed_positives": []
     }
+  },
+  "exploratory_post_hoc_not_preregistered": {
+    "cohort": "E",
+    "split_of_graph_flags_by_listed_manufacturing_sites": {
+      "rocky_mount_sole_site": {
+        "flagged": 306,
+        "listed": 57
+      },
+      "rocky_mount_plus_other_sites": {
+        "flagged": 174,
+        "listed": 6
+      }
+    },
+    "note": "Hypothesis for a future pre-registered test only; not used in any reported metric."
   },
   "uncovered_positives": {
     "00409-5816-11": "not_in_universe (no admissible pre-cutoff SPL found)",

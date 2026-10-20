@@ -82,6 +82,7 @@ class Metrics(unittest.TestCase):
         self.assertEqual(m["reduction_vs_B1"], 0.6)
         b1 = he.metrics(cohort, flags=cohort, positives={"p0", "p1", "p9", "zz"})
         self.assertEqual(he.size_to_match_recall(0.5, b1), round(0.5 / 0.75 * 10, 1))
+        self.assertEqual(he.size_to_match_recall(0.9, b1), "unreachable")
 
 
 if __name__ == "__main__":

@@ -129,7 +129,20 @@ def main(argv=None):
         else:
             reason = "not_in_universe (no admissible pre-cutoff SPL found)"
         uncovered[n] = reason
+    # POST-HOC, EXPLORATORY (not pre-registered; not a result): listing rate among flagged packages
+    # whose admissible label names Rocky Mount as the sole MANUFACTURE site vs Rocky Mount + others.
+    split = Counter()
+    for k, v in E.items():
+        if v["graph_flag"]:
+            sole = all(p["manufacture_duns"] == [he.ROCKY_MOUNT] for p in v["provenance"]
+                       if p["classification"] == "DIRECT")
+            split[("rocky_mount_sole_site" if sole else "rocky_mount_plus_other_sites", k in P)] += 1
+    exploratory = {g: {"flagged": split[(g, True)] + split[(g, False)], "listed": split[(g, True)]}
+                   for g in ("rocky_mount_sole_site", "rocky_mount_plus_other_sites")}
     out = {"seal": seal, "outcome": outcome, "cohorts": results,
+           "exploratory_post_hoc_not_preregistered": {
+               "cohort": "E", "split_of_graph_flags_by_listed_manufacturing_sites": exploratory,
+               "note": "Hypothesis for a future pre-registered test only; not used in any reported metric."},
            "uncovered_positives": uncovered, "uncovered_by_reason": dict(Counter(uncovered.values())),
            "caveats": [
                "The outcome is Pfizer's low-inventory warning list after warehouse damage, not a list of products "

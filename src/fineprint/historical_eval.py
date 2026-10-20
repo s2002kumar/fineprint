@@ -136,9 +136,12 @@ def metrics(cohort: set[str], flags: set[str], positives: set[str]) -> dict:
     }
 
 
-def size_to_match_recall(target_recall: float | None, baseline: dict) -> float | None:
-    """Expected list size if the baseline list were uniformly subsampled to reach target recall."""
+def size_to_match_recall(target_recall: float | None, baseline: dict) -> float | str | None:
+    """Expected list size if the baseline list were uniformly subsampled to reach target recall;
+    'unreachable' when the full baseline list already falls short of the target."""
     r = baseline.get("recall_named")
     if not target_recall or not r:
         return None
-    return round(min(1.0, target_recall / r) * baseline["N"], 1)
+    if r < target_recall:
+        return "unreachable"
+    return round(target_recall / r * baseline["N"], 1)
