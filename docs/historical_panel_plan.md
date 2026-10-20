@@ -104,6 +104,29 @@ in 2023: the listed registrations expire 12/31/2022, and no pre-event 2023 regis
 has been found. Historical outputs must say "identity per the 2022 registration record", never
 "registered in 2023".
 
+**A4 (2026-10-20, DST-04A preparation; committed before the run).** Build a **draft, unfrozen**
+candidate universe and measure its coverage. Nothing here classifies Rocky Mount links or
+touches outcomes.
+1. **Universe U** = source-A set IDs ∪ set IDs of the 213 source-D documents. Each D document is
+   fetched **by document ID** from FDA's SPL repository
+   (`accessdata.fda.gov/spl/data/<docid>/<docid>.xml`). That endpoint was verified byte-identical
+   to DailyMed's version ZIP for DST-00 control acetylcysteine v19, SHA-256 `257d81d5…`.
+2. **Cutoff version per set** = the latest version with DailyMed history `published_date`
+   ≤ 2023-07-18, fetched via `getFile`; the served set/version must match. If a set has no
+   DailyMed history, its D document stands as the latest evidence dated by the snapshot
+   (≤ 2023-05-05), flagged `cutoff_version_unverified`.
+3. **Packages.**
+   - Every `0409` package in each cutoff document is listed with its 11-digit form (`to_11_digit` only)
+     and its product (raw segment rule).
+   - Exclusions are counted by reason: no package code, ambiguous format, marketing ended on or before the cutoff.
+   - Each D package is checked for presence in its set's cutoff document; absences are reported as **unresolved mappings**.
+4. **Coverage** is reported by source (A only / D only / both), cutoff versions retrieved / unverified / missing,
+   D packages covered, and products whose cutoff document has any `MANUFACTURE` assertion (any site; no site
+   classification).
+5. Every fetched source goes into `evidence/historical/historical_source_manifest.json`.
+
+The output is marked **DRAFT — NOT FROZEN**. The freeze (plan §6) happens only in DST-04B.
+
 **A3 (2026-10-19). B3 unavailable.** B3 ("already-short stays short") stays **NOT EVALUABLE**
 until a dated, pre-cutoff shortage-state source with package-level (or exactly mappable)
 granularity is identified and recorded here before unsealing. No substitute baseline will be used.
