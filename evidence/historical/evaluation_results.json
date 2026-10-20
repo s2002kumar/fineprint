@@ -1,0 +1,23 @@
+{
+  "seal": {
+    "tag": "dst04b-freeze",
+    "tag_commit": "16245583c2b282cb1980d30e1aa3f0e0955d9328",
+    "manifest_sha256": "361e21bae2bc4fb31e68dfe2f9cf33d03dc8dfb7130c638b1f5012c8596593e3",
+    "files_verified": 6
+  },
+  "outcome": {
+    "url": "https://www.fda.gov/media/170647/download",
+    "sha256": "9079b24eaf5bcbc71149caf2d4480d3c9323bed1dbb491cc75ae0162dd511845",
+    "bytes": 250873,
+    "retrieved_at": "2026-10-20T04:15:38Z",
+    "last_modified": "Thu, 27 Jul 2023 19:57:32 GMT",
+    "pages": 5,
+    "tokens_found": 0,
+    "distinct_package_ndc_11": 0,
+    "unparsed_tokens": [],
+    "labeler_segments": {},
+    "duplicate_mentions": {},
+    "text_layer_chars": 12629
+  },
+  "status": "BLOCKED: no package NDCs in text layer"
+}

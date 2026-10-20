@@ -92,6 +92,12 @@ def injectable(form: str | None, routes) -> str:
 NDC_TOKEN = re.compile(r"(?<![\w-])(\d{4,5}-\d{3,4}-\d{1,2}|\d{11})(?![\w-])")
 
 
+def extract_ndc_tokens(text: str) -> list[str]:
+    """A5.1: PDF text layers may render '00409-3308-03' as '00409 - 3308 - 03'; rejoin hyphens between
+    digits, then apply the unchanged delimited NDC_TOKEN rule."""
+    return NDC_TOKEN.findall(re.sub(r"(?<=\d)\s+-\s+(?=\d)", "-", text))
+
+
 def normalize_outcome_ndc(token: str) -> str | None:
     """A5 §7: hyphenated 10-digit -> 5-4-2; hyphenated 5-4-2 kept; bare 11 digits split 5-4-2; else None."""
     t = token.strip()

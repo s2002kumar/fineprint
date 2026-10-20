@@ -202,6 +202,13 @@ computed and before the outcome appendix is retrieved.**
 9. **Seal.** Freeze outputs are committed with a SHA-256 manifest and local tag `dst04b-freeze`. The unsealing
    script refuses to run unless those files' hashes equal the blobs at that tag.
 
+**A5.1 (2026-10-20, AFTER unsealing; text extraction only).** The first scoring run found 0 NDC
+tokens. The appendix's PDF text layer renders every hyphen with surrounding spaces
+(`00409 - 3308 - 03`). Hyphens between digits are now rejoined before the **unchanged** §7 token and
+normalization rule is applied. The text holds exactly 65 occurrences of `00409`, the letter's stated count.
+Nothing else changed: cohorts, classifications, baselines, audit and metric definitions are exactly as frozen at
+`dst04b-freeze`.
+
 **A3 (2026-10-19). B3 unavailable.** B3 ("already-short stays short") stays **NOT EVALUABLE**
 until a dated, pre-cutoff shortage-state source with package-level (or exactly mappable)
 granularity is identified and recorded here before unsealing. No substitute baseline will be used.

@@ -57,6 +57,10 @@ class OutcomeNdc(unittest.TestCase):
         self.assertIsNone(he.normalize_outcome_ndc("0409-4888"))      # product code: not a package
         self.assertIsNone(he.normalize_outcome_ndc("0409488802"))     # unhyphenated 10-digit: ambiguous
 
+    def test_spaced_hyphens_from_pdf_text_layer(self):
+        text = "Chain NDC 00409 - 3308 - 03 Acetylcysteine 6 g/30 mL 00409 - 4911 - 34 0.1 mg/mL; call 844 - 646 - 4398"
+        self.assertEqual(he.extract_ndc_tokens(text), ["00409-3308-03", "00409-4911-34"])
+
     def test_token_regex(self):
         text = "NDC 0409-4888-02 and 00409-1234-01; lot 1234-567; 00409123401x"
         self.assertEqual(he.NDC_TOKEN.findall(text), ["0409-4888-02", "00409-1234-01"])
