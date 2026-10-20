@@ -1,0 +1,21 @@
+{
+  "plan": "docs/historical_panel_plan.md amendment A5",
+  "cutoff": "2023-07-18",
+  "status": "FROZEN before outcome retrieval",
+  "source": "https://web.archive.org/web/20221014123457id_/https://www.accessdata.fda.gov/cder/drls_reg.zip",
+  "sha256": "ee64289333b9284bff73bd042bdd76f994809371a281346ceb7cf3100a67b52b",
+  "fda_generated": "2022-10-13T06:15:16",
+  "rocky_mount_rows": [
+    {
+      "FEI_NUMBER": "1021343",
+      "DUNS_NUMBER": "093132819",
+      "FIRM_NAME": "Hospira, Inc.",
+      "ADDRESS": "Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA)",
+      "EXPIRATION_DATE": "12/31/2022"
+    }
+  ],
+  "other_duns_sharing_fei": [],
+  "dst00_identity_evidence_sha256": "c46fef93ed72b0e06a5b1bd6a8fc6af9d5e79a92ef467debf09bf3f47fd87afe",
+  "dst00_spl_facility_filing_evidence_sha256": "2839fd87bd265267594f9765bbc5e0a1fb39cb56f9015f4332f355c2b659856e",
+  "caveat": "Identity per the 2022-10-13 registration record; not 2023 registration status (plan A2)."
+}

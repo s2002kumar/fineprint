@@ -1,0 +1,24 @@
+{
+  "plan": "docs/historical_panel_plan.md amendment A5",
+  "cutoff": "2023-07-18",
+  "status": "FROZEN before outcome retrieval",
+  "reconciliation": {
+    "candidate_rows": 896,
+    "distinct_package_ndc_11": 890,
+    "duplicate_rows": 6,
+    "rows_in_may_listing": 470,
+    "distinct_in_may_listing": 469,
+    "distinct_not_in_may_listing": 421,
+    "may_listing_packages_total": 477,
+    "may_listing_present_in_cutoff_documents": 475,
+    "may_listing_present_but_marketing_ended_by_cutoff": 6,
+    "may_listing_without_admissible_document": 2
+  },
+  "exclusions_E": {
+    "no_package_code": 197,
+    "marketing_ended_pre_cutoff": 87
+  },
+  "multi_provenance_conflicts": [],
+  "B3": "NOT EVALUABLE (A5 §5)",
+  "draft_sha256": "4ee84ebef918852b5a346b9e52a78206d5851a794c06e0b35373dd9a6e33b585"
+}

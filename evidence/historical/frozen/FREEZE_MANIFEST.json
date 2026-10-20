@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-20T04:12:24Z",
+  "plan": "docs/historical_panel_plan.md amendment A5",
+  "cutoff": "2023-07-18",
+  "status": "FROZEN before outcome retrieval",
+  "draft_input_sha256": "4ee84ebef918852b5a346b9e52a78206d5851a794c06e0b35373dd9a6e33b585",
+  "files": {
+    "cohort_E.json": "7e89afed256b80e0cf951dc3366f6fa9fcf64ea85cff1a11207ee932d79e23e5",
+    "cohort_M.json": "ee425813c201fbd309c71e3825aaae8d4d752b548f7605f910f8ca8b7b380df2",
+    "documents.json": "af7ba3bc2d07b23ae08e43bccc08eb83f342d7fa44e8c52207b0b53ea3ec9001",
+    "identity.json": "880d1fa4cf02cce0a268c3881bbb77588da9763518adc1bce438b7ea4d120c10",
+    "audit_sample.json": "c976dfc6fc35aa8c937b96bbe41acd2de55c831a9c239b563c72dd5b856836f3",
+    "freeze_summary.json": "32ec7001653214c1fa2da7aa8221b69a15b37ee16d551cb6ffc745ff288d1cb2"
+  },
+  "psycopg_loaded": false
+}
