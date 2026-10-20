@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-20T04:39:21Z",
+  "generated_at": "2026-10-20T04:48:31Z",
   "scope": "every blob reachable from every local ref + commit author/committer metadata",
   "refs": [
     "dst-00 da545f0",
     "dst-01 aee1a7e",
     "dst-02-03-04a 98c3004",
     "main 137ae3f",
-    "release-v1 c2b3a3d",
+    "release-v1 5288577",
     "dst04b-freeze fa4912c"
   ],
-  "blobs_scanned": 192,
+  "blobs_scanned": 208,
   "remotes": [
     "origin"
   ],

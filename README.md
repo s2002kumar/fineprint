@@ -91,7 +91,7 @@ Read more: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) (schema, provenance chai
 
 ## Reproduce
 ```sh
-python -I -m unittest discover -s tests -t .                          # 73 tests; 18 DB tests need psycopg + PostgreSQL
+python -I -m unittest discover -s tests -t .                          # 75 tests; 20 need psycopg + PostgreSQL (they skip otherwise)
 python -I scripts/dst01_fetch_release.py --out evidence/dst01/release_manifest.json
 python -I scripts/dst01_ingest.py --manifest evidence/dst01/release_manifest.json --db fineprint
 python -I scripts/dst02_registration.py --db fineprint --out evidence/dst02/registration_manifest.json
