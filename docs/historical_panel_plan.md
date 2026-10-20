@@ -133,6 +133,17 @@ HTTP 404 for a cutoff version that the history service lists. Such a set is now 
 with the **identical set ID and version** is used, labelled `cutoff_version_by_document_id`. An older
 or different version is never substituted.
 
+**A4.2 (2026-10-20, before running).** The 10 `cutoff_version_not_retrievable` sets each have a
+version published 2023-05-08 … 2023-07-13 that `getFile` does not serve. DailyMed still hosts the
+2023 monthly update archives, so recovery works as follows:
+- Each archive's central directory is read by HTTP Range, and only members whose name contains the set ID are fetched.
+- A member counts only if its XML `setId` **and** `versionNumber` equal the cutoff version, and that
+  version's history `published_date` is ≤ 2023-07-18.
+- An archive *container* posted after the cutoff (e.g. jul2023, posted 2023-09-01) is acceptable,
+  because SPL versions are immutable; its post-date is recorded.
+
+Recovered sets are labelled `cutoff_version_from_monthly_archive`. Everything else stays unretrievable.
+
 **A3 (2026-10-19). B3 unavailable.** B3 ("already-short stays short") stays **NOT EVALUABLE**
 until a dated, pre-cutoff shortage-state source with package-level (or exactly mappable)
 granularity is identified and recorded here before unsealing. No substitute baseline will be used.
