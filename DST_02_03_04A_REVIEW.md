@@ -112,10 +112,10 @@ Everything is on local branch `dst-02-03-04a`, which is stacked on `dst-01` → 
 ## 7. Security and reproducibility
 - Raw data (18 GB plus historical sources), the database cluster, credentials and the venv all live under `$FINEPRINT_DATA`, outside OneDrive and git.
 - Contact fields never reach the database or the repo. All external requests use a generic User-Agent.
-- **History audit** (`evidence/security/git_history_audit.json`, 135 blobs, all refs):
+- **History audit** (`evidence/security/git_history_audit.json`, 140 blobs, all refs):
   - the database password is **absent**;
-  - HEAD hits are only pattern literals in guard code;
-  - **4 history-only blobs** contain the local home path and username: pre-scrub DST-00/01 evidence and the first DST-01 report;
+  - HEAD hits are only pattern literals in guard and audit code;
+  - **5 history-only blobs** carry personal fragments: the local home path and username in pre-scrub DST-00/01 evidence and the first DST-01 report, plus the first audit report, whose "masking" kept a path prefix and two username characters. The repo guard test caught that one; the masking is now category-only;
   - **every commit's author email is a personal Outlook address**.
 - A remote `origin` (`github.com/s2002kumar/fineprint`) is configured but has never been fetched or pushed.
 - **Before any push, you need to approve a history rewrite** (fresh squashed history, or `git filter-repo`, plus a noreply author email). Nothing was rewritten.
