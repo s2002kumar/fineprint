@@ -1,0 +1,147 @@
+{
+  "procedure": "scripts/reproduce.sh: fresh git clone + fresh venv (psycopg[binary]==3.3.6), new database fineprint_repro, offline input verification, clean ingest, offline registration load, 2 graph builds, freeze re-derivation into a side directory, seal-verified scoring, full test suite, comparison with the reference build",
+  "inputs_verified_offline": {
+    "dm_spl_release_human_rx_part1.zip": true,
+    "dm_spl_release_human_rx_part2.zip": true,
+    "dm_spl_release_human_rx_part3.zip": true,
+    "dm_spl_release_human_rx_part4.zip": true,
+    "dm_spl_release_human_rx_part5.zip": true,
+    "dm_spl_release_human_rx_part6.zip": true
+  },
+  "ingest": {
+    "status": "completed",
+    "wall_seconds": 661.98,
+    "peak_rss_bytes": 94728192,
+    "members_processed": 55064,
+    "failed": 0
+  },
+  "graph_builds_seconds": [
+    10.83,
+    12.48
+  ],
+  "graph_rebuild_identical": true,
+  "tests_in_clean_clone": [
+    "Ran 73 tests in 12.254s",
+    "OK"
+  ],
+  "comparison": {
+    "all_identical": true,
+    "database_layers": {
+      "dst01": true,
+      "graph": true
+    },
+    "frozen_files_byte_identical": {
+      "cohort_E.json": true,
+      "cohort_M.json": true,
+      "documents.json": true,
+      "identity.json": true,
+      "audit_sample.json": true,
+      "freeze_summary.json": true
+    },
+    "evaluation_results_identical": true
+  },
+  "fingerprints": {
+    "dst01": {
+      "identical": true,
+      "fineprint": {
+        "spl_document": {
+          "rows": 55064,
+          "md5": "04bf4b5d3b57f3742af9558f840c3e95"
+        },
+        "organization_mention": {
+          "rows": 158291,
+          "md5": "c69b6faf19eb80d3f19d7774b2e49447"
+        },
+        "product": {
+          "rows": 88501,
+          "md5": "f186be0f14782ab00747cb0d343e8dc0"
+        },
+        "package": {
+          "rows": 233934,
+          "md5": "d048095ddb44df6b44fb5e6a1e508004"
+        },
+        "operation_assertion": {
+          "rows": 129952,
+          "md5": "03ffb65cd00a45b8a4b4c782f882c437"
+        },
+        "archive_member": {
+          "rows": 55064,
+          "md5": "ab72339af535b8f28fe175cff7cb3af0"
+        },
+        "dead_letter": {
+          "rows": 0,
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      },
+      "fineprint_repro": {
+        "spl_document": {
+          "rows": 55064,
+          "md5": "04bf4b5d3b57f3742af9558f840c3e95"
+        },
+        "organization_mention": {
+          "rows": 158291,
+          "md5": "c69b6faf19eb80d3f19d7774b2e49447"
+        },
+        "product": {
+          "rows": 88501,
+          "md5": "f186be0f14782ab00747cb0d343e8dc0"
+        },
+        "package": {
+          "rows": 233934,
+          "md5": "d048095ddb44df6b44fb5e6a1e508004"
+        },
+        "operation_assertion": {
+          "rows": 129952,
+          "md5": "03ffb65cd00a45b8a4b4c782f882c437"
+        },
+        "archive_member": {
+          "rows": 55064,
+          "md5": "ab72339af535b8f28fe175cff7cb3af0"
+        },
+        "dead_letter": {
+          "rows": 0,
+          "md5": "d41d8cd98f00b204e9800998ecf8427e"
+        }
+      }
+    },
+    "graph": {
+      "identical": true,
+      "fineprint": {
+        "set_version_selection": {
+          "rows": 52747,
+          "md5": "72501b8f199b1e2922572e7fd053ebd7"
+        },
+        "duns_identity": {
+          "rows": 4314,
+          "md5": "e33f31c51d86decd5d4ae89570f3a137"
+        },
+        "facility": {
+          "rows": 3444,
+          "md5": "1b80520b74caa184360d9a65203d2939"
+        },
+        "operation_edge": {
+          "rows": 123200,
+          "md5": "a301d92d3d87d4cebdada4aa4ebe35c2"
+        }
+      },
+      "fineprint_repro": {
+        "set_version_selection": {
+          "rows": 52747,
+          "md5": "72501b8f199b1e2922572e7fd053ebd7"
+        },
+        "duns_identity": {
+          "rows": 4314,
+          "md5": "e33f31c51d86decd5d4ae89570f3a137"
+        },
+        "facility": {
+          "rows": 3444,
+          "md5": "1b80520b74caa184360d9a65203d2939"
+        },
+        "operation_edge": {
+          "rows": 123200,
+          "md5": "a301d92d3d87d4cebdada4aa4ebe35c2"
+        }
+      }
+    }
+  }
+}

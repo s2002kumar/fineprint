@@ -69,6 +69,13 @@ It runs the following and exits non-zero on any difference:
 5. the full test suite;
 6. a comparison of every fingerprint and frozen file with the reference.
 
+**Measured clean-clone run (2026-10-20)** — `evidence/dst05/reproduction.json`:
+- All 6 parts and the metadata file were re-verified offline.
+- The fresh ingest processed 55,064/55,064 members with 0 failures in 662 s, at a peak RSS of 95 MB.
+- Graph builds took 10.8 s and 12.5 s.
+- **Every DST-01 and graph table fingerprint, all 6 frozen historical files (byte-identical) and the evaluation
+  results were identical to the reference.** 73/73 tests passed in the clone.
+
 ## 4. Tests and CI
 - `python -I -m unittest discover -s tests -t .` runs the stdlib-only tests; the database tests skip.
 - With psycopg and a test database, the same command runs the full suite: real ingest semantics, crash/kill/resume, graph rules, CLI answers, historical rules and the repo privacy guards.
