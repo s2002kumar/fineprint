@@ -25,7 +25,11 @@ def main(argv=None):
     ap.add_argument("--parallel", type=int, default=3)
     ap.add_argument("--only", action="append", help="part name(s) to fetch (default: all advertised)")
     ap.add_argument("--interrupt-after-mb", type=int, help="test hook: abort each fetched part after N MB")
+    ap.add_argument("--offline", type=Path, metavar="MANIFEST",
+                    help="no network: re-verify the parts/metadata recorded in MANIFEST against their SHA-256")
     a = ap.parse_args(argv)
+    if a.offline:
+        return verify_offline(a.offline, a.out)
 
     raw = config.data_dir() / "raw" / "dailymed"
     page = net.fetch(dailymed.BULK_PAGE, raw / "pages" / f"spl-resources-all-drug-labels.{net.utc_now()[:10]}.html")
@@ -83,6 +87,25 @@ def main(argv=None):
     failed = [n for n, r in results.items() if r["error"]] + (["zip_metadata"] if meta.get("error") else [])
     print(json.dumps({"parts": len(parts), "fetched": len(results), "failed": failed}), file=sys.stderr)
     return 1 if failed else 0
+
+
+def verify_offline(manifest_path: Path, out: Path) -> int:
+    """Reproducibility mode: every recorded file must exist and match its recorded SHA-256."""
+    m = json.loads(manifest_path.read_text(encoding="utf-8"))
+    bad = []
+    items = [p for p in m["parts"]] + ([m["zip_metadata"]] if m.get("zip_metadata", {}).get("local_path") else [])
+    for p in items:
+        path = config.data_dir() / p["local_path"]
+        want = (p.get("download") or {}).get("sha256")
+        sha, md5, n = download.hash_file(path) if path.exists() else (None, None, 0)
+        ok = sha is not None and sha == want
+        p.setdefault("offline_verification", {})
+        p["offline_verification"] = {"verified_at": net.utc_now(), "sha256_matches_record": ok, "bytes": n}
+        if not ok:
+            bad.append(p.get("name") or p["local_path"])
+        print(path.name, "OK" if ok else "MISMATCH/MISSING", file=sys.stderr)
+    write_json(out, m)
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":

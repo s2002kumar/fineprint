@@ -40,11 +40,13 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--db", default="fineprint")
     ap.add_argument("--out", required=True, type=Path)
+    ap.add_argument("--offline", action="store_true",
+                    help="no network: load only already-downloaded snapshots, each re-verified against its record")
     a = ap.parse_args(argv)
     root = config.data_dir() / "raw" / "fda" / "decrs"
     conn = db.connect(a.db, autocommit=True)
     db.migrate(conn)
-    out = {"generated_at": net.utc_now(), "rule": ARCHIVE_RULE, "files": []}
+    out = {"generated_at": net.utc_now(), "rule": ARCHIVE_RULE, "files": [], "offline": a.offline}
 
     def load(kind, path, record, generated_at, captured_at=None, digest=None):
         rows, member = identity.parse_decrs(path)
@@ -60,6 +62,25 @@ def main(argv=None):
                              "distinct_duns": len({r["DUNS_NUMBER"] for r in rows if r["DUNS_NUMBER"]})})
         print(kind, generated_at, len(rows), "rows", "new" if new else "existing", file=sys.stderr)
         return member
+
+    if a.offline:
+        for path in sorted(p for p in root.glob("*/*.zip")):
+            rec = json.loads(Path(str(path) + ".json").read_text(encoding="utf-8"))
+            if hashlib.sha256(path.read_bytes()).hexdigest() != rec["sha256"]:
+                raise SystemExit(f"offline verification failed: {path.name}")
+            if path.parent.name == "archived":
+                ts = path.stem.split("_")[-1]
+                cap = f"{ts[:4]}-{ts[4:6]}-{ts[6:8]}T{ts[8:10]}:{ts[10:12]}:{ts[12:14]}Z"
+                digest = base64.b32encode(hashlib.sha1(path.read_bytes()).digest()).decode()
+                load("fda_decrs_registration_archived", path, rec, identity.parse_decrs(path)[1]["generated_at"],
+                     captured_at=cap, digest=digest)
+            else:
+                kind = "fda_decrs_excluded" if path.name.startswith("drls_excluded") else "fda_decrs_registration"
+                load(kind, path, rec, identity.parse_decrs(path)[1]["generated_at"])
+        write_json(a.out, out)
+        conn.close()
+        print(json.dumps({f["generated_at"]: f["rows"] for f in out["files"]}, indent=1))
+        return
 
     current_generated = None
     for name, kind in (("drls_reg.zip", "fda_decrs_registration"), ("drls_excluded.zip", "fda_decrs_excluded")):

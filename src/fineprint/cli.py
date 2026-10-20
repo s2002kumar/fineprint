@@ -410,7 +410,7 @@ def render(cmd, res):
         total = sum(r["products"] for r in res["products_by_manufacturing_status"])
         out.append(f"Products in canonical documents: {total}")
         for r in res["products_by_manufacturing_status"]:
-            out.append(f"  {r['manufacturing_status']:26} {r['products']:>7}  {100 * r['products'] / total:5.1f}%")
+            out.append(f"  {r['manufacturing_status']:26} {r['products']:>7}  {100 * r['products'] / max(total, 1):5.1f}%")
         for r in res["products_without_manufacture_evidence_by_reason"]:
             out.append(f"    no evidence: {r['evidence_status']:40} {r['products']:>7}")
         st = res["sets"]
@@ -419,7 +419,7 @@ def render(cmd, res):
         mduns = sum(r["manufacture_duns"] for r in res["establishment_duns_by_identity_status"])
         out.append(f"Manufacturing DUNS by identity status (of {mduns}):")
         for r in res["establishment_duns_by_identity_status"]:
-            out.append(f"  {r['status']:28} {r['manufacture_duns']:>6}  {100 * r['manufacture_duns'] / mduns:5.1f}%"
+            out.append(f"  {r['status']:28} {r['manufacture_duns']:>6}  {100 * r['manufacture_duns'] / max(mduns, 1):5.1f}%"
                        f"   (all establishment DUNS: {r['duns']})")
         f = res["facilities"]
         out.append(f"Facilities (FEI): {f['facilities']}, currently registered {f['currently_registered']}, "
