@@ -144,6 +144,64 @@ version published 2023-05-08 … 2023-07-13 that `getFile` does not serve. Daily
 
 Recovered sets are labelled `cutoff_version_from_monthly_archive`. Everything else stays unretrievable.
 
+**A5 (2026-10-20, DST-04B freeze and scoring protocol). Committed before any freeze output is
+computed and before the outcome appendix is retrieved.**
+1. **Inputs.** `evidence/historical/dst04a_candidates_draft.json` (SHA-256 recorded at freeze) plus the cached
+   raw cutoff documents, each re-hashed against the draft before use. No national-schema data is read.
+2. **Two independent cohorts.** Both are sets of distinct 11-digit `00409` package NDCs.
+   - **M (May 2023 directory cohort):** packages listed in the archived FDA NDC Directory (FDA-generated
+     2023-05-05) that appear in their set's admissible cutoff document and are not marketing-ended by the cutoff.
+   - **E (expanded historical cohort):** every eligible `0409` package in the admissible cutoff documents of
+     the A ∪ D universe (rules §3).
+   - Listed packages without an admissible cutoff document are excluded from M, with the reason recorded.
+3. **Deduplication.** One entry per 11-digit NDC; all provenance rows are kept. A package is flagged if
+   **any** provenance row qualifies, and disagreeing provenance rows are reported as conflicts.
+4. **Classification (§4), in this precedence.** Rocky Mount means DUNS `093132819` exactly.
+   1. DIRECT
+   2. KIT_PART_ONLY
+   3. OTHER_SITE (MANUFACTURE elsewhere)
+   4. RM_SECONDARY_ONLY
+   5. UNKNOWN_MANUFACTURE_WITHOUT_DUNS
+   6. UNKNOWN_NO_ESTABLISHMENT (no establishment block)
+   7. UNKNOWN_UNSCOPED_OPERATION
+   8. UNKNOWN_NO_MANUFACTURE_OP
+
+   Pre-event identity is the 2013/2015 SPL facility filing plus the 2022-10-13 DECRS capture (identity only, per A2).
+   The freeze also reports whether any other DUNS shares FEI 1021343 in that capture.
+5. **Baselines.**
+   - B1: the whole cohort.
+   - B2: §5 injectable rule (UNCLASSIFIED is not in B2).
+   - **B3: NOT EVALUABLE.** On 2026-10-20 the only responsive pre-cutoff FDA shortage captures were the
+     ingredient-level landing page. Package-level detail-page captures could not be enumerated (Internet
+     Archive CDX returned 504 / "temporarily offline"); any that exist would be incidental, with no cohort-wide
+     coverage. ASHP data is proprietary.
+6. **Link audit (before unsealing).**
+   - Seed `fineprint-dst04b-audit`: the first 20 DIRECT, 10 OTHER_SITE and 10 RM_SECONDARY/UNKNOWN packages
+     of cohort E, ordered by `sha256(seed|ndc11)`.
+   - Each is checked against the hash-verified raw XML:
+     - VERIFIED: the cited element supports the classification;
+     - FAILED: it does not;
+     - UNKNOWN: it cannot be inspected.
+   - The auditor is the assistant reading raw XML excerpts, **not a human**. The audit is committed before unsealing.
+7. **Outcome normalization.**
+   - Package NDC strings are extracted from the appendix text.
+     - Hyphenated 10-digit codes go through `to_11_digit`.
+     - Hyphenated 5-4-2 codes are kept as given.
+     - Unhyphenated 11-digit codes are split 5-4-2.
+     - Anything else is reported as unparsed.
+   - Deduplicate on the 11-digit form; the result is P.
+   - Product-level matches are diagnostics only, never package matches.
+   - Non-`00409` positives count in P and are reported as uncovered.
+8. **Metrics, per cohort and method.**
+   - N; X = |flags ∩ P|; recall X/|P|; panel-conditional recall; reduction 1 − N/|B1|; overlap density X/N
+     (**not** precision).
+   - Expected baseline list size to match graph recall, assuming uniform random subsampling.
+   - Missed positives are broken down by classification. Uncovered positives are broken down by reason: not in the
+     universe, no admissible document, excluded, other labeler code, or product present but package absent.
+   - Flagged packages not on the list are reported as "flagged, not listed", **never** as false positives.
+9. **Seal.** Freeze outputs are committed with a SHA-256 manifest and local tag `dst04b-freeze`. The unsealing
+   script refuses to run unless those files' hashes equal the blobs at that tag.
+
 **A3 (2026-10-19). B3 unavailable.** B3 ("already-short stays short") stays **NOT EVALUABLE**
 until a dated, pre-cutoff shortage-state source with package-level (or exactly mappable)
 granularity is identified and recorded here before unsealing. No substitute baseline will be used.
