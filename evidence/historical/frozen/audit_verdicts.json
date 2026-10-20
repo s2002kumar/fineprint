@@ -1,0 +1,301 @@
+{
+  "generated_at": "2026-10-20T04:14:54Z",
+  "plan": "A5 §6",
+  "status": "completed BEFORE outcome retrieval",
+  "auditor": "Claude (AI assistant) reading the raw-XML excerpts in audit_worksheet.md; NOT human-reviewed",
+  "method": "independent ElementTree extraction from hash-verified raw cutoff documents + reading of each quoted element",
+  "tally": {
+    "DIRECT": {
+      "VERIFIED": 20
+    },
+    "OTHER_SITE": {
+      "VERIFIED": 10
+    },
+    "CONTROL": {
+      "VERIFIED": 10
+    }
+  },
+  "items": [
+    {
+      "package_ndc_11": "00409-9157-31",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-2045-10",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-2045-01",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-2305-50",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-6637-24",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-2016-10",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-1754-15",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-1626-01",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-1966-01",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-6102-04",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-0040-05",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-1160-18",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-9137-05",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-1273-32",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-7620-59",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-7650-62",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-1464-01",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-3374-02",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_ESTABLISHMENT",
+      "verdict": "VERIFIED",
+      "basis": "Raw document has no establishment-level organizations (no operations at all)."
+    },
+    {
+      "package_ndc_11": "00409-9137-11",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-7338-01",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_ESTABLISHMENT",
+      "verdict": "VERIFIED",
+      "basis": "Raw document has no establishment-level organizations (no operations at all)."
+    },
+    {
+      "package_ndc_11": "00409-0004-04",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-7101-68",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_MANUFACTURE_OP",
+      "verdict": "VERIFIED",
+      "basis": "Establishments exist but none performs MANUFACTURE for this product."
+    },
+    {
+      "package_ndc_11": "00409-5239-01",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_MANUFACTURE_OP",
+      "verdict": "VERIFIED",
+      "basis": "Establishments exist but none performs MANUFACTURE for this product."
+    },
+    {
+      "package_ndc_11": "00409-3183-11",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-5092-16",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-6102-02",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-9300-11",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-4759-01",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-2308-70",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-1207-13",
+      "bucket": "DIRECT",
+      "frozen_classification": "DIRECT",
+      "verdict": "VERIFIED",
+      "basis": "Raw <performance> with C43360 and this product code sits in DUNS 093132819's assignedOrganization."
+    },
+    {
+      "package_ndc_11": "00409-6533-59",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-2585-11",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_ESTABLISHMENT",
+      "verdict": "VERIFIED",
+      "basis": "Raw document has no establishment-level organizations (no operations at all)."
+    },
+    {
+      "package_ndc_11": "00409-3718-01",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_ESTABLISHMENT",
+      "verdict": "VERIFIED",
+      "basis": "Raw document has no establishment-level organizations (no operations at all)."
+    },
+    {
+      "package_ndc_11": "00409-1808-06",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_ESTABLISHMENT",
+      "verdict": "VERIFIED",
+      "basis": "Raw document has no establishment-level organizations (no operations at all)."
+    },
+    {
+      "package_ndc_11": "00409-1061-01",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_ESTABLISHMENT",
+      "verdict": "VERIFIED",
+      "basis": "Raw document has no establishment-level organizations (no operations at all)."
+    },
+    {
+      "package_ndc_11": "00409-2051-15",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-1412-40",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-3510-22",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_ESTABLISHMENT",
+      "verdict": "VERIFIED",
+      "basis": "Raw document has no establishment-level organizations (no operations at all)."
+    },
+    {
+      "package_ndc_11": "00409-0120-01",
+      "bucket": "OTHER_SITE",
+      "frozen_classification": "OTHER_SITE",
+      "verdict": "VERIFIED",
+      "basis": "Raw MANUFACTURE only at other DUNS; no Rocky Mount operation for this product."
+    },
+    {
+      "package_ndc_11": "00409-7811-31",
+      "bucket": "CONTROL",
+      "frozen_classification": "UNKNOWN_NO_ESTABLISHMENT",
+      "verdict": "VERIFIED",
+      "basis": "Raw document has no establishment-level organizations (no operations at all)."
+    }
+  ],
+  "observation": "Establishment blocks present in 167/189 getFile documents, 27/37 document-ID documents, 8/9 monthly-archive documents; retired labels lack establishment data more often."
+}
