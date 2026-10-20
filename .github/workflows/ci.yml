@@ -15,8 +15,8 @@ jobs:
       matrix:
         python: ["3.11", "3.14"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python }}
       - run: python -I -m unittest discover -s tests -t . -v
@@ -38,12 +38,13 @@ jobs:
       # Tests drop and rebuild the 'national' schema in this throwaway database only.
       FINEPRINT_DSN: host=127.0.0.1 port=5432 user=fineprint password=ci-only-not-a-secret dbname=fineprint_test
       FINEPRINT_TEST_DB: fineprint_test
-      FINEPRINT_DATA: ${{ runner.temp }}/fineprint-data
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.14"
+      # the runner context is not available in job-level env, so FINEPRINT_DATA is set here
+      - run: echo "FINEPRINT_DATA=$RUNNER_TEMP/fineprint-data" >> "$GITHUB_ENV"
       - run: python -m pip install "psycopg[binary]==3.3.6"
       - name: full test suite (ingest, crash/resume, graph, CLI, historical rules, privacy guards)
         run: python -I -m unittest discover -s tests -t . -v
