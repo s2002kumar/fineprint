@@ -76,11 +76,13 @@ identity only: 2023 registration status is not established (A2).
 
 ## Link audit (pre-unsealing, seeded sample)
 **40/40 VERIFIED:** 20 DIRECT, 10 OTHER_SITE and 10 controls.
-- An independent ElementTree extraction from the hash-verified raw XML agreed with every frozen
-  classification, and each quoted `<performance>` element was read.
+- A second ElementTree extraction from the hash-verified raw XML agreed with every frozen classification, and each
+  quoted `<performance>` element was read. That extraction was written separately from the classifier, by the same
+  AI author, so it is an independent code path, not an independent reviewer.
 - DIRECT-link precision on the sample is **20/20** (Clopper–Pearson 95% lower bound 0.83); all 40 combined give a lower bound of 0.91.
 - **Auditor: the AI assistant, not a human.** The worksheet with every excerpt is in
-  `evidence/historical/frozen/audit_worksheet.md` for human spot-checks.
+  `evidence/historical/frozen/audit_worksheet.md`. A seeded sample for an independent human audit, with public source
+  URLs, is in [HUMAN_AUDIT_WORKSHEET.md](HUMAN_AUDIT_WORKSHEET.md). It has not been performed yet.
 
 ## Failure analysis
 - **Uncovered positives (2/65).** `00409-5816-11` and `-31` are "Sterile Empty Vial". DailyMed has no drug SPL for that
@@ -91,8 +93,12 @@ identity only: 2023 registration status is not established (A2).
 - **Unrecovered evidence versus incorrect classification.**
   - *Unrecovered:* the 2 empty vials (no SPL), 1 unretrievable set (no positives), 197 packages without an NDC in their label, and an unproven frame (no DailyMed date-archive export).
   - *Incorrect classification:* none detected. That rests on 0 non-DIRECT positives in the cohorts plus 40/40 audited links. A wrongly *flagged* package cannot be detected with this outcome list.
-- **Archival recovery mattered.** 6 of the 63 recovered positives come from retired sets that today's DailyMed
-  search cannot see: 5 via FDA SPL-by-document-ID retrieval and 1 via the 2023 monthly-archive range recovery.
+- **Archival recovery mattered.** 6 of the 63 recovered positives have a source in a retired set that today's DailyMed
+  search cannot see. **5 of them depend on it alone**: 4 via FDA SPL-by-document-ID retrieval and 1 via the 2023
+  monthly-archive range recovery.
+  - The sixth, `00409-4928-34`, is also DIRECT in a searchable set (`c4c65e48` v18).
+  - *Wording corrected 2026-10-20 during the public-release review.* Earlier text said all 6 depended on archival
+    recovery. No metric is affected.
 
 ## Exploratory, post-hoc, not pre-registered
 Among the 480 flagged packages, those whose label lists Rocky Mount as the **sole** manufacturer were on the

@@ -21,7 +21,7 @@ To use an existing server instead, set `FINEPRINT_DSN`; the tests then use `FINE
 | Download all parts (resumable) | `scripts/dst01_fetch_release.py --out evidence/dst01/release_manifest.json` | 17,979,089,637 bytes in ≈37 min (3 parallel × ≈3 MB/s); every part's MD5 = advertised |
 | Ingest | `scripts/dst01_ingest.py --manifest evidence/dst01/release_manifest.json --db fineprint` | 55,064/55,064 members, 0 failures, 23.1 min, peak RSS 73 MB, database 532 MB |
 | Registration evidence | `scripts/dst02_registration.py --db fineprint --out evidence/dst02/registration_manifest.json` | 5 dated FDA files |
-| Graph | `scripts/dst02_build_graph.py --db fineprint --verify-rebuild` | 6–14 s per atomic rebuild; rebuild fingerprints identical |
+| Graph | `scripts/dst02_build_graph.py --db fineprint --verify-rebuild` | 9.6–12.5 s per atomic rebuild (reference and clean-clone runs); rebuild fingerprints identical |
 | Query | `scripts/fp.py product 0409-4346`, `… evidence 105515 --raw`, `… coverage` | 3–32 ms per lookup; coverage 0.7 s |
 
 **Live sources move.** DailyMed replaces the full release, and FDA regenerates DECRS daily. To rebuild exactly
@@ -82,12 +82,31 @@ It runs the following and exits non-zero on any difference:
 psql -c "CREATE DATABASE fineprint_refresh TEMPLATE fineprint"      # or any equivalent
 python -I scripts/dst06_refresh.py --db fineprint_refresh --update dm_spl_daily_update_10192026.zip --out /tmp/refresh.json
 ```
-**Measured 2026-10-20:**
-- First pass: 42 s. It loaded 207 prescription labels and applied 196 in-scope retractions. Edges: +80 / −89 / 0 modified / 624 carried forward.
-- Second pass: 19 s, 0 changes.
-- Evidence: `evidence/dst06/`. Updates are advertised on the DailyMed page only for a short window, and older ones disappear.
+**Measured 2026-10-20** (`evidence/dst06/`):
+- First pass: it loaded 207 prescription labels (ingest step 4.19 s) and applied 196 in-scope retractions.
+  Edges: +80 / −89 / 0 modified / 624 carried forward.
+- Second pass: 0 changes.
+- End-to-end wall times of about 42 s and 19 s were timed at the shell; they are not in the evidence files.
+- Updates are advertised on the DailyMed page only for a short window, and older ones disappear.
+
+## Explorer data (`site/data/`)
+```sh
+python -I scripts/export_explorer.py --db fineprint            # writes site/data/ (about 21 s)
+python -I scripts/export_explorer.py --db fineprint --verify   # a fresh export must equal the committed files byte for byte
+python -I scripts/verify_explorer_csv.py --db fineprint        # browser CSV code (run under Node) vs independent SQL
+python -I scripts/export_explorer.py --check                   # no database: files vs manifest checksums
+python -I scripts/make_human_audit_worksheet.py                # regenerate the seeded human audit sample
+```
+On the reference database, `--verify` reported all 101 data files identical. 34,494 CSV rows matched the graph on all
+28 fields (`evidence/explorer/csv_verification.json`).
 
 ## 4. Tests and CI
-- `python -I -m unittest discover -s tests -t .` runs the stdlib-only tests; the database tests skip.
-- With psycopg and a test database, the same command runs the full suite: real ingest semantics, crash/kill/resume, graph rules, CLI answers, historical rules and the repo privacy guards.
-- `.github/workflows/ci.yml` runs both against a PostgreSQL 18 service container. The full national download stays out of CI.
+- `python -I -m unittest discover -s tests -t .` runs 84 tests. Without a database, the 20 database tests skip.
+- With psycopg and a test database, the same command runs the full suite. It covers:
+  - real ingest semantics and crash/kill/resume;
+  - graph rules, CLI answers and historical rules;
+  - the published site data;
+  - the repo privacy guards.
+- `.github/workflows/ci.yml` runs both against a PostgreSQL 18 service container. The full national download stays
+  out of CI.
+- `.github/workflows/pages.yml` re-checks the site data, then deploys `site/` to GitHub Pages.

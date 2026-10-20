@@ -19,6 +19,7 @@ flowchart LR
     N --> G[Graph build<br/>version selection · DUNS identity · edges]
     G --> E[(operation_edge<br/>DIRECT / TENTATIVE / UNKNOWN)]
     E --> C[CLI fp.py<br/>product · facility · compare · evidence]
+    E --> X[export_explorer.py<br/>deterministic JSON + manifest]
   end
   subgraph hist[Historical evaluation]
     H[Pre-cutoff SPL versions<br/>+ archived NDC Directory] --> F[Frame + freeze<br/>tag dst04b-freeze]
@@ -26,6 +27,8 @@ flowchart LR
     A --> U[Unseal outcome list<br/>seal-verified]
     U --> S[Scores vs B1/B2]
   end
+  X --> W[site/ static explorer<br/>GitHub Pages]
+  S --> X
 ```
 
 ## Schema (`migrations/001`, `002`; additive, immutable, checksummed)
@@ -67,6 +70,31 @@ flowchart LR
 4. It records `refresh_run` / `refresh_change`, classifying each edge (keyed by set, product code, DUNS and operation) as added, removed, modified or carried forward.
 
 Re-applying the same archive changes nothing. With no updates loaded, graph fingerprints equal the release build (migration `003` is additive). Two limits remain: updates must be applied in chronological order, and documents added by updates have no `published_date`, because the official metadata file is only refreshed with full releases.
+
+## Static explorer (`site/`)
+`scripts/export_explorer.py --db <db>` writes `site/data/`, which the browser reads directly; there is no server.
+- **`current/facilities.json`:** one row per establishment DUNS in the canonical labels (4,314). Each row has its
+  identity status, FEI, registered name and address, and the registration file and line it came from. It also has
+  edge counts by status and operation.
+- **`current/manufacture/NN.json`:** every MANUFACTURE edge, sharded by the first two DUNS digits. Each shard holds
+  the products it references (with package NDCs) and the label versions (set ID, version, document ID, publication
+  date, release part, archive member, XML SHA-256).
+- **`current/examples/<duns>.json`:** every operation (MANUFACTURE, ANALYSIS, PACK, LABEL) for Rocky Mount and
+  McPherson.
+- **`historical/rocky_mount_2023.json`:** derived only from the frozen files in `evidence/historical/`, never from
+  the database. It is labeled `"dataset": "historical"` and is shown on a separate page with its own banner.
+- **`manifest.json`:**
+  - the source snapshot and part hashes, the graph build, and table fingerprints;
+  - the historical input hashes and generation method;
+  - attribution, currency and licence notes;
+  - the SHA-256 and row count of every file.
+
+Rows are ordered by natural keys and timestamps are UTC, so re-running the export on the same database reproduces
+every data file byte for byte; `--verify` checks exactly that. CSV downloads are built in the browser by
+`site/explorer-core.js`. `scripts/verify_explorer_csv.py` runs the same module under Node for every establishment and
+compares each row, field by field, with SQL written independently of the export. `tests/test_site_data.py` checks
+the following without a database: checksums, internal consistency, dataset separation, attribution and privacy
+patterns. `.github/workflows/pages.yml` runs it before deploying `site/`.
 
 ## Reliability mechanisms
 - Downloads resume with Range + If-Range on the ETag, so a changed object restarts rather than splicing. MD5 must match the advertised value before a file is accepted.

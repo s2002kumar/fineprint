@@ -1,0 +1,13 @@
+$ python -I scripts/fp.py product 0409-4346
+SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 8 — current state only, not historical
+
+00409-4346  Aminocaproic Acid  INJECTION, SOLUTION  [labeler: Hospira, Inc. — a labeler is not a facility]
+  set 1c5bc1dd-e9ec-44c1-9281-67ad482315d9 v20  published 2026-05-04  version selection: confirmed (SINGLE_VERSION_METADATA_CONFIRMED); versions in release [20]
+  MANUFACTURE DIRECT: 
+    093132819  FEI 1021343 — Hospira, Inc., Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA)  [evidence 105515]
+    860037912  FEI 3008316085 — Pfizer Healthcare India Private Limited, Plot No. 116, 117, 118, 119, 111 (Part) and 123 (Part), Jawaharlal Nehru Pharma City (SEZ), Parawada Mandal, Anakapalli, Andhra Pradesh 531019, India (IND)  [evidence 105517]
+  MANUFACTURE TENTATIVE: none
+  MANUFACTURE UNKNOWN: none
+  other operations (not manufacture): ANALYSIS 093132819 DIRECT [105513]; LABEL 093132819 DIRECT [105514]; PACK 093132819 DIRECT [105516]; ANALYSIS 860037912 DIRECT [105518]; PACK 860037912 DIRECT [105519]; LABEL 860037912 DIRECT [105520]
+
+(466.5 ms)

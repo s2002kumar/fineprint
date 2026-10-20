@@ -1,0 +1,51 @@
+{
+  "current": {
+    "facilities": 4314,
+    "csv_rows": 34494,
+    "graph_edges_expected": 34494,
+    "rows_missing_from_csv": 0,
+    "field_mismatches": {},
+    "mismatch_examples": [],
+    "url_errors": 0,
+    "edge_vs_identity_status_disagreements": 0,
+    "columns_compared": [
+      "evidence_id",
+      "confidence",
+      "reasons",
+      "operation",
+      "establishment_duns",
+      "identity_status",
+      "fei",
+      "registered_firm_name",
+      "registered_address",
+      "product_ndc_5_4",
+      "product_ndc_raw",
+      "product_name",
+      "dosage_form",
+      "package_ndcs_11",
+      "labelers",
+      "set_id",
+      "version",
+      "document_id",
+      "published_date",
+      "effective_date",
+      "version_selection",
+      "product_scope",
+      "operation_product_code",
+      "xml_location",
+      "source_part",
+      "archive_member",
+      "xml_member",
+      "xml_sha256"
+    ]
+  },
+  "historical": {
+    "csv_rows": 898,
+    "packages": 892,
+    "cohort_E_packages": 890,
+    "flagged": 480,
+    "on_warning_list": 65,
+    "rows_disagreeing_with_frozen_cohort": 0
+  },
+  "ok": true
+}

@@ -19,7 +19,10 @@ keeps its publisher's terms.
 - **In this repository:**
   - SPL documents under `tests/fixtures/`, unmodified except that the two facility filings had their contact
     elements removed;
-  - derived identifiers and citations under `evidence/`.
+  - derived identifiers and citations under `evidence/`;
+  - the explorer's data exports under `site/data/`. These hold identifiers, product names, dosage forms, label
+    version metadata, XML locations and hashes, and FDA-registered firm names and business addresses. No label text
+    and no personal contact data are included.
 - **Currency.** This repository and anything built from it reflect the dated snapshots above. **They do not
   reflect the most current/accurate data available from NLM.** Current labels are at
   <https://dailymed.nlm.nih.gov/>.

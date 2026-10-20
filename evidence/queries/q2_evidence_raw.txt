@@ -1,0 +1,56 @@
+$ python -I scripts/fp.py evidence 105515 --raw
+SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 8 — current state only, not historical
+
+  evidence_id: 105515
+  set_id: 1c5bc1dd-e9ec-44c1-9281-67ad482315d9
+  version: 20
+  document_id: eddf1507-1869-4ac6-9751-4cb12bdce2c1
+  document_type_name: HUMAN PRESCRIPTION DRUG LABEL
+  effective_time_raw: 20260430
+  published_date: 2026-05-04
+  selection_status: SINGLE_VERSION_METADATA_CONFIRMED
+  xml_sha256: 7c342e8bc47018bb10ee9c0c1a7c97acdee449384036c9256d5d9a68d9913193
+  xml_member_name: eddf1507-1869-4ac6-9751-4cb12bdce2c1.xml
+  member_name: prescription/20260503_1c5bc1dd-e9ec-44c1-9281-67ad482315d9.zip
+  member_sha256: acc53755f309fb133ca6f4355acc0e61ad3eaf60eb64cc58741f3bc8f63b69b4
+  source_part: dm_spl_release_human_rx_part5.zip
+  source_sha256: d9c41cbf5a4244b9033694f438a14468e2b4a71e7dcbb8bc67ce0d4e5fdc20e5
+  retrieved_completed_at: 2026-10-19 17:31:10-04:00
+  local_path: raw/dailymed/human_rx_full/2026-10-16/dm_spl_release_human_rx_part5.zip
+  release_label: 2026-10-16
+  loc: /document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]
+  operation_code: C43360
+  operation_name_raw: MANUFACTURE
+  product_code_raw: 0409-4346
+  product_scope: product
+  duns: 093132819
+  establishment_name_in_spl: Hospira, Inc.
+  confidence: DIRECT
+  confidence_reasons: []
+  identity_status: CURRENT_REGISTERED
+  fei: 1021343
+  identity_as_of: 2026-10-19
+  identity_source: drls_reg.zip
+  identity_source_sha256: d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd
+  identity_generated_at: 2026-10-19 03:00:34-04:00
+  identity_captured_at: None
+  identity_line: 656
+  identity_firm_name: Hospira, Inc.
+  identity_address: Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA)
+  in_current_graph: True
+  raw XML (re-read from the archive; member and XML SHA-256 verified):
+    <performance xmlns="urn:hl7-org:v3">
+                            <actDefinition>
+                               <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE" />
+                               <product>
+                                  <manufacturedProduct classCode="MANU">
+                                     <manufacturedMaterialKind>
+                                        <code code="0409-4346" codeSystem="2.16.840.1.113883.6.69" />
+                                     </manufacturedMaterialKind>
+                                  </manufacturedProduct>
+                               </product>
+                            </actDefinition>
+                         </performance>
+                         
+
+(146.2 ms)

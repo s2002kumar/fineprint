@@ -1,5 +1,7 @@
 # Raw downloaded source data never goes in git; manifests record hashes + recipes.
 data/
+# ...except the explorer's published, checksummed exports (site/data/manifest.json)
+!site/data/
 *.zip
 !tests/fixtures/**/*.zip
 

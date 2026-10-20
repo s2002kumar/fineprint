@@ -4,3 +4,6 @@
 # Raw source fixtures and evidence are hashed byte-for-byte: never convert line endings.
 tests/fixtures/** -text
 evidence/** -text
+
+# Published explorer data is checksummed byte-for-byte (site/data/manifest.json).
+site/data/** -text

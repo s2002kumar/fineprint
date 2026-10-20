@@ -1,0 +1,24 @@
+$ python -I scripts/fp.py compare 093132819 030606222 --labeler 141588017 --limit 5
+SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 8 — current state only, not historical
+
+MANUFACTURE at 093132819 vs 030606222 (labeler 141588017): {'only_a': 144, 'only_b': 62, 'both': 27}
+  only_a:
+    00409-0009  Ondansetron  set d62cd60b-f87e-4825-bead-1d18bbc4e480  ['DIRECT']
+    00409-0024  Sterile Water  set 3a6422e1-feee-4095-8883-2b0837039e6e  ['DIRECT']
+    00409-0032  Potassium Phosphates  set 2fcbc814-c7a4-469a-8b1d-6819b961bfb9  ['DIRECT']
+    00409-1093  Bacteriostatic Water  set 87d6e9dc-fe3b-4593-ac9a-d7493d1959c7  ['DIRECT']
+    00409-1141  SODIUM CHLORIDE  set af6aebad-ef03-4d19-9a40-18e5a278b812  ['DIRECT']
+  only_b:
+    00409-0001  Midazolam  set 1abda8b8-48a8-4995-af86-39220d1aa240  ['DIRECT']
+    00409-0161  LEVOPHED  set 2c7dd2b0-cc10-4db6-bf56-6eb154ebeb10  ['DIRECT']
+    00409-1098  Cisatracurium Besylate  set 67908e20-044d-454d-9c51-bf106e817bd0  ['DIRECT']
+    00409-1103  Cisatracurium Besylate  set 67908e20-044d-454d-9c51-bf106e817bd0  ['DIRECT']
+    00409-1171  Diltiazem Hydrochloride  set bba03666-ff4f-4bf6-fa92-78e1ec2d9073  ['DIRECT']
+  both:
+    00409-0007  Lidocaine Hydrochloride and Epinephrine  set 2f94f711-14c4-48ec-c5a3-c5ec4b8e8729  ['DIRECT']
+    00409-0147  Lidocaine Hydrochloride and Epinephrine  set 2f94f711-14c4-48ec-c5a3-c5ec4b8e8729  ['DIRECT']
+    00409-0155  Precedex  set 92b7ddaa-e45a-4b64-a802-bb5df8771dd6  ['DIRECT']
+    00409-1174  Precedex  set 4419162d-81d4-49bd-96de-1729440bdb74  ['DIRECT']
+    00409-1283  Hydromorphone Hydrochloride  set f9ca2ef5-46d8-475a-a26e-f7c8becd6db7  ['DIRECT']
+
+(40.7 ms)

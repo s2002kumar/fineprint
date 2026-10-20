@@ -1,0 +1,48 @@
+name: pages
+
+# Publishes site/ (the static Facility Evidence Explorer and its committed data exports) to GitHub Pages.
+# No database is involved: the data files are generated locally by scripts/export_explorer.py and
+# checked here against site/data/manifest.json before anything is deployed.
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "scripts/export_explorer.py", "scripts/explorer_csv.mjs", "tests/test_site_data.py",
+            "evidence/historical/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: verify site data and package the site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+      - name: checksums, internal consistency, dataset separation, privacy, browser CSV code
+        run: python -I -m unittest discover -s tests -t . -p "test_site_data.py" -v
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    name: deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
