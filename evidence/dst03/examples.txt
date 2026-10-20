@@ -1,5 +1,5 @@
 $ python -I scripts/fp.py product 0409-4346
-SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical
+SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical
 
 00409-4346  Aminocaproic Acid  INJECTION, SOLUTION  [labeler: Hospira, Inc. — a labeler is not a facility]
   set 1c5bc1dd-e9ec-44c1-9281-67ad482315d9 v20  published 2026-05-04  version selection: confirmed (SINGLE_VERSION_METADATA_CONFIRMED); versions in release [20]
@@ -10,10 +10,10 @@ SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19
   MANUFACTURE UNKNOWN: none
   other operations (not manufacture): ANALYSIS 093132819 DIRECT [105513]; LABEL 093132819 DIRECT [105514]; PACK 093132819 DIRECT [105516]; ANALYSIS 860037912 DIRECT [105518]; PACK 860037912 DIRECT [105519]; LABEL 860037912 DIRECT [105520]
 
-(62.2 ms)
+(66.3 ms)
 
 $ python -I scripts/fp.py compare 093132819 030606222 --labeler 141588017 --limit 3
-SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical
+SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical
 
 MANUFACTURE at 093132819 vs 030606222 (labeler 141588017): {'only_a': 144, 'only_b': 62, 'both': 27}
   only_a:
@@ -29,10 +29,10 @@ MANUFACTURE at 093132819 vs 030606222 (labeler 141588017): {'only_a': 144, 'only
     00409-0147  Lidocaine Hydrochloride and Epinephrine  set 2f94f711-14c4-48ec-c5a3-c5ec4b8e8729  ['DIRECT']
     00409-0155  Precedex  set 92b7ddaa-e45a-4b64-a802-bb5df8771dd6  ['DIRECT']
 
-(20.3 ms)
+(17.4 ms)
 
 $ python -I scripts/fp.py search naloxone --limit 12
-SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical
+SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical
 
 Name matches are listed one product at a time. A shared name does NOT mean the same product, labeler or manufacturing site.
   00054-0188  buprenorphine and naloxone  [Hikma Pharmaceuticals USA Inc.]  set 713db2c6-0544-4633-b874-cfbeaf93db89  manufacturing: DIRECT (1 DUNS)
@@ -48,10 +48,10 @@ Name matches are listed one product at a time. A shared name does NOT mean the s
   00404-9773  NALOXONE HYDROCHLORIDE  [Henry Schein, Inc.]  set ddeebc32-9aab-4a2f-8c87-74335d17d5ef  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)
   00404-9920  Naloxone Hydrochloride  [Henry Schein, Inc.]  set d39635a4-ddb3-4d32-8211-eb84c78e9f59  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)
 
-(67.9 ms)
+(64.7 ms)
 
 $ python -I scripts/fp.py facility 080105003
-SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical
+SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical
 
 DUNS 080105003: NOT_FOUND
   also LABELER on 204 current labels (company role; not counted as manufacturing)
@@ -263,10 +263,10 @@ DUNS 080105003: NOT_FOUND
     72934-9036  CANTHARIDIN 1% / PODOPHYLLUM RESIN 5% / SALICYLIC ACID 30%  set 891a7037-9b8a-cbd3-e053-2a95a90a7006 v1  [evidence 16222]  (identity:NOT_FOUND)
   other operations: API MANUFACTURE UNKNOWN 1 products
 
-(29.4 ms)
+(19.7 ms)
 
 $ python -I scripts/fp.py evidence 105515 --raw
-SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical
+SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical
 
   evidence_id: 105515
   set_id: 1c5bc1dd-e9ec-44c1-9281-67ad482315d9
@@ -320,5 +320,5 @@ SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19
                          </performance>
                          
 
-(99.8 ms)
+(72.1 ms)
 

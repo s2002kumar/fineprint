@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-20T02:49:07Z",
+  "generated_at": "2026-10-20T02:49:54Z",
   "database": "fineprint",
   "rule_version": "dst02-v1",
   "builds": [
     {
-      "build_id": 3,
-      "seconds": 14.06,
+      "build_id": 5,
+      "seconds": 11.82,
       "fingerprint": {
         "set_version_selection": {
           "rows": 52747,
@@ -26,8 +26,8 @@
       }
     },
     {
-      "build_id": 4,
-      "seconds": 11.98,
+      "build_id": 6,
+      "seconds": 9.64,
       "fingerprint": {
         "set_version_selection": {
           "rows": 52747,
@@ -82,6 +82,6 @@
     }
   },
   "dst01_base_unchanged": true,
-  "peak_rss_bytes": 132141056,
+  "peak_rss_bytes": 130748416,
   "rebuild_fingerprints_equal": true
 }

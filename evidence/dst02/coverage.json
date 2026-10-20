@@ -3,7 +3,7 @@
     "dailymed_release": "2026-10-16",
     "release_parts": 6,
     "registration_as_of": "2026-10-19",
-    "graph_build": 4,
+    "graph_build": 6,
     "note": "Current release only; not a historical state. Labeler != facility; PACK/LABEL != MANUFACTURE."
   },
   "documents_and_sets": {
@@ -99,5 +99,5 @@
       "edges": 3008
     }
   ],
-  "elapsed_ms": 842.9
+  "elapsed_ms": 850.0
 }

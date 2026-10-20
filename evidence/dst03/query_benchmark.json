@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-20T02:40:55Z",
+  "generated_at": "2026-10-20T02:50:16Z",
   "database": "fineprint",
   "repeat": 5,
-  "peak_rss_bytes": 53186560,
+  "peak_rss_bytes": 53547008,
   "queries": [
     {
       "argv": [
         "product",
         "0409-4346"
       ],
-      "ms_min": 15.4,
-      "ms_median": 16.0,
-      "ms_max": 138.4,
+      "ms_min": 16.5,
+      "ms_median": 22.4,
+      "ms_max": 73.5,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "00409-4346  Aminocaproic Acid  INJECTION, SOLUTION  [labeler: Hospira, Inc. — a labeler is not a facility]",
         "  set 1c5bc1dd-e9ec-44c1-9281-67ad482315d9 v20  published 2026-05-04  version selection: confirmed (SINGLE_VERSION_METADATA_CONFIRMED); versions in release [20]",
@@ -24,7 +24,7 @@
         "  MANUFACTURE UNKNOWN: none",
         "  other operations (not manufacture): ANALYSIS 093132819 DIRECT [105513]; LABEL 093132819 DIRECT [105514]; PACK 093132819 DIRECT [105516]; ANALYSIS 860037912 DIRECT [105518]; PACK 860037912 DIRECT [105519]; LABEL 860037912 DIRECT [105520]",
         "",
-        "(14.5 ms)"
+        "(15.7 ms)"
       ]
     },
     {
@@ -32,11 +32,11 @@
         "product",
         "00409-1782-03"
       ],
-      "ms_min": 14.4,
-      "ms_median": 14.9,
-      "ms_max": 24.1,
+      "ms_min": 16.1,
+      "ms_median": 16.3,
+      "ms_max": 27.2,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "00409-1782  Naloxone Hydrochloride  INJECTION, SOLUTION  [labeler: Hospira, Inc. — a labeler is not a facility]",
         "  set b598c237-032d-4bb5-0e92-50eabd863dac v23  published 2023-06-07  version selection: confirmed (SINGLE_VERSION_METADATA_CONFIRMED); versions in release [23]",
@@ -46,7 +46,7 @@
         "  MANUFACTURE UNKNOWN: none",
         "  other operations (not manufacture): ANALYSIS 030606222 DIRECT [32942]; PACK 030606222 DIRECT [32944]; LABEL 030606222 DIRECT [32945]",
         "",
-        "(13.7 ms)"
+        "(15.5 ms)"
       ]
     },
     {
@@ -54,11 +54,11 @@
         "facility",
         "093132819"
       ],
-      "ms_min": 4.8,
-      "ms_median": 5.0,
-      "ms_max": 18.6,
+      "ms_min": 4.6,
+      "ms_median": 5.2,
+      "ms_max": 14.6,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "DUNS 093132819: CURRENT_REGISTERED, FEI 1021343, Hospira, Inc., Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA) (registration file 2026-10-19, expires 2026-12-31)",
         "  MANUFACTURE DIRECT: 180 product edge(s)",
@@ -79,11 +79,11 @@
         "facility",
         "FEI:1925262"
       ],
-      "ms_min": 3.6,
-      "ms_median": 4.2,
-      "ms_max": 11.0,
+      "ms_min": 3.7,
+      "ms_median": 3.9,
+      "ms_max": 19.4,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "DUNS 030606222: CURRENT_REGISTERED, FEI 1925262, Hospira, Inc., 1776 North Centennial Drive, McPherson, Kansas (KS) 67460, United States (USA) (registration file 2026-10-19, expires 2026-12-31)",
         "  MANUFACTURE DIRECT: 122 product edge(s)",
@@ -107,11 +107,11 @@
         "--labeler",
         "141588017"
       ],
-      "ms_min": 2.9,
-      "ms_median": 3.6,
-      "ms_max": 8.5,
+      "ms_min": 2.8,
+      "ms_median": 2.8,
+      "ms_max": 7.2,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "MANUFACTURE at 093132819 vs 030606222 (labeler 141588017): {'only_a': 144, 'only_b': 62, 'both': 27}",
         "  only_a:",
@@ -132,11 +132,11 @@
         "labeler",
         "141588017"
       ],
-      "ms_min": 6.9,
-      "ms_median": 7.3,
-      "ms_max": 13.5,
+      "ms_min": 7.6,
+      "ms_median": 8.2,
+      "ms_max": 19.4,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "Labeler DUNS 141588017: 400 products in 201 current sets. A product made at several sites is counted under each site.",
         "    171  DIRECT     093132819  FEI 1021343 Hospira, Inc., Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA)",
@@ -157,11 +157,11 @@
         "search",
         "naloxone hydrochloride"
       ],
-      "ms_min": 29.4,
-      "ms_median": 31.5,
-      "ms_max": 93.1,
+      "ms_min": 26.6,
+      "ms_median": 27.4,
+      "ms_max": 57.0,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "Name matches are listed one product at a time. A shared name does NOT mean the same product, labeler or manufacturing site.",
         "  00404-9773  NALOXONE HYDROCHLORIDE  [Henry Schein, Inc.]  set ddeebc32-9aab-4a2f-8c87-74335d17d5ef  manufacturing: NO_MANUFACTURE_EVIDENCE (0 DUNS)",
@@ -182,11 +182,11 @@
         "facility",
         "080105003"
       ],
-      "ms_min": 5.6,
-      "ms_median": 5.8,
-      "ms_max": 19.6,
+      "ms_min": 4.3,
+      "ms_median": 6.1,
+      "ms_max": 19.7,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "DUNS 080105003: NOT_FOUND",
         "  also LABELER on 204 current labels (company role; not counted as manufacturing)",
@@ -208,11 +208,11 @@
         "--limit",
         "25"
       ],
-      "ms_min": 29.9,
-      "ms_median": 30.5,
-      "ms_max": 33.0,
+      "ms_min": 30.1,
+      "ms_median": 32.3,
+      "ms_max": 36.5,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "NOT_FOUND 772, STALE_REGISTERED 170, CURRENT_REGISTERED_NO_FEI 6",
         "NOT_FOUND = no registration evidence in any loaded snapshot; STALE = listed only in an older snapshot; no identity is inferred from names or addresses.",
@@ -232,11 +232,11 @@
       "argv": [
         "coverage"
       ],
-      "ms_min": 794.5,
-      "ms_median": 1206.6,
-      "ms_max": 1462.6,
+      "ms_min": 617.7,
+      "ms_median": 728.7,
+      "ms_max": 1064.4,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "Documents in release 55064 | sets 52747 | canonical documents 52747 (confirmed 51910, unconfirmed 730, ambiguous 107, unresolved 0)",
         "Products in canonical documents: 80508",
@@ -258,11 +258,11 @@
         "105515",
         "--raw"
       ],
-      "ms_min": 84.8,
-      "ms_median": 92.4,
-      "ms_max": 219.7,
+      "ms_min": 68.7,
+      "ms_median": 80.9,
+      "ms_max": 131.2,
       "output_head": [
-        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 2 — current state only, not historical",
+        "SCOPE: DailyMed release 2026-10-16 (6 parts) | FDA registration as of 2026-10-19 | graph build 6 — current state only, not historical",
         "",
         "  evidence_id: 105515",
         "  set_id: 1c5bc1dd-e9ec-44c1-9281-67ad482315d9",
