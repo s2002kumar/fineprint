@@ -37,13 +37,10 @@ def git(*args, input=None):
 
 
 def mask(b: bytes, kind: str) -> str:
-    s = b.decode("utf-8", "replace")
+    """Category token only (email keeps just its domain): the report must not leak fragments itself."""
     if kind == "email":
-        local, _, dom = s.partition("@")
-        return f"{local[:2]}***@{dom}"
-    if "home_path" in kind:
-        return re.sub(r"(Users[\\/]+|home/)([^\\/]+)", lambda m: m.group(1) + m.group(2)[:2] + "***", s)
-    return s[:12] + "***"
+        return "<email at " + b.decode("utf-8", "replace").partition("@")[2].lower() + ">"
+    return f"<{kind}>"
 
 
 def main(argv=None):

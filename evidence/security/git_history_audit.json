@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-20T02:50:32Z",
+  "generated_at": "2026-10-20T02:53:41Z",
   "scope": "every blob reachable from every local ref + commit author/committer metadata",
   "refs": [
     "dst-00 04df3b0",
     "dst-01 8514aaf",
-    "dst-02-03-04a 5e595d9",
+    "dst-02-03-04a d4c2f20",
     "main 6766255"
   ],
-  "blobs_scanned": 135,
+  "blobs_scanned": 138,
   "remotes": [
     "origin"
   ],
@@ -15,27 +15,32 @@
   "project_db_password_paths": [],
   "findings": {
     "contact_markup": {
+      "evidence/security/git_history_audit.json": {
+        "history_blobs": 1,
+        "in_HEAD": true,
+        "masked_examples": [
+          "<contact_markup>"
+        ]
+      },
       "scripts/audit_git_history.py": {
         "history_blobs": 1,
         "in_HEAD": true,
         "masked_examples": [
-          "<contactPart***",
-          "mailto:***"
+          "<contact_markup>"
         ]
       },
       "scripts/dst00_historical.py": {
         "history_blobs": 1,
         "in_HEAD": true,
         "masked_examples": [
-          "<contactPart***"
+          "<contact_markup>"
         ]
       },
       "tests/test_download_resume.py": {
         "history_blobs": 3,
         "in_HEAD": true,
         "masked_examples": [
-          "<contactPart***",
-          "mailto:***"
+          "<contact_markup>"
         ]
       }
     },
@@ -70,30 +75,41 @@
       }
     },
     "posix_home_path": {
+      "evidence/security/git_history_audit.json": {
+        "history_blobs": 1,
+        "in_HEAD": true,
+        "masked_examples": [
+          "<posix_home_path>"
+        ]
+      },
       "scripts/audit_git_history.py": {
         "history_blobs": 1,
         "in_HEAD": true,
         "masked_examples": [
-          "/Users/)[***",
-          "/c/Users/|***",
-          "/home/|***"
+          "<posix_home_path>"
         ]
       },
       "tests/test_download_resume.py": {
         "history_blobs": 2,
         "in_HEAD": true,
         "masked_examples": [
-          "/Users/[^***",
-          "/home/[^***"
+          "<posix_home_path>"
         ]
       }
     },
     "secret_like": {
+      "evidence/security/git_history_audit.json": {
+        "history_blobs": 1,
+        "in_HEAD": true,
+        "masked_examples": [
+          "<secret_like>"
+        ]
+      },
       "scripts/audit_git_history.py": {
         "history_blobs": 1,
         "in_HEAD": true,
         "masked_examples": [
-          "PGPASSWORD=***"
+          "<secret_like>"
         ]
       }
     },
@@ -102,33 +118,40 @@
         "history_blobs": 1,
         "in_HEAD": false,
         "masked_examples": [
-          "C:\\Users\\<redacted>"
+          "<windows_home_path>"
         ]
       },
       "evidence/dst00/bulk_part6_download.json": {
         "history_blobs": 1,
         "in_HEAD": false,
         "masked_examples": [
-          "C:\\\\Users\\\\<redacted>"
+          "<windows_home_path>"
         ]
       },
       "evidence/dst01/ingest_run1_clean_full.json": {
         "history_blobs": 1,
         "in_HEAD": false,
         "masked_examples": [
-          "C:\\\\Users\\\\<redacted>"
+          "<windows_home_path>"
         ]
       },
       "evidence/dst01/restart_test_final_resume.json": {
         "history_blobs": 1,
         "in_HEAD": false,
         "masked_examples": [
-          "C:\\\\Users\\\\<redacted>"
+          "<windows_home_path>"
+        ]
+      },
+      "evidence/security/git_history_audit.json": {
+        "history_blobs": 1,
+        "in_HEAD": true,
+        "masked_examples": [
+          "<windows_home_path>"
         ]
       }
     }
   },
   "commit_identity_emails_masked": [
-    "<redacted-email>"
+    "<email at outlook.com>"
   ]
 }
