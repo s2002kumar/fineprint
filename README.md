@@ -2,8 +2,20 @@
 
 **Which factory actually makes your medicine?**
 
-Status: **DST-01 national ingest complete, awaiting review.** See [dst01_ingestion_report.md](dst01_ingestion_report.md)
-(DST-00: [feasibility_report.md](feasibility_report.md)). There is no facility-identity resolution or query CLI yet.
+Status: **DST-02/03/04A complete, awaiting review.** See [DST_02_03_04A_REVIEW.md](DST_02_03_04A_REVIEW.md)
+(earlier: [dst01_ingestion_report.md](dst01_ingestion_report.md), [feasibility_report.md](feasibility_report.md)).
+
+## Query the current graph
+```sh
+python -I scripts/dst02_registration.py --db fineprint --out evidence/dst02/registration_manifest.json
+python -I scripts/dst02_build_graph.py --db fineprint --out evidence/dst02/graph_build.json --verify-rebuild
+python -I scripts/fp.py product 0409-4346            # manufacturing sites: DIRECT / TENTATIVE / UNKNOWN
+python -I scripts/fp.py facility 093132819           # products made at a DUNS (or FEI:1021343)
+python -I scripts/fp.py compare 093132819 030606222 --labeler 141588017
+python -I scripts/fp.py evidence 105515 --raw        # exact source, re-read from the archive
+python -I scripts/fp.py coverage
+```
+Answers describe the **current** DailyMed release and FDA registration file only, never a historical state.
 
 ## Reproduce DST-01 (current national ingest)
 Needs PostgreSQL 18 binaries and `psycopg[binary]==3.3.6` in a venv. `$FINEPRINT_DATA` defaults to
