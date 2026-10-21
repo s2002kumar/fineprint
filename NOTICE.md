@@ -63,6 +63,7 @@ capture timestamp in `evidence/`.
 | `psycopg[binary]` 3.3.6 | optional PostgreSQL driver, installed from PyPI, not vendored (its wheel bundles libpq and OpenSSL) | LGPL-3.0-only |
 | PostgreSQL 18 | external database server | PostgreSQL License |
 | GitHub Actions (`actions/*`), `postgres:18` container | CI and Pages deployment only | each project's own license |
+| Newsreader, DM Sans and JetBrains Mono typefaces (variable WOFF2, latin and latin-ext subsets, from Fontsource 5.3.0) | explorer typography, self-hosted in `site/fonts/`, unmodified | SIL Open Font License 1.1 (`site/fonts/LICENSE-*.txt`) |
 
 ## Independence
 fineprint is an independent project. It is not affiliated with, endorsed by, or reviewed by the U.S. National

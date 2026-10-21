@@ -102,6 +102,33 @@ class SiteData(unittest.TestCase):
                 and (contact.search(p.read_bytes()) or home.search(p.read_bytes()))]
         self.assertEqual(hits, [])
 
+    def test_site_loads_nothing_from_third_parties(self):
+        html = (SITE / "index.html").read_text(encoding="utf-8")
+        css = (SITE / "style.css").read_text(encoding="utf-8")
+        self.assertEqual(re.findall(r'<(?:script|link)\b[^>]*\b(?:src|href)="(?:https?:)?//[^"]*"', html), [])
+        self.assertEqual(re.findall(r"@import|url\(\s*['\"]?(?:https?:)?//", css), [])
+        for m in re.finditer(r"url\(\s*['\"]?([^'\")]+)", css):
+            self.assertTrue((SITE / m.group(1)).is_file(), m.group(1))
+        for m in re.finditer(r'<link\b[^>]*\bhref="([^"#:]+)"', html):
+            self.assertTrue((SITE / m.group(1)).is_file(), m.group(1))
+
+    def test_self_hosted_fonts_carry_their_licenses(self):
+        fonts = sorted((SITE / "fonts").glob("*.woff2"))
+        self.assertTrue(fonts)
+        for f in fonts:
+            family = next(k for k in ("newsreader", "dm-sans", "jetbrains-mono") if f.name.startswith(k))
+            text = (SITE / "fonts" / f"LICENSE-{family}.txt").read_text(encoding="utf-8")
+            self.assertIn("SIL Open Font License, Version 1.1", text, f.name)
+            self.assertEqual(f.read_bytes()[:4], b"wOF2", f.name)
+        self.assertIn("SIL Open Font License 1.1", (ROOT / "NOTICE.md").read_text(encoding="utf-8"))
+
+    def test_no_design_study_fixtures_in_site(self):
+        # The approved design was a prototype with labelled sample records; production shows only exported data.
+        fixture = re.compile(r"design study|sample records?|illustrative|00409-XXXX|SAMPLE_NOT_LOADED|not in sample", re.I)
+        hits = [f"{p.name}: {m.group(0)}" for p in SITE.glob("*.*") if p.suffix in (".html", ".js", ".css")
+                for m in fixture.finditer(p.read_text(encoding="utf-8"))]
+        self.assertEqual(hits, [])
+
     @unittest.skipUnless(shutil.which("node"), "node not installed")
     def test_browser_csv_code_reproduces_exported_rows(self):
         out = json.loads(subprocess.run(["node", str(ROOT / "scripts" / "explorer_csv.mjs"), str(SITE)],

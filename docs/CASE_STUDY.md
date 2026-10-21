@@ -88,7 +88,7 @@ shorter list to investigate than "everything Hospira sells", without missing the
 FDA's SPL-by-document-ID store, and 9 by reading single members out of multi-GB 2023 monthly archives with HTTP Range
 requests.
 
-![The explorer's historical page: separate banner, benchmark table and limits](img/explorer-case-study.png)
+![The explorer's historical page: a separate amber 2023 banner, the headline result, proportional shortlist and recall figures, and the supplementary baselines](img/explorer-case-study.png)
 
 ## 5. Findings
 | Cohort | Method | Candidates | Flagged NDCs recovered | Shorter than all-Hospira |
