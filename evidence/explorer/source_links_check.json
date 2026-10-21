@@ -1,0 +1,94 @@
+{
+ "checked_at": "2026-10-21T17:29:12Z",
+ "rows": 3,
+ "ok": true,
+ "results": [
+  {
+   "duns": "093132819",
+   "evidence_id": 126734,
+   "confidence": "DIRECT",
+   "set_id": "2f94f711-14c4-48ec-c5a3-c5ec4b8e8729",
+   "version": 36,
+   "document_id": "2bf70cff-3f29-4938-8728-b3bb31f04475",
+   "xml_sha256_shown": "668a6e9dd50553e37fcd0eb7fd41f3efdb65d1e38bb8be93e407624d81df6c5b",
+   "label_page": {
+    "status": 200,
+    "mentions_set_id": true
+   },
+   "version_zip": {
+    "status": 200,
+    "is_zip": true,
+    "bytes": 2476630
+   },
+   "history": {
+    "status": 200,
+    "lists_version": true,
+    "latest_version": "36"
+   },
+   "fda_xml": {
+    "status": 200,
+    "sha256": "668a6e9dd50553e37fcd0eb7fd41f3efdb65d1e38bb8be93e407624d81df6c5b",
+    "matches_shown_hash": true
+   },
+   "ok": true
+  },
+  {
+   "duns": "093132819",
+   "evidence_id": 3791,
+   "confidence": "UNKNOWN",
+   "set_id": "139f86a4-75c5-4304-894c-8f8b8a396c78",
+   "version": 2,
+   "document_id": "f988da15-db11-448a-b10b-e06ed3dbb758",
+   "xml_sha256_shown": "513d8017812517b4fbb5fc14a02ff3d89df3c7dab962ae46394a609f75cdcef3",
+   "label_page": {
+    "status": 200,
+    "mentions_set_id": true
+   },
+   "version_zip": {
+    "status": 200,
+    "is_zip": true,
+    "bytes": 245935
+   },
+   "history": {
+    "status": 200,
+    "lists_version": true,
+    "latest_version": "2"
+   },
+   "fda_xml": {
+    "status": 200,
+    "sha256": "513d8017812517b4fbb5fc14a02ff3d89df3c7dab962ae46394a609f75cdcef3",
+    "matches_shown_hash": true
+   },
+   "ok": true
+  },
+  {
+   "duns": "030606222",
+   "evidence_id": 75182,
+   "confidence": "DIRECT",
+   "set_id": "d23ab39c-b6ec-41cf-a529-9dd2852c9d9a",
+   "version": 18,
+   "document_id": "e73179c2-1306-443c-a5ed-d2748e96147c",
+   "xml_sha256_shown": "60d49c6f931459a7aba6b217befab49185ace360bd94ad14de9e1991dfaca32d",
+   "label_page": {
+    "status": 200,
+    "mentions_set_id": true
+   },
+   "version_zip": {
+    "status": 200,
+    "is_zip": true,
+    "bytes": 2415030
+   },
+   "history": {
+    "status": 200,
+    "lists_version": true,
+    "latest_version": "18"
+   },
+   "fda_xml": {
+    "status": 200,
+    "sha256": "60d49c6f931459a7aba6b217befab49185ace360bd94ad14de9e1991dfaca32d",
+    "matches_shown_hash": true
+   },
+   "ok": true
+  }
+ ]
+}

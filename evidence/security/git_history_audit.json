@@ -1,17 +1,20 @@
 {
-  "generated_at": "2026-10-20T20:10:45Z",
+  "generated_at": "2026-10-21T17:29:48Z",
   "scope": "every blob reachable from every local ref + commit author/committer metadata",
   "refs": [
     "dst-00 da545f0",
     "dst-01 aee1a7e",
     "dst-02-03-04a 98c3004",
-    "main a9a6739",
+    "frontend-v1.2 67061eb",
+    "main 590e97e",
     "release-v1 3438df2",
-    "origin/main a9a6739",
+    "origin/frontend-v1.2 67061eb",
+    "origin/main 590e97e",
     "dst04b-freeze fa4912c",
-    "v1.0.0 46b34e7"
+    "v1.0.0 46b34e7",
+    "v1.1.0 44cf62c"
   ],
-  "blobs_scanned": 356,
+  "blobs_scanned": 392,
   "remotes": [
     "origin"
   ],
@@ -48,7 +51,7 @@
         ]
       },
       "tests/test_site_data.py": {
-        "history_blobs": 1,
+        "history_blobs": 2,
         "in_HEAD": true,
         "masked_examples": [
           "<contact_markup>"
@@ -78,7 +81,7 @@
         ]
       },
       "tests/test_site_data.py": {
-        "history_blobs": 1,
+        "history_blobs": 2,
         "in_HEAD": true,
         "masked_examples": [
           "<posix_home_path>"
@@ -119,6 +122,8 @@
     }
   },
   "commit_identity_emails_masked": [
+    "<email at github.com>",
+    "<email at outlook.com>",
     "<email at users.noreply.github.com>"
   ]
 }

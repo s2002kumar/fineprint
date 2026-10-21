@@ -1,16 +1,134 @@
 {
  "site": "https://s2002kumar.github.io/fineprint/",
- "checked_at": "2026-10-20T20:09:50Z",
- "home_loaded": true,
- "search_rocky_mount_first_hit": "093132819",
- "search_fei_1925262": [
-  "030606222"
- ],
- "rocky_mount_rows": 183,
- "rocky_mount_count_text": "183 of 183 MANUFACTURE assertions shown.",
- "case_study_loaded": true,
+ "checked_at": "2026-10-21T17:27:43Z",
+ "desktop": {
+  "home_loaded": true,
+  "home_stats": [
+   "55,064",
+   "4,314"
+  ],
+  "search_rocky_mount_first": "#/facility/093132819",
+  "search_rocky_mount_count": "8 establishments match.",
+  "search_placeholder_query_first": "#/facility/093132819",
+  "search_fei_enter_navigates_to": "#/facility/030606222",
+  "mcpherson_heading": "McPherson, KS — Hospira, Inc.",
+  "search_empty_state": "No establishment matches “zzqx no such site”.The search covers the 4,314 establishment DUNS named in the current labels. A site the labels never name will not appear.",
+  "facility_loaded": true,
+  "facility_heading": "Rocky Mount, NC — Hospira, Inc.",
+  "facility_rows": 183,
+  "facility_count_text": "Showing 183 of 183 MANUFACTURE assertions. The CSV holds the rows shown, with every source field, link and hash.",
+  "csv_all_equals_reference": true,
+  "filter_unknown_rows": 3,
+  "csv_unknown_equals_reference": true,
+  "filter_tentative_empty_state": "No assertions match.This site has 0 tentative MANUFACTURE assertions. That is a measured result, not missing data.Clear filters",
+  "all_operations_rows_first_page": 500,
+  "all_operations_count_text": "Showing 728 of 728 assertions. The CSV holds the rows shown, with every source field, link and hash.",
+  "all_operations_rows_after_show_all": 728,
+  "csv_all_operations_equals_reference": true,
+  "first_row_label_link": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f94f711-14c4-48ec-c5a3-c5ec4b8e8729",
+  "first_row_label_link_expected": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f94f711-14c4-48ec-c5a3-c5ec4b8e8729",
+  "nav_current": [
+   "facility:page"
+  ],
+  "unknown_duns_page": "No label in the current release names this DUNS as an establishment.",
+  "no_manufacture_page": "No MANUFACTURE assertion names this establishment in the current labels.",
+  "about_release_parts": 6
+ },
+ "phone": {
+  "facility_cards_first_page_390": 60,
+  "facility_cards_390": 183,
+  "facility_has_no_table_390": true,
+  "csv_390_equals_reference": true,
+  "facility_overflow_390": 0,
+  "drawer_width_390": 390,
+  "home_overflow_390": 0,
+  "history_overflow_390": 0,
+  "about_overflow_390": 0,
+  "home_overflow_320": 0,
+  "facility_overflow_320": 0,
+  "history_overflow_320": 0,
+  "about_overflow_320": 0
+ },
+ "keyboard": {
+  "drawer_opened_by_enter": true,
+  "focus_on_close_button": true,
+  "drawer_title": "Lidocaine Hydrochloride and Epinephrine",
+  "drawer_shows_first_row_set_id": true,
+  "drawer_shows_first_row_sha256": true,
+  "drawer_shows_first_row_xml_location": true,
+  "drawer_links": [
+   "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f94f711-14c4-48ec-c5a3-c5ec4b8e8729",
+   "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=2f94f711-14c4-48ec-c5a3-c5ec4b8e8729&version=36",
+   "https://www.accessdata.fda.gov/spl/data/2bf70cff-3f29-4938-8728-b3bb31f04475/2bf70cff-3f29-4938-8728-b3bb31f04475.xml",
+   "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/2f94f711-14c4-48ec-c5a3-c5ec4b8e8729/history.json"
+  ],
+  "drawer_links_expected": [
+   "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f94f711-14c4-48ec-c5a3-c5ec4b8e8729",
+   "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?type=zip&setid=2f94f711-14c4-48ec-c5a3-c5ec4b8e8729&version=36",
+   "https://www.accessdata.fda.gov/spl/data/2bf70cff-3f29-4938-8728-b3bb31f04475/2bf70cff-3f29-4938-8728-b3bb31f04475.xml",
+   "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/2f94f711-14c4-48ec-c5a3-c5ec4b8e8729/history.json"
+  ],
+  "background_inert": true,
+  "focus_trapped_in_drawer": true,
+  "escape_closes_drawer": true,
+  "focus_returned_to_trigger": true,
+  "background_restored": true,
+  "overlay_click_closes": true,
+  "first_tab_is_skip_link": true,
+  "skip_link_moves_focus_to_h1": true
+ },
+ "history": {
+  "loaded": true,
+  "title": "A facility-based list was 46.1% shorter and found the same warned packages.",
+  "figures": [
+   "480",
+   "−46.1%",
+   "63/65"
+  ],
+  "bar_widths": [
+   "100%",
+   "53.9326%"
+  ],
+  "recall_cells": [
+   "63/65",
+   "63/65"
+  ],
+  "supplementary_rows": [
+   "Cohort E · 890 packages",
+   "Company-wide | 890 | 63/65 | —",
+   "Injectables only | 886 | 62/65 | 0.4%",
+   "Facility graph | 480 | 63/65 | 46.1%",
+   "Cohort M · 469 packages",
+   "Company-wide | 469 | 63/65 | —",
+   "Injectables only | 467 | 62/65 | 0.4%",
+   "Facility graph | 235 | 63/65 | 49.9%",
+   "Both cohorts",
+   "Already short before the event | Not evaluable: no package-level shortage data was published before the cutoff."
+  ],
+  "cohort_rows": 898,
+  "csv_equals_reference": true,
+  "csv_rows": 898,
+  "strip": "◆ Historical · data as of 2023-07-18Archived labels, not the current snapshotCurrent Rocky Mount view →"
+ },
+ "reduced_motion_drawer_animation_s": 0.00001,
+ "normal_motion_drawer_animation_s": 0.2,
+ "requests": 193,
+ "third_party_requests": [],
  "page_exceptions": [],
- "csv_button_rows": 183,
- "csv_button_equals_reference": true,
+ "console_errors": [],
+ "checks": {
+  "home": true,
+  "search": true,
+  "facility": true,
+  "csv": true,
+  "drawer": true,
+  "keyboard": true,
+  "states": true,
+  "history": true,
+  "phone": true,
+  "reduced_motion": true,
+  "no_third_party_requests": true,
+  "no_page_errors": true
+ },
  "ok": true
 }
