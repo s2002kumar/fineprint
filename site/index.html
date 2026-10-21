@@ -4,34 +4,48 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>fineprint · Facility Evidence Explorer</title>
-<meta name="description" content="Static explorer of fineprint's facility-to-drug graph built from DailyMed labels and FDA registration records, with exact source references.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23234'/%3E%3Cpath d='M4 4h8M4 8h6M4 12h4' stroke='%23fff' stroke-width='1.6'/%3E%3C/svg%3E">
+<meta name="description" content="Trace a medicine to the factory behind it: a static explorer of fineprint's facility-to-drug graph built from versioned DailyMed labels and FDA registration records, with exact source references.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#F7F6F1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='2' fill='%23F7F6F1'/%3E%3Ctext x='2.2' y='12.4' font-family='Georgia,serif' font-size='12' fill='%2316221E'%3Ef%3C/text%3E%3Ccircle cx='11.6' cy='11.4' r='1.6' fill='%23274B3C'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/dm-sans-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <script type="module" src="app.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header>
-  <a class="brand" href="#/">fineprint</a>
-  <nav aria-label="Main">
-    <a href="#/">Facilities</a>
-    <a href="#/rocky-mount-2023">Rocky Mount 2023</a>
-    <a href="#/about">About the data</a>
-  </nav>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="wordmark" href="#/" aria-label="fineprint, home">fineprint<span aria-hidden="true">.</span></a>
+    <span class="eyebrow">Evidence Explorer</span>
+    <nav aria-label="Main">
+      <a href="#/" data-nav="home">Search</a>
+      <a href="#/facility/093132819" data-nav="facility">Facility</a>
+      <a href="#/rocky-mount-2023" data-nav="history" class="hist">2023 case</a>
+      <a href="#/about" data-nav="about">Data</a>
+    </nav>
+  </div>
 </header>
 <main id="main" tabindex="-1">
-  <noscript><p>This explorer needs JavaScript to read its data files. The same data is in
-  <a href="data/manifest.json">data/</a> as JSON, and the source code is on
-  <a href="https://github.com/s2002kumar/fineprint">GitHub</a>.</p></noscript>
+  <noscript><div class="wrap loading"><p>This explorer needs JavaScript to read its data files. The same data is in
+  <a class="link" href="data/manifest.json">data/</a> as JSON, and the source code is on
+  <a class="link" href="https://github.com/s2002kumar/fineprint">GitHub</a>.</p></div></noscript>
 </main>
-<footer>
-  <p>DailyMed data courtesy of the U.S. National Library of Medicine. The snapshots shown do not reflect the most
-  current/accurate data available from NLM; current labels are at
-  <a href="https://dailymed.nlm.nih.gov/">dailymed.nlm.nih.gov</a>. FDA registration data from the U.S. Food and Drug
-  Administration.</p>
-  <p>fineprint is an independent project, not affiliated with or endorsed by NLM, NIH, FDA, HHS, Pfizer or Hospira.
-  Not medical advice. <a href="https://github.com/s2002kumar/fineprint">Source code</a> (MIT) ·
-  <a href="https://github.com/s2002kumar/fineprint/blob/main/NOTICE.md">data terms</a>.</p>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <span class="tag">Dated snapshot · not live data</span>
+      <p>Not a shortage forecast, inventory proof, supplier-exclusivity claim, or medical advice.</p>
+      <a class="link nw" href="https://github.com/s2002kumar/fineprint" rel="noopener" target="_blank">Source code<span class="sr-only"> (opens in new tab)</span> ↗</a>
+    </div>
+    <p>DailyMed data courtesy of the U.S. National Library of Medicine. The snapshots shown do not reflect the most
+    current/accurate data available from NLM; current labels are at
+    <a class="link" href="https://dailymed.nlm.nih.gov/">dailymed.nlm.nih.gov</a>. FDA registration data from the U.S.
+    Food and Drug Administration. fineprint is an independent project, not affiliated with or endorsed by NLM, NIH,
+    FDA, HHS, Pfizer or Hospira. Code under the MIT license ·
+    <a class="link" href="https://github.com/s2002kumar/fineprint/blob/main/NOTICE.md">data and font terms</a>.</p>
+  </div>
 </footer>
 </body>
 </html>

@@ -7,3 +7,6 @@ evidence/** -text
 
 # Published explorer data is checksummed byte-for-byte (site/data/manifest.json).
 site/data/** -text
+
+# Self-hosted third-party fonts and their license texts are kept exactly as published upstream.
+site/fonts/** -text
