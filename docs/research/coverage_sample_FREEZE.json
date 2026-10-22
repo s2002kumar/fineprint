@@ -1,0 +1,10 @@
+{
+ "frozen_at": "2026-10-22T09:22:45Z",
+ "file": "docs/research/coverage_sample_manifest.json",
+ "sha256": "560a3fddde09db634a658984ffa65c916e086823c475cc73000246624f247062",
+ "seed": "fineprint-coverage-diagnosis-2026-10-22",
+ "n": 120,
+ "graph_build": 8,
+ "code_commit": "1b61045fb95278e2a0652c5bfcbdedfd24a524d4",
+ "rule": "The manifest must not change after this freeze; any replacement sample gets a new file and a new freeze."
+}
