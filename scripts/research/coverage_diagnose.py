@@ -39,7 +39,7 @@ MFG, API = "C43360", "C82401"
 ROLE = re.compile(r"\b(Manufactured|Mfd\.?|Mfg\.?|Made|Produced|Distributed|Dist\.?|Marketed|Packaged|Packed|Labeled|"
                   r"Labelled|Relabeled|Repackaged|Imported|Manufacturer|Product of)\b(?:\s*[:.]?\s*)(by|for|in|of)?\b",
                   re.I)
-STOP = re.compile(r"\b(Manufactured|Mfd\.?|Mfg\.?|Made in|Distributed|Dist\.?|Marketed|Packaged|Packed|Labeled|Labelled|"
+STOP = re.compile(r"\b(Manufactured|Manufacturer|Mfd\.?|Mfg\.?|Made in|Distributed|Dist\.?|Marketed|Packaged|Packed|Labeled|Labelled|"
                   r"Relabeled|Repackaged|Imported|Revised|Rev\.|Issued|Iss\.|Product of|Licensed|For more information|"
                   r"Questions|Call|Copyright|©|U\.S\. Patent|Patent)\b", re.I)
 COUNTRY_HINT = re.compile(r"\b(USA|U\.S\.A\.|United States|India|China|Canada|Italy|Germany|Israel|Ireland|Switzerland|"
@@ -113,7 +113,9 @@ def free_text_hits(sections: list[dict]) -> list[dict]:
         for m in ROLE.finditer(txt):
             kw = m.group(1).lower().rstrip(".")
             prep = (m.group(2) or "").lower()
-            if kw in ("made", "product") and prep not in ("in", "of", "by"):
+            if kw == "product of":
+                kw, prep = "product", ""
+            if kw == "made" and prep not in ("in", "by"):
                 continue
             if kw == "manufacturer" and not re.match(r"\s*[:.]", txt[m.end(1):m.end(1) + 3]):
                 continue
@@ -123,6 +125,12 @@ def free_text_hits(sections: list[dict]) -> list[dict]:
                     "labeled": "LABELED", "labelled": "LABELED", "relabeled": "RELABELED", "repackaged": "REPACKAGED",
                     "imported": "IMPORTED"}[kw]
             role = f"{role}_{prep.upper()}" if prep else role
+            # Deterministic baseline rule: a manufacturing-role STATEMENT starts with a capitalised keyword and either
+            # names a party ("... by/for ...") or is "Made in"/"Product of"/"Manufacturer:". Lower-case narrative uses
+            # ("produced no evidence", "labeled dose", "distributed with a volume") are not statements.
+            strict = m.group(1)[0].isupper() and (prep in ("by", "for") or role in ("MADE_IN", "PRODUCT_OF", "MANUFACTURER"))
+            if not strict:
+                continue
             start = max(0, m.start() - 120)
             tail = txt[m.end():m.end() + 320]
             stop = STOP.search(tail, 3)

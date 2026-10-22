@@ -1,0 +1,1996 @@
+{
+ "n": 120,
+ "strata": {
+  "OTHER_OPERATIONS_ONLY": {
+   "population": 28123,
+   "n": 25,
+   "primary": {
+    "A": 13,
+    "B": 0,
+    "C": 12,
+    "D": 0,
+    "E": 0,
+    "F": 0,
+    "G": 0,
+    "P": 0
+   },
+   "recoverable": {
+    "parser_omission": 0,
+    "structured_cross_reference": 25,
+    "free_text_candidate": 0,
+    "identity_blocker": 0,
+    "genuine_absence": 0,
+    "human_judgment": 0,
+    "positive_control": 0
+   },
+   "flags": {
+    "physical_text_claim": 12,
+    "raw_candidate_link": 6,
+    "verified_link": 0,
+    "structured_source_ndc": 25,
+    "newer_version_today": 1
+   },
+   "intervals": {
+    "primary_A": {
+     "k": 13,
+     "p": 0.52,
+     "wilson95": [
+      0.335,
+      0.7
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_B": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_C": {
+     "k": 12,
+     "p": 0.48,
+     "wilson95": [
+      0.3,
+      0.665
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_D": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_E": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_F": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_G": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_P": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_parser_omission": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_structured_cross_reference": {
+     "k": 25,
+     "p": 1.0,
+     "wilson95": [
+      0.867,
+      1.0
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_free_text_candidate": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_identity_blocker": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_genuine_absence": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_human_judgment": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_positive_control": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "flag_physical_text_claim": {
+     "k": 12,
+     "p": 0.48,
+     "wilson95": [
+      0.3,
+      0.665
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_raw_candidate_link": {
+     "k": 6,
+     "p": 0.24,
+     "wilson95": [
+      0.115,
+      0.434
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_verified_link": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "flag_structured_source_ndc": {
+     "k": 25,
+     "p": 1.0,
+     "wilson95": [
+      0.867,
+      1.0
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_newer_version_today": {
+     "k": 1,
+     "p": 0.04,
+     "wilson95": [
+      0.007,
+      0.195
+     ],
+     "rule_of_three_upper": null
+    }
+   }
+  },
+  "NO_ESTABLISHMENT_BLOCK": {
+   "population": 18453,
+   "n": 25,
+   "primary": {
+    "A": 13,
+    "B": 0,
+    "C": 12,
+    "D": 0,
+    "E": 0,
+    "F": 0,
+    "G": 0,
+    "P": 0
+   },
+   "recoverable": {
+    "parser_omission": 0,
+    "structured_cross_reference": 4,
+    "free_text_candidate": 12,
+    "identity_blocker": 0,
+    "genuine_absence": 9,
+    "human_judgment": 0,
+    "positive_control": 0
+   },
+   "flags": {
+    "physical_text_claim": 12,
+    "raw_candidate_link": 4,
+    "verified_link": 0,
+    "structured_source_ndc": 4,
+    "newer_version_today": 0
+   },
+   "intervals": {
+    "primary_A": {
+     "k": 13,
+     "p": 0.52,
+     "wilson95": [
+      0.335,
+      0.7
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_B": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_C": {
+     "k": 12,
+     "p": 0.48,
+     "wilson95": [
+      0.3,
+      0.665
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_D": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_E": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_F": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_G": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_P": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_parser_omission": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_structured_cross_reference": {
+     "k": 4,
+     "p": 0.16,
+     "wilson95": [
+      0.064,
+      0.347
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_free_text_candidate": {
+     "k": 12,
+     "p": 0.48,
+     "wilson95": [
+      0.3,
+      0.665
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_identity_blocker": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_genuine_absence": {
+     "k": 9,
+     "p": 0.36,
+     "wilson95": [
+      0.202,
+      0.555
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_human_judgment": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_positive_control": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "flag_physical_text_claim": {
+     "k": 12,
+     "p": 0.48,
+     "wilson95": [
+      0.3,
+      0.665
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_raw_candidate_link": {
+     "k": 4,
+     "p": 0.16,
+     "wilson95": [
+      0.064,
+      0.347
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_verified_link": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "flag_structured_source_ndc": {
+     "k": 4,
+     "p": 0.16,
+     "wilson95": [
+      0.064,
+      0.347
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_newer_version_today": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    }
+   }
+  },
+  "ONLY_UNSCOPED_OPERATIONS_IN_DOCUMENT": {
+   "population": 7762,
+   "n": 25,
+   "primary": {
+    "A": 4,
+    "B": 0,
+    "C": 8,
+    "D": 13,
+    "E": 0,
+    "F": 0,
+    "G": 0,
+    "P": 0
+   },
+   "recoverable": {
+    "parser_omission": 0,
+    "structured_cross_reference": 12,
+    "free_text_candidate": 0,
+    "identity_blocker": 13,
+    "genuine_absence": 0,
+    "human_judgment": 0,
+    "positive_control": 0
+   },
+   "flags": {
+    "physical_text_claim": 9,
+    "raw_candidate_link": 2,
+    "verified_link": 0,
+    "structured_source_ndc": 13,
+    "newer_version_today": 0
+   },
+   "intervals": {
+    "primary_A": {
+     "k": 4,
+     "p": 0.16,
+     "wilson95": [
+      0.064,
+      0.347
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_B": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_C": {
+     "k": 8,
+     "p": 0.32,
+     "wilson95": [
+      0.172,
+      0.516
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_D": {
+     "k": 13,
+     "p": 0.52,
+     "wilson95": [
+      0.335,
+      0.7
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_E": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_F": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_G": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "primary_P": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_parser_omission": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_structured_cross_reference": {
+     "k": 12,
+     "p": 0.48,
+     "wilson95": [
+      0.3,
+      0.665
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_free_text_candidate": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_identity_blocker": {
+     "k": 13,
+     "p": 0.52,
+     "wilson95": [
+      0.335,
+      0.7
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_genuine_absence": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_human_judgment": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "recoverable_positive_control": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "flag_physical_text_claim": {
+     "k": 9,
+     "p": 0.36,
+     "wilson95": [
+      0.202,
+      0.555
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_raw_candidate_link": {
+     "k": 2,
+     "p": 0.08,
+     "wilson95": [
+      0.022,
+      0.25
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_verified_link": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    },
+    "flag_structured_source_ndc": {
+     "k": 13,
+     "p": 0.52,
+     "wilson95": [
+      0.335,
+      0.7
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_newer_version_today": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.133
+     ],
+     "rule_of_three_upper": 0.12
+    }
+   }
+  },
+  "ESTABLISHMENTS_LISTED_NOT_FOR_THIS_PRODUCT": {
+   "population": 119,
+   "n": 15,
+   "primary": {
+    "A": 5,
+    "B": 0,
+    "C": 10,
+    "D": 0,
+    "E": 0,
+    "F": 0,
+    "G": 0,
+    "P": 0
+   },
+   "recoverable": {
+    "parser_omission": 0,
+    "structured_cross_reference": 3,
+    "free_text_candidate": 0,
+    "identity_blocker": 0,
+    "genuine_absence": 5,
+    "human_judgment": 7,
+    "positive_control": 0
+   },
+   "flags": {
+    "physical_text_claim": 10,
+    "raw_candidate_link": 4,
+    "verified_link": 0,
+    "structured_source_ndc": 3,
+    "newer_version_today": 0
+   },
+   "intervals": {
+    "primary_A": {
+     "k": 5,
+     "p": 0.333,
+     "wilson95": [
+      0.152,
+      0.583
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_B": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_C": {
+     "k": 10,
+     "p": 0.667,
+     "wilson95": [
+      0.417,
+      0.848
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_D": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_E": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_F": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_G": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_P": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_parser_omission": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_structured_cross_reference": {
+     "k": 3,
+     "p": 0.2,
+     "wilson95": [
+      0.07,
+      0.452
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_free_text_candidate": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_identity_blocker": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_genuine_absence": {
+     "k": 5,
+     "p": 0.333,
+     "wilson95": [
+      0.152,
+      0.583
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_human_judgment": {
+     "k": 7,
+     "p": 0.467,
+     "wilson95": [
+      0.248,
+      0.699
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_positive_control": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "flag_physical_text_claim": {
+     "k": 10,
+     "p": 0.667,
+     "wilson95": [
+      0.417,
+      0.848
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_raw_candidate_link": {
+     "k": 4,
+     "p": 0.267,
+     "wilson95": [
+      0.109,
+      0.52
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_verified_link": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "flag_structured_source_ndc": {
+     "k": 3,
+     "p": 0.2,
+     "wilson95": [
+      0.07,
+      0.452
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_newer_version_today": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    }
+   }
+  },
+  "UNKNOWN_SITE": {
+   "population": 1002,
+   "n": 15,
+   "primary": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "E": 15,
+    "F": 0,
+    "G": 0,
+    "P": 0
+   },
+   "recoverable": {
+    "parser_omission": 0,
+    "structured_cross_reference": 0,
+    "free_text_candidate": 0,
+    "identity_blocker": 13,
+    "genuine_absence": 0,
+    "human_judgment": 2,
+    "positive_control": 0
+   },
+   "flags": {
+    "physical_text_claim": 5,
+    "raw_candidate_link": 3,
+    "verified_link": 0,
+    "structured_source_ndc": 0,
+    "newer_version_today": 1
+   },
+   "intervals": {
+    "primary_A": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_B": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_C": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_D": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_E": {
+     "k": 15,
+     "p": 1.0,
+     "wilson95": [
+      0.796,
+      1.0
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_F": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_G": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "primary_P": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_parser_omission": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_structured_cross_reference": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_free_text_candidate": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_identity_blocker": {
+     "k": 13,
+     "p": 0.867,
+     "wilson95": [
+      0.621,
+      0.963
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_genuine_absence": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "recoverable_human_judgment": {
+     "k": 2,
+     "p": 0.133,
+     "wilson95": [
+      0.037,
+      0.379
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_positive_control": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "flag_physical_text_claim": {
+     "k": 5,
+     "p": 0.333,
+     "wilson95": [
+      0.152,
+      0.583
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_raw_candidate_link": {
+     "k": 3,
+     "p": 0.2,
+     "wilson95": [
+      0.07,
+      0.452
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_verified_link": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "flag_structured_source_ndc": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.204
+     ],
+     "rule_of_three_upper": 0.2
+    },
+    "flag_newer_version_today": {
+     "k": 1,
+     "p": 0.067,
+     "wilson95": [
+      0.012,
+      0.298
+     ],
+     "rule_of_three_upper": null
+    }
+   }
+  },
+  "TENTATIVE": {
+   "population": 435,
+   "n": 10,
+   "primary": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "E": 10,
+    "F": 0,
+    "G": 0,
+    "P": 0
+   },
+   "recoverable": {
+    "parser_omission": 0,
+    "structured_cross_reference": 0,
+    "free_text_candidate": 0,
+    "identity_blocker": 9,
+    "genuine_absence": 0,
+    "human_judgment": 1,
+    "positive_control": 0
+   },
+   "flags": {
+    "physical_text_claim": 5,
+    "raw_candidate_link": 3,
+    "verified_link": 0,
+    "structured_source_ndc": 0,
+    "newer_version_today": 1
+   },
+   "intervals": {
+    "primary_A": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "primary_B": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "primary_C": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "primary_D": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "primary_E": {
+     "k": 10,
+     "p": 1.0,
+     "wilson95": [
+      0.722,
+      1.0
+     ],
+     "rule_of_three_upper": null
+    },
+    "primary_F": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "primary_G": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "primary_P": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "recoverable_parser_omission": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "recoverable_structured_cross_reference": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "recoverable_free_text_candidate": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "recoverable_identity_blocker": {
+     "k": 9,
+     "p": 0.9,
+     "wilson95": [
+      0.596,
+      0.982
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_genuine_absence": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "recoverable_human_judgment": {
+     "k": 1,
+     "p": 0.1,
+     "wilson95": [
+      0.018,
+      0.404
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_positive_control": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "flag_physical_text_claim": {
+     "k": 5,
+     "p": 0.5,
+     "wilson95": [
+      0.237,
+      0.763
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_raw_candidate_link": {
+     "k": 3,
+     "p": 0.3,
+     "wilson95": [
+      0.108,
+      0.603
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_verified_link": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "flag_structured_source_ndc": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.278
+     ],
+     "rule_of_three_upper": 0.3
+    },
+    "flag_newer_version_today": {
+     "k": 1,
+     "p": 0.1,
+     "wilson95": [
+      0.018,
+      0.404
+     ],
+     "rule_of_three_upper": null
+    }
+   }
+  },
+  "DIRECT": {
+   "population": 24614,
+   "n": 5,
+   "primary": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "E": 0,
+    "F": 0,
+    "G": 0,
+    "P": 5
+   },
+   "recoverable": {
+    "parser_omission": 0,
+    "structured_cross_reference": 0,
+    "free_text_candidate": 0,
+    "identity_blocker": 0,
+    "genuine_absence": 0,
+    "human_judgment": 0,
+    "positive_control": 5
+   },
+   "flags": {
+    "physical_text_claim": 3,
+    "raw_candidate_link": 2,
+    "verified_link": 5,
+    "structured_source_ndc": 0,
+    "newer_version_today": 0
+   },
+   "intervals": {
+    "primary_A": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "primary_B": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "primary_C": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "primary_D": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "primary_E": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "primary_F": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "primary_G": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "primary_P": {
+     "k": 5,
+     "p": 1.0,
+     "wilson95": [
+      0.566,
+      1.0
+     ],
+     "rule_of_three_upper": null
+    },
+    "recoverable_parser_omission": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "recoverable_structured_cross_reference": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "recoverable_free_text_candidate": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "recoverable_identity_blocker": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "recoverable_genuine_absence": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "recoverable_human_judgment": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "recoverable_positive_control": {
+     "k": 5,
+     "p": 1.0,
+     "wilson95": [
+      0.566,
+      1.0
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_physical_text_claim": {
+     "k": 3,
+     "p": 0.6,
+     "wilson95": [
+      0.231,
+      0.882
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_raw_candidate_link": {
+     "k": 2,
+     "p": 0.4,
+     "wilson95": [
+      0.118,
+      0.769
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_verified_link": {
+     "k": 5,
+     "p": 1.0,
+     "wilson95": [
+      0.566,
+      1.0
+     ],
+     "rule_of_three_upper": null
+    },
+    "flag_structured_source_ndc": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    },
+    "flag_newer_version_today": {
+     "k": 0,
+     "p": 0.0,
+     "wilson95": [
+      0.0,
+      0.434
+     ],
+     "rule_of_three_upper": 0.6
+    }
+   }
+  }
+ },
+ "weighted": {
+  "no_evidence_54457": {
+   "primary_A": {
+    "estimate": 25501,
+    "normal95": [
+     18824,
+     32179
+    ],
+    "sum_of_wilson95": [
+     16117,
+     35348
+    ],
+    "denominator": 54457
+   },
+   "primary_B": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     7262
+    ],
+    "denominator": 54457
+   },
+   "primary_C": {
+    "estimate": 24920,
+    "normal95": [
+     18185,
+     31654
+    ],
+    "sum_of_wilson95": [
+     15372,
+     35079
+    ],
+    "denominator": 54457
+   },
+   "primary_D": {
+    "estimate": 4036,
+    "normal95": [
+     2519,
+     5554
+    ],
+    "sum_of_wilson95": [
+     2600,
+     11659
+    ],
+    "denominator": 54457
+   },
+   "primary_E": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     7262
+    ],
+    "denominator": 54457
+   },
+   "primary_F": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     7262
+    ],
+    "denominator": 54457
+   },
+   "primary_G": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     7262
+    ],
+    "denominator": 54457
+   },
+   "primary_P": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     7262
+    ],
+    "denominator": 54457
+   },
+   "recoverable_parser_omission": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     7262
+    ],
+    "denominator": 54457
+   },
+   "recoverable_structured_cross_reference": {
+    "estimate": 34825,
+    "normal95": [
+     31771,
+     37879
+    ],
+    "sum_of_wilson95": [
+     27898,
+     39733
+    ],
+    "denominator": 54457
+   },
+   "recoverable_free_text_candidate": {
+    "estimate": 8857,
+    "normal95": [
+     5246,
+     12469
+    ],
+    "sum_of_wilson95": [
+     5542,
+     17075
+    ],
+    "denominator": 54457
+   },
+   "recoverable_identity_blocker": {
+    "estimate": 4036,
+    "normal95": [
+     2519,
+     5554
+    ],
+    "sum_of_wilson95": [
+     2600,
+     11659
+    ],
+    "denominator": 54457
+   },
+   "recoverable_genuine_absence": {
+    "estimate": 6683,
+    "normal95": [
+     3213,
+     10153
+    ],
+    "sum_of_wilson95": [
+     3754,
+     15087
+    ],
+    "denominator": 54457
+   },
+   "recoverable_human_judgment": {
+    "estimate": 56,
+    "normal95": [
+     27,
+     84
+    ],
+    "sum_of_wilson95": [
+     30,
+     7321
+    ],
+    "denominator": 54457
+   },
+   "recoverable_positive_control": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     7262
+    ],
+    "denominator": 54457
+   },
+   "flag_physical_text_claim": {
+    "estimate": 25230,
+    "normal95": [
+     18487,
+     31974
+    ],
+    "sum_of_wilson95": [
+     15609,
+     35381
+    ],
+    "denominator": 54457
+   },
+   "flag_raw_candidate_link": {
+    "estimate": 10355,
+    "normal95": [
+     4891,
+     15818
+    ],
+    "sum_of_wilson95": [
+     4600,
+     20608
+    ],
+    "denominator": 54457
+   },
+   "flag_verified_link": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     7262
+    ],
+    "denominator": 54457
+   },
+   "flag_structured_source_ndc": {
+    "estimate": 35136,
+    "normal95": [
+     32082,
+     38189
+    ],
+    "sum_of_wilson95": [
+     28167,
+     40002
+    ],
+    "denominator": 54457
+   },
+   "flag_newer_version_today": {
+    "estimate": 1125,
+    "normal95": [
+     0,
+     3284
+    ],
+    "sum_of_wilson95": [
+     200,
+     9012
+    ],
+    "denominator": 54457
+   }
+  },
+  "all_seven_strata": {
+   "primary_A": {
+    "estimate": 25501,
+    "normal95": [
+     18824,
+     32179
+    ],
+    "sum_of_wilson95": [
+     16117,
+     46367
+    ],
+    "denominator": 80508
+   },
+   "primary_B": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     18281
+    ],
+    "denominator": 80508
+   },
+   "primary_C": {
+    "estimate": 24920,
+    "normal95": [
+     18185,
+     31654
+    ],
+    "sum_of_wilson95": [
+     15372,
+     46098
+    ],
+    "denominator": 80508
+   },
+   "primary_D": {
+    "estimate": 4036,
+    "normal95": [
+     2519,
+     5554
+    ],
+    "sum_of_wilson95": [
+     2600,
+     22678
+    ],
+    "denominator": 80508
+   },
+   "primary_E": {
+    "estimate": 1437,
+    "normal95": [
+     1437,
+     1437
+    ],
+    "sum_of_wilson95": [
+     1112,
+     19393
+    ],
+    "denominator": 80508
+   },
+   "primary_F": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     18281
+    ],
+    "denominator": 80508
+   },
+   "primary_G": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     18281
+    ],
+    "denominator": 80508
+   },
+   "primary_P": {
+    "estimate": 24614,
+    "normal95": [
+     24614,
+     24614
+    ],
+    "sum_of_wilson95": [
+     13920,
+     32201
+    ],
+    "denominator": 80508
+   },
+   "recoverable_parser_omission": {
+    "estimate": 0,
+    "normal95": [
+     0,
+     0
+    ],
+    "sum_of_wilson95": [
+     0,
+     18281
+    ],
+    "denominator": 80508
+   },
+   "recoverable_structured_cross_reference": {
+    "estimate": 34825,
+    "normal95": [
+     31771,
+     37879
+    ],
+    "sum_of_wilson95": [
+     27898,
+     50753
+    ],
+    "denominator": 80508
+   },
+   "recoverable_free_text_candidate": {
+    "estimate": 8857,
+    "normal95": [
+     5246,
+     12469
+    ],
+    "sum_of_wilson95": [
+     5542,
+     28095
+    ],
+    "denominator": 80508
+   },
+   "recoverable_identity_blocker": {
+    "estimate": 5296,
+    "normal95": [
+     3767,
+     6825
+    ],
+    "sum_of_wilson95": [
+     3482,
+     23745
+    ],
+    "denominator": 80508
+   },
+   "recoverable_genuine_absence": {
+    "estimate": 6683,
+    "normal95": [
+     3213,
+     10153
+    ],
+    "sum_of_wilson95": [
+     3754,
+     26106
+    ],
+    "denominator": 80508
+   },
+   "recoverable_human_judgment": {
+    "estimate": 233,
+    "normal95": [
+     42,
+     424
+    ],
+    "sum_of_wilson95": [
+     75,
+     18570
+    ],
+    "denominator": 80508
+   },
+   "recoverable_positive_control": {
+    "estimate": 24614,
+    "normal95": [
+     24614,
+     24614
+    ],
+    "sum_of_wilson95": [
+     13920,
+     32201
+    ],
+    "denominator": 80508
+   },
+   "flag_physical_text_claim": {
+    "estimate": 40550,
+    "normal95": [
+     28011,
+     53090
+    ],
+    "sum_of_wilson95": [
+     21543,
+     58016
+    ],
+    "denominator": 80508
+   },
+   "flag_raw_candidate_link": {
+    "estimate": 20531,
+    "normal95": [
+     8632,
+     32431
+    ],
+    "sum_of_wilson95": [
+     7613,
+     40258
+    ],
+    "denominator": 80508
+   },
+   "flag_verified_link": {
+    "estimate": 24614,
+    "normal95": [
+     24614,
+     24614
+    ],
+    "sum_of_wilson95": [
+     13920,
+     32201
+    ],
+    "denominator": 80508
+   },
+   "flag_structured_source_ndc": {
+    "estimate": 35136,
+    "normal95": [
+     32082,
+     38189
+    ],
+    "sum_of_wilson95": [
+     28167,
+     51022
+    ],
+    "denominator": 80508
+   },
+   "flag_newer_version_today": {
+    "estimate": 1235,
+    "normal95": [
+     0,
+     3400
+    ],
+    "sum_of_wilson95": [
+     219,
+     20181
+    ],
+    "denominator": 80508
+   }
+  }
+ },
+ "definitions": {
+  "categories": {
+   "A": "evidence truly absent from the inspected label",
+   "B": "manufacturing information in structured XML but missed by the parser",
+   "C": "manufacturing information in free text, absent from structured establishment operations",
+   "D": "manufacturing operation present but not attributable to a specific product",
+   "E": "facility identity missing, stale or conflicting",
+   "F": "data/version inconsistency or another error",
+   "G": "unresolved after inspection",
+   "P": "positive control: structured MANUFACTURE present and correct"
+  },
+  "recoverability": [
+   "parser_omission",
+   "structured_cross_reference",
+   "free_text_candidate",
+   "identity_blocker",
+   "genuine_absence",
+   "human_judgment",
+   "positive_control"
+  ]
+ }
+}

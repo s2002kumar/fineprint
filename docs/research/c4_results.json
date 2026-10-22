@@ -1,0 +1,3362 @@
+{
+ "generated_at": "2026-10-22T09:48:38Z",
+ "gold_labels": 120,
+ "gold_with_maker": 56,
+ "gold_makers_on_full_label": 56,
+ "gold_makers_not_in_excerpt": [],
+ "baseline": {
+  "n": 120,
+  "maker_named_correct": 109,
+  "true_positive_company": 47,
+  "false_assertion_no_maker": 5,
+  "wrong_company": 3,
+  "missed_maker": 6,
+  "location_correct": 35,
+  "location_evaluable": 48,
+  "unsupported_quote": 0,
+  "quotes_given": 55,
+  "per_label": {
+   "S001": {
+    "gold": {
+     "maker": "Crown Laboratories, Inc.",
+     "location": "Johnson City, TN 37604"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Crown Laboratories",
+     "maker_location": "Inc.Johnson City, TN 37604",
+     "supporting_quote": "Manufactured by: Crown Laboratories, Inc.Johnson City, TN 37604"
+    },
+    "outcome": "correct_company"
+   },
+   "S002": {
+    "gold": {
+     "maker": "HIKMA Pharmaceuticals",
+     "location": "P.O. Box 182400 Amman 11118 Jordan"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "HIKMA Pharmaceuticals P",
+     "maker_location": "O. Box 182400 Amman 11118 \u2013 Jordan",
+     "supporting_quote": "Manufactured by: HIKMA Pharmaceuticals P.O. Box 182400 Amman 11118 \u2013 Jordan"
+    },
+    "outcome": "correct_company"
+   },
+   "S003": {
+    "gold": {
+     "maker": "Macleods Pharmaceuticals Ltd.",
+     "location": "Baddi, Himachal Pradesh, INDIA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Macleods Pharmaceuticals Ltd",
+     "maker_location": "Baddi, Himachal Pradesh, INDIA",
+     "supporting_quote": "Manufactured by: Macleods Pharmaceuticals Ltd. Baddi, Himachal Pradesh, INDIA"
+    },
+    "outcome": "correct_company"
+   },
+   "S004": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S005": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S006": {
+    "gold": {
+     "maker": "Aurobindo Pharma Limited",
+     "location": "Hyderabad-500 038, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Aurobindo Pharma Limited Hyderabad-500 038",
+     "maker_location": "India",
+     "supporting_quote": "Manufactured by: Aurobindo Pharma Limited Hyderabad-500 038, India"
+    },
+    "outcome": "correct_company"
+   },
+   "S007": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S008": {
+    "gold": {
+     "maker": "InvaGen Pharmaceuticals, Inc.",
+     "location": "Hauppauge, NY 11788"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "InvaGen Pharmaceuticals",
+     "maker_location": "Inc.Hauppauge, NY 11788 Rev: 11/13 Barcode: 422-11-2013",
+     "supporting_quote": "Manufactured by:InvaGen Pharmaceuticals, Inc.Hauppauge, NY 11788 Rev: 11/13 Barcode: 422-11-2013\n[section 42229-5 Repackaging Information @0] Please reference the How Supplied section listed above for"
+    },
+    "outcome": "correct_company"
+   },
+   "S009": {
+    "gold": {
+     "maker": "Alkem Laboratories Ltd.",
+     "location": "Mumbai - 400 013, INDIA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Alkem Laboratories Ltd",
+     "maker_location": ", Mumbai - 400 013, INDIA",
+     "supporting_quote": "Manufactured by: Alkem Laboratories Ltd., Mumbai - 400 013, INDIA."
+    },
+    "outcome": "correct_company"
+   },
+   "S010": {
+    "gold": {
+     "maker": "Rubicon Research Ltd.",
+     "location": "Thane 421506, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Rubicon Research Ltd",
+     "maker_location": ", Thane 421506, India",
+     "supporting_quote": "Manufactured by: Rubicon Research Ltd., Thane 421506, India."
+    },
+    "outcome": "correct_company"
+   },
+   "S011": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S012": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S013": {
+    "gold": {
+     "maker": "Rubicon Research Private Limited",
+     "location": "Ambernath, Thane 421506 India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Rubicon Research Private Limited",
+     "maker_location": "Ambernath",
+     "supporting_quote": "Manufactured by: Rubicon Research Private Limited, Ambernath,"
+    },
+    "outcome": "correct_company"
+   },
+   "S014": {
+    "gold": {
+     "maker": "Mylan Laboratories Limited",
+     "location": "Hyderabad 500 096, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Mylan Laboratories Limited Hyderabad \u2014 500 096",
+     "maker_location": "India 75106328",
+     "supporting_quote": "Manufactured by: Mylan Laboratories Limited Hyderabad \u2014 500 096, India 75106328"
+    },
+    "outcome": "correct_company"
+   },
+   "S015": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S016": {
+    "gold": {
+     "maker": "Lupin Limited",
+     "location": "Goa - 403722 India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Lupin Limited Goa - 403722 India",
+     "maker_location": null,
+     "supporting_quote": "Manufactured by: Lupin Limited Goa - 403722 India"
+    },
+    "outcome": "correct_company"
+   },
+   "S017": {
+    "gold": {
+     "maker": "Cadila Healthcare Ltd.",
+     "location": "India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Cadila Healthcare Ltd",
+     "maker_location": "India",
+     "supporting_quote": "Manufactured by: Cadila Healthcare Ltd. India."
+    },
+    "outcome": "correct_company"
+   },
+   "S018": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S019": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S020": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S021": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S022": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S023": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S024": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S025": {
+    "gold": {
+     "maker": "Pfizer Inc",
+     "location": "New York, NY 10017"
+    },
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "missed"
+   },
+   "S026": {
+    "gold": {
+     "maker": "Par Pharmaceutical",
+     "location": "Chestnut Ridge, NY 10977"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Par Pharmaceutical Chestnut Ridge",
+     "maker_location": "NY 10977",
+     "supporting_quote": "Manufactured by: Par Pharmaceutical Chestnut Ridge, NY 10977"
+    },
+    "outcome": "correct_company"
+   },
+   "S027": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S028": {
+    "gold": {
+     "maker": "Woodstock Sterile Solutions, Inc.",
+     "location": "Woodstock, IL 60098 U.S.A."
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Woodstock Sterile Solutions",
+     "maker_location": "Inc. Woodstock, IL 60098 U.S.A",
+     "supporting_quote": "Manufactured by: Woodstock Sterile Solutions, Inc. Woodstock, IL 60098 U.S.A."
+    },
+    "outcome": "correct_company"
+   },
+   "S029": {
+    "gold": {
+     "maker": "Nesher Pharmaceuticals USA LLC",
+     "location": "St. Louis, MO 63044"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Nesher Pharmaceuticals USA LLC St",
+     "maker_location": "Louis, MO 63044",
+     "supporting_quote": "Manufactured By: Nesher Pharmaceuticals USA LLC St. Louis, MO 63044"
+    },
+    "outcome": "correct_company"
+   },
+   "S030": {
+    "gold": {
+     "maker": "AustarPharma, LLC",
+     "location": "18 Mayfield Ave Edison, NJ 08837, USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "AustarPharma",
+     "maker_location": "LLC 18 Mayfield Ave Edison, NJ 08837, USA",
+     "supporting_quote": "Manufactured by: AustarPharma, LLC 18 Mayfield Ave Edison, NJ 08837, USA\n[section 34088-5 OVERDOSAGE @0] Limited information is available on the acute toxicity of methocarbamol. Overdose of methocarba"
+    },
+    "outcome": "correct_company"
+   },
+   "S031": {
+    "gold": {
+     "maker": "Hikma Pharmaceuticals USA Inc.",
+     "location": "Berkeley Heights, NJ 07922"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Hikma Pharmaceuticals USA Inc",
+     "maker_location": "Berkeley Heights, NJ 07922",
+     "supporting_quote": "Manufactured by: Hikma Pharmaceuticals USA Inc. Berkeley Heights, NJ 07922"
+    },
+    "outcome": "correct_company"
+   },
+   "S032": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S033": {
+    "gold": {
+     "maker": "Ascendis Pharma Bone Diseases A/S",
+     "location": "Tuborg Boulevard 12, DK-2900 Hellerup, Denmark"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Ascendis Pharma Bone Diseases A/STuborg Boulevard 12",
+     "maker_location": "DK-2900 Hellerup, Denmark For information about YORVIPATH contact:Ascendis Pharma Endocrinology, Inc.Princeton, New Jersey 08540, USA1-844-442-7236 (1-844-44ASC",
+     "supporting_quote": "Manufactured by:Ascendis Pharma Bone Diseases A/STuborg Boulevard 12, DK-2900 Hellerup, Denmark For information about YORVIPATH contact:Ascendis Pharma Endocrinology, Inc.Princeton, New Jersey 08540, "
+    },
+    "outcome": "correct_company"
+   },
+   "S034": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S035": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S036": {
+    "gold": {
+     "maker": "Latina Pharma S.p.A.",
+     "location": "Sermoneta (LT), Italy"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Latina Pharma S",
+     "maker_location": "p.A., Sermoneta (LT), Italy for: Wilshire Pharmaceuticals, Inc. Atlanta, GA 30328 USA",
+     "supporting_quote": "Manufactured by Latina Pharma S.p.A., Sermoneta (LT), Italy for: Wilshire Pharmaceuticals, Inc. Atlanta, GA 30328 USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S037": {
+    "gold": {
+     "maker": "Baxter Healthcare Corporation",
+     "location": "Deerfield, IL 60015 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Packed by",
+     "maker_location": null,
+     "supporting_quote": "Manufactured by, Packed by,"
+    },
+    "outcome": "wrong_company"
+   },
+   "S038": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S039": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S040": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S041": {
+    "gold": {
+     "maker": "Biocon Pharma Limited",
+     "location": "Bengaluru, India 560099"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Biocon Pharma Limited Bengaluru",
+     "maker_location": "India \u2013 560099",
+     "supporting_quote": "Manufactured by: Biocon Pharma Limited Bengaluru, India \u2013 560099"
+    },
+    "outcome": "correct_company"
+   },
+   "S042": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S043": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S044": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S045": {
+    "gold": {
+     "maker": "Tris Pharma, Inc.",
+     "location": "Monmouth Junction, NJ 08852"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Tris Pharma",
+     "maker_location": "Inc. Monmouth Junction, NJ 08852 For: Cranbury Pharmaceuticals, LLC Monmouth Junction, NJ 08852 LB8408 Rev. 06 07/2024",
+     "supporting_quote": "Manufactured by: Tris Pharma, Inc. Monmouth Junction, NJ 08852 For: Cranbury Pharmaceuticals, LLC Monmouth Junction, NJ 08852 LB8408 Rev. 06 07/2024\n[section 42231-1 MEDICATION GUIDE @12093] \u2026ate hydr"
+    },
+    "outcome": "correct_company"
+   },
+   "S046": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S047": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S048": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S049": {
+    "gold": {
+     "maker": "Gland Pharma Limited",
+     "location": "Hyderabad-502307, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Gland Pharma Limited Hyderabad-502307",
+     "maker_location": "India",
+     "supporting_quote": "Manufactured by: Gland Pharma Limited Hyderabad-502307, India."
+    },
+    "outcome": "correct_company"
+   },
+   "S050": {
+    "gold": {
+     "maker": "Contract Pharmacal Corp.",
+     "location": "165 Oser Avenue Hauppauge, NY 11788 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Contract Pharmacal Corp",
+     "maker_location": "165 Oser Avenue Hauppauge, NY 11788 USA Toll Free Number: (800) 231-4670",
+     "supporting_quote": "Manufactured by: Contract Pharmacal Corp. 165 Oser Avenue Hauppauge, NY 11788 USA Toll Free Number: (800) 231-4670"
+    },
+    "outcome": "correct_company"
+   },
+   "S051": {
+    "gold": {
+     "maker": "DPT Laboratories Ltd",
+     "location": "San Antonio, TX 78215"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "DPT Laboratories Ltd San Antonio",
+     "maker_location": "TX 78215 Rev. 270:00 10/09 129160-1009 Additional barcode labeling by: Physicians Total Care, Inc.Tulsa, OK 74146",
+     "supporting_quote": "Manufactured by: DPT Laboratories Ltd San Antonio, TX 78215 Rev. 270:00 10/09 129160-1009 Additional barcode labeling by: Physicians Total Care, Inc.Tulsa, OK 74146\n[section 34072-9 General @0] Clobet"
+    },
+    "outcome": "correct_company"
+   },
+   "S052": {
+    "gold": null,
+    "pred": {
+     "maker_named": true,
+     "maker_company": "AIR LIQUEFACTION RETURN WITH 25 PSIG",
+     "maker_location": "TO BE REFILLED BY AN INWELD AUTHORIZED FACILITY ONLY. RETURN WITH 25 PSIG. Pressure: ___________ PSIG at 70\u00b0FSize: _______________Contents: ___________ LitersDO",
+     "supporting_quote": "PRODUCED BY AIR LIQUEFACTION RETURN WITH 25 PSIG. TO BE REFILLED BY AN INWELD AUTHORIZED FACILITY ONLY. RETURN WITH 25 PSIG. Pressure: ___________ PSIG at 70\u00b0FSize: _______________Contents: __________"
+    },
+    "outcome": "false_assertion"
+   },
+   "S053": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S054": {
+    "gold": {
+     "maker": "Amneal Pharmaceuticals of NY",
+     "location": "Hauppauge, NY 11788"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Amneal Pharmaceuticals of NY Hauppauge",
+     "maker_location": "NY 11788",
+     "supporting_quote": "Manufactured by: Amneal Pharmaceuticals of NY Hauppauge, NY 11788"
+    },
+    "outcome": "correct_company"
+   },
+   "S055": {
+    "gold": {
+     "maker": "TEVA PHARMACEUTICAL INDUSTRIES",
+     "location": "Israel",
+     "note": "statement form 'Manufactured In Israel By:'; missed by the first digest, found by the round-1 LLM pass and confirmed in the text; corrected before scoring"
+    },
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "missed"
+   },
+   "S056": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S057": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S058": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S059": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S060": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S061": {
+    "gold": {
+     "maker": "Mylan; Apotex (one per strength)",
+     "location": null
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Mylan) buPROPion Hydrochloride Tablets",
+     "maker_location": "USP 75 mg WARNING: Do not use in combination with Zyban\u00ae* or any other medicines that contain bupropion hydrochloride. 30 TABLETS (Rx only) Each film-coated tab",
+     "supporting_quote": "Manufactured by: Mylan) buPROPion Hydrochloride Tablets, USP 75 mg WARNING: Do not use in combination with Zyban\u00ae* or any other medicines that contain bupropion hydrochloride. 30 TABLETS (Rx only) Eac"
+    },
+    "outcome": "wrong_company"
+   },
+   "S062": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S063": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S064": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S065": {
+    "gold": {
+     "maker": "Ortho Pharmaceutical, a division of Janssen Ortho LLC",
+     "location": "Manati, Puerto Rico 00674-0463"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Ortho Pharmaceuticala division of Janssen Ortho LLC",
+     "maker_location": "Manati, Puerto Rico 00674-0463 \u00a9 OMJPI 2010 RETIN-A MICRO\u00ae (tretinoin gel) microsphere, 0.1% and 0.04% Additional barcode labeling by: Physicians Total Care, In",
+     "supporting_quote": "Manufactured by: Ortho Pharmaceuticala division of Janssen Ortho LLC.Manati, Puerto Rico 00674-0463 \u00a9 OMJPI 2010 RETIN-A MICRO\u00ae (tretinoin gel) microsphere, 0.1% and 0.04% Additional barcode labeling "
+    },
+    "outcome": "correct_company"
+   },
+   "S066": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S067": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S068": {
+    "gold": {
+     "maker": "Actavis Elizabeth LLC",
+     "location": "200 Elmora Avenue, Elizabeth, NJ 07207 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Actavis Elizabeth LLC 200 Elmora Avenue",
+     "maker_location": "Elizabeth, NJ 07207 USA 40-9048",
+     "supporting_quote": "Manufactured by: Actavis Elizabeth LLC 200 Elmora Avenue, Elizabeth, NJ 07207 USA 40-9048"
+    },
+    "outcome": "correct_company"
+   },
+   "S069": {
+    "gold": {
+     "maker": "Actavis Elizabeth LLC",
+     "location": "200 Elmora Avenue Elizabeth, NJ 07207 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Actavis Elizabeth LLC 200 Elmora Avenue Elizabeth",
+     "maker_location": "NJ 07207 USA 40-9148",
+     "supporting_quote": "Manufactured by: Actavis Elizabeth LLC 200 Elmora Avenue Elizabeth, NJ 07207 USA 40-9148"
+    },
+    "outcome": "correct_company"
+   },
+   "S070": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S071": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S072": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S073": {
+    "gold": {
+     "maker": "Camber Pharmaceuticals",
+     "location": "Piscataway, NJ 08854"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Camber Pharmaceuticals Piscataway",
+     "maker_location": "NJ 08854",
+     "supporting_quote": "Manufactured By: Camber Pharmaceuticals Piscataway, NJ 08854"
+    },
+    "outcome": "correct_company"
+   },
+   "S074": {
+    "gold": {
+     "maker": "Sandoz Inc.",
+     "location": "Princeton, NJ 08540"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Sandoz Inc",
+     "maker_location": "Princeton, NJ 08540 And",
+     "supporting_quote": "Manufactured By: Sandoz Inc. Princeton, NJ 08540 And"
+    },
+    "outcome": "correct_company"
+   },
+   "S075": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S076": {
+    "gold": {
+     "maker": "Watson Pharma Private Limited",
+     "location": "Verna, Salcette Goa 403 722 INDIA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Watson Pharma Private Limited Verna",
+     "maker_location": "Salcette Goa 403 722 INDIA",
+     "supporting_quote": "Manufactured by: Watson Pharma Private Limited Verna, Salcette Goa 403 722 INDIA"
+    },
+    "outcome": "correct_company"
+   },
+   "S077": {
+    "gold": {
+     "maker": "ICU Medical, Inc.",
+     "location": "Lake Forest, Illinois, 60045, USA",
+     "note": "HOW SUPPLIED table says 'Manufactured by ICU Medical, Inc.' for the 50/100/250 mL sizes and 'Manufactured for' elsewhere; the keyword is glued to a preceding NDC ('\u2026-36Manufactured by'), which defeats the digest's word-boundary rule; found by the round-2 LLM pass, confirmed in the text, corrected after the first scoring run and rescored"
+    },
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "missed"
+   },
+   "S078": {
+    "gold": {
+     "maker": "Sun Pharmaceutical Industries Ltd.",
+     "location": "Acme Plaza, Andheri-Kurla Road, Andheri (East), Mumbai-400 059, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Sun Pharmaceutical Industries Ltd",
+     "maker_location": "Acme Plaza, Andheri-Kurla Road, Andheri (East), Mumbai-400 059, India",
+     "supporting_quote": "Manufactured by: Sun Pharmaceutical Industries Ltd. Acme Plaza, Andheri-Kurla Road, Andheri (East), Mumbai-400 059, India."
+    },
+    "outcome": "correct_company"
+   },
+   "S079": {
+    "gold": {
+     "maker": "Novel Laboratories Inc.",
+     "location": "Somerset, NJ 08873"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Novel Laboratories Inc",
+     "maker_location": "Somerset, NJ 08873 PI0800000102 Rev. 12/2014 FDA-APPROVED PATIENT LABELING PATIENT INFORMATION Amlodipine (am loe' di peen) and Valsartan (val sar' tan) Tablets",
+     "supporting_quote": "Manufactured by: Novel Laboratories Inc. Somerset, NJ 08873 PI0800000102 Rev. 12/2014 FDA-APPROVED PATIENT LABELING PATIENT INFORMATION Amlodipine (am loe' di peen) and Valsartan (val sar' tan) Tablet"
+    },
+    "outcome": "correct_company"
+   },
+   "S080": {
+    "gold": {
+     "maker": "JOLLC",
+     "location": "Gurabo, Puerto Rico 00778",
+     "note": "statement belongs to another presentation on the same label; ambiguous for this product"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "JOLLC Gurabo",
+     "maker_location": "Puerto Rico 00778",
+     "supporting_quote": "Manufactured by: JOLLC Gurabo, Puerto Rico 00778"
+    },
+    "outcome": "correct_company"
+   },
+   "S081": {
+    "gold": {
+     "maker": "EMCURE PHARMACEUTICALS LTD.",
+     "location": "Hinjwadi, Pune, India",
+     "note": "statement form 'Manufactured In India By:'; missed by the first digest, found by the round-1 LLM pass and confirmed in the text; corrected before scoring"
+    },
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "missed"
+   },
+   "S082": {
+    "gold": {
+     "maker": "JOLLC",
+     "location": "Gurabo, Puerto Rico 00778",
+     "note": "as S080"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "JOLLC Gurabo",
+     "maker_location": "Puerto Rico 00778",
+     "supporting_quote": "Manufactured by: JOLLC Gurabo, Puerto Rico 00778"
+    },
+    "outcome": "correct_company"
+   },
+   "S083": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S084": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S085": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S086": {
+    "gold": {
+     "maker": "JOLLC",
+     "location": "Gurabo, Puerto Rico 00778",
+     "note": "as S080"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "JOLLC Gurabo",
+     "maker_location": "Puerto Rico 00778",
+     "supporting_quote": "Manufactured by: JOLLC Gurabo, Puerto Rico 00778"
+    },
+    "outcome": "correct_company"
+   },
+   "S087": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S088": {
+    "gold": {
+     "maker": "Lupin Limited",
+     "location": "INDIA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Lupin Limited",
+     "maker_location": "INDIA For BluePoint Laboratories Rev: 05/2021",
+     "supporting_quote": "Manufactured by: Lupin Limited, INDIA For BluePoint Laboratories Rev: 05/2021\n[section 43682-4 12.3 Pharmacokinetics @599] \u2026e half-life of 12 hours. Lisinopril does not appear to be bound to other ser"
+    },
+    "outcome": "correct_company"
+   },
+   "S089": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S090": {
+    "gold": {
+     "maker": "Haemonetics Manufacturing Inc",
+     "location": "1630 Industrial Park Street Covina, CA 91722, USA"
+    },
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "missed"
+   },
+   "S091": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S092": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S093": {
+    "gold": {
+     "maker": "Teligent Pharma, Inc.",
+     "location": "Buena, NJ 08310"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Teligent Pharma",
+     "maker_location": "Inc.Buena, NJ 08310 C101281PI-051-00Rev 07/2019",
+     "supporting_quote": "Manufactured by:Teligent Pharma, Inc.Buena, NJ 08310 C101281PI-051-00Rev 07/2019\n[section 34072-9 General @0] Clobetasol propionate cream should not be used in the treatment of rosacea or perioral der"
+    },
+    "outcome": "correct_company"
+   },
+   "S094": {
+    "gold": {
+     "maker": "Mylan Laboratories Limited",
+     "location": null
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Mylan Laboratories Limited 200012302-000",
+     "maker_location": null,
+     "supporting_quote": "Manufactured by: Mylan Laboratories Limited 200012302-000"
+    },
+    "outcome": "correct_company"
+   },
+   "S095": {
+    "gold": {
+     "maker": "MUTUAL PHARMACEUTICAL COMPANY, INC.",
+     "location": "Philadelphia, PA 19124 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "MUTUAL PHARMACEUTICAL COMPANY",
+     "maker_location": "INC. Philadelphia, PA 19124 USA Rev 12, March 2013",
+     "supporting_quote": "Manufactured by: MUTUAL PHARMACEUTICAL COMPANY, INC. Philadelphia, PA 19124 USA Rev 12, March 2013\n[section 42229-5 5.11 Paradoxical Decreases in HDL Cholesterol Levels @0] There have been postmarketi"
+    },
+    "outcome": "correct_company"
+   },
+   "S096": {
+    "gold": null,
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Air Liquefaction M",
+     "maker_location": "D.D. Representative: Medical Product Services Borngasse 20 35619 Braunfels, Germany",
+     "supporting_quote": "Produced by Air Liquefaction M.D.D. Representative: Medical Product Services Borngasse 20 35619 Braunfels, Germany"
+    },
+    "outcome": "false_assertion"
+   },
+   "S097": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S098": {
+    "gold": {
+     "maker": "Dr. Reddy's Laboratories Limited",
+     "location": "FTO-SEZ, Process Unit-01, Devunipalavalasa Village, Srikakulam District, Andhra Pradesh, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Dr",
+     "maker_location": "Reddy's Laboratories Limited FTO-SEZ-Process-Unit-01Survey No: 57 to 59, 60, 52 & 72 Sector No: 9 to14 & 17 to 20, Devunipalavalasa Village Ranasthalam Mandal S",
+     "supporting_quote": "Manufactured by: Dr. Reddy's Laboratories Limited FTO-SEZ-Process-Unit-01Survey No: 57 to 59, 60, 52 & 72 Sector No: 9 to14 & 17 to 20, Devunipalavalasa Village Ranasthalam Mandal Srikakulam District "
+    },
+    "outcome": "wrong_company"
+   },
+   "S099": {
+    "gold": {
+     "maker": "Wockhardt Limited",
+     "location": "H-14/2, MIDC, Waluj, Aurangabad 431136, Maharashtra, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Wockhardt Limited",
+     "maker_location": "H-14/2, MIDC, Waluj, Aurangabad 431136, Maharashtra, India",
+     "supporting_quote": "Manufactured by: Wockhardt Limited, H-14/2, MIDC, Waluj, Aurangabad 431136, Maharashtra, India."
+    },
+    "outcome": "correct_company"
+   },
+   "S100": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S101": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S102": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S103": {
+    "gold": null,
+    "pred": {
+     "maker_named": true,
+     "maker_company": "AIR LIQUEFACTION IN CASE OF EMERGENCY",
+     "maker_location": null,
+     "supporting_quote": "PRODUCED BY AIR LIQUEFACTION IN CASE OF EMERGENCY:"
+    },
+    "outcome": "false_assertion"
+   },
+   "S104": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S105": {
+    "gold": null,
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Air Liquefaction",
+     "maker_location": null,
+     "supporting_quote": "Produced by Air Liquefaction."
+    },
+    "outcome": "false_assertion"
+   },
+   "S106": {
+    "gold": null,
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Air Liquefaction",
+     "maker_location": null,
+     "supporting_quote": "Produced by Air Liquefaction."
+    },
+    "outcome": "false_assertion"
+   },
+   "S107": {
+    "gold": {
+     "maker": "Nostrum Laboratories, Inc.",
+     "location": "Kansas City, MO 64120"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Nostrum Laboratories",
+     "maker_location": "Inc. Kansas City, MO 64120 Rev: 03 January 2018",
+     "supporting_quote": "Manufactured by: Nostrum Laboratories, Inc. Kansas City, MO 64120 Rev: 03 January 2018\n[section 42231-1 FDA-approved Medication Guide @3965] \u2026l medicines to show the healthcare provider. Do not start "
+    },
+    "outcome": "correct_company"
+   },
+   "S108": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S109": {
+    "gold": {
+     "maker": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD",
+     "location": "GUANGZHOU CHINA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD GUANGZHOU CHINA (AN AFFILIATE OF BAXTER WOR",
+     "maker_location": null,
+     "supporting_quote": "MANUFACTURED BY BAXTER HEALTHCARE (GUANGZHOU) CO LTD GUANGZHOU CHINA (AN AFFILIATE OF BAXTER WORLD TRADE INC USA) HK-62710 DIRECTIONSTO BE USED AS DIRECTED BY THE PHYSICIAN Prescription Drug"
+    },
+    "outcome": "correct_company"
+   },
+   "S110": {
+    "gold": {
+     "maker": "Warner Chilcott Company, LLC",
+     "location": "Fajardo, PR 00738"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Warner Chilcott Company",
+     "maker_location": "LLCFajardo, PR 00738Manufactured for: Lupin Pharmaceuticals, Inc.Baltimore, Maryland 21202United States To report SUSPECTED ADVERSE REACTIONS, contact Warner Ch",
+     "supporting_quote": "Manufactured by: Warner Chilcott Company, LLCFajardo, PR 00738Manufactured for: Lupin Pharmaceuticals, Inc.Baltimore, Maryland 21202United States To report SUSPECTED ADVERSE REACTIONS, contact Warner "
+    },
+    "outcome": "correct_company"
+   },
+   "S111": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S112": {
+    "gold": {
+     "maker": "Haemonetics Manufacturing Inc",
+     "location": "1630 Industrial Park Street Covina, CA 91722, USA"
+    },
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "missed"
+   },
+   "S113": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S114": {
+    "gold": {
+     "maker": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD",
+     "location": "GUANGZHOU CHINA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD GUANGZHOU CHINA (AN AFFILIATE OF BAXTER WOR",
+     "maker_location": null,
+     "supporting_quote": "MANUFACTURED BY BAXTER HEALTHCARE (GUANGZHOU) CO LTD GUANGZHOU CHINA (AN AFFILIATE OF BAXTER WORLD TRADE INC USA) HK-62710 DIRECTIONSTO BE USED AS DIRECTED BY THE PHYSICIAN Prescription Drug"
+    },
+    "outcome": "correct_company"
+   },
+   "S115": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S116": {
+    "gold": {
+     "maker": "Intas Pharmaceuticals Limited",
+     "location": "Plot No.:457/458-Matoda/ Plot No.191/218P-Chacharwadi, Sarkhej-Bavla Highway, Taluka - Sanand, Matoda, Ahmedabad, Gujarat 382210, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Intas Pharmaceuticals Limited",
+     "maker_location": "Plot No.:457/458-Matoda/ Plot No.191/218P-Chacharwadi, Sarkhej-Bavla Highway, Taluka - Sanand, Matoda, Ahmedabad, Gujarat 382210, India. 10 2400 2 6031391",
+     "supporting_quote": "Manufactured by: Intas Pharmaceuticals Limited, Plot No.:457/458-Matoda/ Plot No.191/218P-Chacharwadi, Sarkhej-Bavla Highway, Taluka - Sanand, Matoda, Ahmedabad, Gujarat 382210, India. 10 2400 2 60313"
+    },
+    "outcome": "correct_company"
+   },
+   "S117": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S118": {
+    "gold": {
+     "maker": "Intas Pharmaceuticals Limited",
+     "location": "Plot No : 457, 458, Village - Matoda, Bavla Road, Ta.- Sanand"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Intas Pharmaceuticals Limited",
+     "maker_location": "Plot No : 457, 458, Village \u2013 Matoda, Bavla Road, Ta.- Sanand",
+     "supporting_quote": "Manufactured By: Intas Pharmaceuticals Limited, Plot No : 457, 458, Village \u2013 Matoda, Bavla Road, Ta.- Sanand,"
+    },
+    "outcome": "correct_company"
+   },
+   "S119": {
+    "gold": {
+     "maker": "Nephron Pharmaceuticals Corporation",
+     "location": "4500 12th Street Extension West Columbia, SC 29172"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Nephron Pharmaceuticals Corporation (Company Logo) Nephron Pharmaceuticals Corpo",
+     "maker_location": null,
+     "supporting_quote": "Manufactured by: Nephron Pharmaceuticals Corporation (Company Logo) Nephron Pharmaceuticals Corporation 4500 12th Street Extension West Columbia, SC 29172 1-844-224-2225\n[section 90375-7 Post-Marketin"
+    },
+    "outcome": "correct_company"
+   },
+   "S120": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   }
+  }
+ },
+ "llm": {
+  "n": 120,
+  "maker_named_correct": 120,
+  "true_positive_company": 55,
+  "false_assertion_no_maker": 0,
+  "wrong_company": 1,
+  "missed_maker": 0,
+  "location_correct": 54,
+  "location_evaluable": 54,
+  "unsupported_quote": 0,
+  "quotes_given": 56,
+  "per_label": {
+   "S001": {
+    "gold": {
+     "maker": "Crown Laboratories, Inc.",
+     "location": "Johnson City, TN 37604"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Crown Laboratories, Inc.",
+     "maker_location": "Johnson City, TN 37604",
+     "supporting_quote": "Manufactured by: Crown Laboratories, Inc.Johnson City, TN 37604"
+    },
+    "outcome": "correct_company"
+   },
+   "S002": {
+    "gold": {
+     "maker": "HIKMA Pharmaceuticals",
+     "location": "P.O. Box 182400 Amman 11118 Jordan"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "HIKMA Pharmaceuticals",
+     "maker_location": "P.O. Box 182400 Amman 11118 \u2013 Jordan",
+     "supporting_quote": "Manufactured by: HIKMA Pharmaceuticals P.O. Box 182400 Amman 11118 \u2013 Jordan"
+    },
+    "outcome": "correct_company"
+   },
+   "S003": {
+    "gold": {
+     "maker": "Macleods Pharmaceuticals Ltd.",
+     "location": "Baddi, Himachal Pradesh, INDIA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Macleods Pharmaceuticals Ltd.",
+     "maker_location": "Baddi, Himachal Pradesh, INDIA",
+     "supporting_quote": "Manufactured by: Macleods Pharmaceuticals Ltd. Baddi, Himachal Pradesh, INDIA"
+    },
+    "outcome": "correct_company"
+   },
+   "S004": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S005": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S006": {
+    "gold": {
+     "maker": "Aurobindo Pharma Limited",
+     "location": "Hyderabad-500 038, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Aurobindo Pharma Limited",
+     "maker_location": "Hyderabad-500 038, India",
+     "supporting_quote": "Manufactured by: Aurobindo Pharma Limited Hyderabad-500 038, India"
+    },
+    "outcome": "correct_company"
+   },
+   "S007": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S008": {
+    "gold": {
+     "maker": "InvaGen Pharmaceuticals, Inc.",
+     "location": "Hauppauge, NY 11788"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "InvaGen Pharmaceuticals, Inc.",
+     "maker_location": "Hauppauge, NY 11788",
+     "supporting_quote": "Manufactured by:InvaGen Pharmaceuticals, Inc.Hauppauge, NY 11788"
+    },
+    "outcome": "correct_company"
+   },
+   "S009": {
+    "gold": {
+     "maker": "Alkem Laboratories Ltd.",
+     "location": "Mumbai - 400 013, INDIA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Alkem Laboratories Ltd.",
+     "maker_location": "Mumbai - 400 013, INDIA.",
+     "supporting_quote": "Manufactured by: Alkem Laboratories Ltd., Mumbai - 400 013, INDIA."
+    },
+    "outcome": "correct_company"
+   },
+   "S010": {
+    "gold": {
+     "maker": "Rubicon Research Ltd.",
+     "location": "Thane 421506, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Rubicon Research Ltd.",
+     "maker_location": "Thane 421506, India.",
+     "supporting_quote": "Manufactured by: Rubicon Research Ltd., Thane 421506, India."
+    },
+    "outcome": "correct_company"
+   },
+   "S011": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S012": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S013": {
+    "gold": {
+     "maker": "Rubicon Research Private Limited",
+     "location": "Ambernath, Thane 421506 India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Rubicon Research Private Limited",
+     "maker_location": "Ambernath, Dist: Thane, 421506 India",
+     "supporting_quote": "Manufactured by: Rubicon Research Private Limited, Ambernath, Dist: Thane, 421506 India"
+    },
+    "outcome": "correct_company"
+   },
+   "S014": {
+    "gold": {
+     "maker": "Mylan Laboratories Limited",
+     "location": "Hyderabad 500 096, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Mylan Laboratories Limited",
+     "maker_location": "Hyderabad \u2014 500 096, India",
+     "supporting_quote": "Manufactured by: Mylan Laboratories Limited Hyderabad \u2014 500 096, India"
+    },
+    "outcome": "correct_company"
+   },
+   "S015": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S016": {
+    "gold": {
+     "maker": "Lupin Limited",
+     "location": "Goa - 403722 India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Lupin Limited",
+     "maker_location": "Goa - 403722 India",
+     "supporting_quote": "Manufactured by: Lupin Limited Goa - 403722 India"
+    },
+    "outcome": "correct_company"
+   },
+   "S017": {
+    "gold": {
+     "maker": "Cadila Healthcare Ltd.",
+     "location": "India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Cadila Healthcare Ltd.",
+     "maker_location": "India.",
+     "supporting_quote": "Manufactured by: Cadila Healthcare Ltd. India."
+    },
+    "outcome": "correct_company"
+   },
+   "S018": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S019": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S020": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S021": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S022": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S023": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S024": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S025": {
+    "gold": {
+     "maker": "Pfizer Inc",
+     "location": "New York, NY 10017"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Pfizer Inc",
+     "maker_location": "New York, NY 10017",
+     "supporting_quote": "Manufactured For: TEVA PHARMACEUTICALS USA, INC. North Wales, PA 19454By Pfizer Inc, New York, NY 10017"
+    },
+    "outcome": "correct_company"
+   },
+   "S026": {
+    "gold": {
+     "maker": "Par Pharmaceutical",
+     "location": "Chestnut Ridge, NY 10977"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Par Pharmaceutical",
+     "maker_location": "Chestnut Ridge, NY 10977",
+     "supporting_quote": "Manufactured by: Par Pharmaceutical Chestnut Ridge, NY 10977"
+    },
+    "outcome": "correct_company"
+   },
+   "S027": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S028": {
+    "gold": {
+     "maker": "Woodstock Sterile Solutions, Inc.",
+     "location": "Woodstock, IL 60098 U.S.A."
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Woodstock Sterile Solutions, Inc.",
+     "maker_location": "Woodstock, IL 60098 U.S.A.",
+     "supporting_quote": "Manufactured by: Woodstock Sterile Solutions, Inc. Woodstock, IL 60098 U.S.A."
+    },
+    "outcome": "correct_company"
+   },
+   "S029": {
+    "gold": {
+     "maker": "Nesher Pharmaceuticals USA LLC",
+     "location": "St. Louis, MO 63044"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Nesher Pharmaceuticals USA LLC",
+     "maker_location": "St. Louis, MO 63044",
+     "supporting_quote": "Manufactured By: Nesher Pharmaceuticals USA LLC St. Louis, MO 63044"
+    },
+    "outcome": "correct_company"
+   },
+   "S030": {
+    "gold": {
+     "maker": "AustarPharma, LLC",
+     "location": "18 Mayfield Ave Edison, NJ 08837, USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "AustarPharma, LLC",
+     "maker_location": "18 Mayfield Ave Edison, NJ 08837, USA",
+     "supporting_quote": "Manufactured by: AustarPharma, LLC 18 Mayfield Ave Edison, NJ 08837, USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S031": {
+    "gold": {
+     "maker": "Hikma Pharmaceuticals USA Inc.",
+     "location": "Berkeley Heights, NJ 07922"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Hikma Pharmaceuticals USA Inc.",
+     "maker_location": "Berkeley Heights, NJ 07922",
+     "supporting_quote": "Manufactured by: Hikma Pharmaceuticals USA Inc. Berkeley Heights, NJ 07922"
+    },
+    "outcome": "correct_company"
+   },
+   "S032": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S033": {
+    "gold": {
+     "maker": "Ascendis Pharma Bone Diseases A/S",
+     "location": "Tuborg Boulevard 12, DK-2900 Hellerup, Denmark"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Ascendis Pharma Bone Diseases A/S",
+     "maker_location": "Tuborg Boulevard 12, DK-2900 Hellerup, Denmark",
+     "supporting_quote": "Manufactured by:Ascendis Pharma Bone Diseases A/STuborg Boulevard 12, DK-2900 Hellerup, Denmark"
+    },
+    "outcome": "correct_company"
+   },
+   "S034": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S035": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S036": {
+    "gold": {
+     "maker": "Latina Pharma S.p.A.",
+     "location": "Sermoneta (LT), Italy"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Latina Pharma S.p.A.",
+     "maker_location": "Sermoneta (LT), Italy",
+     "supporting_quote": "Manufactured by Latina Pharma S.p.A., Sermoneta (LT), Italy for: Wilshire Pharmaceuticals, Inc. Atlanta, GA 30328 USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S037": {
+    "gold": {
+     "maker": "Baxter Healthcare Corporation",
+     "location": "Deerfield, IL 60015 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Baxter Healthcare Corporation",
+     "maker_location": "Deerfield, IL 60015 USA",
+     "supporting_quote": "Manufactured by, Packed by, Distributed by: Baxter Healthcare Corporation Deerfield, IL 60015 USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S038": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S039": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S040": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S041": {
+    "gold": {
+     "maker": "Biocon Pharma Limited",
+     "location": "Bengaluru, India 560099"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Biocon Pharma Limited",
+     "maker_location": "Bengaluru, India \u2013 560099",
+     "supporting_quote": "Manufactured by: Biocon Pharma Limited Bengaluru, India \u2013 560099 Manufactured for: Biocon Pharma Inc."
+    },
+    "outcome": "correct_company"
+   },
+   "S042": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S043": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S044": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S045": {
+    "gold": {
+     "maker": "Tris Pharma, Inc.",
+     "location": "Monmouth Junction, NJ 08852"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Tris Pharma, Inc.",
+     "maker_location": "Monmouth Junction, NJ 08852",
+     "supporting_quote": "Manufactured by: Tris Pharma, Inc. Monmouth Junction, NJ 08852 For: Cranbury Pharmaceuticals, LLC"
+    },
+    "outcome": "correct_company"
+   },
+   "S046": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S047": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S048": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S049": {
+    "gold": {
+     "maker": "Gland Pharma Limited",
+     "location": "Hyderabad-502307, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Gland Pharma Limited",
+     "maker_location": "Hyderabad-502307, India.",
+     "supporting_quote": "Manufactured by: Gland Pharma Limited Hyderabad-502307, India. Distributed by: Virtus Pharmaceuticals, LLC"
+    },
+    "outcome": "correct_company"
+   },
+   "S050": {
+    "gold": {
+     "maker": "Contract Pharmacal Corp.",
+     "location": "165 Oser Avenue Hauppauge, NY 11788 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Contract Pharmacal Corp.",
+     "maker_location": "165 Oser Avenue Hauppauge, NY 11788 USA",
+     "supporting_quote": "Manufactured by: Contract Pharmacal Corp. 165 Oser Avenue Hauppauge, NY 11788 USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S051": {
+    "gold": {
+     "maker": "DPT Laboratories Ltd",
+     "location": "San Antonio, TX 78215"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "DPT Laboratories Ltd",
+     "maker_location": "San Antonio, TX 78215",
+     "supporting_quote": "Manufactured by: DPT Laboratories Ltd San Antonio, TX 78215"
+    },
+    "outcome": "correct_company"
+   },
+   "S052": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S053": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S054": {
+    "gold": {
+     "maker": "Amneal Pharmaceuticals of NY",
+     "location": "Hauppauge, NY 11788"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Amneal Pharmaceuticals of NY",
+     "maker_location": "Hauppauge, NY 11788",
+     "supporting_quote": "Manufactured by: Amneal Pharmaceuticals of NY Hauppauge, NY 11788 Distributed by: Amneal Pharmaceuticals Glasgow, KY 42141"
+    },
+    "outcome": "correct_company"
+   },
+   "S055": {
+    "gold": {
+     "maker": "TEVA PHARMACEUTICAL INDUSTRIES",
+     "location": "Israel",
+     "note": "statement form 'Manufactured In Israel By:'; missed by the first digest, found by the round-1 LLM pass and confirmed in the text; corrected before scoring"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "TEVA PHARMACEUTICAL IND. LTD.",
+     "maker_location": "Jerusalem, 91010, Israel",
+     "supporting_quote": "Manufactured In Israel By: TEVA PHARMACEUTICAL IND. LTD. Jerusalem, 91010, Israel Manufactured For: TEVA PHARMACEUTICALS USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S056": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S057": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S058": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S059": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S060": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S061": {
+    "gold": {
+     "maker": "Mylan; Apotex (one per strength)",
+     "location": null
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Mylan; Apotex",
+     "maker_location": null,
+     "supporting_quote": "NDC 53808-0347-1 (Manufactured by: Mylan) buPROPion Hydrochloride Tablets, USP 75 mg"
+    },
+    "outcome": "wrong_company"
+   },
+   "S062": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S063": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S064": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S065": {
+    "gold": {
+     "maker": "Ortho Pharmaceutical, a division of Janssen Ortho LLC",
+     "location": "Manati, Puerto Rico 00674-0463"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Ortho Pharmaceutical a division of Janssen Ortho LLC",
+     "maker_location": "Manati, Puerto Rico 00674-0463",
+     "supporting_quote": "Manufactured by: Ortho Pharmaceutical a division of Janssen Ortho LLC. Manati, Puerto Rico 00674-0463"
+    },
+    "outcome": "correct_company"
+   },
+   "S066": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S067": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S068": {
+    "gold": {
+     "maker": "Actavis Elizabeth LLC",
+     "location": "200 Elmora Avenue, Elizabeth, NJ 07207 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Actavis Elizabeth LLC",
+     "maker_location": "200 Elmora Avenue, Elizabeth, NJ 07207 USA",
+     "supporting_quote": "Manufactured by: Actavis Elizabeth LLC 200 Elmora Avenue, Elizabeth, NJ 07207 USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S069": {
+    "gold": {
+     "maker": "Actavis Elizabeth LLC",
+     "location": "200 Elmora Avenue Elizabeth, NJ 07207 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Actavis Elizabeth LLC",
+     "maker_location": "200 Elmora Avenue Elizabeth, NJ 07207 USA",
+     "supporting_quote": "Manufactured by: Actavis Elizabeth LLC 200 Elmora Avenue Elizabeth, NJ 07207 USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S070": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S071": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S072": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S073": {
+    "gold": {
+     "maker": "Camber Pharmaceuticals",
+     "location": "Piscataway, NJ 08854"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Camber Pharmaceuticals",
+     "maker_location": "Piscataway, NJ 08854",
+     "supporting_quote": "Manufactured By: Camber Pharmaceuticals Piscataway, NJ 08854 Repackaged by: Rebel Distributors Corp Thousand Oaks, CA 91320"
+    },
+    "outcome": "correct_company"
+   },
+   "S074": {
+    "gold": {
+     "maker": "Sandoz Inc.",
+     "location": "Princeton, NJ 08540"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Sandoz Inc.",
+     "maker_location": "Princeton, NJ 08540",
+     "supporting_quote": "This product was Manufactured By: Sandoz Inc. Princeton, NJ 08540 And Repackaged By: State of Florida DOH Central Pharmacy"
+    },
+    "outcome": "correct_company"
+   },
+   "S075": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S076": {
+    "gold": {
+     "maker": "Watson Pharma Private Limited",
+     "location": "Verna, Salcette Goa 403 722 INDIA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Watson Pharma Private Limited",
+     "maker_location": "Verna, Salcette Goa 403 722 INDIA",
+     "supporting_quote": "Manufactured by: Watson Pharma Private Limited Verna, Salcette Goa 403 722 INDIA Distributed by: Actavis Pharma, Inc. Parsippany, NJ 07054 USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S077": {
+    "gold": {
+     "maker": "ICU Medical, Inc.",
+     "location": "Lake Forest, Illinois, 60045, USA",
+     "note": "HOW SUPPLIED table says 'Manufactured by ICU Medical, Inc.' for the 50/100/250 mL sizes and 'Manufactured for' elsewhere; the keyword is glued to a preceding NDC ('\u2026-36Manufactured by'), which defeats the digest's word-boundary rule; found by the round-2 LLM pass, confirmed in the text, corrected after the first scoring run and rescored"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "ICU Medical, Inc.",
+     "maker_location": "Lake Forest, Illinois, 60045, USA",
+     "supporting_quote": "0409-7730-36Manufactured by ICU Medical, Inc., Lake Forest, Illinois, 60045, USA 0.45% Sodium Chloride Inj., USP 50"
+    },
+    "outcome": "correct_company"
+   },
+   "S078": {
+    "gold": {
+     "maker": "Sun Pharmaceutical Industries Ltd.",
+     "location": "Acme Plaza, Andheri-Kurla Road, Andheri (East), Mumbai-400 059, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Sun Pharmaceutical Industries Ltd.",
+     "maker_location": "Acme Plaza, Andheri-Kurla Road, Andheri (East), Mumbai-400 059, India.",
+     "supporting_quote": "Manufactured by: Sun Pharmaceutical Industries Ltd. Acme Plaza, Andheri-Kurla Road, Andheri (East), Mumbai-400 059, India. Distributed by: CARACO PHARMACEUTICAL LABORATORIES LTD."
+    },
+    "outcome": "correct_company"
+   },
+   "S079": {
+    "gold": {
+     "maker": "Novel Laboratories Inc.",
+     "location": "Somerset, NJ 08873"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Novel Laboratories Inc.",
+     "maker_location": "Somerset, NJ 08873",
+     "supporting_quote": "Manufactured by: Novel Laboratories Inc. Somerset, NJ 08873 PI0800000102 Rev. 12/2014"
+    },
+    "outcome": "correct_company"
+   },
+   "S080": {
+    "gold": {
+     "maker": "JOLLC",
+     "location": "Gurabo, Puerto Rico 00778",
+     "note": "statement belongs to another presentation on the same label; ambiguous for this product"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "JOLLC",
+     "maker_location": "Gurabo, Puerto Rico 00778",
+     "supporting_quote": "Product of Ireland Manufactured by: JOLLC Gurabo, Puerto Rico 00778 Manufactured for: Patriot Pharmaceuticals, LLC Horsham, PA 19044"
+    },
+    "outcome": "correct_company"
+   },
+   "S081": {
+    "gold": {
+     "maker": "EMCURE PHARMACEUTICALS LTD.",
+     "location": "Hinjwadi, Pune, India",
+     "note": "statement form 'Manufactured In India By:'; missed by the first digest, found by the round-1 LLM pass and confirmed in the text; corrected before scoring"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "EMCURE PHARMACEUTICALS LTD.",
+     "maker_location": "Hinjwadi, Pune, India",
+     "supporting_quote": "Manufactured In India By: EMCURE PHARMACEUTICALS LTD. Hinjwadi, Pune, India Manufactured For: TEVA PHARMACEUTICALS USA Sellersville, PA 18960"
+    },
+    "outcome": "correct_company"
+   },
+   "S082": {
+    "gold": {
+     "maker": "JOLLC",
+     "location": "Gurabo, Puerto Rico 00778",
+     "note": "as S080"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "JOLLC",
+     "maker_location": "Gurabo, Puerto Rico 00778",
+     "supporting_quote": "Product of Ireland Manufactured by: JOLLC Gurabo, Puerto Rico 00778 Manufactured for: Patriot Pharmaceuticals, LLC Horsham, PA 19044"
+    },
+    "outcome": "correct_company"
+   },
+   "S083": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S084": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S085": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S086": {
+    "gold": {
+     "maker": "JOLLC",
+     "location": "Gurabo, Puerto Rico 00778",
+     "note": "as S080"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "JOLLC",
+     "maker_location": "Gurabo, Puerto Rico 00778",
+     "supporting_quote": "Product of Ireland Manufactured by: JOLLC Gurabo, Puerto Rico 00778 Manufactured for: Patriot Pharmaceuticals, LLC Horsham, PA 19044"
+    },
+    "outcome": "correct_company"
+   },
+   "S087": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S088": {
+    "gold": {
+     "maker": "Lupin Limited",
+     "location": "INDIA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Lupin Limited",
+     "maker_location": "INDIA",
+     "supporting_quote": "Manufactured by: Lupin Limited, INDIA For BluePoint Laboratories Rev: 05/2021"
+    },
+    "outcome": "correct_company"
+   },
+   "S089": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S090": {
+    "gold": {
+     "maker": "Haemonetics Manufacturing Inc",
+     "location": "1630 Industrial Park Street Covina, CA 91722, USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Haemonetics Manufacturing Inc",
+     "maker_location": "1630 Industrial Park Street Covina, CA 91722, USA",
+     "supporting_quote": "Manufactured for: Haemonetics Corporation 400 Wood Road Braintree, MA 02184, USA By: Haemonetics Manufacturing Inc 1630 Industrial Park Street Covina, CA 91722, USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S091": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S092": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S093": {
+    "gold": {
+     "maker": "Teligent Pharma, Inc.",
+     "location": "Buena, NJ 08310"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Teligent Pharma, Inc.",
+     "maker_location": "Buena, NJ 08310",
+     "supporting_quote": "Rx only Manufactured by:Teligent Pharma, Inc.Buena, NJ 08310 C101281PI-051-00Rev 07/2019"
+    },
+    "outcome": "correct_company"
+   },
+   "S094": {
+    "gold": {
+     "maker": "Mylan Laboratories Limited",
+     "location": null
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Mylan Laboratories Limited",
+     "maker_location": null,
+     "supporting_quote": "Manufactured for: Afaxys Pharma LLC Charleston, SC 29403, USA. Manufactured by: Mylan Laboratories Limited 200012302-000 REVISED: JUNE 2017"
+    },
+    "outcome": "correct_company"
+   },
+   "S095": {
+    "gold": {
+     "maker": "MUTUAL PHARMACEUTICAL COMPANY, INC.",
+     "location": "Philadelphia, PA 19124 USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "MUTUAL PHARMACEUTICAL COMPANY, INC.",
+     "maker_location": "Philadelphia, PA 19124 USA",
+     "supporting_quote": "Manufactured for: AR SCIENTIFIC, INC. Philadelphia, PA 19124 USA Manufactured by: MUTUAL PHARMACEUTICAL COMPANY, INC. Philadelphia, PA 19124 USA Rev 12, March 2013"
+    },
+    "outcome": "correct_company"
+   },
+   "S096": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S097": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S098": {
+    "gold": {
+     "maker": "Dr. Reddy's Laboratories Limited",
+     "location": "FTO-SEZ, Process Unit-01, Devunipalavalasa Village, Srikakulam District, Andhra Pradesh, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Dr. Reddy's Laboratories Limited",
+     "maker_location": "FTO-SEZ, Process Unit-01, Devunipalavalasa Village, Srikakulam (District), Andhra Pradesh, India. Pin-:532409",
+     "supporting_quote": "Manufactured by: Dr. Reddy's Laboratories Limited FTO-SEZ, Process Unit-01, Devunipalavalasa Village, Srikakulam (District), Andhra Pradesh, India. Pin-:532409"
+    },
+    "outcome": "correct_company"
+   },
+   "S099": {
+    "gold": {
+     "maker": "Wockhardt Limited",
+     "location": "H-14/2, MIDC, Waluj, Aurangabad 431136, Maharashtra, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Wockhardt Limited",
+     "maker_location": "H-14/2, MIDC, Waluj, Aurangabad 431136, Maharashtra, India.",
+     "supporting_quote": "Manufactured by: Wockhardt Limited, H-14/2, MIDC, Waluj, Aurangabad 431136, Maharashtra, India. Distributed by: Wockhardt USA LLC."
+    },
+    "outcome": "correct_company"
+   },
+   "S100": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S101": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S102": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S103": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S104": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S105": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S106": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S107": {
+    "gold": {
+     "maker": "Nostrum Laboratories, Inc.",
+     "location": "Kansas City, MO 64120"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Nostrum Laboratories, Inc.",
+     "maker_location": "Kansas City, MO 64120",
+     "supporting_quote": "Manufactured by: Nostrum Laboratories, Inc. Kansas City, MO 64120 Rev: 03 January 2018"
+    },
+    "outcome": "correct_company"
+   },
+   "S108": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S109": {
+    "gold": {
+     "maker": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD",
+     "location": "GUANGZHOU CHINA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD",
+     "maker_location": "GUANGZHOU CHINA",
+     "supporting_quote": "MANUFACTURED BY BAXTER HEALTHCARE (GUANGZHOU) CO LTD GUANGZHOU CHINA (AN AFFILIATE OF BAXTER WORLD TRADE INC USA)"
+    },
+    "outcome": "correct_company"
+   },
+   "S110": {
+    "gold": {
+     "maker": "Warner Chilcott Company, LLC",
+     "location": "Fajardo, PR 00738"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Warner Chilcott Company, LLC",
+     "maker_location": "Fajardo, PR 00738",
+     "supporting_quote": "Manufactured by: Warner Chilcott Company, LLCFajardo, PR 00738Manufactured for: Lupin Pharmaceuticals, Inc.Baltimore, Maryland 21202United States"
+    },
+    "outcome": "correct_company"
+   },
+   "S111": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S112": {
+    "gold": {
+     "maker": "Haemonetics Manufacturing Inc",
+     "location": "1630 Industrial Park Street Covina, CA 91722, USA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Haemonetics Manufacturing Inc",
+     "maker_location": "1630 Industrial Park Street Covina, CA 91722, USA",
+     "supporting_quote": "Manufactured for: Haemonetics Corporation 400 Wood Road Braintree, MA 02184, USA By: Haemonetics Manufacturing Inc 1630 Industrial Park Street Covina, CA 91722, USA"
+    },
+    "outcome": "correct_company"
+   },
+   "S113": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S114": {
+    "gold": {
+     "maker": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD",
+     "location": "GUANGZHOU CHINA"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD",
+     "maker_location": "GUANGZHOU CHINA",
+     "supporting_quote": "MANUFACTURED BY BAXTER HEALTHCARE (GUANGZHOU) CO LTD GUANGZHOU CHINA (AN AFFILIATE OF BAXTER WORLD TRADE INC USA)"
+    },
+    "outcome": "correct_company"
+   },
+   "S115": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S116": {
+    "gold": {
+     "maker": "Intas Pharmaceuticals Limited",
+     "location": "Plot No.:457/458-Matoda/ Plot No.191/218P-Chacharwadi, Sarkhej-Bavla Highway, Taluka - Sanand, Matoda, Ahmedabad, Gujarat 382210, India"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Intas Pharmaceuticals Limited",
+     "maker_location": "Plot No.:457/458-Matoda/ Plot No.191/218P-Chacharwadi, Sarkhej-Bavla Highway, Taluka - Sanand, Matoda, Ahmedabad, Gujarat 382210, India",
+     "supporting_quote": "Manufactured by: Intas Pharmaceuticals Limited, Plot No.:457/458-Matoda/ Plot No.191/218P-Chacharwadi, Sarkhej-Bavla Highway, Taluka - Sanand, Matoda, Ahmedabad, Gujarat 382210, India."
+    },
+    "outcome": "correct_company"
+   },
+   "S117": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   },
+   "S118": {
+    "gold": {
+     "maker": "Intas Pharmaceuticals Limited",
+     "location": "Plot No : 457, 458, Village - Matoda, Bavla Road, Ta.- Sanand"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Intas Pharmaceuticals Limited",
+     "maker_location": "Plot No : 457, 458, Village \u2013 Matoda, Bavla Road, Ta.- Sanand, Dist.- Ahmedabad \u2013 382210. India",
+     "supporting_quote": "Manufactured By: Intas Pharmaceuticals Limited, Plot No : 457, 458, Village \u2013 Matoda, Bavla Road, Ta.- Sanand, Dist.- Ahmedabad \u2013 382210. India."
+    },
+    "outcome": "correct_company"
+   },
+   "S119": {
+    "gold": {
+     "maker": "Nephron Pharmaceuticals Corporation",
+     "location": "4500 12th Street Extension West Columbia, SC 29172"
+    },
+    "pred": {
+     "maker_named": true,
+     "maker_company": "Nephron Pharmaceuticals Corporation",
+     "maker_location": "4500 12th Street Extension West Columbia, SC 29172",
+     "supporting_quote": "Manufactured by: Nephron Pharmaceuticals Corporation (Company Logo) Nephron Pharmaceuticals Corporation 4500 12th Street Extension West Columbia, SC 29172"
+    },
+    "outcome": "correct_company"
+   },
+   "S120": {
+    "gold": null,
+    "pred": {
+     "maker_named": false,
+     "maker_company": null,
+     "maker_location": null,
+     "supporting_quote": null
+    },
+    "outcome": "correct_none"
+   }
+  }
+ },
+ "llm_labels_answered": 120,
+ "llm_timing": [
+  {
+   "batch": "batch_1.json",
+   "seconds": 53,
+   "labels": 20
+  },
+  {
+   "batch": "batch_2.json",
+   "seconds": 34,
+   "labels": 20
+  },
+  {
+   "batch": "batch_3.json",
+   "seconds": 50,
+   "labels": 20
+  },
+  {
+   "batch": "batch_4.json",
+   "seconds": 47,
+   "labels": 20
+  },
+  {
+   "batch": "batch_5.json",
+   "seconds": 70,
+   "labels": 20
+  },
+  {
+   "batch": "batch_6.json",
+   "seconds": 37,
+   "labels": 20
+  }
+ ],
+ "facility_matching_of_gold_makers": {
+  "makers": 56,
+  "exact_name_rows_any": 33,
+  "exact_name_unique_fei": 10,
+  "name_and_city_unique_fei": 9,
+  "no_match": 23,
+  "per_label": {
+   "S001": {
+    "maker": "Crown Laboratories, Inc.",
+    "city_token": "JOHNSON CITY",
+    "exact_name_feis": [
+     "1019820"
+    ],
+    "name_and_city_feis": [
+     "1019820"
+    ]
+   },
+   "S002": {
+    "maker": "HIKMA Pharmaceuticals",
+    "city_token": "P.O.",
+    "exact_name_feis": [
+     "1510690",
+     "2220525",
+     "3002806351",
+     "3012545029"
+    ],
+    "name_and_city_feis": [
+     "3002806351"
+    ]
+   },
+   "S003": {
+    "maker": "Macleods Pharmaceuticals Ltd.",
+    "city_token": null,
+    "exact_name_feis": [
+     "3006363714",
+     "3006607469",
+     "3007517881",
+     "3018011011",
+     "3018972378"
+    ],
+    "name_and_city_feis": []
+   },
+   "S006": {
+    "maker": "Aurobindo Pharma Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3004021229",
+     "3004021263",
+     "3004446312",
+     "3007373532"
+    ],
+    "name_and_city_feis": []
+   },
+   "S008": {
+    "maker": "InvaGen Pharmaceuticals, Inc.",
+    "city_token": "HAUPPAUGE",
+    "exact_name_feis": [
+     "3003950641",
+     "3012696190",
+     "3017588287"
+    ],
+    "name_and_city_feis": [
+     "3003950641"
+    ]
+   },
+   "S009": {
+    "maker": "Alkem Laboratories Ltd.",
+    "city_token": null,
+    "exact_name_feis": [
+     "3006370524",
+     "3006370533",
+     "3006851796",
+     "3008450172"
+    ],
+    "name_and_city_feis": []
+   },
+   "S010": {
+    "maker": "Rubicon Research Ltd.",
+    "city_token": null,
+    "exact_name_feis": [
+     "3006559899",
+     "3008252295",
+     "3012953979",
+     "3016480976"
+    ],
+    "name_and_city_feis": []
+   },
+   "S013": {
+    "maker": "Rubicon Research Private Limited",
+    "city_token": "AMBERNATH",
+    "exact_name_feis": [
+     "3006559899",
+     "3008252295",
+     "3012953979",
+     "3016480976"
+    ],
+    "name_and_city_feis": [
+     "3008252295"
+    ]
+   },
+   "S014": {
+    "maker": "Mylan Laboratories Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3005587313",
+     "3006355432",
+     "3007512701",
+     "3007648351",
+     "3007720135",
+     "3008255419",
+     "3008316970",
+     "3010453141"
+    ],
+    "name_and_city_feis": []
+   },
+   "S016": {
+    "maker": "Lupin Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3002807510",
+     "3002807511",
+     "3002807512",
+     "3004819820",
+     "3004995645",
+     "3007549629",
+     "3007756473",
+     "3009107538",
+     "3009831799",
+     "3009843207"
+    ],
+    "name_and_city_feis": []
+   },
+   "S017": {
+    "maker": "Cadila Healthcare Ltd.",
+    "city_token": null,
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S025": {
+    "maker": "Pfizer Inc",
+    "city_token": "NEW YORK",
+    "exact_name_feis": [
+     "1940118"
+    ],
+    "name_and_city_feis": []
+   },
+   "S026": {
+    "maker": "Par Pharmaceutical",
+    "city_token": "CHESTNUT RIDGE",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S028": {
+    "maker": "Woodstock Sterile Solutions, Inc.",
+    "city_token": "WOODSTOCK",
+    "exact_name_feis": [
+     "1419377"
+    ],
+    "name_and_city_feis": [
+     "1419377"
+    ]
+   },
+   "S029": {
+    "maker": "Nesher Pharmaceuticals USA LLC",
+    "city_token": "ST. LOUIS",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S030": {
+    "maker": "AustarPharma, LLC",
+    "city_token": "MAYFIELD AVE EDISON",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S031": {
+    "maker": "Hikma Pharmaceuticals USA Inc.",
+    "city_token": "BERKELEY HEIGHTS",
+    "exact_name_feis": [
+     "1510690",
+     "2220525",
+     "3002806351",
+     "3012545029"
+    ],
+    "name_and_city_feis": []
+   },
+   "S033": {
+    "maker": "Ascendis Pharma Bone Diseases A/S",
+    "city_token": null,
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S036": {
+    "maker": "Latina Pharma S.p.A.",
+    "city_token": null,
+    "exact_name_feis": [
+     "3001229385"
+    ],
+    "name_and_city_feis": []
+   },
+   "S037": {
+    "maker": "Baxter Healthcare Corporation",
+    "city_token": "DEERFIELD",
+    "exact_name_feis": [
+     "1000261013",
+     "1000440083",
+     "1019003",
+     "1025114",
+     "1416980",
+     "2618677",
+     "2649614",
+     "2650090"
+    ],
+    "name_and_city_feis": []
+   },
+   "S041": {
+    "maker": "Biocon Pharma Limited",
+    "city_token": "BENGALURU",
+    "exact_name_feis": [
+     "3013637926"
+    ],
+    "name_and_city_feis": [
+     "3013637926"
+    ]
+   },
+   "S045": {
+    "maker": "Tris Pharma, Inc.",
+    "city_token": "MONMOUTH JUNCTION",
+    "exact_name_feis": [
+     "3004712471",
+     "3008079002"
+    ],
+    "name_and_city_feis": [
+     "3004712471"
+    ]
+   },
+   "S049": {
+    "maker": "Gland Pharma Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3002647489",
+     "3009056604",
+     "3009864167",
+     "3010142300"
+    ],
+    "name_and_city_feis": []
+   },
+   "S050": {
+    "maker": "Contract Pharmacal Corp.",
+    "city_token": "OSER AVENUE HAUPPAUGE",
+    "exact_name_feis": [
+     "2427358"
+    ],
+    "name_and_city_feis": []
+   },
+   "S051": {
+    "maker": "DPT Laboratories Ltd",
+    "city_token": "SAN ANTONIO",
+    "exact_name_feis": [
+     "1000117684",
+     "1628114",
+     "3005023061"
+    ],
+    "name_and_city_feis": [
+     "1000117684",
+     "1628114",
+     "3005023061"
+    ]
+   },
+   "S054": {
+    "maker": "Amneal Pharmaceuticals of NY",
+    "city_token": "HAUPPAUGE",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S055": {
+    "maker": "TEVA PHARMACEUTICAL INDUSTRIES",
+    "city_token": null,
+    "exact_name_feis": [
+     "3002721084"
+    ],
+    "name_and_city_feis": []
+   },
+   "S061": {
+    "maker": "Mylan; Apotex (one per strength)",
+    "city_token": null,
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S065": {
+    "maker": "Ortho Pharmaceutical, a division of Janssen Ortho LLC",
+    "city_token": "PUERTO",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S068": {
+    "maker": "Actavis Elizabeth LLC",
+    "city_token": "ELIZABETH",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S069": {
+    "maker": "Actavis Elizabeth LLC",
+    "city_token": "ELMORA AVENUE ELIZABETH",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S073": {
+    "maker": "Camber Pharmaceuticals",
+    "city_token": "PISCATAWAY",
+    "exact_name_feis": [
+     "3007157928"
+    ],
+    "name_and_city_feis": [
+     "3007157928"
+    ]
+   },
+   "S074": {
+    "maker": "Sandoz Inc.",
+    "city_token": "PRINCETON",
+    "exact_name_feis": [
+     "3002806523",
+     "3004828473",
+     "3004944629",
+     "3027620173"
+    ],
+    "name_and_city_feis": []
+   },
+   "S076": {
+    "maker": "Watson Pharma Private Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3005719315"
+    ],
+    "name_and_city_feis": []
+   },
+   "S077": {
+    "maker": "ICU Medical, Inc.",
+    "city_token": null,
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S078": {
+    "maker": "Sun Pharmaceutical Industries Ltd.",
+    "city_token": null,
+    "exact_name_feis": [
+     "3002807979",
+     "3002809586",
+     "3002871444",
+     "3003227153",
+     "3003892973",
+     "3003952717",
+     "3004520113",
+     "3004561553",
+     "3007627683",
+     "3009395771"
+    ],
+    "name_and_city_feis": []
+   },
+   "S079": {
+    "maker": "Novel Laboratories Inc.",
+    "city_token": "SOMERSET",
+    "exact_name_feis": [
+     "3006271438"
+    ],
+    "name_and_city_feis": [
+     "3006271438"
+    ]
+   },
+   "S080": {
+    "maker": "JOLLC",
+    "city_token": "PUERTO",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S081": {
+    "maker": "EMCURE PHARMACEUTICALS LTD.",
+    "city_token": null,
+    "exact_name_feis": [
+     "3005782879",
+     "3006643860",
+     "3014595023",
+     "3022175565"
+    ],
+    "name_and_city_feis": []
+   },
+   "S082": {
+    "maker": "JOLLC",
+    "city_token": "PUERTO",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S086": {
+    "maker": "JOLLC",
+    "city_token": "PUERTO",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S088": {
+    "maker": "Lupin Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3002807510",
+     "3002807511",
+     "3002807512",
+     "3004819820",
+     "3004995645",
+     "3007549629",
+     "3007756473",
+     "3009107538",
+     "3009831799",
+     "3009843207"
+    ],
+    "name_and_city_feis": []
+   },
+   "S090": {
+    "maker": "Haemonetics Manufacturing Inc",
+    "city_token": "INDUSTRIAL PARK STREET COVINA",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S093": {
+    "maker": "Teligent Pharma, Inc.",
+    "city_token": "BUENA",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S094": {
+    "maker": "Mylan Laboratories Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3005587313",
+     "3006355432",
+     "3007512701",
+     "3007648351",
+     "3007720135",
+     "3008255419",
+     "3008316970",
+     "3010453141"
+    ],
+    "name_and_city_feis": []
+   },
+   "S095": {
+    "maker": "MUTUAL PHARMACEUTICAL COMPANY, INC.",
+    "city_token": "PHILADELPHIA",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S098": {
+    "maker": "Dr. Reddy's Laboratories Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3002806851",
+     "3002949085",
+     "3002949099",
+     "3003184497",
+     "3005336882",
+     "3005447965",
+     "3005448030",
+     "3006549835",
+     "3009193040",
+     "3009483004"
+    ],
+    "name_and_city_feis": []
+   },
+   "S099": {
+    "maker": "Wockhardt Limited",
+    "city_token": "WALUJ",
+    "exact_name_feis": [
+     "3007523885",
+     "3009278506"
+    ],
+    "name_and_city_feis": []
+   },
+   "S107": {
+    "maker": "Nostrum Laboratories, Inc.",
+    "city_token": "KANSAS CITY",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S109": {
+    "maker": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD",
+    "city_token": null,
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S110": {
+    "maker": "Warner Chilcott Company, LLC",
+    "city_token": "FAJARDO",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S112": {
+    "maker": "Haemonetics Manufacturing Inc",
+    "city_token": "INDUSTRIAL PARK STREET COVINA",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S114": {
+    "maker": "BAXTER HEALTHCARE (GUANGZHOU) CO LTD",
+    "city_token": null,
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   },
+   "S116": {
+    "maker": "Intas Pharmaceuticals Limited",
+    "city_token": "AHMEDABAD",
+    "exact_name_feis": [
+     "3003157498",
+     "3003722314",
+     "3004011473",
+     "3005890633",
+     "3007277149",
+     "3011743992"
+    ],
+    "name_and_city_feis": [
+     "3003157498",
+     "3004011473",
+     "3007277149"
+    ]
+   },
+   "S118": {
+    "maker": "Intas Pharmaceuticals Limited",
+    "city_token": null,
+    "exact_name_feis": [
+     "3003157498",
+     "3003722314",
+     "3004011473",
+     "3005890633",
+     "3007277149",
+     "3011743992"
+    ],
+    "name_and_city_feis": []
+   },
+   "S119": {
+    "maker": "Nephron Pharmaceuticals Corporation",
+    "city_token": "TH STREET EXTENSION WEST COLUMBIA",
+    "exact_name_feis": [],
+    "name_and_city_feis": []
+   }
+  }
+ },
+ "caveats": [
+  "gold adjudicated by the AI assistant, not a human",
+  "LLM = Claude subagent inside this session; same model family as the adjudicator; no API charge",
+  "extraction only: no facility is verified by any method here"
+ ]
+}
