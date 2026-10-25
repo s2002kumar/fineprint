@@ -7,7 +7,7 @@
 
 ## Executive result
 
-The source-NDC pilot has a reproducible evidence bundle, a version-aware rule, an item-by-item AI-assisted adjudication, direct links to the exact cited label versions, and automated tests for the review artifacts. The CI run for commit `abb3fae84d8ce1296e9e6fe552a82e4b10cbc408` passed on Python 3.11, Python 3.14, and PostgreSQL 18 (workflow run 25).
+The source-NDC pilot has a reproducible evidence bundle, a version-aware rule, an item-by-item AI-assisted adjudication, direct links to the exact cited label versions, and automated tests for the review artifacts. The CI run for commit `e21da0aa27d3596a0d2ab0cbd68b3a118a289f28` passed on Python 3.11, Python 3.14, and PostgreSQL 18 (workflow run 33; 132 tests, with no skips in the full PostgreSQL job). This includes a check that every local link in this status page resolves.
 
 This is **not** a claim that the formal human acceptance criteria have passed. The original human worksheet remains intentionally blank, and this branch must not be merged or used in production until a person completes that gate.
 
