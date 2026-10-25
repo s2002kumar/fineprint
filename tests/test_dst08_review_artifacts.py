@@ -81,7 +81,7 @@ class DST08ReviewArtifactIntegrity(unittest.TestCase):
     def test_review_status_links_resolve_inside_the_repository(self):
         status_path = DST08 / "DST_08_REVIEW_STATUS.md"
         status_text = status_path.read_text(encoding="utf-8")
-        targets = re.findall(r"\\[[^\\]]+\\]\\(([^)]+)\\)", status_text)
+        targets = re.findall(r"\[[^\]]+\]\(([^)]+)\)", status_text)
         local_targets = [target for target in targets if "://" not in target]
         self.assertTrue(local_targets)
         for target in local_targets:
