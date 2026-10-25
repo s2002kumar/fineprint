@@ -1,0 +1,2897 @@
+{
+ "generated_at": "2026-10-25T06:47:27Z",
+ "note": "post-hoc diagnostic; rule dst08-lineage-v1 and eligibility unchanged",
+ "lineage_build": {
+  "build_id": 1,
+  "rule_version": "dst08-lineage-v1",
+  "code_commit": "c8ded0ff8b4c57e0e5b6f8cc4014976ce8de9a4c"
+ },
+ "eligible_references": 19668,
+ "documents_read": 20451,
+ "outcomes": {
+  "IMPRINT_EQUAL_ALL_EQUAL": 16936,
+  "NOTHING_COMPARABLE": 1639,
+  "NO_IMPRINT_OTHERS_EQUAL": 720,
+  "IMPRINT_EQUAL_OTHER_DIFFERS": 190,
+  "IMPRINT_DIFFERS": 179,
+  "NO_IMPRINT_OTHER_DIFFERS": 4
+ },
+ "per_characteristic": {
+  "color": {
+   "SAME": 17875,
+   "DIFFERS": 76,
+   "ONE_SIDE": 21
+  },
+  "flavor": {
+   "ONE_SIDE": 15,
+   "SAME": 717,
+   "DIFFERS": 1
+  },
+  "imprint": {
+   "SAME": 17126,
+   "DIFFERS": 179,
+   "ONE_SIDE": 6
+  },
+  "score": {
+   "SAME": 17257,
+   "DIFFERS": 45,
+   "ONE_SIDE": 22
+  },
+  "shape": {
+   "SAME": 17275,
+   "DIFFERS": 71,
+   "ONE_SIDE": 3
+  },
+  "size": {
+   "SAME": 17281,
+   "DIFFERS": 61
+  }
+ },
+ "strict_imprint_differences_by_lenient_comparison": {
+  "imprint_token_sets_equal": 48,
+  "imprint_token_sets_differ": 131
+ },
+ "conflicting_references_on_products_not_direct": {
+  "IMPRINT_EQUAL_OTHER_DIFFERS": 190,
+  "IMPRINT_DIFFERS": 179,
+  "NO_IMPRINT_OTHER_DIFFERS": 4
+ },
+ "source_linked_products_now": 19612,
+ "source_linked_products_if_conflicts_were_excluded": 19239,
+ "outcomes_by_source_newer_than_citing": {
+  "source_newer": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 8677,
+   "NOTHING_COMPARABLE": 988,
+   "NO_IMPRINT_OTHERS_EQUAL": 402,
+   "IMPRINT_DIFFERS": 175,
+   "IMPRINT_EQUAL_OTHER_DIFFERS": 173,
+   "NO_IMPRINT_OTHER_DIFFERS": 4
+  },
+  "source_not_newer": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 8259,
+   "NOTHING_COMPARABLE": 651,
+   "NO_IMPRINT_OTHERS_EQUAL": 318,
+   "IMPRINT_EQUAL_OTHER_DIFFERS": 17,
+   "IMPRINT_DIFFERS": 4
+  }
+ },
+ "outcomes_by_citing_form_top10": {
+  "C42998": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 7210,
+   "IMPRINT_EQUAL_OTHER_DIFFERS": 114,
+   "IMPRINT_DIFFERS": 46,
+   "NO_IMPRINT_OTHERS_EQUAL": 1
+  },
+  "C42931": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 4538,
+   "IMPRINT_DIFFERS": 36,
+   "NO_IMPRINT_OTHERS_EQUAL": 33,
+   "IMPRINT_EQUAL_OTHER_DIFFERS": 11
+  },
+  "C25158": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 2649,
+   "IMPRINT_DIFFERS": 77,
+   "IMPRINT_EQUAL_OTHER_DIFFERS": 42,
+   "NO_IMPRINT_OTHER_DIFFERS": 3
+  },
+  "C42927": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 701,
+   "IMPRINT_DIFFERS": 3,
+   "IMPRINT_EQUAL_OTHER_DIFFERS": 1
+  },
+  "C42945": {
+   "NOTHING_COMPARABLE": 457,
+   "NO_IMPRINT_OTHERS_EQUAL": 27
+  },
+  "C42930": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 368
+  },
+  "C42905": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 358,
+   "IMPRINT_EQUAL_OTHER_DIFFERS": 3,
+   "IMPRINT_DIFFERS": 1
+  },
+  "C42902": {
+   "IMPRINT_EQUAL_ALL_EQUAL": 325,
+   "IMPRINT_DIFFERS": 15,
+   "IMPRINT_EQUAL_OTHER_DIFFERS": 10,
+   "NO_IMPRINT_OTHERS_EQUAL": 1
+  },
+  "C42986": {
+   "NOTHING_COMPARABLE": 196,
+   "NO_IMPRINT_OTHERS_EQUAL": 130
+  },
+  "C28944": {
+   "NOTHING_COMPARABLE": 161,
+   "NO_IMPRINT_OTHERS_EQUAL": 141
+  }
+ },
+ "sample_eligible": {
+  "R1-03": {
+   "outcome": "NOTHING_COMPARABLE",
+   "per_characteristic": {},
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R1-06": {
+   "outcome": "NOTHING_COMPARABLE",
+   "per_characteristic": {},
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R1-07": {
+   "outcome": "NOTHING_COMPARABLE",
+   "per_characteristic": {},
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R1-09": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "G;32;500"
+   ],
+   "source_imprint": [
+    "G;32;500"
+   ]
+  },
+  "R5-10": {
+   "outcome": "NOTHING_COMPARABLE",
+   "per_characteristic": {},
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R8-01": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "P;11"
+   ],
+   "source_imprint": [
+    "P;11"
+   ]
+  },
+  "R8-02": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "CY;185"
+   ],
+   "source_imprint": [
+    "CY;185"
+   ]
+  },
+  "R8-03": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "RI3"
+   ],
+   "source_imprint": [
+    "RI3"
+   ]
+  },
+  "R8-05": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "PREMPRO;0625;25"
+   ],
+   "source_imprint": [
+    "PREMPRO;0625;25"
+   ]
+  },
+  "R8-06": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "184"
+   ],
+   "source_imprint": [
+    "184"
+   ]
+  },
+  "R8-08": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "FF1"
+   ],
+   "source_imprint": [
+    "FF1"
+   ]
+  },
+  "R8-10": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "I;10"
+   ],
+   "source_imprint": [
+    "I;10"
+   ]
+  },
+  "R9-01": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "49;L"
+   ],
+   "source_imprint": [
+    "49;L"
+   ]
+  },
+  "R9-02": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "P1;N"
+   ],
+   "source_imprint": [
+    "P1;N"
+   ]
+  },
+  "R9-03": {
+   "outcome": "NO_IMPRINT_OTHERS_EQUAL",
+   "per_characteristic": {
+    "color": "SAME",
+    "flavor": "SAME"
+   },
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R9-04": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "E;11"
+   ],
+   "source_imprint": [
+    "E;11"
+   ]
+  },
+  "R9-05": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "RX;774"
+   ],
+   "source_imprint": [
+    "RX;774"
+   ]
+  },
+  "R9-06": {
+   "outcome": "NOTHING_COMPARABLE",
+   "per_characteristic": {},
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R9-07": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "L349"
+   ],
+   "source_imprint": [
+    "L349"
+   ]
+  },
+  "R9-08": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    ";WES103"
+   ],
+   "source_imprint": [
+    ";WES103"
+   ]
+  },
+  "R9-09": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "HCQS"
+   ],
+   "source_imprint": [
+    "HCQS"
+   ]
+  },
+  "R9-10": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "G5;40"
+   ],
+   "source_imprint": [
+    "G5;40"
+   ]
+  },
+  "R9-11": {
+   "outcome": "NO_IMPRINT_OTHERS_EQUAL",
+   "per_characteristic": {
+    "color": "SAME",
+    "flavor": "SAME"
+   },
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R9-12": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "RDY;587"
+   ],
+   "source_imprint": [
+    "RDY;587"
+   ]
+  },
+  "R9-13": {
+   "outcome": "NOTHING_COMPARABLE",
+   "per_characteristic": {},
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R9-14": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "11"
+   ],
+   "source_imprint": [
+    "11"
+   ]
+  },
+  "R9-15": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "D;5"
+   ],
+   "source_imprint": [
+    "D;5"
+   ]
+  },
+  "R9-16": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "22;5mg;Novel122"
+   ],
+   "source_imprint": [
+    "22;5mg;Novel122"
+   ]
+  },
+  "R9-17": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "427;O"
+   ],
+   "source_imprint": [
+    "427;O"
+   ]
+  },
+  "R9-18": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "A;43;500;mg"
+   ],
+   "source_imprint": [
+    "A;43;500;mg"
+   ]
+  },
+  "R9-19": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "200"
+   ],
+   "source_imprint": [
+    "200"
+   ]
+  },
+  "R9-20": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "97"
+   ],
+   "source_imprint": [
+    "97"
+   ]
+  },
+  "R9-21": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "NF;90"
+   ],
+   "source_imprint": [
+    "NF;90"
+   ]
+  },
+  "R9-22": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "F;91"
+   ],
+   "source_imprint": [
+    "F;91"
+   ]
+  },
+  "R9-23": {
+   "outcome": "NOTHING_COMPARABLE",
+   "per_characteristic": {},
+   "citing_imprint": null,
+   "source_imprint": null
+  },
+  "R9-24": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "0;21;100"
+   ],
+   "source_imprint": [
+    "0;21;100"
+   ]
+  },
+  "R9-25": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "E;74"
+   ],
+   "source_imprint": [
+    "E;74"
+   ]
+  },
+  "R9-26": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "H;105"
+   ],
+   "source_imprint": [
+    "H;105"
+   ]
+  },
+  "R9-27": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "A;136"
+   ],
+   "source_imprint": [
+    "A;136"
+   ]
+  },
+  "R9-28": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "I05"
+   ],
+   "source_imprint": [
+    "I05"
+   ]
+  },
+  "R9-29": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME",
+    "flavor": "SAME"
+   },
+   "citing_imprint": [
+    "5;E"
+   ],
+   "source_imprint": [
+    "5;E"
+   ]
+  },
+  "R9-30": {
+   "outcome": "IMPRINT_EQUAL_ALL_EQUAL",
+   "per_characteristic": {
+    "imprint": "SAME",
+    "color": "SAME",
+    "shape": "SAME",
+    "size": "SAME",
+    "score": "SAME"
+   },
+   "citing_imprint": [
+    "C;33"
+   ],
+   "source_imprint": [
+    "C;33"
+   ]
+  }
+ },
+ "examples": {
+  "IMPRINT_EQUAL_OTHER_DIFFERS": [
+   {
+    "citing_ndc": "54868-4785",
+    "citing_set_id": "4700340f-4f77-48f2-bef2-bf6391bc25da",
+    "citing_version": 5,
+    "citing_published": "2009-12-18",
+    "source_ndc": "63304-538",
+    "source_set_id": "b8f4d730-fd8e-4692-aabd-e2b7e63fabe1",
+    "source_version": 6,
+    "source_published": "2013-12-26",
+    "citing": {
+     "color": [
+      "C48332"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "imprint": [
+      "RX538"
+     ],
+     "size": [
+      "8 mm"
+     ],
+     "imprint_raw": [
+      "RX538"
+     ],
+     "imprint_tokens": [
+      "RX538"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48331"
+     ],
+     "imprint": [
+      "RX538"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "size": [
+      "8 mm"
+     ],
+     "imprint_raw": [
+      "RX538"
+     ],
+     "imprint_tokens": [
+      "RX538"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "DIFFERS",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "21695-506",
+    "citing_set_id": "7efb19d9-32bb-4737-ac7f-2ec21eca255c",
+    "citing_version": 1,
+    "citing_published": "2010-03-15",
+    "source_ndc": "13668-007",
+    "source_set_id": "1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+    "source_version": 27,
+    "source_published": "2026-09-02",
+    "citing": {
+     "color": [
+      "C48326"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "5MG"
+     ],
+     "imprint_raw": [
+      "5MG"
+     ],
+     "imprint_tokens": [
+      "5MG"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48326"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "5MG"
+     ],
+     "imprint_raw": [
+      "5;MG"
+     ],
+     "imprint_tokens": [
+      "5",
+      "MG"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "DIFFERS",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "21695-507",
+    "citing_set_id": "7efb19d9-32bb-4737-ac7f-2ec21eca255c",
+    "citing_version": 1,
+    "citing_published": "2010-03-15",
+    "source_ndc": "13668-008",
+    "source_set_id": "1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+    "source_version": 27,
+    "source_published": "2026-09-02",
+    "citing": {
+     "color": [
+      "C48330"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "10MG"
+     ],
+     "imprint_raw": [
+      "10MG"
+     ],
+     "imprint_tokens": [
+      "10MG"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48330"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "10MG"
+     ],
+     "imprint_raw": [
+      "10;MG"
+     ],
+     "imprint_tokens": [
+      "10",
+      "MG"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "DIFFERS",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "67046-499",
+    "citing_set_id": "2c4f826c-e71b-4462-a025-19730701a9de",
+    "citing_version": 1,
+    "citing_published": "2010-10-09",
+    "source_ndc": "68462-188",
+    "source_set_id": "6c5bb008-e66f-4ef0-bf84-aca7eb5983e9",
+    "source_version": 13,
+    "source_published": "2025-12-29",
+    "citing": {
+     "color": [
+      "C48331"
+     ],
+     "size": [
+      "9 mm"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "score": [
+      "2"
+     ],
+     "imprint": [
+      "G32250"
+     ],
+     "imprint_raw": [
+      "G;32;250"
+     ],
+     "imprint_tokens": [
+      "250",
+      "32",
+      "G"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48331"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "score": [
+      "2"
+     ],
+     "imprint": [
+      "G32250"
+     ],
+     "imprint_raw": [
+      "G;32;250"
+     ],
+     "imprint_tokens": [
+      "250",
+      "32",
+      "G"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "67046-501",
+    "citing_set_id": "2c4f826c-e71b-4462-a025-19730701a9de",
+    "citing_version": 1,
+    "citing_published": "2010-10-09",
+    "source_ndc": "68462-190",
+    "source_set_id": "6c5bb008-e66f-4ef0-bf84-aca7eb5983e9",
+    "source_version": 13,
+    "source_published": "2025-12-29",
+    "citing": {
+     "color": [
+      "C48331"
+     ],
+     "size": [
+      "116 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "2"
+     ],
+     "imprint": [
+      "G32500"
+     ],
+     "imprint_raw": [
+      "G;32;500"
+     ],
+     "imprint_tokens": [
+      "32",
+      "500",
+      "G"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48331"
+     ],
+     "size": [
+      "16 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "2"
+     ],
+     "imprint": [
+      "G32500"
+     ],
+     "imprint_raw": [
+      "G;32;500"
+     ],
+     "imprint_tokens": [
+      "32",
+      "500",
+      "G"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "53808-0705",
+    "citing_set_id": "3318680f-f60c-4c5e-844d-7c6b829ff179",
+    "citing_version": 2,
+    "citing_published": "2010-03-24",
+    "source_ndc": "0054-2527",
+    "source_set_id": "7dc9c6d2-6d9a-49e4-a8ab-437b0ed5f84e",
+    "source_version": 28,
+    "source_published": "2023-11-29",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "54463"
+     ],
+     "size": [
+      "2 mm"
+     ],
+     "imprint_raw": [
+      "54;463"
+     ],
+     "imprint_tokens": [
+      "463",
+      "54"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "size": [
+      "15 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "54463"
+     ],
+     "imprint_raw": [
+      "54;463"
+     ],
+     "imprint_tokens": [
+      "463",
+      "54"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "53808-0704",
+    "citing_set_id": "7714d36e-1309-4fe2-9506-e7d0f5bce030",
+    "citing_version": 2,
+    "citing_published": "2010-03-24",
+    "source_ndc": "68462-221",
+    "source_set_id": "63b3790f-a9b5-47f4-bae1-ddf8b43c13c1",
+    "source_version": 13,
+    "source_published": "2025-12-24",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "imprint": [
+      "300G221"
+     ],
+     "size": [
+      "18 mm"
+     ],
+     "imprint_raw": [
+      "300;G221"
+     ],
+     "imprint_tokens": [
+      "300",
+      "G221"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48328"
+     ],
+     "size": [
+      "18 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "300G221"
+     ],
+     "imprint_raw": [
+      "300;G221"
+     ],
+     "imprint_tokens": [
+      "300",
+      "G221"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "DIFFERS",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "ONE_SIDE"
+    }
+   },
+   {
+    "citing_ndc": "53808-0216",
+    "citing_set_id": "5edaed4c-4294-418b-a3bd-28b17f67381f",
+    "citing_version": 2,
+    "citing_published": "2010-03-26",
+    "source_ndc": "0054-0088",
+    "source_set_id": "85fd41f8-2823-44ca-a15e-f1f2e5d0ff94",
+    "source_version": 8,
+    "source_published": "2025-04-21",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "54215"
+     ],
+     "size": [
+      "1 mm"
+     ],
+     "imprint_raw": [
+      "54215"
+     ],
+     "imprint_tokens": [
+      "54215"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325",
+      "C48333"
+     ],
+     "size": [
+      "22 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "54215"
+     ],
+     "imprint_raw": [
+      "54;215"
+     ],
+     "imprint_tokens": [
+      "215",
+      "54"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "DIFFERS",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "67046-430",
+    "citing_set_id": "1bde6fe0-fc5a-4ad5-95a2-71d5ad7824c0",
+    "citing_version": 1,
+    "citing_published": "2010-04-08",
+    "source_ndc": "0054-2527",
+    "source_set_id": "7dc9c6d2-6d9a-49e4-a8ab-437b0ed5f84e",
+    "source_version": 28,
+    "source_published": "2023-11-29",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "size": [
+      "2 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "54463"
+     ],
+     "imprint_raw": [
+      "54;463"
+     ],
+     "imprint_tokens": [
+      "463",
+      "54"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "size": [
+      "15 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "54463"
+     ],
+     "imprint_raw": [
+      "54;463"
+     ],
+     "imprint_tokens": [
+      "463",
+      "54"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "67046-308",
+    "citing_set_id": "b022458f-564e-4b5f-9541-80fadd61b733",
+    "citing_version": 1,
+    "citing_published": "2010-04-15",
+    "source_ndc": "55111-682",
+    "source_set_id": "24731405-219c-79b4-ecf0-7d5fbfda94ba",
+    "source_version": 15,
+    "source_published": "2025-07-07",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "4I"
+     ],
+     "imprint_raw": [
+      "4I"
+     ],
+     "imprint_tokens": [
+      "4I"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "imprint": [
+      "4I"
+     ],
+     "score": [
+      "1"
+     ],
+     "size": [
+      "8 mm"
+     ],
+     "imprint_raw": [
+      "4I"
+     ],
+     "imprint_tokens": [
+      "4I"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "67046-300",
+    "citing_set_id": "b022458f-564e-4b5f-9541-80fadd61b733",
+    "citing_version": 1,
+    "citing_published": "2010-04-15",
+    "source_ndc": "55111-683",
+    "source_set_id": "24731405-219c-79b4-ecf0-7d5fbfda94ba",
+    "source_version": 15,
+    "source_published": "2025-07-07",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "size": [
+      "17 mm"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "6I"
+     ],
+     "imprint_raw": [
+      "6I"
+     ],
+     "imprint_tokens": [
+      "6I"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "6I"
+     ],
+     "size": [
+      "9 mm"
+     ],
+     "imprint_raw": [
+      "6I"
+     ],
+     "imprint_tokens": [
+      "6I"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "DIFFERS",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "54868-5475",
+    "citing_set_id": "ba72b914-1252-4370-9b4b-0105186ffb42",
+    "citing_version": 1,
+    "citing_published": "2010-05-10",
+    "source_ndc": "63304-163",
+    "source_set_id": "b630824c-bee7-4a78-9349-d995c1eb0f16",
+    "source_version": 9,
+    "source_published": "2016-01-08",
+    "citing": {
+     "color": [
+      "C48328"
+     ],
+     "score": [
+      "2"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "imprint": [
+      "RX163"
+     ],
+     "size": [
+      "8 mm"
+     ],
+     "imprint_raw": [
+      "RX;163"
+     ],
+     "imprint_tokens": [
+      "163",
+      "RX"
+     ]
+    },
+    "source": {
+     "shape": [
+      "C48348"
+     ],
+     "size": [
+      "8 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "color": [
+      "C48328"
+     ],
+     "imprint": [
+      "RX163"
+     ],
+     "imprint_raw": [
+      "RX;163"
+     ],
+     "imprint_tokens": [
+      "163",
+      "RX"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "DIFFERS"
+    }
+   },
+   {
+    "citing_ndc": "53808-0793",
+    "citing_set_id": "07c99997-31c7-4c03-ae35-49788213b43e",
+    "citing_version": 1,
+    "citing_published": "2010-05-26",
+    "source_ndc": "63304-791",
+    "source_set_id": "cdb54447-86a5-4924-a7de-ec170f86651d",
+    "source_version": 10,
+    "source_published": "2014-04-29",
+    "citing": {
+     "color": [
+      "C48332"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "RX791"
+     ],
+     "size": [
+      "13 mm"
+     ],
+     "imprint_raw": [
+      "RX;791"
+     ],
+     "imprint_tokens": [
+      "791",
+      "RX"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48332"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "size": [
+      "8 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "RX791"
+     ],
+     "imprint_raw": [
+      "RX791"
+     ],
+     "imprint_tokens": [
+      "RX791"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "53808-0307",
+    "citing_set_id": "66abc5e3-4a7c-447a-8daa-91b872b88094",
+    "citing_version": 1,
+    "citing_published": "2010-08-04",
+    "source_ndc": "59746-383",
+    "source_set_id": "43e92495-2cf2-46dd-a80c-f0c3c88c7b73",
+    "source_version": 8,
+    "source_published": "2026-05-06",
+    "citing": {
+     "color": [
+      "C48324"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "TL383"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "imprint_raw": [
+      "TL383"
+     ],
+     "imprint_tokens": [
+      "TL383"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48324"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "16 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "TL383"
+     ],
+     "imprint_raw": [
+      "TL383"
+     ],
+     "imprint_tokens": [
+      "TL383"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "53808-0309",
+    "citing_set_id": "66abc5e3-4a7c-447a-8daa-91b872b88094",
+    "citing_version": 1,
+    "citing_published": "2010-08-04",
+    "source_ndc": "59746-384",
+    "source_set_id": "43e92495-2cf2-46dd-a80c-f0c3c88c7b73",
+    "source_version": 8,
+    "source_published": "2026-05-06",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "TL384"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "imprint_raw": [
+      "TL384"
+     ],
+     "imprint_tokens": [
+      "TL384"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "16 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "TL384"
+     ],
+     "imprint_raw": [
+      "TL384"
+     ],
+     "imprint_tokens": [
+      "TL384"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "SAME",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   }
+  ],
+  "IMPRINT_DIFFERS": [
+   {
+    "citing_ndc": "16590-057",
+    "citing_set_id": "26fcf4be-4785-4922-a37b-4546570a132c",
+    "citing_version": 1,
+    "citing_published": "2010-02-12",
+    "source_ndc": "63304-692",
+    "source_set_id": "1dbd8448-c1e5-46df-8060-50ef82380445",
+    "source_version": 19,
+    "source_published": "2026-06-22",
+    "citing": {
+     "color": [
+      "C48333"
+     ],
+     "score": [
+      "2"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "imprint": [
+      "RX692"
+     ],
+     "size": [
+      "19 mm"
+     ],
+     "imprint_raw": [
+      "RX692"
+     ],
+     "imprint_tokens": [
+      "RX692"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48329",
+      "C48333"
+     ],
+     "size": [
+      "19 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "RX692RX692"
+     ],
+     "imprint_raw": [
+      "RX692;RX692"
+     ],
+     "imprint_tokens": [
+      "RX692"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "DIFFERS",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "DIFFERS"
+    }
+   },
+   {
+    "citing_ndc": "16590-051",
+    "citing_set_id": "13831529-e814-4b95-9287-c5ba6678bf52",
+    "citing_version": 2,
+    "citing_published": "2010-03-05",
+    "source_ndc": "65862-019",
+    "source_set_id": "8e28f049-6110-4473-830f-c494191a7197",
+    "source_version": 19,
+    "source_published": "2026-10-02",
+    "citing": {
+     "color": [
+      "C48329"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "imprint": [
+      "A42500MG"
+     ],
+     "size": [
+      "21 mm"
+     ],
+     "imprint_raw": [
+      "A;42;500mg"
+     ],
+     "imprint_tokens": [
+      "42",
+      "500MG",
+      "A"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48329"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "21 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "A43500MG"
+     ],
+     "imprint_raw": [
+      "A;43;500;mg"
+     ],
+     "imprint_tokens": [
+      "43",
+      "500",
+      "A",
+      "MG"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "63874-087",
+    "citing_set_id": "9c70817f-e721-4f04-b095-0747702df614",
+    "citing_version": 1,
+    "citing_published": "2010-04-30",
+    "source_ndc": "55111-179",
+    "source_set_id": "a42f3479-f2c2-8214-d547-c5cae9bfed1e",
+    "source_version": 16,
+    "source_published": "2026-09-11",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "score": [
+      "2"
+     ],
+     "imprint": [
+      "RDY179"
+     ],
+     "size": [
+      "8 mm"
+     ],
+     "imprint_raw": [
+      "RDY;179"
+     ],
+     "imprint_tokens": [
+      "179",
+      "RDY"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "score": [
+      "2"
+     ],
+     "size": [
+      "8 mm"
+     ],
+     "imprint": [
+      "R179"
+     ],
+     "imprint_raw": [
+      "R;179"
+     ],
+     "imprint_tokens": [
+      "179",
+      "R"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "53808-0357",
+    "citing_set_id": "f738ddad-fef0-43cb-b791-b046fdcec311",
+    "citing_version": 1,
+    "citing_published": "2010-08-05",
+    "source_ndc": "68180-266",
+    "source_set_id": "33798a7c-c5a9-49a5-be5d-1312910ef468",
+    "source_version": 28,
+    "source_published": "2026-05-07",
+    "citing": {
+     "color": [
+      "C48327"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "L005"
+     ],
+     "size": [
+      "11 mm"
+     ],
+     "imprint_raw": [
+      "L005"
+     ],
+     "imprint_tokens": [
+      "L005"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48328"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "L006"
+     ],
+     "imprint_raw": [
+      "L006"
+     ],
+     "imprint_tokens": [
+      "L006"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "DIFFERS",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "53808-0773",
+    "citing_set_id": "4cde01bb-230b-42d8-a9e1-4c7da1a01b76",
+    "citing_version": 3,
+    "citing_published": "2010-08-24",
+    "source_ndc": "59676-562",
+    "source_set_id": "814301f9-c990-46a5-b481-2879a521a16f",
+    "source_version": 58,
+    "source_published": "2025-09-01",
+    "citing": {
+     "color": [
+      "C48331"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "600TMC"
+     ],
+     "size": [
+      "21 mm"
+     ],
+     "imprint_raw": [
+      "600;TMC"
+     ],
+     "imprint_tokens": [
+      "600",
+      "TMC"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48331"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "size": [
+      "21 mm"
+     ],
+     "imprint": [
+      "600MGTMC"
+     ],
+     "imprint_raw": [
+      "600MG;TMC"
+     ],
+     "imprint_tokens": [
+      "600MG",
+      "TMC"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "16590-580",
+    "citing_set_id": "1576a4be-c3ec-426e-9219-c6a0c99f294f",
+    "citing_version": 1,
+    "citing_published": "2010-09-01",
+    "source_ndc": "0591-0347",
+    "source_set_id": "a3eb7294-f913-434b-896c-da028bfebc73",
+    "source_version": 25,
+    "source_published": "2026-09-14",
+    "citing": {
+     "color": [
+      "C48325",
+      "C48334"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "imprint": [
+      "WATSON347ANDL125MG"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "imprint_raw": [
+      "WATSON;347;andL12;5;mg"
+     ],
+     "imprint_tokens": [
+      "347",
+      "5",
+      "ANDL12",
+      "MG",
+      "WATSON"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325",
+      "C48334"
+     ],
+     "imprint": [
+      "WATSON347AND125MG"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "imprint_raw": [
+      "WATSON;347;and;12;5;mg"
+     ],
+     "imprint_tokens": [
+      "12",
+      "347",
+      "5",
+      "AND",
+      "MG",
+      "WATSON"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "54868-5994",
+    "citing_set_id": "c3afa988-d258-4e83-89ed-d674743109c4",
+    "citing_version": 1,
+    "citing_published": "2010-09-14",
+    "source_ndc": "0115-0522",
+    "source_set_id": "bfc6668c-3f69-4dd3-bc19-0d26c23dd04c",
+    "source_version": 48,
+    "source_published": "2022-12-08",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "imprint": [
+      "G05222"
+     ],
+     "size": [
+      "19 mm"
+     ],
+     "imprint_raw": [
+      "G;05222"
+     ],
+     "imprint_tokens": [
+      "05222",
+      "G"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "imprint": [
+      "G0522"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "19 mm"
+     ],
+     "imprint_raw": [
+      "G;0522"
+     ],
+     "imprint_tokens": [
+      "0522",
+      "G"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "21695-630",
+    "citing_set_id": "dfb8fc2d-4899-4891-a985-755fbdf1d525",
+    "citing_version": 1,
+    "citing_published": "2011-02-11",
+    "source_ndc": "65862-079",
+    "source_set_id": "6600e2b3-65df-4fc3-8081-d574537d27e3",
+    "source_version": 20,
+    "source_published": "2024-04-22",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "size": [
+      "11 mm"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "IG209"
+     ],
+     "imprint_raw": [
+      "IG;209"
+     ],
+     "imprint_tokens": [
+      "209",
+      "IG"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "size": [
+      "11 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "D74"
+     ],
+     "imprint_raw": [
+      "D;74"
+     ],
+     "imprint_tokens": [
+      "74",
+      "D"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "54868-4135",
+    "citing_set_id": "4b5513c3-b57f-46f1-9855-dad1063aa4c9",
+    "citing_version": 2,
+    "citing_published": "2011-03-21",
+    "source_ndc": "51672-4017",
+    "source_set_id": "ec82b108-6a6f-4d1b-82cb-831d4ed36c80",
+    "source_version": 11,
+    "source_published": "2026-07-16",
+    "citing": {
+     "color": [
+      "C48328"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "imprint": [
+      "ETO200MG"
+     ],
+     "size": [
+      "22 mm"
+     ],
+     "imprint_raw": [
+      "ETO;200;MG"
+     ],
+     "imprint_tokens": [
+      "200",
+      "ETO",
+      "MG"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48328"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "22 mm"
+     ],
+     "imprint": [
+      "ETO300MG"
+     ],
+     "imprint_raw": [
+      "ETO;300;MG"
+     ],
+     "imprint_tokens": [
+      "300",
+      "ETO",
+      "MG"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "54868-4102",
+    "citing_set_id": "28d5753e-862a-4811-8b9f-6707361f8475",
+    "citing_version": 1,
+    "citing_published": "2011-05-17",
+    "source_ndc": "43386-480",
+    "source_set_id": "7b76c8a7-dd0c-481c-8299-26dfd38ce066",
+    "source_version": 15,
+    "source_published": "2025-09-12",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "imprint": [
+      "GG931"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "imprint_raw": [
+      "GG931"
+     ],
+     "imprint_tokens": [
+      "GG931"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "NL4"
+     ],
+     "imprint_raw": [
+      "NL4"
+     ],
+     "imprint_tokens": [
+      "NL4"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "21695-033",
+    "citing_set_id": "4b33e408-01cb-4cd0-b9aa-aa5409228d91",
+    "citing_version": 2,
+    "citing_published": "2011-05-17",
+    "source_ndc": "63304-692",
+    "source_set_id": "1dbd8448-c1e5-46df-8060-50ef82380445",
+    "source_version": 19,
+    "source_published": "2026-06-22",
+    "citing": {
+     "color": [
+      "C48329",
+      "C48333"
+     ],
+     "size": [
+      "19 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "RX692"
+     ],
+     "imprint_raw": [
+      "RX692"
+     ],
+     "imprint_tokens": [
+      "RX692"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48329",
+      "C48333"
+     ],
+     "size": [
+      "19 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "RX692RX692"
+     ],
+     "imprint_raw": [
+      "RX692;RX692"
+     ],
+     "imprint_tokens": [
+      "RX692"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "21695-034",
+    "citing_set_id": "4b33e408-01cb-4cd0-b9aa-aa5409228d91",
+    "citing_version": 2,
+    "citing_published": "2011-05-17",
+    "source_ndc": "63304-693",
+    "source_set_id": "1dbd8448-c1e5-46df-8060-50ef82380445",
+    "source_version": 19,
+    "source_published": "2026-06-22",
+    "citing": {
+     "color": [
+      "C48333"
+     ],
+     "size": [
+      "22 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "RX693"
+     ],
+     "imprint_raw": [
+      "RX693"
+     ],
+     "imprint_tokens": [
+      "RX693"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48333"
+     ],
+     "size": [
+      "22 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "RX693RX693"
+     ],
+     "imprint_raw": [
+      "RX693;RX693"
+     ],
+     "imprint_tokens": [
+      "RX693"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "67296-0315",
+    "citing_set_id": "63a0466c-af7d-4696-a950-19b73b55a65a",
+    "citing_version": 1,
+    "citing_published": "2011-06-24",
+    "source_ndc": "63304-692",
+    "source_set_id": "1dbd8448-c1e5-46df-8060-50ef82380445",
+    "source_version": 19,
+    "source_published": "2026-06-22",
+    "citing": {
+     "color": [
+      "C48329",
+      "C48333"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "imprint": [
+      "RX692"
+     ],
+     "size": [
+      "19 mm"
+     ],
+     "imprint_raw": [
+      "RX692"
+     ],
+     "imprint_tokens": [
+      "RX692"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48329",
+      "C48333"
+     ],
+     "size": [
+      "19 mm"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "RX692RX692"
+     ],
+     "imprint_raw": [
+      "RX692;RX692"
+     ],
+     "imprint_tokens": [
+      "RX692"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "68788-9150",
+    "citing_set_id": "0f50125a-6d89-4b2b-b48b-daac6129182c",
+    "citing_version": 1,
+    "citing_published": "2011-09-16",
+    "source_ndc": "43386-480",
+    "source_set_id": "7b76c8a7-dd0c-481c-8299-26dfd38ce066",
+    "source_version": 15,
+    "source_published": "2025-09-12",
+    "citing": {
+     "color": [
+      "C48325"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "GG931"
+     ],
+     "imprint_raw": [
+      "GG931"
+     ],
+     "imprint_tokens": [
+      "GG931"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48325"
+     ],
+     "shape": [
+      "C48348"
+     ],
+     "size": [
+      "10 mm"
+     ],
+     "score": [
+      "1"
+     ],
+     "imprint": [
+      "NL4"
+     ],
+     "imprint_raw": [
+      "NL4"
+     ],
+     "imprint_tokens": [
+      "NL4"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "21695-862",
+    "citing_set_id": "e8a485af-a78b-49a0-9bf4-75e1cd5bb740",
+    "citing_version": 1,
+    "citing_published": "2011-10-21",
+    "source_ndc": "68462-137",
+    "source_set_id": "1c713b59-a628-42e6-b166-ae71c3913284",
+    "source_version": 18,
+    "source_published": "2025-12-04",
+    "citing": {
+     "color": [
+      "C48330"
+     ],
+     "size": [
+      "11 mm"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "score": [
+      "2"
+     ],
+     "imprint": [
+      "G4"
+     ],
+     "imprint_raw": [
+      "G;4"
+     ],
+     "imprint_tokens": [
+      "4",
+      "G"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48330"
+     ],
+     "size": [
+      "11 mm"
+     ],
+     "shape": [
+      "C48345"
+     ],
+     "score": [
+      "2"
+     ],
+     "imprint": [
+      "G13AND7"
+     ],
+     "imprint_raw": [
+      "G;13;and;7"
+     ],
+     "imprint_tokens": [
+      "13",
+      "7",
+      "AND",
+      "G"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "DIFFERS",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   }
+  ],
+  "NO_IMPRINT_OTHER_DIFFERS": [
+   {
+    "citing_ndc": "54868-5432",
+    "citing_set_id": "fbf67fc8-8d29-4ae2-a533-75461754c5b1",
+    "citing_version": 4,
+    "citing_published": "2012-03-28",
+    "source_ndc": "54092-173",
+    "source_set_id": "bc03e499-5bac-4293-bff4-6864153a624d",
+    "source_version": 41,
+    "source_published": "2026-08-25",
+    "citing": {
+     "color": [
+      "C48323",
+      "C48329"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "22 mm"
+     ]
+    },
+    "source": {
+     "color": [
+      "C48323",
+      "C48329"
+     ],
+     "imprint": [
+      "SHIRE"
+     ],
+     "score": [
+      "1"
+     ],
+     "shape": [
+      "C48336"
+     ],
+     "size": [
+      "23 mm"
+     ],
+     "imprint_raw": [
+      "shire"
+     ],
+     "imprint_tokens": [
+      "SHIRE"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "ONE_SIDE",
+     "color": "SAME",
+     "shape": "SAME",
+     "size": "DIFFERS",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "68071-2715",
+    "citing_set_id": "df738f7d-d11f-a872-e053-2a95a90ac763",
+    "citing_version": 1,
+    "citing_published": "2022-05-23",
+    "source_ndc": "16714-836",
+    "source_set_id": "0071a228-21cc-56a6-dcc9-a7a6ceea758c",
+    "source_version": 11,
+    "source_published": "2026-06-03",
+    "citing": {
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "color": [
+      "C48327"
+     ]
+    },
+    "source": {
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "imprint": [
+      "RDY257"
+     ],
+     "color": [
+      "C48327",
+      "C48333"
+     ],
+     "imprint_raw": [
+      "RDY;257"
+     ],
+     "imprint_tokens": [
+      "257",
+      "RDY"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "ONE_SIDE",
+     "color": "DIFFERS",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "68071-2980",
+    "citing_set_id": "f9b4b874-5f9b-2540-e053-6394a90a44fb",
+    "citing_version": 1,
+    "citing_published": "2023-04-20",
+    "source_ndc": "55111-257",
+    "source_set_id": "396cb4a6-01a1-f73f-2a37-39df9067bf98",
+    "source_version": 26,
+    "source_published": "2026-06-03",
+    "citing": {
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "color": [
+      "C48327"
+     ]
+    },
+    "source": {
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "imprint": [
+      "RDY257"
+     ],
+     "color": [
+      "C48327",
+      "C48333"
+     ],
+     "imprint_raw": [
+      "RDY;257"
+     ],
+     "imprint_tokens": [
+      "257",
+      "RDY"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "ONE_SIDE",
+     "color": "DIFFERS",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   },
+   {
+    "citing_ndc": "71335-2236",
+    "citing_set_id": "48e6e141-66d3-4eab-b0bf-dfd1d44b4832",
+    "citing_version": 100,
+    "citing_published": "2023-09-08",
+    "source_ndc": "55111-257",
+    "source_set_id": "396cb4a6-01a1-f73f-2a37-39df9067bf98",
+    "source_version": 26,
+    "source_published": "2026-06-03",
+    "citing": {
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "color": [
+      "C48327"
+     ]
+    },
+    "source": {
+     "shape": [
+      "C48336"
+     ],
+     "score": [
+      "1"
+     ],
+     "size": [
+      "14 mm"
+     ],
+     "imprint": [
+      "RDY257"
+     ],
+     "color": [
+      "C48327",
+      "C48333"
+     ],
+     "imprint_raw": [
+      "RDY;257"
+     ],
+     "imprint_tokens": [
+      "257",
+      "RDY"
+     ]
+    },
+    "per_characteristic": {
+     "imprint": "ONE_SIDE",
+     "color": "DIFFERS",
+     "shape": "SAME",
+     "size": "SAME",
+     "score": "SAME"
+    }
+   }
+  ]
+ }
+}

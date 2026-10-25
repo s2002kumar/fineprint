@@ -1,0 +1,210 @@
+{
+ "lineage_build": {
+  "build_id": 1,
+  "rule_version": "dst08-lineage-v1",
+  "graph_build": 8,
+  "code_commit": "c8ded0ff8b4c57e0e5b6f8cc4014976ce8de9a4c",
+  "code_dirty": false,
+  "finished_at": "2026-10-25 02:38:39.017522-04:00"
+ },
+ "products_in_release": 80508,
+ "references": {
+  "references": 36457,
+  "citing_products_and_parts": 36457,
+  "top_level_products": 36354,
+  "kit_parts": 103
+ },
+ "citing_top_level_products_by_direct_tier_status": [
+  [
+   "DIRECT",
+   76
+  ],
+  [
+   "NO_MANUFACTURE_EVIDENCE",
+   36259
+  ],
+  [
+   "TENTATIVE",
+   4
+  ],
+  [
+   "UNKNOWN_SITE",
+   15
+  ]
+ ],
+ "valid_resolved": {
+  "references": 30283,
+  "distinct_citing_source_pairs": 30283,
+  "distinct_source_products": 9086
+ },
+ "eligible": {
+  "references": 19668,
+  "distinct_source_products": 5607,
+  "on_products_already_direct": 56
+ },
+ "source_linked_tier": {
+  "products": 19612,
+  "distinct_source_products": 5593,
+  "distinct_direct_sites": 787,
+  "evidence_rows": 26133
+ },
+ "primary_reason": [
+  [
+   "eligible",
+   19668
+  ],
+  [
+   "source has no DIRECT manufacture",
+   9104
+  ],
+  [
+   "unresolved: NO_CANDIDATE",
+   5607
+  ],
+  [
+   "chain: MULTI_HOP",
+   508
+  ],
+  [
+   "conflict with source: FORM_DIFFERS",
+   397
+  ],
+  [
+   "unresolved: MULTIPLE_CANDIDATES",
+   351
+  ],
+  [
+   "conflict with source: ACTIVE_DIFFERS",
+   267
+  ],
+  [
+   "conflict with source: INCOMPLETE",
+   143
+  ],
+  [
+   "source version selection: ambiguous",
+   135
+  ],
+  [
+   "invalid reference: PACKAGE_CODE_NOT_PRODUCT_CODE",
+   105
+  ],
+  [
+   "citing kit part",
+   103
+  ],
+  [
+   "unresolved: ONLY_KIT_PART",
+   41
+  ],
+  [
+   "invalid reference: MALFORMED_OR_MISSING_CODE",
+   16
+  ],
+  [
+   "chain: ENDS_AT_UNRESOLVED_REFERENCE",
+   9
+  ],
+  [
+   "unresolved: ONLY_NON_CANONICAL_VERSION",
+   3
+  ]
+ ],
+ "multiple_candidates_by_site_agreement": [
+  [
+   "all candidates name the same DIRECT sites",
+   206
+  ],
+  [
+   "candidates name different DIRECT sites",
+   90
+  ],
+  [
+   "no candidate has DIRECT sites",
+   58
+  ]
+ ],
+ "temporal_eligible": {
+  "eligible": 19668,
+  "source_version_published_after_citing_version": 10419,
+  "source_version_published_on_or_before": 8932,
+  "a_date_missing": 317
+ },
+ "source_linked_products_by_direct_site_count": [
+  [
+   "1",
+   14979,
+   1
+  ],
+  [
+   "2",
+   3285,
+   2
+  ],
+  [
+   "3",
+   1256,
+   3
+  ],
+  [
+   "4",
+   81,
+   4
+  ],
+  [
+   "5 or more",
+   11,
+   213
+  ]
+ ],
+ "package_prefix_diagnostic": {
+  "package_code_references": 105,
+  "prefix_matches_exactly_one_canonical_product": 41,
+  "prefix_matches_several": 0,
+  "prefix_matches_none": 64
+ },
+ "coverage": {
+  "direct_tier_unchanged": {
+   "DIRECT": 24614,
+   "NO_MANUFACTURE_EVIDENCE": 54457,
+   "TENTATIVE": 435,
+   "UNKNOWN_SITE": 1002
+  },
+  "with_source_linked_tier": {
+   "DIRECT": 24614,
+   "NO_MANUFACTURE_EVIDENCE": 34850,
+   "SOURCE_LINKED": 19612,
+   "TENTATIVE": 433,
+   "UNKNOWN_SITE": 999
+  },
+  "share": {
+   "DIRECT": 0.3057,
+   "SOURCE_LINKED": 0.2436,
+   "DIRECT_or_SOURCE_LINKED": 0.5493
+  }
+ },
+ "sample_ai_assisted": {
+  "note": "AI-assisted reading of mechanical raw-XML checks; not a human adjudication",
+  "eligible_in_prototype": 42,
+  "link_supported": 42,
+  "wilson_95": [
+   0.9162,
+   1.0
+  ],
+  "r9_supported": [
+   30,
+   30
+  ],
+  "r9_wilson_95": [
+   0.8865,
+   1.0
+  ],
+  "verdicts": {
+   "CORRECTLY_EXCLUDED": 44,
+   "LINK_SUPPORTED": 41,
+   "EXCLUDED_PLAUSIBLE_LINK": 10,
+   "EXCLUDED_BY_DEFECT_FIXED": 1
+  },
+  "human_review_rows": 22
+ }
+}
