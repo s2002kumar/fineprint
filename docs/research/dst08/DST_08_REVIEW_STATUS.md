@@ -7,7 +7,7 @@
 
 ## Executive result
 
-The source-NDC pilot has a reproducible evidence bundle, a version-aware rule, an item-by-item AI-assisted adjudication, direct links to the exact cited label versions, and automated tests for the review artifacts. The CI run for commit `e21da0aa27d3596a0d2ab0cbd68b3a118a289f28` passed on Python 3.11, Python 3.14, and PostgreSQL 18 (workflow run 33; 132 tests, with no skips in the full PostgreSQL job). This includes a check that every local link in this status page resolves.
+The source-NDC pilot has a reproducible evidence bundle, a version-aware rule, an item-by-item AI-assisted adjudication, direct links to the exact cited label versions, and automated tests for the review artifacts. The CI run for commit `b2709483835d515d6663596b0a2bd11ebc888d66` passed on Python 3.11, Python 3.14, and PostgreSQL 18 (workflow run 37; 132 tests, with no skips in the full PostgreSQL job). The artifact-integrity tests also check that every local link in this status page resolves, that each accepted version case has exactly one candidate, and that its continuing sites are a subset of current evidence sites.
 
 This is **not** a claim that the formal human acceptance criteria have passed. The original human worksheet remains intentionally blank, and this branch must not be merged or used in production until a person completes that gate.
 
