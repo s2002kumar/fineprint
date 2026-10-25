@@ -18,10 +18,11 @@ CREATE TABLE lineage.build (
 -- Dosage form and active ingredients (UNII, strength) of every product and kit part in a canonical document, read from
 -- the release XML: used only to reject a reference whose cited source contradicts it.
 CREATE TABLE lineage.product_attributes (
-    product_pk  bigint PRIMARY KEY REFERENCES national.product,
-    form_code   text,
-    active      jsonb NOT NULL,          -- sorted [[unii, num value, num unit, den value, den unit], ...]
-    build_id    bigint NOT NULL REFERENCES lineage.build
+    product_pk       bigint PRIMARY KEY REFERENCES national.product,
+    form_code        text,
+    active           jsonb NOT NULL,     -- sorted [[unii, num value, num unit, den value, den unit], ...]
+    characteristics  jsonb NOT NULL,     -- imprint, color, shape, size, score, flavor as stated (lineage.characteristics)
+    build_id         bigint NOT NULL REFERENCES lineage.build
 );
 
 -- SOURCE_NDC_REFERENCE: one row per asEquivalentEntity element of a product or kit part in a canonical document.
@@ -91,6 +92,18 @@ CREATE TABLE lineage.source_linked_evidence (
     CHECK (linked_product_pk <> source_product_pk)
 );
 CREATE INDEX source_linked_evidence_product ON lineage.source_linked_evidence (linked_product_pk);
+
+-- Physical characteristics of each resolved reference against its source, in the current release. Rule v1 does not
+-- read this table; rule v2 sends every conflict through the version-aware check (dst08_lineage_v2.sql).
+CREATE TABLE lineage.physical_check (
+    reference_pk  bigint PRIMARY KEY REFERENCES lineage.source_reference,
+    outcome       text NOT NULL CHECK (outcome IN ('IMPRINT_EQUAL_ALL_EQUAL', 'IMPRINT_EQUAL_OTHER_DIFFERS', 'IMPRINT_DIFFERS',
+                      'NO_IMPRINT_OTHERS_EQUAL', 'NO_IMPRINT_OTHER_DIFFERS', 'NOTHING_COMPARABLE')),
+    conflict      boolean NOT NULL,      -- a characteristic stated on both sides differs (the post-hoc diagnostic's test)
+    differing     text[] NOT NULL,
+    strict        jsonb NOT NULL,        -- per characteristic: SAME, DIFFERS or ONE_SIDE
+    per           jsonb NOT NULL         -- per characteristic as rule v2 reads it (lineage.physical_compare)
+);
 
 -- Coverage per product. The DIRECT tier is national.v_product_manufacturing_status unchanged; SOURCE_LINKED is a
 -- separate tier reached only by products that are not DIRECT.

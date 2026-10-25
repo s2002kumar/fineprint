@@ -6,12 +6,20 @@ non-canonical version; a multi-hop chain; a cycle; dosage-form and strength conf
 MANUFACTURE; a kit part; a source without DIRECT evidence; a wrong equivalence code; two sources on one product; a
 self reference), build the graph and the lineage schema, and check every classification, that the national tables
 and DIRECT edges are untouched, that a rebuild is identical, and that the SQL rule equals the Python rule.
+
+Rule v2 has one scenario per class of the version-aware check (drift resolved, with and without site continuity; a
+confirmed conflict; notation only; several presentations; no history; a match with an earlier version only; a
+characteristic not stated at the applicable version; a source set newer than the citing label), with archived source
+versions in a temporary cache and a manifest like the fetch script's.
 """
 
 import io
+import json
 import os
+import shutil
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from tests import release_builder as rb
@@ -93,6 +101,89 @@ R = {k: (i, f"44444-00{i:02d}") for i, k in enumerate(
      "noncanon", "equiv", "two", "self", "decimal", "ratio"], 1)}
 
 
+def chars(imprint=None, color=None):
+    """Physical characteristics on the manufacturedProduct role (appended after the product element)."""
+    def ch(code, value):
+        return (f'<subjectOf><characteristic classCode="OBS"><code code="{code}" codeSystem="2.16.840.1.113883.1.11.19255"/>'
+                f'{value}</characteristic></subjectOf>')
+    return ((ch("SPLIMPRINT", f"<value>{imprint}</value>") if imprint else "")
+            + (ch("SPLCOLOR", f'<value code="{color}" codeSystem="{NCI}"/>') if color else ""))
+
+
+# Rule v2 scenarios: key -> (citing imprint, citing colour, source versions [(version, DailyMed date, presentations of
+# the cited code [(imprint, colour)], MANUFACTURE DUNS)]). The last version is the release's canonical one; the others
+# exist only in the archive cache. Every citing label version was published on D.
+OTHER = "500000003"
+D = "2021-06-01"
+V2 = {
+    "drift": ("OLD1", None, [(1, "2020-01-01", [("OLD1", None)], X), (2, "2022-01-01", [("NEW1", None)], X),
+                             (3, "2023-01-01", [("NEW1", None)], X)]),
+    "sitechg": ("OLD2", None, [(1, "2020-01-01", [("OLD2", None)], OTHER), (2, "2023-01-01", [("NEW2", None)], X)]),
+    "conflict": ("ZZZ", None, [(1, "2020-01-01", [("AAA", None)], X), (2, "2023-01-01", [("AAA", None)], X)]),
+    "notation": ("RX692", None, [(1, "2020-01-01", [("RX692;RX692", None)], X)]),
+    "several": ("P1", None, [(1, "2020-01-01", [("P1", None), ("P2", None)], X), (2, "2023-01-01", [("P2", None)], X)]),
+    "nohist": ("QQ2", None, [(1, "2020-01-01", [("QQ1", None)], X)]),
+    "earlier": ("OLD7", None, [(1, "2019-01-01", [("OLD7", None)], X), (2, "2020-01-01", [("MID7", None)], X),
+                               (3, "2023-01-01", [("NEW7", None)], X)]),
+    "unstated": ("OLD8", "C48325", [(1, "2020-01-01", [(None, "C48325")], X), (2, "2023-01-01", [("NEW8", "C48325")], X)]),
+    "postdates": ("S0", None, [(1, "2023-01-01", [("S9", None)], X)]),
+    "agree": ("OK1", None, [(1, "2020-01-01", [("OK1", None)], X)]),
+}
+
+
+def v2_citing(key):
+    n = 20 + list(V2).index(key)
+    return sid(n), f"44444-00{n:02d}"
+
+
+def v2_source(key):
+    n = 70 + list(V2).index(key)
+    return sid(n), f"33333-00{n:02d}"
+
+
+def v2_source_xml(key, version):
+    s, code = v2_source(key)
+    _, _, presentations, duns = next(h for h in V2[key][2] if h[0] == version)
+    return doc_xml(s, version, [product_xml(code) + chars(i, c) for i, c in presentations], [(duns, [(*MFG, [code])])],
+                   labeler="333333333")
+
+
+def v2_documents():
+    out = []
+    for key, (imprint, color, versions) in V2.items():
+        s, code = v2_citing(key)
+        out.append((s, 1, doc_xml(s, 1, [product_xml(code, sources=[equiv(v2_source(key)[1])]) + chars(imprint, color)],
+                                  [(Z, [(*REPACK, [code])])], labeler="444444444")))
+        canonical = versions[-1][0]
+        out.append((v2_source(key)[0], canonical, v2_source_xml(key, canonical)))
+    return out
+
+
+def write_history(root: Path):
+    """The archive cache and the manifest validate_v2 reads, as dst08_fetch_source_versions.py would write them."""
+    cache, history, docs = root / "history", {}, []
+    for key, (_, _, versions) in V2.items():
+        history[v2_citing(key)[0]] = {"status": "ok", "versions": [{"version": 1, "published_at": D}]}
+        s = v2_source(key)[0]
+        if key == "nohist":
+            history[s] = {"status": "unavailable", "versions": []}
+            continue
+        history[s] = {"status": "ok", "versions": [{"version": v, "published_at": p} for v, p, _, _ in versions]}
+        for v, _, _, _ in versions:
+            xml = v2_source_xml(key, v)
+            z = sf.nested(xml)
+            path = cache / "spl" / f"{s}_v{v}.zip"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(z)
+            docs.append({"set_id": s, "version": v, "status": "ok", "url": f"https://example.invalid/{s}/{v}",
+                         "retrieved_at": "2026-10-25T00:00:00Z", "zip_path": f"spl/{s}_v{v}.zip",
+                         "zip_sha256": rb.sha256(z), "xml_member": "doc.xml", "xml_sha256": rb.sha256(xml),
+                         "document_id": f"doc-{s}-{v}", "effective_time": "20260101"})
+    manifest = root / "source_history_manifest.json"
+    manifest.write_text(json.dumps({"history": history, "documents": docs}), encoding="utf-8")
+    return manifest, cache
+
+
 def documents():
     src = lambda n, code, duns, **kw: (sid(50 + n), 1, doc_xml(sid(50 + n), 1, [product_xml(code, **kw)],  # noqa: E731
                                                                [(duns, [(*MFG, [code])])], labeler="333333333"))
@@ -133,7 +224,7 @@ def documents():
         # an equal ratio stated with a different denominator is still a difference, not a tolerance
         rep("ratio", sources=[equiv("33333-0001")], active=[("UNIIAAAAAA", "20", "mg")], denominator="2"),
     ]
-    return docs
+    return docs + v2_documents()
 
 
 def build_fixture(root: Path):
@@ -230,6 +321,47 @@ class PureRules(unittest.TestCase):
                 return R()
         with self.assertRaises(lineage.LineageRefused):
             lineage.build(Conn())
+
+    def test_characteristics_are_read_from_the_product_role(self):
+        xml = doc_xml(sid(1), 1, [product_xml("44444-0001") + chars("m 30", "C48325")], [(Z, [(*REPACK, ["44444-0001"])])])
+        (p,) = lineage.extract(xml)
+        self.assertEqual(p["characteristics"], {"imprint": ["M30"], "imprint_raw": ["m 30"], "imprint_tokens": ["30", "M"],
+                                                "color": ["C48325"]})
+
+    def test_physical_comparison_keeps_the_diagnostics_strict_test_and_adds_v2_values(self):
+        def c(*imprints, color=None):
+            return lineage.characteristics(ET.fromstring(
+                f'<r xmlns="urn:hl7-org:v3">{"".join(chars(i) for i in imprints)}{chars(color=color)}</r>'))
+        marks = lineage.physical_compare(c("RX692"), c("RX692;RX692"))
+        self.assertEqual((marks["outcome"], marks["per"]["imprint"]), ("IMPRINT_DIFFERS", "SAME_MARKS"))
+        several = lineage.physical_compare(c("P1"), c("P1", "P2"))
+        self.assertEqual((several["outcome"], several["per"]["imprint"]), ("IMPRINT_DIFFERS", "ONE_OF_SEVERAL"))
+        other = lineage.physical_compare(c("A1", color="C48325"), c("A1", color="C48330"))
+        self.assertEqual((other["outcome"], other["differing"], other["per"]),
+                         ("IMPRINT_EQUAL_OTHER_DIFFERS", ["color"], {"imprint": "SAME", "color": "DIFFERS"}))
+        self.assertEqual(lineage.physical_compare(c("A1"), c(color="C48325"))["outcome"], "NOTHING_COMPARABLE")
+
+    def test_version_aware_classes_follow_the_preregistered_order(self):
+        def cls(failure=None, at=None, now=None, matching=(), unretrievable=(), conflicting=("imprint",)):
+            return lineage.classify_version_aware(failure=failure, conflicting=list(conflicting), at_applicable=at or {},
+                                                  at_current=now or {"imprint": "DIFFERS"},
+                                                  versions_matching=list(matching),
+                                                  versions_unretrievable=list(unretrievable))[0]
+        self.assertEqual(cls("history_unavailable"), "MISSING_COMPARISON_EVIDENCE")
+        self.assertEqual(cls("applicable_version_not_retrievable"), "MISSING_COMPARISON_EVIDENCE")
+        self.assertEqual(cls("source_set_not_published_by_citing_date"), "UNRESOLVED_AMBIGUITY")
+        self.assertEqual(cls("code_not_in_applicable_version"), "UNRESOLVED_AMBIGUITY")
+        self.assertEqual(cls(at={"imprint": "DIFFERS"}), "CONFIRMED_CONFLICT")
+        self.assertEqual(cls(at={"imprint": "DIFFERS"}, matching=[1]), "UNRESOLVED_AMBIGUITY")
+        self.assertEqual(cls(at={"imprint": "DIFFERS"}, unretrievable=[4]), "UNRESOLVED_AMBIGUITY")
+        # a difference at the applicable version wins over a missing field, which wins over several presentations
+        self.assertEqual(cls(at={"color": "DIFFERS", "imprint": "ONE_SIDE"}), "CONFIRMED_CONFLICT")
+        self.assertEqual(cls(at={"imprint": "ONE_SIDE"}), "MISSING_COMPARISON_EVIDENCE")
+        self.assertEqual(cls(at={"imprint": "SAME", "color": "ONE_OF_SEVERAL"}, conflicting=("imprint", "size")),
+                         "MISSING_COMPARISON_EVIDENCE")
+        self.assertEqual(cls(at={"imprint": "ONE_OF_SEVERAL"}), "MULTIPLE_VALID_PRESENTATIONS")
+        self.assertEqual(cls(at={"imprint": "SAME"}), "VERSION_DRIFT_RESOLVED")
+        self.assertEqual(cls(at={"imprint": "SAME_MARKS"}, now={"imprint": "SAME_MARKS"}), "NOTATION_ONLY")
 
 
 @unittest.skipUnless(available(), f"PostgreSQL test database {TEST_DB!r} not reachable")
@@ -363,6 +495,105 @@ class LineageDb(unittest.TestCase):
         self.assertEqual(step["registration"]["file"], "drls_reg.zip")
         excluded = lineage.evidence_chain(self.conn, R["none"][1])
         self.assertEqual([(s["relationship"], s["status"]) for s in excluded], [("SOURCE_NDC_REFERENCE", "EXCLUDED")])
+
+
+@unittest.skipUnless(available(), f"PostgreSQL test database {TEST_DB!r} not reachable")
+class LineageV2Db(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        assert TEST_DB != "fineprint", "refusing to run destructive tests on the main database"
+        cls.tmp = tempfile.TemporaryDirectory()
+        root = Path(cls.tmp.name)
+        build_fixture(root)
+        cls.manifest, cls.cache = write_history(root)
+        cls.conn = db.connect(TEST_DB, autocommit=True)
+        cls.national = db.fingerprint(cls.conn)
+        lineage.build(cls.conn, log=lambda m: None)
+        cls.v1 = lineage.fingerprint(cls.conn)
+        cls.first = lineage.validate_v2(cls.conn, cls.manifest, cls.cache, log=lambda m: None)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.conn.close()
+        cls.tmp.cleanup()
+
+    def check(self, key):
+        return self.conn.execute(
+            """SELECT c.classification, v.status, v.reasons, c.continuing_sites, c.applicable_version
+               FROM lineage.version_check c JOIN lineage.resolution_v2 v USING (reference_pk) WHERE c.citing_ndc = %s""",
+            (v2_citing(key)[1],)).fetchone()
+
+    def tiers(self, code):
+        return (self.conn.execute("SELECT coverage_tier FROM lineage.v_product_coverage WHERE ndc_raw = %s", (code,)).fetchone()[0],
+                self.conn.execute("SELECT coverage_tier FROM lineage.v_product_coverage_v2 WHERE ndc_raw = %s", (code,)).fetchone()[0])
+
+    def test_every_current_conflict_is_checked_and_gets_its_preregistered_class(self):
+        expect = {
+            "drift": ("VERSION_DRIFT_RESOLVED", "ELIGIBLE", [], [X], 1),
+            "sitechg": ("VERSION_DRIFT_RESOLVED", "EXCLUDED", ["version:sites_changed_since_citing"], [], 1),
+            "conflict": ("CONFIRMED_CONFLICT", "EXCLUDED", ["version:CONFIRMED_CONFLICT"], None, 1),
+            "notation": ("NOTATION_ONLY", "ELIGIBLE", [], [X], 1),
+            "several": ("MULTIPLE_VALID_PRESENTATIONS", "ELIGIBLE", [], [X], 1),
+            "nohist": ("MISSING_COMPARISON_EVIDENCE", "EXCLUDED", ["version:MISSING_COMPARISON_EVIDENCE"], None, None),
+            "earlier": ("UNRESOLVED_AMBIGUITY", "EXCLUDED", ["version:UNRESOLVED_AMBIGUITY"], None, 2),
+            "unstated": ("MISSING_COMPARISON_EVIDENCE", "EXCLUDED", ["version:MISSING_COMPARISON_EVIDENCE"], None, 1),
+            "postdates": ("UNRESOLVED_AMBIGUITY", "EXCLUDED", ["version:UNRESOLVED_AMBIGUITY"], None, None),
+        }
+        for key, (cls, status, reasons, sites, app) in expect.items():
+            got = self.check(key)
+            self.assertIsNotNone(got, key)
+            self.assertEqual((got[0], got[1], list(got[2]), got[3], got[4]), (cls, status, reasons, sites, app), key)
+        self.assertEqual(self.conn.execute("SELECT count(*) FROM lineage.version_check").fetchone()[0], len(expect))
+
+    def test_a_reference_without_a_current_conflict_keeps_its_v1_result(self):
+        self.assertIsNone(self.check("agree"))
+        rows = self.conn.execute(
+            """SELECT count(*) FROM lineage.source_resolution x JOIN lineage.resolution_v2 v USING (reference_pk)
+               WHERE v.basis = 'v1' AND (v.status <> x.status OR v.reasons <> x.reasons)""").fetchone()[0]
+        self.assertEqual(rows, 0)
+        self.assertEqual(self.tiers(v2_citing("agree")[1]), ("SOURCE_LINKED", "SOURCE_LINKED"))
+        self.assertEqual(self.tiers(R["ok"][1]), ("SOURCE_LINKED", "SOURCE_LINKED"))
+
+    def test_v2_only_removes_links_and_keeps_only_continuing_sites(self):
+        self.assertEqual(self.tiers(v2_citing("drift")[1]), ("SOURCE_LINKED", "SOURCE_LINKED"))
+        for key in ("conflict", "sitechg", "earlier", "nohist", "unstated", "postdates"):
+            self.assertEqual(self.tiers(v2_citing(key)[1]), ("SOURCE_LINKED", "NO_MANUFACTURE_EVIDENCE"), key)
+        added = self.conn.execute(
+            """SELECT count(*) FROM lineage.source_linked_evidence_v2 e2 WHERE NOT EXISTS (
+                   SELECT 1 FROM lineage.source_linked_evidence e
+                   WHERE e.reference_pk = e2.reference_pk AND e.source_assertion_pk = e2.source_assertion_pk)""").fetchone()[0]
+        self.assertEqual(added, 0)
+
+    def test_dates_versions_and_the_fetch_path_check_are_recorded(self):
+        row = self.conn.execute(
+            """SELECT citing_published_at::text, citing_date_basis, source_version_now, applicable_published_at::text,
+                      sites_at_applicable, canonical_xml_matches_release, versions_matching
+               FROM lineage.version_check WHERE citing_ndc = %s""", (v2_citing("earlier")[1],)).fetchone()
+        self.assertEqual(row, (D, "dailymed_history", 3, "2020-01-01", [X], True, [1]))
+        docs = self.conn.execute("SELECT count(*), count(*) FILTER (WHERE status = 'ok') "
+                                 "FROM lineage.source_version_document").fetchone()
+        self.assertEqual(docs, (sum(len(v[2]) for k, v in V2.items() if k != "nohist"),) * 2)
+
+    def test_v1_and_national_tables_are_untouched_and_v2_is_reproducible(self):
+        self.assertEqual(lineage.fingerprint(self.conn), self.v1)
+        self.assertEqual(db.fingerprint(self.conn), self.national)
+        again = lineage.validate_v2(self.conn, self.manifest, self.cache, log=lambda m: None)
+        self.assertEqual(again["fingerprint"], self.first["fingerprint"])
+
+    def test_a_cached_archive_that_differs_from_the_manifest_is_refused(self):
+        tampered = Path(self.tmp.name) / "tampered"
+        shutil.copytree(self.cache, tampered)
+        victim = next((tampered / "spl").iterdir())
+        victim.write_bytes(victim.read_bytes() + b"\0")
+        with self.assertRaises(ValueError):
+            lineage.validate_v2(self.conn, self.manifest, tampered, log=lambda m: None)
+        self.assertEqual(lineage.fingerprint_v2(self.conn), self.first["fingerprint"])
+
+    def test_the_evidence_chain_reports_the_version_check(self):
+        (step,) = lineage.evidence_chain(self.conn, v2_citing("drift")[1])
+        self.assertEqual((step["v2"]["status"], step["v2"]["evidence_sites"]), ("ELIGIBLE", [X]))
+        self.assertEqual(step["v2"]["version_check"]["classification"], "VERSION_DRIFT_RESOLVED")
+        self.assertEqual(step["v2"]["version_check"]["applicable_version"], 1)
 
 
 if __name__ == "__main__":

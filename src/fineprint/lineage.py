@@ -23,6 +23,12 @@ Every rule is exact: NDC codes are normalised only through ``fineprint.ndc`` (a 
 product code), candidates are matched on the normalised product code only, and nothing is inferred from names,
 companies, addresses or product similarity. The dosage form and active ingredients are compared only to reject a
 reference whose cited source contradicts it (the Implementation Guide requires them to be the same).
+
+Rule ``dst08-lineage-v2`` (``validate_v2``) adds the physical characteristics the Implementation Guide also requires
+to be the same, compared version-aware: a v1-eligible reference whose citing and current source labels state a
+conflicting characteristic is judged against the source label version in force when the citing label was published,
+read from DailyMed's version archive through a frozen, hash-verified manifest. It writes its own tables beside the v1
+tables, which it never changes, so the two rules can be measured against each other.
 """
 
 from __future__ import annotations
@@ -30,15 +36,17 @@ from __future__ import annotations
 import hashlib
 import io
 import json
+import re
 import time
 import xml.etree.ElementTree as ET
 import zipfile
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
-from fineprint import config, ndc, safezip
+from fineprint import config, ndc, safezip, spl
 
 RULE_VERSION = "dst08-lineage-v1"
+V2_RULE_VERSION = "dst08-lineage-v2"
 HL7 = "{urn:hl7-org:v3}"
 NDC_SYSTEM = "2.16.840.1.113883.6.69"
 NCI_SYSTEM = "2.16.840.1.113883.3.26.1.1"
@@ -160,16 +168,89 @@ def _equivalents(holder, holder_loc: str) -> list[dict]:
     return refs
 
 
-def _attrs(inner, loc: str, kind: str) -> dict:
+PHYSICAL = {"SPLIMPRINT": "imprint", "SPLCOLOR": "color", "SPLSHAPE": "shape", "SPLSIZE": "size", "SPLSCORE": "score",
+            "SPLFLAVOR": "flavor"}
+PHYSICAL_KEYS = tuple(PHYSICAL.values())
+STRICT_CONFLICTS = ("IMPRINT_DIFFERS", "IMPRINT_EQUAL_OTHER_DIFFERS", "NO_IMPRINT_OTHER_DIFFERS")
+
+
+def characteristics(role) -> dict:
+    """The physical characteristics a label states for one product: the ``subjectOf/characteristic`` children of its
+    ``manufacturedProduct`` role (or of a kit ``part``), which the Implementation Guide requires to equal the source's
+    (3.2.2.4-3.2.2.9). Every value is a sorted list: COLOR, SHAPE and FLAVOR codes, SIZE an exact decimal and unit,
+    SCORE as written, and IMPRINT upper-cased with everything but letters and digits removed ('M;30' is 'M30'), with
+    the text as written in ``imprint_raw`` and its marks in ``imprint_tokens`` (split on ';', ',' and spaces)."""
+    vals: dict[str, list[str]] = {}
+    for so in role.findall(HL7 + "subjectOf"):
+        ch = so.find(HL7 + "characteristic")
+        code = ch.find(HL7 + "code") if ch is not None else None
+        key = PHYSICAL.get(code.get("code")) if code is not None else None
+        val = ch.find(HL7 + "value") if key else None
+        if val is None:
+            continue
+        if key == "imprint":
+            v = " ".join("".join(val.itertext()).split())
+        elif key == "size":
+            v = f"{decimal_text(val.get('value') or '')} {val.get('unit') or ''}".strip()
+        else:
+            v = val.get("code") or val.get("value") or ""
+        if v:
+            vals.setdefault(key, []).append(v)
+    out = {k: sorted(set(v)) for k, v in vals.items()}
+    if "imprint" in out:
+        out["imprint_raw"] = out["imprint"]
+        out["imprint_tokens"] = sorted({re.sub(r"[^0-9A-Z]", "", t.upper()) for v in out["imprint"]
+                                        for t in re.split(r"[;,\s]+", v)} - {""})
+        out["imprint"] = sorted({re.sub(r"[^0-9A-Z]", "", v.upper()) for v in out["imprint"]} - {""})
+        if not out["imprint"]:
+            del out["imprint"], out["imprint_tokens"]
+    return out
+
+
+def physical_compare(a: dict, b: dict) -> dict:
+    """Citing characteristics ``a`` against source characteristics ``b``.
+
+    ``strict``/``outcome`` repeat the post-hoc diagnostic exactly (equal lists or not). ``per`` is what rule v2 reads:
+    SAME; SAME_MARKS, imprints that differ only in how the same marks are written ('RX692' against 'RX692;RX692');
+    ONE_OF_SEVERAL, the source states several values and the citing product's are among them; DIFFERS; ONE_SIDE."""
+    strict, per = {}, {}
+    for k in PHYSICAL_KEYS:
+        if k in a and k in b:
+            strict[k] = "SAME" if a[k] == b[k] else "DIFFERS"
+            if a[k] == b[k]:
+                per[k] = "SAME"
+            elif k == "imprint" and a["imprint_tokens"] == b["imprint_tokens"]:
+                per[k] = "SAME_MARKS"
+            elif set(a[k]) < set(b[k]):
+                per[k] = "ONE_OF_SEVERAL"
+            else:
+                per[k] = "DIFFERS"
+        elif k in a or k in b:
+            strict[k] = per[k] = "ONE_SIDE"
+    both = {k: v for k, v in strict.items() if v != "ONE_SIDE"}
+    others_differ = any(v == "DIFFERS" for k, v in both.items() if k != "imprint")
+    if "imprint" in both:
+        outcome = ("IMPRINT_DIFFERS" if both["imprint"] == "DIFFERS" else
+                   "IMPRINT_EQUAL_OTHER_DIFFERS" if others_differ else "IMPRINT_EQUAL_ALL_EQUAL")
+    elif not both:
+        outcome = "NOTHING_COMPARABLE"
+    else:
+        outcome = "NO_IMPRINT_OTHER_DIFFERS" if others_differ else "NO_IMPRINT_OTHERS_EQUAL"
+    return {"outcome": outcome, "strict": strict, "per": per,
+            "differing": sorted(k for k, v in strict.items() if v == "DIFFERS")}
+
+
+def _attrs(inner, loc: str, kind: str, role) -> dict:
     code = inner.find(HL7 + "code")
     form = inner.find(HL7 + "formCode")
     return {"loc": loc, "kind": kind, "code": code.get("code") if code is not None else None,
             "form": form.get("code") if form is not None else None, "active": _ingredients(inner),
-            "refs": _equivalents(inner, loc)}
+            "characteristics": characteristics(role), "refs": _equivalents(inner, loc)}
 
 
 def extract(xml: bytes) -> list[dict]:
-    """Products and kit parts of one SPL document with their source references, dosage form and active ingredients.
+    """Products and kit parts of one SPL document with their source references, dosage form, active ingredients and
+    physical characteristics.
 
     Locations follow the parser's convention exactly (``spl.parse_spl``): every step indexed among its siblings of the
     same tag, a product at ``.../subject[n]/manufacturedProduct/<inner>`` for any subject whose parent is a section,
@@ -193,7 +274,7 @@ def extract(xml: bytes) -> list[dict]:
                     if inner_tag is not None:
                         inner = outer.find(HL7 + inner_tag)
                         ploc = f"{cpath}/manufacturedProduct/{inner_tag}"
-                        found.append(_attrs(inner, ploc, "product"))
+                        found.append(_attrs(inner, ploc, "product", outer))
                         pc: dict[str, int] = {}
                         for part in inner:
                             pt = _local(part.tag)
@@ -202,7 +283,8 @@ def extract(xml: bytes) -> list[dict]:
                                 continue
                             pp_tag = next((n for n in ("partProduct", "partMedicine") if part.find(HL7 + n) is not None), None)
                             if pp_tag is not None:
-                                found.append(_attrs(part.find(HL7 + pp_tag), f"{ploc}/part[{pc[pt]}]/{pp_tag}", "kit_part"))
+                                found.append(_attrs(part.find(HL7 + pp_tag), f"{ploc}/part[{pc[pt]}]/{pp_tag}", "kit_part",
+                                                    part))
             walk(child, cpath)
 
     walk(root, "/document")
@@ -270,7 +352,7 @@ def build(conn, *, data_dir: Path | None = None, code_commit: str | None = None,
                     unmapped += 1
                     continue
                 pk, kind, own = hit
-                attrs_rows.append((pk, p["form"], json.dumps(p["active"]), build_id))
+                attrs_rows.append((pk, p["form"], json.dumps(p["active"]), json.dumps(p["characteristics"]), build_id))
                 for r in p["refs"]:
                     v = reference_validity(class_code=r["class_code"], eq_code=r["eq_code"], eq_system=r["eq_system"],
                                            src_code=r["src_code"], src_system=r["src_system"], own_code=own,
@@ -287,14 +369,15 @@ def build(conn, *, data_dir: Path | None = None, code_commit: str | None = None,
         if unmapped:
             raise ValueError(f"{unmapped} extracted products have no national.product row at the same location")
         with conn.cursor() as cur:
-            cur.executemany("INSERT INTO lineage.product_attributes (product_pk, form_code, active, build_id) "
-                            "VALUES (%s, %s, %s::jsonb, %s)", attrs_rows)
+            cur.executemany("INSERT INTO lineage.product_attributes (product_pk, form_code, active, characteristics, build_id) "
+                            "VALUES (%s, %s, %s::jsonb, %s::jsonb, %s)", attrs_rows)
             cur.executemany(
                 """INSERT INTO lineage.source_reference (build_id, document_pk, product_pk, product_kind, product_ndc_raw,
                        product_ndc_5_4, loc, class_code, equivalence_code, equivalence_code_system, source_code_raw,
                        source_code_system, source_code_pattern, source_ndc_5_4, validity)
                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""", ref_rows)
         resolve(conn, build_id)
+        physical(conn)
         outputs = summary(conn)
         outputs["seconds"] = round(time.time() - t0, 1)
         outputs["fingerprint"] = fingerprint(conn)
@@ -417,6 +500,25 @@ def resolve(conn, build_id: int) -> None:
     conn.execute(RESOLVE_SQL)
 
 
+def physical(conn) -> None:
+    """The citing product's physical characteristics against its resolved source's, for every resolved reference, in the
+    current release. Recorded beside rule v1 (which does not read it); rule v2 reads it."""
+    rows = conn.execute(
+        """SELECT x.reference_pk, a.characteristics, b.characteristics
+           FROM lineage.source_resolution x JOIN lineage.source_reference r USING (reference_pk)
+           JOIN lineage.product_attributes a ON a.product_pk = r.product_pk
+           JOIN lineage.product_attributes b ON b.product_pk = x.source_product_pk
+           WHERE x.resolution = 'RESOLVED' ORDER BY 1""").fetchall()
+    out = []
+    for ref_pk, a, b in rows:
+        c = physical_compare(a, b)
+        out.append((ref_pk, c["outcome"], c["outcome"] in STRICT_CONFLICTS, c["differing"], json.dumps(c["strict"]),
+                    json.dumps(c["per"])))
+    with conn.cursor() as cur:
+        cur.executemany("INSERT INTO lineage.physical_check (reference_pk, outcome, conflict, differing, strict, per) "
+                        "VALUES (%s, %s, %s, %s, %s::jsonb, %s::jsonb)", out)
+
+
 def summary(conn) -> dict:
     q = lambda sql: [list(r) for r in conn.execute(sql).fetchall()]  # noqa: E731
     return {
@@ -436,6 +538,12 @@ def summary(conn) -> dict:
         "evidence_rows": conn.execute("SELECT count(*) FROM lineage.source_linked_evidence").fetchone()[0],
         "coverage": q("SELECT coverage_tier, count(*) FROM lineage.v_product_coverage GROUP BY 1 ORDER BY 1"),
         "direct_tier_unchanged": q("SELECT direct_tier_status, count(*) FROM lineage.v_product_coverage GROUP BY 1 ORDER BY 1"),
+        "physical_eligible_by_outcome": q(
+            "SELECT p.outcome, count(*) FROM lineage.physical_check p JOIN lineage.source_resolution x USING (reference_pk) "
+            "WHERE x.status = 'ELIGIBLE' GROUP BY 1 ORDER BY 1"),
+        "physical_eligible_conflicts": conn.execute(
+            "SELECT count(*) FROM lineage.physical_check p JOIN lineage.source_resolution x USING (reference_pk) "
+            "WHERE x.status = 'ELIGIBLE' AND p.conflict").fetchone()[0],
     }
 
 
@@ -452,6 +560,9 @@ def fingerprint(conn) -> dict:
         "source_linked_evidence": """SELECT d.set_id, d.version, r.loc, e.source_assertion_pk, e.duns, e.fei
                                      FROM lineage.source_linked_evidence e JOIN lineage.source_reference r USING (reference_pk)
                                      JOIN national.spl_document d ON d.document_pk = r.document_pk ORDER BY 1, 2, 3, 4""",
+        "physical_check": """SELECT d.set_id, d.version, r.loc, p.outcome, p.differing, p.per
+                             FROM lineage.physical_check p JOIN lineage.source_reference r USING (reference_pk)
+                             JOIN national.spl_document d ON d.document_pk = r.document_pk ORDER BY 1, 2, 3""",
     }
     out = {}
     for name, sql in queries.items():
@@ -532,5 +643,320 @@ def evidence_chain(conn, product_ndc: str, *, data_dir: Path | None = None) -> l
                 "element": _element(data_dir, s_path, s_member, s_msha, s_xmem, s_xsha, a_loc)}
             step["registration"] = {"registration_pk": reg_pk, "line_no": reg_line, "file": reg_file, "sha256": reg_sha,
                                     "generated_at": reg_gen.isoformat() if reg_gen else None}
+        if conn.execute("SELECT to_regclass('lineage.resolution_v2')").fetchone()[0]:
+            step["v2"] = _chain_v2(conn, ref_pk)
         out.append(step)
+    return out
+
+
+def _chain_v2(conn, ref_pk: int) -> dict:
+    status, reasons, basis = conn.execute("SELECT status, reasons, basis FROM lineage.resolution_v2 WHERE reference_pk = %s",
+                                          (ref_pk,)).fetchone()
+    out = {"rule": V2_RULE_VERSION, "status": status, "reasons": list(reasons), "basis": basis,
+           "evidence_sites": [r[0] for r in conn.execute(
+               "SELECT DISTINCT duns FROM lineage.source_linked_evidence_v2 WHERE reference_pk = %s ORDER BY 1",
+               (ref_pk,)).fetchall()]}
+    row = conn.execute(
+        """SELECT citing_published_at, citing_date_basis, source_version_now, source_published_now, applicable_version,
+                  applicable_published_at, applicable_document_id, applicable_xml_sha256, conflicting, at_applicable,
+                  at_current, sites_at_applicable, sites_now_direct, continuing_sites, versions_matching, classification,
+                  detail
+           FROM lineage.version_check WHERE reference_pk = %s""", (ref_pk,)).fetchone()
+    if row:
+        keys = ("citing_published_at", "citing_date_basis", "source_version_now", "source_published_now",
+                "applicable_version", "applicable_published_at", "applicable_document_id", "applicable_xml_sha256",
+                "conflicting", "at_applicable", "at_current", "sites_at_applicable", "sites_now_direct",
+                "continuing_sites", "versions_matching", "classification", "detail")
+        out["version_check"] = {k: (v.isoformat() if hasattr(v, "isoformat") else v) for k, v in zip(keys, row)}
+    return out
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Rule dst08-lineage-v2: the version-aware physical check (docs/research/dst08/SOURCE_NDC_V2_DESIGN.md).
+
+V2_SCHEMA_SQL = SCHEMA_SQL.with_name("dst08_lineage_v2.sql")
+VERSION_CLASSES = ("NOTATION_ONLY", "VERSION_DRIFT_RESOLVED", "MULTIPLE_VALID_PRESENTATIONS",
+                   "MISSING_COMPARISON_EVIDENCE", "UNRESOLVED_AMBIGUITY", "CONFIRMED_CONFLICT")
+ACCEPTABLE = ("NOTATION_ONLY", "VERSION_DRIFT_RESOLVED", "MULTIPLE_VALID_PRESENTATIONS")
+CONSISTENT_VALUES = ("SAME", "SAME_MARKS", "ONE_OF_SEVERAL")
+
+
+def pooled_characteristics(products: list[dict]) -> dict:
+    """The characteristics of every product in one label that carries the cited code, pooled: a label that lists the
+    code for several presentations states each of their values."""
+    out: dict[str, set] = {}
+    for p in products:
+        for k, v in p["characteristics"].items():
+            out.setdefault(k, set()).update(v)
+    return {k: sorted(v) for k, v in out.items()}
+
+
+def describes(per: dict, conflicting) -> bool:
+    """Whether a source label version describes the citing product: no characteristic stated on both sides differs,
+    and every characteristic that conflicts in the current release is stated on both sides and consistent."""
+    return not any(v == "DIFFERS" for v in per.values()) and all(per.get(k) in CONSISTENT_VALUES for k in conflicting)
+
+
+def classify_version_aware(*, failure, conflicting, at_applicable, at_current, versions_matching,
+                           versions_unretrievable) -> tuple[str, str]:
+    """Rule v2's class for one conflicting reference; the first case that applies wins (design note, section 5)."""
+    if failure in ("citing_date_unknown", "history_unavailable", "applicable_version_not_retrievable"):
+        return "MISSING_COMPARISON_EVIDENCE", failure
+    if failure:
+        return "UNRESOLVED_AMBIGUITY", failure
+    differs = sorted(k for k, v in at_applicable.items() if v == "DIFFERS")
+    if differs:
+        if versions_matching:
+            return "UNRESOLVED_AMBIGUITY", (f"differs at the applicable version ({', '.join(differs)}) but matches source "
+                                            f"version(s) {', '.join(map(str, versions_matching))}")
+        if versions_unretrievable:
+            return "UNRESOLVED_AMBIGUITY", (f"differs at the applicable version ({', '.join(differs)}); source version(s) "
+                                            f"{', '.join(map(str, versions_unretrievable))} not retrievable")
+        return "CONFIRMED_CONFLICT", f"differs at the applicable version: {', '.join(differs)}"
+    missing = sorted(k for k in conflicting if at_applicable.get(k) not in CONSISTENT_VALUES)
+    if missing:
+        return "MISSING_COMPARISON_EVIDENCE", f"not stated on both sides at the applicable version: {', '.join(missing)}"
+    several = sorted(k for k, v in at_applicable.items() if v == "ONE_OF_SEVERAL")
+    if several:
+        return "MULTIPLE_VALID_PRESENTATIONS", f"the applicable version states several values for: {', '.join(several)}"
+    changed = sorted(k for k, v in at_current.items() if v in ("DIFFERS", "ONE_OF_SEVERAL"))
+    if changed:
+        return "VERSION_DRIFT_RESOLVED", f"matches the applicable version; the source label changed later: {', '.join(changed)}"
+    return "NOTATION_ONLY", f"the same marks written differently: {', '.join(sorted(conflicting))}"
+
+
+def _manifest_xml(cache_root: Path, rec: dict) -> bytes:
+    """One archived label version's XML, verified against the manifest; a mismatch is an input error, never evidence."""
+    data = (cache_root / rec["zip_path"]).read_bytes()
+    if hashlib.sha256(data).hexdigest() != rec["zip_sha256"]:
+        raise ValueError(f"cached archive differs from the manifest: {rec['zip_path']}")
+    with zipfile.ZipFile(io.BytesIO(data)) as z:
+        xml = safezip.read_member(z, z.getinfo(rec["xml_member"]), safezip.DEFAULT_LIMITS.max_member_bytes)
+    if hashlib.sha256(xml).hexdigest() != rec["xml_sha256"]:
+        raise ValueError(f"cached XML differs from the manifest: {rec['zip_path']}")
+    return xml
+
+
+def read_label_version(xml: bytes) -> dict:
+    """The top-level products of one label version, and its MANUFACTURE DUNS by normalised product code (the
+    production parser's operation edges, a package code never truncated)."""
+    products = [p for p in extract(xml) if p["kind"] == "product"]
+    mfg: dict[str, set] = {}
+    for e in spl.operation_edges(spl.parse_spl(io.BytesIO(xml))):
+        code = e["product_code"]
+        if e["operation_code"] == MANUFACTURE and e["duns"] and code_pattern(code) == "product":
+            mfg.setdefault(ndc.to_product_5_4(code), set()).add(e["duns"])
+    return {"products": products, "manufacture": mfg}
+
+
+def _carrying(label: dict, source_ndc_5_4: str) -> list[dict]:
+    return [p for p in label["products"] if code_pattern(p["code"]) == "product"
+            and ndc.to_product_5_4(p["code"]) == source_ndc_5_4]
+
+
+TARGETS_SQL = """
+SELECT r.reference_pk, cp.ndc_raw, lower(cd.set_id), cd.version, cd.published_date, r.source_code_raw, r.source_ndc_5_4,
+       sp.ndc_raw, lower(x.source_set_id), x.source_version, sd.published_date, sd.xml_sha256, a.characteristics,
+       p.differing, p.per,
+       ARRAY(SELECT DISTINCT e.duns FROM national.operation_edge e
+             WHERE e.product_pk = x.source_product_pk AND e.report_product_pk = x.source_product_pk
+               AND e.product_scope = 'product' AND e.is_manufacture AND e.confidence = 'DIRECT' ORDER BY 1)
+FROM lineage.source_resolution x
+JOIN lineage.source_reference r USING (reference_pk)
+JOIN lineage.physical_check p USING (reference_pk)
+JOIN lineage.product_attributes a ON a.product_pk = r.product_pk
+JOIN national.product cp ON cp.product_pk = r.product_pk
+JOIN national.spl_document cd ON cd.document_pk = r.document_pk
+JOIN national.product sp ON sp.product_pk = x.source_product_pk
+JOIN national.spl_document sd ON sd.document_pk = x.source_document_pk
+WHERE x.status = 'ELIGIBLE' AND p.conflict
+ORDER BY r.reference_pk"""
+
+
+def _version_check(t, history: dict, label) -> dict:
+    (ref_pk, citing_ndc, c_set, c_ver, c_pub_release, src_raw, src54, source_ndc, s_set, s_ver_now, s_pub_now, s_xsha,
+     citing_chars, conflicting, at_current, sites_now) = t
+    d = next((v["published_at"] for v in (history.get(c_set) or {}).get("versions", []) if v["version"] == c_ver), None)
+    basis = "dailymed_history" if d else ("release_metadata" if c_pub_release else "unknown")
+    d = d or (c_pub_release.isoformat() if c_pub_release else None)
+    sh = history.get(s_set) or {}
+    versions = sorted((v for v in sh.get("versions", []) if v["version"] <= s_ver_now), key=lambda v: v["version"])
+    row = {"reference_pk": ref_pk, "citing_ndc": citing_ndc, "citing_set_id": c_set, "citing_version": c_ver,
+           "citing_published_at": d, "citing_date_basis": basis, "source_code_cited": src_raw, "source_ndc": source_ndc,
+           "source_set_id": s_set, "source_version_now": s_ver_now, "source_published_now": s_pub_now,
+           "source_history_status": sh.get("status") or "not_in_manifest", "applicable_version": None,
+           "applicable_published_at": None, "applicable_document_id": None, "applicable_xml_sha256": None,
+           "conflicting": list(conflicting), "citing_characteristics": citing_chars, "applicable_characteristics": None,
+           "at_applicable": None, "at_current": at_current, "sites_at_applicable": None, "sites_now_direct": list(sites_now),
+           "continuing_sites": None}
+    failure, app = None, None
+    if d is None:
+        failure = "citing_date_unknown"
+    elif row["source_history_status"] != "ok" or not versions:
+        failure = "history_unavailable"
+    else:
+        before = [v for v in versions if v["published_at"] <= d]
+        if not before:
+            failure = "source_set_not_published_by_citing_date"
+        else:
+            app = max(before, key=lambda v: v["version"])
+            row.update(applicable_version=app["version"], applicable_published_at=app["published_at"])
+            status, lab, rec = label(s_set, app["version"])
+            if status != "ok":
+                failure = "applicable_version_not_retrievable"
+            else:
+                row.update(applicable_document_id=rec.get("document_id"), applicable_xml_sha256=rec.get("xml_sha256"))
+                hits = _carrying(lab, src54)
+                if not hits:
+                    failure = "code_not_in_applicable_version"
+                else:
+                    row["applicable_characteristics"] = pooled_characteristics(hits)
+                    row["at_applicable"] = physical_compare(citing_chars, row["applicable_characteristics"])["per"]
+                    row["sites_at_applicable"] = sorted(lab["manufacture"].get(src54, set()))
+    matching, unretrievable = [], []
+    for v in versions:
+        if app is not None and v["version"] == app["version"]:
+            continue
+        status, lab, _ = label(s_set, v["version"])
+        if status != "ok":
+            unretrievable.append(v["version"])
+            continue
+        hits = _carrying(lab, src54)
+        if hits and describes(physical_compare(citing_chars, pooled_characteristics(hits))["per"], conflicting):
+            matching.append(v["version"])
+    status, _, rec = label(s_set, s_ver_now)
+    row.update(versions_matching=matching, versions_unretrievable=unretrievable,
+               canonical_xml_matches_release=(rec["xml_sha256"] == s_xsha) if status == "ok" else None)
+    cls, detail = classify_version_aware(failure=failure, conflicting=conflicting, at_applicable=row["at_applicable"] or {},
+                                         at_current=at_current, versions_matching=matching,
+                                         versions_unretrievable=unretrievable)
+    row.update(classification=cls, detail=detail)
+    if cls in ACCEPTABLE:
+        row["continuing_sites"] = sorted(set(row["sites_at_applicable"] or ()) & set(sites_now))
+        row["v2"] = ("ELIGIBLE", []) if row["continuing_sites"] else ("EXCLUDED", ["version:sites_changed_since_citing"])
+    else:
+        row["v2"] = ("EXCLUDED", [f"version:{cls}"])
+    return row
+
+
+VERSION_CHECK_COLUMNS = ("reference_pk", "citing_ndc", "citing_set_id", "citing_version", "citing_published_at",
+                         "citing_date_basis", "source_code_cited", "source_ndc", "source_set_id", "source_version_now",
+                         "source_published_now", "source_history_status", "applicable_version",
+                         "applicable_published_at", "applicable_document_id", "applicable_xml_sha256", "conflicting",
+                         "citing_characteristics", "applicable_characteristics", "at_applicable", "at_current",
+                         "sites_at_applicable", "sites_now_direct", "continuing_sites", "versions_matching",
+                         "versions_unretrievable", "canonical_xml_matches_release", "classification", "detail")
+JSON_COLUMNS = ("citing_characteristics", "applicable_characteristics", "at_applicable", "at_current")
+
+
+def validate_v2(conn, manifest_path: Path, cache_root: Path, *, log=print) -> dict:
+    """Apply rule v2 over the latest lineage build: every v1-eligible reference whose citing and current source labels
+    state a conflicting characteristic is classified against the source version in force when the citing label was
+    published. Reads only the frozen manifest and the hash-verified archive cache; never changes a v1 or national row."""
+    _require_scratch(conn)
+    raw_manifest = Path(manifest_path).read_bytes()
+    manifest = json.loads(raw_manifest)
+    history = {k.lower(): v for k, v in manifest["history"].items()}
+    documents = {(r["set_id"].lower(), int(r["version"])): r for r in manifest["documents"]}
+    parsed: dict = {}
+
+    def label(set_id: str, version: int):
+        key = (set_id, version)
+        if key not in parsed:
+            rec = documents.get(key)
+            if rec is None or rec["status"] != "ok":
+                parsed[key] = (rec["status"] if rec else "not_in_manifest", None, rec)
+            else:
+                xml = _manifest_xml(Path(cache_root), rec)
+                try:
+                    parsed[key] = ("ok", read_label_version(xml), rec)
+                except (ET.ParseError, spl.SplRejected, ValueError) as e:
+                    parsed[key] = (f"unparseable:{type(e).__name__}", None, rec)
+        return parsed[key]
+
+    t0 = time.time()
+    with conn.transaction():
+        conn.execute(V2_SCHEMA_SQL.read_text(encoding="utf-8"))
+        build_id = conn.execute("SELECT build_id FROM lineage.build WHERE status = 'completed' "
+                                "ORDER BY build_id DESC LIMIT 1").fetchone()[0]
+        vid = conn.execute("INSERT INTO lineage.validation_v2 (rule_version, build_id, manifest_sha256) VALUES (%s, %s, %s) "
+                           "RETURNING validation_id",
+                           (V2_RULE_VERSION, build_id, hashlib.sha256(raw_manifest).hexdigest())).fetchone()[0]
+        published = {(s, v["version"]): v["published_at"] for s, h in history.items() for v in h.get("versions", [])}
+        with conn.cursor() as cur:
+            cur.executemany(
+                "INSERT INTO lineage.source_version_document (set_id, version, published_at, status, url, retrieved_at, "
+                "zip_sha256, xml_sha256, document_id, effective_time) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                [(s, v, published.get((s, v)), r["status"], r.get("url"), r.get("retrieved_at"), r.get("zip_sha256"),
+                  r.get("xml_sha256"), r.get("document_id"), r.get("effective_time")) for (s, v), r in sorted(documents.items())])
+        checks = [_version_check(t, history, label) for t in conn.execute(TARGETS_SQL).fetchall()]
+        with conn.cursor() as cur:
+            cur.executemany(
+                f"INSERT INTO lineage.version_check ({', '.join(VERSION_CHECK_COLUMNS)}) VALUES "
+                f"({', '.join('%s::jsonb' if c in JSON_COLUMNS else '%s' for c in VERSION_CHECK_COLUMNS)})",
+                [tuple(json.dumps(c[k]) if k in JSON_COLUMNS and c[k] is not None else c[k] for k in VERSION_CHECK_COLUMNS)
+                 for c in checks])
+            conn.execute("INSERT INTO lineage.resolution_v2 (reference_pk, status, reasons, basis) "
+                         "SELECT reference_pk, status, reasons, 'v1' FROM lineage.source_resolution")
+            cur.executemany("UPDATE lineage.resolution_v2 SET status = %s, reasons = %s, basis = 'version_check' "
+                            "WHERE reference_pk = %s", [(c["v2"][0], c["v2"][1], c["reference_pk"]) for c in checks])
+        conn.execute(
+            """INSERT INTO lineage.source_linked_evidence_v2 (reference_pk, source_assertion_pk, linked_product_pk,
+                   source_product_pk, duns)
+               SELECT e.reference_pk, e.source_assertion_pk, e.linked_product_pk, e.source_product_pk, e.duns
+               FROM lineage.source_linked_evidence e JOIN lineage.resolution_v2 v USING (reference_pk)
+               LEFT JOIN lineage.version_check c USING (reference_pk)
+               WHERE v.status = 'ELIGIBLE' AND (c.reference_pk IS NULL OR e.duns = ANY (c.continuing_sites))""")
+        outputs = summary_v2(conn)
+        outputs["seconds"] = round(time.time() - t0, 1)
+        outputs["fingerprint"] = fingerprint_v2(conn)
+        conn.execute("UPDATE lineage.validation_v2 SET finished_at = now(), status = 'completed', outputs = %s "
+                     "WHERE validation_id = %s", (json.dumps(outputs), vid))
+    log(f"lineage v2: {len(checks)} references checked in {outputs['seconds']}s")
+    return outputs
+
+
+def summary_v2(conn) -> dict:
+    q = lambda sql: [list(r) for r in conn.execute(sql).fetchall()]  # noqa: E731
+    one = lambda sql: conn.execute(sql).fetchone()[0]  # noqa: E731
+    return {
+        "checked_references": one("SELECT count(*) FROM lineage.version_check"),
+        "by_classification": q("SELECT classification, count(*) FROM lineage.version_check GROUP BY 1 ORDER BY 1"),
+        "by_classification_and_status": q(
+            "SELECT c.classification, v.status, v.reasons, count(*) FROM lineage.version_check c "
+            "JOIN lineage.resolution_v2 v USING (reference_pk) GROUP BY 1, 2, 3 ORDER BY 1, 2, 3"),
+        "by_citing_date_basis": q("SELECT citing_date_basis, count(*) FROM lineage.version_check GROUP BY 1 ORDER BY 1"),
+        "canonical_xml_matches_release": q(
+            "SELECT canonical_xml_matches_release, count(*) FROM lineage.version_check GROUP BY 1 ORDER BY 1"),
+        "manifest_documents": q("SELECT status, count(*) FROM lineage.source_version_document GROUP BY 1 ORDER BY 1"),
+        "status_v1_to_v2": q("SELECT x.status, v.status, count(*) FROM lineage.source_resolution x "
+                             "JOIN lineage.resolution_v2 v USING (reference_pk) GROUP BY 1, 2 ORDER BY 1, 2"),
+        "eligible_references_v2": one("SELECT count(*) FROM lineage.resolution_v2 WHERE status = 'ELIGIBLE'"),
+        "evidence_rows_v2": one("SELECT count(*) FROM lineage.source_linked_evidence_v2"),
+        "coverage_v2": q("SELECT coverage_tier, count(*) FROM lineage.v_product_coverage_v2 GROUP BY 1 ORDER BY 1"),
+        "direct_tier_unchanged": q("SELECT direct_tier_status, count(*) FROM lineage.v_product_coverage_v2 GROUP BY 1 ORDER BY 1"),
+    }
+
+
+def fingerprint_v2(conn) -> dict:
+    """SHA-256 over each v2 table's rows by natural key, like ``fingerprint``."""
+    queries = {
+        "version_check": f"""SELECT d.set_id, d.version, r.loc, {', '.join('c.' + k for k in VERSION_CHECK_COLUMNS[1:])}
+                             FROM lineage.version_check c JOIN lineage.source_reference r USING (reference_pk)
+                             JOIN national.spl_document d ON d.document_pk = r.document_pk ORDER BY 1, 2, 3""",
+        "resolution_v2": """SELECT d.set_id, d.version, r.loc, v.status, v.reasons, v.basis
+                            FROM lineage.resolution_v2 v JOIN lineage.source_reference r USING (reference_pk)
+                            JOIN national.spl_document d ON d.document_pk = r.document_pk ORDER BY 1, 2, 3""",
+        "source_linked_evidence_v2": """SELECT d.set_id, d.version, r.loc, e.source_assertion_pk, e.duns
+                                        FROM lineage.source_linked_evidence_v2 e JOIN lineage.source_reference r USING (reference_pk)
+                                        JOIN national.spl_document d ON d.document_pk = r.document_pk ORDER BY 1, 2, 3, 4""",
+    }
+    out = {}
+    for name, sql in queries.items():
+        h = hashlib.sha256()
+        n = 0
+        for row in conn.execute(sql):
+            h.update(json.dumps(row, default=str).encode() + b"\n")
+            n += 1
+        out[name] = {"rows": n, "sha256": h.hexdigest()}
     return out
