@@ -32,20 +32,30 @@ def rule_counts(c, rule: str) -> dict:
     total = one(f"SELECT count(*) FROM {cov}")
     tiers = pairs(f"SELECT coverage_tier, count(*) FROM {cov} GROUP BY 1")
     linked = tiers.get("SOURCE_LINKED", 0)
+    # site figures over the products that reach the SOURCE_LINKED tier (the 56 eligible links on DIRECT products stay
+    # DIRECT and are counted only in the whole-table figures)
+    tier_ev = f"(SELECT e.* FROM {ev} e JOIN {cov} v ON v.product_pk = e.linked_product_pk WHERE v.coverage_tier = 'SOURCE_LINKED')"
     return {
         "eligible_references": one(f"SELECT count(*) FROM {res} WHERE status = 'ELIGIBLE'"),
         "eligible_on_direct_products": one(
             f"""SELECT count(*) FROM {res} x JOIN lineage.source_reference r USING (reference_pk)
                 JOIN {cov} v ON v.product_pk = r.product_pk WHERE x.status = 'ELIGIBLE' AND v.direct_tier_status = 'DIRECT'"""),
-        "evidence_rows": one(f"SELECT count(*) FROM {ev}"),
+        "evidence_rows_all_eligible": one(f"SELECT count(*) FROM {ev}"),
         "source_linked_products": linked,
         "source_linked_from": pairs(f"SELECT direct_tier_status, count(*) FROM {cov} WHERE coverage_tier = 'SOURCE_LINKED' GROUP BY 1"),
-        "distinct_source_products": one(f"SELECT count(DISTINCT source_product_pk) FROM {ev}"),
-        "distinct_source_sites": one(f"SELECT count(DISTINCT duns) FROM {ev}"),
-        "products_by_number_of_source_sites": pairs(
+        "tier_evidence_rows": one(f"SELECT count(*) FROM {tier_ev} t"),
+        "tier_distinct_source_products": one(f"SELECT count(DISTINCT source_product_pk) FROM {tier_ev} t"),
+        "tier_distinct_source_sites": one(f"SELECT count(DISTINCT duns) FROM {tier_ev} t"),
+        "tier_products_by_number_of_source_sites": pairs(
             f"""SELECT CASE WHEN n >= 5 THEN '5+' ELSE n::text END, count(*) FROM (
-                    SELECT linked_product_pk, count(DISTINCT duns) n FROM {ev} GROUP BY 1) t GROUP BY 1"""),
+                    SELECT linked_product_pk, count(DISTINCT duns) n FROM {tier_ev} t GROUP BY 1) u GROUP BY 1"""),
         "max_source_sites": one(f"SELECT max(n) FROM (SELECT count(DISTINCT duns) n FROM {ev} GROUP BY linked_product_pk) t"),
+        "tier_medical_gas_products": one(
+            f"""SELECT count(*) FROM {cov} v JOIN national.product p USING (product_pk)
+                WHERE v.coverage_tier = 'SOURCE_LINKED' AND p.dosage_form = 'GAS'"""),
+        "tier_products_with_5_or_more_sites_that_are_gases": one(
+            f"""SELECT count(*) FROM (SELECT linked_product_pk FROM {tier_ev} t GROUP BY 1 HAVING count(DISTINCT duns) >= 5) u
+                JOIN national.product p ON p.product_pk = u.linked_product_pk WHERE p.dosage_form = 'GAS'"""),
         "coverage_tiers": tiers,
         "products": total,
         "share": {"direct": round(tiers.get("DIRECT", 0) / total, 4), "source_linked": round(linked / total, 4),

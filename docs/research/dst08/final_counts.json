@@ -1,0 +1,695 @@
+{
+ "lineage_build": {
+  "rule": "dst08-lineage-v1",
+  "code_commit": "9cd9c5efdc841452978c02ba9bf123511e5332e3",
+  "code_dirty": false,
+  "finished_at": "2026-10-25 04:41:29.518198-04:00"
+ },
+ "validation_v2": {
+  "rule": "dst08-lineage-v2",
+  "manifest_sha256": "5115e7f60dae5775d76139d7f17fedd31fdb3faa90d7f6f8c8c118f3283c4bef",
+  "finished_at": "2026-10-25 04:55:08.242567-04:00"
+ },
+ "references": 36457,
+ "references_on_kit_parts": 103,
+ "resolved_unique_source": 30283,
+ "direct_tier": {
+  "DIRECT": 24614,
+  "NO_MANUFACTURE_EVIDENCE": 54457,
+  "TENTATIVE": 435,
+  "UNKNOWN_SITE": 1002
+ },
+ "direct_tier_identical_under_v2": true,
+ "v1": {
+  "eligible_references": 19668,
+  "eligible_on_direct_products": 56,
+  "evidence_rows_all_eligible": 26866,
+  "source_linked_products": 19612,
+  "source_linked_from": {
+   "NO_MANUFACTURE_EVIDENCE": 19607,
+   "TENTATIVE": 2,
+   "UNKNOWN_SITE": 3
+  },
+  "tier_evidence_rows": 26133,
+  "tier_distinct_source_products": 5593,
+  "tier_distinct_source_sites": 787,
+  "tier_products_by_number_of_source_sites": {
+   "1": 14979,
+   "2": 3285,
+   "3": 1256,
+   "4": 81,
+   "5+": 11
+  },
+  "max_source_sites": 213,
+  "tier_medical_gas_products": 15,
+  "tier_products_with_5_or_more_sites_that_are_gases": 11,
+  "coverage_tiers": {
+   "DIRECT": 24614,
+   "NO_MANUFACTURE_EVIDENCE": 34850,
+   "SOURCE_LINKED": 19612,
+   "TENTATIVE": 433,
+   "UNKNOWN_SITE": 999
+  },
+  "products": 80508,
+  "share": {
+   "direct": 0.3057,
+   "source_linked": 0.2436,
+   "direct_or_source_linked": 0.5493
+  }
+ },
+ "v2": {
+  "eligible_references": 19497,
+  "eligible_on_direct_products": 56,
+  "evidence_rows_all_eligible": 26568,
+  "source_linked_products": 19441,
+  "source_linked_from": {
+   "NO_MANUFACTURE_EVIDENCE": 19436,
+   "TENTATIVE": 2,
+   "UNKNOWN_SITE": 3
+  },
+  "tier_evidence_rows": 25835,
+  "tier_distinct_source_products": 5567,
+  "tier_distinct_source_sites": 785,
+  "tier_products_by_number_of_source_sites": {
+   "1": 14891,
+   "2": 3243,
+   "3": 1218,
+   "4": 78,
+   "5+": 11
+  },
+  "max_source_sites": 213,
+  "tier_medical_gas_products": 15,
+  "tier_products_with_5_or_more_sites_that_are_gases": 11,
+  "coverage_tiers": {
+   "DIRECT": 24614,
+   "NO_MANUFACTURE_EVIDENCE": 35021,
+   "SOURCE_LINKED": 19441,
+   "TENTATIVE": 433,
+   "UNKNOWN_SITE": 999
+  },
+  "products": 80508,
+  "share": {
+   "direct": 0.3057,
+   "source_linked": 0.2415,
+   "direct_or_source_linked": 0.5472
+  }
+ },
+ "transitions_v1_to_v2": [
+  [
+   "ELIGIBLE",
+   "ELIGIBLE",
+   "v1",
+   19295
+  ],
+  [
+   "ELIGIBLE",
+   "ELIGIBLE",
+   "version_check",
+   202
+  ],
+  [
+   "ELIGIBLE",
+   "EXCLUDED",
+   "version_check",
+   171
+  ],
+  [
+   "EXCLUDED",
+   "EXCLUDED",
+   "v1",
+   16789
+  ]
+ ],
+ "physical_basis_of_v2_eligible": [
+  [
+   "IMPRINT_EQUAL_ALL_EQUAL",
+   16936
+  ],
+  [
+   "NOTHING_COMPARABLE",
+   1639
+  ],
+  [
+   "NO_IMPRINT_OTHERS_EQUAL",
+   720
+  ],
+  [
+   "version check: VERSION_DRIFT_RESOLVED",
+   169
+  ],
+  [
+   "version check: NOTATION_ONLY",
+   31
+  ],
+  [
+   "version check: MULTIPLE_VALID_PRESENTATIONS",
+   2
+  ]
+ ],
+ "version_check": {
+  "references": 373,
+  "by_class_and_v2": [
+   [
+    "CONFIRMED_CONFLICT",
+    "EXCLUDED",
+    [
+     "version:CONFIRMED_CONFLICT"
+    ],
+    50
+   ],
+   [
+    "MISSING_COMPARISON_EVIDENCE",
+    "EXCLUDED",
+    [
+     "version:MISSING_COMPARISON_EVIDENCE"
+    ],
+    5
+   ],
+   [
+    "MULTIPLE_VALID_PRESENTATIONS",
+    "ELIGIBLE",
+    [],
+    2
+   ],
+   [
+    "MULTIPLE_VALID_PRESENTATIONS",
+    "EXCLUDED",
+    [
+     "version:no_site_named_at_applicable_version"
+    ],
+    2
+   ],
+   [
+    "NOTATION_ONLY",
+    "ELIGIBLE",
+    [],
+    31
+   ],
+   [
+    "NOTATION_ONLY",
+    "EXCLUDED",
+    [
+     "version:no_site_named_at_applicable_version"
+    ],
+    16
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "EXCLUDED",
+    [
+     "version:UNRESOLVED_AMBIGUITY"
+    ],
+    28
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "ELIGIBLE",
+    [],
+    169
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "EXCLUDED",
+    [
+     "version:no_site_named_at_applicable_version"
+    ],
+    61
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "EXCLUDED",
+    [
+     "version:sites_changed_since_citing"
+    ],
+    9
+   ]
+  ],
+  "by_class_and_why": [
+   [
+    "CONFIRMED_CONFLICT",
+    "differs at the applicable version",
+    50
+   ],
+   [
+    "MISSING_COMPARISON_EVIDENCE",
+    "applicable_version_not_retrievable",
+    4
+   ],
+   [
+    "MISSING_COMPARISON_EVIDENCE",
+    "not stated on both sides at the applicable version",
+    1
+   ],
+   [
+    "MULTIPLE_VALID_PRESENTATIONS",
+    "the applicable version states several values for",
+    4
+   ],
+   [
+    "NOTATION_ONLY",
+    "the same marks written differently",
+    47
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "source_set_not_published_by_citing_date",
+    19
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "matches another source version",
+    9
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "matches the applicable version; the source label changed later",
+    239
+   ]
+  ],
+  "by_conflicting_characteristic": [
+   [
+    "imprint",
+    142
+   ],
+   [
+    "shape",
+    61
+   ],
+   [
+    "color",
+    46
+   ],
+   [
+    "size",
+    42
+   ],
+   [
+    "score",
+    29
+   ],
+   [
+    "color+imprint",
+    14
+   ],
+   [
+    "imprint+score",
+    11
+   ],
+   [
+    "color+imprint+size",
+    5
+   ],
+   [
+    "imprint+size",
+    5
+   ],
+   [
+    "color+size",
+    4
+   ],
+   [
+    "color+shape",
+    3
+   ],
+   [
+    "shape+size",
+    3
+   ],
+   [
+    "score+shape",
+    2
+   ],
+   [
+    "color+score+size",
+    1
+   ],
+   [
+    "color+shape+size",
+    1
+   ],
+   [
+    "color+imprint+score",
+    1
+   ],
+   [
+    "imprint+shape",
+    1
+   ],
+   [
+    "color+score",
+    1
+   ],
+   [
+    "flavor",
+    1
+   ]
+  ],
+  "by_class_and_conflicting": [
+   [
+    "CONFIRMED_CONFLICT",
+    "imprint",
+    15
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "color",
+    7
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "shape",
+    6
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "size",
+    6
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "score",
+    5
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "color+imprint",
+    2
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "color+imprint+size",
+    2
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "shape+size",
+    2
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "color+score",
+    1
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "imprint+shape",
+    1
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "score+shape",
+    1
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "color+score+size",
+    1
+   ],
+   [
+    "CONFIRMED_CONFLICT",
+    "color+imprint+score",
+    1
+   ],
+   [
+    "MISSING_COMPARISON_EVIDENCE",
+    "size",
+    2
+   ],
+   [
+    "MISSING_COMPARISON_EVIDENCE",
+    "shape",
+    2
+   ],
+   [
+    "MISSING_COMPARISON_EVIDENCE",
+    "score",
+    1
+   ],
+   [
+    "MULTIPLE_VALID_PRESENTATIONS",
+    "color",
+    3
+   ],
+   [
+    "MULTIPLE_VALID_PRESENTATIONS",
+    "flavor",
+    1
+   ],
+   [
+    "NOTATION_ONLY",
+    "imprint",
+    47
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "size",
+    12
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "color+size",
+    4
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "imprint",
+    4
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "shape",
+    2
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "score",
+    2
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "color",
+    1
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "color+shape+size",
+    1
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "color+imprint+size",
+    1
+   ],
+   [
+    "UNRESOLVED_AMBIGUITY",
+    "shape+size",
+    1
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "imprint",
+    76
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "shape",
+    51
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "color",
+    35
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "size",
+    22
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "score",
+    21
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "color+imprint",
+    12
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "imprint+score",
+    11
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "imprint+size",
+    5
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "color+shape",
+    3
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "color+imprint+size",
+    2
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    "score+shape",
+    1
+   ]
+  ],
+  "source_label_newer_than_citing": [
+   [
+    false,
+    10
+   ],
+   [
+    true,
+    359
+   ],
+   [
+    null,
+    4
+   ]
+  ],
+  "citing_date_basis": [
+   [
+    "dailymed_history",
+    373
+   ]
+  ],
+  "citing_history_date_equals_release_metadata": [
+   [
+    true,
+    366
+   ],
+   [
+    null,
+    7
+   ]
+  ],
+  "source_history_date_equals_release_metadata": [
+   [
+    true,
+    369
+   ],
+   [
+    null,
+    4
+   ]
+  ],
+  "applicable_is_current_version": [
+   [
+    false,
+    344
+   ],
+   [
+    true,
+    10
+   ],
+   [
+    null,
+    19
+   ]
+  ],
+  "canonical_xml_matches_release": [
+   [
+    true,
+    369
+   ],
+   [
+    null,
+    4
+   ]
+  ],
+  "distinct_source_sets": 112,
+  "accepted_sites": [
+   [
+    "MULTIPLE_VALID_PRESENTATIONS",
+    5,
+    2
+   ],
+   [
+    "NOTATION_ONLY",
+    86,
+    55
+   ],
+   [
+    "VERSION_DRIFT_RESOLVED",
+    393,
+    232
+   ]
+  ]
+ },
+ "frozen_sample_v1_v2": {
+  "R1 REPACKAGER_CLAIMS_MANUFACTURE": {
+   "EXCLUDED / EXCLUDED / IMPRINT_DIFFERS": 1,
+   "EXCLUDED / EXCLUDED / -": 5,
+   "ELIGIBLE / ELIGIBLE / NOTHING_COMPARABLE": 3,
+   "ELIGIBLE / ELIGIBLE / IMPRINT_EQUAL_ALL_EQUAL": 1
+  },
+  "R2 KIT_OR_PART": {
+   "EXCLUDED / EXCLUDED / -": 4,
+   "EXCLUDED / EXCLUDED / NOTHING_COMPARABLE": 1,
+   "EXCLUDED / EXCLUDED / IMPRINT_EQUAL_ALL_EQUAL": 1
+  },
+  "R3 PACKAGE_CODE": {
+   "EXCLUDED / EXCLUDED / -": 6
+  },
+  "R4 OTHER_INVALID": {
+   "EXCLUDED / EXCLUDED / -": 6
+  },
+  "R5 CHAIN_OR_CONFLICT": {
+   "EXCLUDED / EXCLUDED / IMPRINT_EQUAL_ALL_EQUAL": 7,
+   "EXCLUDED / EXCLUDED / NOTHING_COMPARABLE": 1,
+   "EXCLUDED / EXCLUDED / IMPRINT_EQUAL_OTHER_DIFFERS": 1,
+   "ELIGIBLE / ELIGIBLE / NOTHING_COMPARABLE": 1
+  },
+  "R6 MULTIPLE_CANDIDATES": {
+   "EXCLUDED / EXCLUDED / -": 6
+  },
+  "R7 NO_MATCHING_SOURCE": {
+   "EXCLUDED / EXCLUDED / -": 6
+  },
+  "R8 MULTIPLE_VERSIONS": {
+   "ELIGIBLE / ELIGIBLE / IMPRINT_EQUAL_ALL_EQUAL": 7,
+   "EXCLUDED / EXCLUDED / IMPRINT_EQUAL_ALL_EQUAL": 3
+  },
+  "R9 RESOLVED_DIRECT": {
+   "ELIGIBLE / ELIGIBLE / IMPRINT_EQUAL_ALL_EQUAL": 25,
+   "ELIGIBLE / ELIGIBLE / NO_IMPRINT_OTHERS_EQUAL": 2,
+   "ELIGIBLE / ELIGIBLE / NOTHING_COMPARABLE": 3
+  },
+  "R10 RESOLVED_NOT_DIRECT": {
+   "EXCLUDED / EXCLUDED / IMPRINT_EQUAL_OTHER_DIFFERS": 2,
+   "EXCLUDED / EXCLUDED / IMPRINT_EQUAL_ALL_EQUAL": 4
+  }
+ },
+ "manifest_documents": [
+  [
+   "ok",
+   1262
+  ],
+  [
+   "http_404",
+   13
+  ]
+ ],
+ "eligible_v2_source_label_newer_than_citing": [
+  [
+   false,
+   8924
+  ],
+  [
+   true,
+   10262
+  ],
+  [
+   null,
+   311
+  ]
+ ]
+}
