@@ -187,9 +187,13 @@ class DST08ReviewArtifactIntegrity(unittest.TestCase):
                 self.assertIsNotNone(source)
                 self.assertIsNotNone(applicable)
                 self.assertEqual(citing, (case["citing"]["set_id"], int(case["citing"]["version"])))
-                self.assertTrue(case["candidates"])
+                self.assertEqual(len(case["candidates"]), 1)
                 current_source = case["candidates"][0]
                 self.assertEqual(source, (current_source["set_id"], int(current_source["version"])))
+                self.assertEqual(reproduced["candidates_independent"], 1)
+                self.assertTrue(set(prototype["v2_continuing_sites"]).issubset(
+                    set(reproduced["independent_manufacture_sites"])
+                ))
                 self.assertEqual(applicable[0], current_source["set_id"])
                 self.assertEqual(applicable[1], int(prototype["v2_applicable_version"]))
 
