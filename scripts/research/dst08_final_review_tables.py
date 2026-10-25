@@ -72,6 +72,18 @@ def main():
                           "source": rows[-1]["source_citation"], "relevant_version": rows[-1]["applicable_version_citation"],
                           "prototype": f"v1 {rows[-1]['v1']}; v2 {rows[-1]['v2']} {rows[-1]['v2_class']}".strip(),
                           "ai_reading": f"{v['verdict']}: {v['rationale']}", **{k: "" for k in HUMAN_COLUMNS}})
+    checks = {r["sample_id"]: r for r in json.loads((DST08 / "sample_checks.json").read_text(encoding="utf-8"))["results"]}
+    earlier = {r["sample_id"]: r for r in csv.DictReader((DST08 / "sample_ai_review.csv").read_text(encoding="utf-8").splitlines())}
+    for sid in verdicts.get("precision_sample", []):
+        r, cz = checks[sid], checks[sid]["citing"]
+        (cand,) = r["candidates"]
+        sites = sorted({e["duns"] for e in cand["graph_manufacture_edges"] if e["confidence"] == "DIRECT"})
+        human.append({"item_id": f"P-{sid}", "kind": "source link (random precision sample, frozen at 43b3c5b)",
+                      "question": verdicts["precision_question"],
+                      "citing": f"{cz['product_code']}; {cite(cz)}; element {r['ref_id'].split('|')[2]}",
+                      "source": f"{cite(cand)}; DIRECT sites {';'.join(sites)}", "relevant_version": "",
+                      "prototype": "v1 ELIGIBLE; v2 ELIGIBLE (basis v1, no physical conflict)",
+                      "ai_reading": f"{earlier[sid]['ai_verdict']}: {earlier[sid]['note']}", **{k: "" for k in HUMAN_COLUMNS}})
     reg = json.loads((DST08 / "registration_operations_audit.json").read_text(encoding="utf-8"))
     for item in verdicts.get("direct_edges", []):
         e = next(x for x in reg["edges"] if x["assertion_pk"] == item["assertion_pk"])

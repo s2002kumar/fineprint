@@ -594,7 +594,8 @@ class LineageV2Db(unittest.TestCase):
 
     def test_the_evidence_chain_reports_the_version_check(self):
         (step,) = lineage.evidence_chain(self.conn, v2_citing("drift")[1])
-        self.assertEqual((step["v2"]["status"], step["v2"]["evidence_sites"]), ("ELIGIBLE", [X]))
+        self.assertEqual((step["v2"]["status"], step["v2"]["evidence_sites"], step["v2"]["this_site_kept_by_v2"]),
+                         ("ELIGIBLE", [X], True))
         self.assertEqual(step["v2"]["version_check"]["classification"], "VERSION_DRIFT_RESOLVED")
         self.assertEqual(step["v2"]["version_check"]["applicable_version"], 1)
 

@@ -645,6 +645,8 @@ def evidence_chain(conn, product_ndc: str, *, data_dir: Path | None = None) -> l
                                     "generated_at": reg_gen.isoformat() if reg_gen else None}
         if conn.execute("SELECT to_regclass('lineage.resolution_v2')").fetchone()[0]:
             step["v2"] = _chain_v2(conn, ref_pk)
+            if a_pk:
+                step["v2"]["this_site_kept_by_v2"] = duns in step["v2"]["evidence_sites"]
         out.append(step)
     return out
 

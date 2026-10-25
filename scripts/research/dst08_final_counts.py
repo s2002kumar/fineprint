@@ -19,6 +19,7 @@ sys.path.insert(0, str(REPO / "src"))
 from fineprint import db  # noqa: E402
 
 OUT = REPO / "docs" / "research" / "dst08" / "final_counts.json"
+SAMPLE = REPO / "docs" / "research" / "dst08" / "sample_manifest.json"
 
 TIER = {"v1": ("lineage.source_resolution", "lineage.source_linked_evidence", "lineage.v_product_coverage"),
         "v2": ("lineage.resolution_v2", "lineage.source_linked_evidence_v2", "lineage.v_product_coverage_v2")}
@@ -50,6 +51,22 @@ def rule_counts(c, rule: str) -> dict:
         "share": {"direct": round(tiers.get("DIRECT", 0) / total, 4), "source_linked": round(linked / total, 4),
                   "direct_or_source_linked": round((tiers.get("DIRECT", 0) + linked) / total, 4)},
     }
+
+
+def frozen_sample(c) -> dict:
+    """The 96 references frozen at 43b3c5b, by stratum: v1 status, v2 status and the current physical outcome."""
+    out: dict[str, dict] = {}
+    for s in json.loads(SAMPLE.read_text(encoding="utf-8"))["sample"]:
+        row = c.execute(
+            """SELECT x.status, v.status, coalesce(p.outcome, '-') FROM lineage.source_reference r
+               JOIN national.spl_document d USING (document_pk) JOIN lineage.source_resolution x USING (reference_pk)
+               JOIN lineage.resolution_v2 v USING (reference_pk) LEFT JOIN lineage.physical_check p USING (reference_pk)
+               WHERE lower(d.set_id) = lower(%s) AND d.version = %s AND r.loc = %s""",
+            (s["set_id"], int(s["version"]), s["ref_loc"])).fetchone()
+        key = " / ".join(row)
+        out.setdefault(s["stratum"], {}).setdefault(key, 0)
+        out[s["stratum"]][key] += 1
+    return out
 
 
 def main():
@@ -117,6 +134,7 @@ def main():
                     """SELECT c.classification, sum(cardinality(c.sites_now_direct)), sum(cardinality(c.continuing_sites))
                        FROM lineage.version_check c WHERE c.continuing_sites IS NOT NULL GROUP BY 1 ORDER BY 1"""),
             },
+            "frozen_sample_v1_v2": frozen_sample(c),
             "manifest_documents": q("SELECT status, count(*) FROM lineage.source_version_document GROUP BY 1 ORDER BY 2 DESC"),
             "eligible_v2_source_label_newer_than_citing": q(
                 """SELECT sd.published_date > cd.published_date, count(*) FROM lineage.resolution_v2 v
