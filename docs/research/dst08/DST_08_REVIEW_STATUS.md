@@ -36,8 +36,8 @@ If the human threshold fails, the pre-registered decision is **REJECT** for the 
 
 ## Review materials
 
-- [Final validation and decision](../../DST_08_FINAL_VALIDATION.md)
-- [First source-NDC review gate](../../DST_08_SOURCE_NDC_REVIEW.md)
+- [Final validation and decision](../../../DST_08_FINAL_VALIDATION.md)
+- [First source-NDC review gate](../../../DST_08_SOURCE_NDC_REVIEW.md)
 - [AI-assisted independent adjudication (not human sign-off)](DST_08_ASSISTANT_ADJUDICATION.md)
 - [Human review runbook with exact-version source links](DST_08_HUMAN_REVIEW_RUNBOOK.md)
 - [Original 52-item human worksheet (blank until actual review)](final_human_worksheet.csv)
