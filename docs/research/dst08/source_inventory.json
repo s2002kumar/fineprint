@@ -1,0 +1,46 @@
+{
+ "generated_at": "2026-10-25T03:46:40Z",
+ "graph_build": 8,
+ "documents_in_scope": 52747,
+ "seconds": 458,
+ "scan_tally": {
+  "documents": 52747
+ },
+ "reference_tally": {
+  "chain:ENDS_UNRESOLVED": 9,
+  "chain:MULTI_HOP": 509,
+  "chain:NOT_APPLICABLE": 121,
+  "chain:SINGLE_HOP": 29765,
+  "chain:UNRESOLVED": 6053,
+  "diagnostic_package_prefix_candidates:0": 64,
+  "diagnostic_package_prefix_candidates:1": 46,
+  "kind:kit_part": 103,
+  "kind:product": 36354,
+  "products_with_reference_kit_part": 103,
+  "products_with_reference_product": 36354,
+  "references": 36457,
+  "resolution:MULTIPLE_CANDIDATES": 354,
+  "resolution:NOT_RESOLVED_INVALID": 121,
+  "resolution:NO_CANDIDATE": 5646,
+  "resolution:ONLY_KIT_PART": 50,
+  "resolution:ONLY_NON_CANONICAL_VERSION": 3,
+  "resolution:RESOLVED": 30283,
+  "resolved_active_match:False": 109,
+  "resolved_active_match:SAME_UNII_DIFFERENT_STRENGTH": 228,
+  "resolved_active_match:True": 29946,
+  "resolved_form_match:False": 411,
+  "resolved_form_match:True": 29872,
+  "resolved_source_status:DIRECT": 20188,
+  "resolved_source_status:NO_MANUFACTURE_EVIDENCE": 9717,
+  "resolved_source_status:TENTATIVE": 206,
+  "resolved_source_status:UNKNOWN_SITE": 172,
+  "validity:MALFORMED_OR_MISSING_CODE": 11,
+  "validity:PACKAGE_CODE_NOT_PRODUCT_CODE": 110,
+  "validity:VALID": 36336
+ },
+ "outputs_outside_repo": [
+  "FINEPRINT_DATA/research/dst08/references.csv",
+  "FINEPRINT_DATA/research/dst08/products.jsonl.gz"
+ ],
+ "references_csv_sha256": "4ca5f5268bec8d059a39c12f6c2b07ec2c2246251d068c1ca0b555b7b05a0aa9"
+}

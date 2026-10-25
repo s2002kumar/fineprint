@@ -1,0 +1,941 @@
+{
+ "confirmed_conflicts": 50,
+ "by_category": {
+  "CODED_FIELD_ONLY": 31,
+  "SIBLING_STRENGTH_IMPRINT": 6,
+  "IMPRINT_ONE_CHARACTER": 6,
+  "IMPRINT_MARKS_CONTAINED": 4,
+  "IMPRINT_DISTINCT": 2,
+  "IMPRINT_AND_OTHER_FIELDS": 1
+ },
+ "rule": "comparing the citing product with the applicable source version (read from the hash-verified archive cache):\n\n  SIBLING_STRENGTH_IMPRINT    the citing imprint is the imprint of another product in the same source label (the\n                              citing label describes a different strength of the cited source)\n  IMPRINT_AND_OTHER_FIELDS    the imprint and at least one other characteristic differ\n  IMPRINT_ONE_CHARACTER       only the imprint differs, by one character in the normalised text ('O;25' / '0;25')\n  IMPRINT_MARKS_CONTAINED     only the imprint differs, and one side's marks contain the other's ('IG;228' /\n                              '100;mg;IG;228')\n  IMPRINT_DISTINCT            only the imprint differs, otherwise ('IG;209' / 'D;74')\n  CODED_FIELD_ONLY            the imprint is equal or absent; only colour, shape, score, size or flavour differs",
+ "cases": [
+  {
+   "citing_ndc": "0615-8266",
+   "citing": "226d917a-33de-48cc-baf6-bd6a20668341 v8 (2024-12-04)",
+   "source_ndc": "69097-861",
+   "applicable": "e8f368cb-6a07-4178-95fa-1d5a209171ed v3 (2020-08-24)",
+   "category": "IMPRINT_MARKS_CONTAINED",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "100;mg;IG;228"
+   ],
+   "source_imprint": [
+    "IG;228"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "0615-8344",
+   "citing": "d6b933c6-f5f8-406a-84d6-b22c6040482a v6 (2024-10-25)",
+   "source_ndc": "50228-146",
+   "applicable": "911a18c1-120a-46b3-b7a8-25eb37843473 v3 (2020-11-04)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color"
+   ],
+   "citing_imprint": [
+    "SG;146"
+   ],
+   "source_imprint": [
+    "SG;146"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "0904-5854",
+   "citing": "ba86e936-ef72-43e5-aebf-f2c788fe2266 v30 (2026-09-07)",
+   "source_ndc": "55111-683",
+   "applicable": "24731405-219c-79b4-ecf0-7d5fbfda94ba v15 (2025-07-07)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape"
+   ],
+   "citing_imprint": [
+    "6I"
+   ],
+   "source_imprint": [
+    "6I"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "0904-5855",
+   "citing": "ba86e936-ef72-43e5-aebf-f2c788fe2266 v30 (2026-09-07)",
+   "source_ndc": "55111-684",
+   "applicable": "24731405-219c-79b4-ecf0-7d5fbfda94ba v15 (2025-07-07)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape"
+   ],
+   "citing_imprint": [
+    "8I"
+   ],
+   "source_imprint": [
+    "8I"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "10544-041",
+   "citing": "112cbc20-15ab-5ac1-e054-00144ff8d46c v2 (2015-03-13)",
+   "source_ndc": "10702-077",
+   "applicable": "07bf3488-09e7-436f-af3f-94c35a7be025 v2 (2010-09-24)",
+   "category": "SIBLING_STRENGTH_IMPRINT",
+   "differing": [
+    "color",
+    "imprint"
+   ],
+   "citing_imprint": [
+    "K;45"
+   ],
+   "source_imprint": [
+    "K;77"
+   ],
+   "sibling_products_with_citing_imprint": [
+    "10702-045"
+   ],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "16590-051",
+   "citing": "13831529-e814-4b95-9287-c5ba6678bf52 v2 (2010-03-05)",
+   "source_ndc": "65862-019",
+   "applicable": "8e28f049-6110-4473-830f-c494191a7197 v1 (2008-09-11)",
+   "category": "IMPRINT_ONE_CHARACTER",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "A;42;500mg"
+   ],
+   "source_imprint": [
+    "A;43;500;mg"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "16590-057",
+   "citing": "26fcf4be-4785-4922-a37b-4546570a132c v1 (2010-02-12)",
+   "source_ndc": "63304-692",
+   "applicable": "1dbd8448-c1e5-46df-8060-50ef82380445 v1 (2006-12-01)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "score"
+   ],
+   "citing_imprint": [
+    "RX692"
+   ],
+   "source_imprint": [
+    "RX692"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "16590-488",
+   "citing": "816576ac-c49d-4762-9722-e30493d6af83 v2 (2012-06-21)",
+   "source_ndc": "51672-4017",
+   "applicable": "ec82b108-6a6f-4d1b-82cb-831d4ed36c80 v2 (2012-03-06)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color"
+   ],
+   "citing_imprint": [
+    "ETO;300;MG"
+   ],
+   "source_imprint": [
+    "ETO;300;MG"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "16590-580",
+   "citing": "1576a4be-c3ec-426e-9219-c6a0c99f294f v1 (2010-09-01)",
+   "source_ndc": "0591-0347",
+   "applicable": "a3eb7294-f913-434b-896c-da028bfebc73 v6 (2010-06-28)",
+   "category": "IMPRINT_ONE_CHARACTER",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "WATSON;347;andL12;5;mg"
+   ],
+   "source_imprint": [
+    "WATSON;347;and;12;5;mg"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "21695-072",
+   "citing": "2e8fb017-8754-421a-a76a-c41b8f48070b v1 (2011-12-20)",
+   "source_ndc": "13668-035",
+   "applicable": "a6347895-5f16-43b4-92a0-b9904ac81937 v8 (2011-09-20)",
+   "category": "IMPRINT_ONE_CHARACTER",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "O;25;1035"
+   ],
+   "source_imprint": [
+    "0;25;1035"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "21695-087",
+   "citing": "2e8fb017-8754-421a-a76a-c41b8f48070b v1 (2011-12-20)",
+   "source_ndc": "13668-036",
+   "applicable": "a6347895-5f16-43b4-92a0-b9904ac81937 v8 (2011-09-20)",
+   "category": "IMPRINT_ONE_CHARACTER",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "RO;50;1036"
+   ],
+   "source_imprint": [
+    "R0;50;1036"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "21695-630",
+   "citing": "dfb8fc2d-4899-4891-a985-755fbdf1d525 v1 (2011-02-11)",
+   "source_ndc": "65862-079",
+   "applicable": "6600e2b3-65df-4fc3-8081-d574537d27e3 v6 (2010-07-13)",
+   "category": "IMPRINT_DISTINCT",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "IG;209"
+   ],
+   "source_imprint": [
+    "D;74"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "21695-818",
+   "citing": "9b3db659-f64c-4c48-946a-6b4f1d800eba v1 (2011-05-02)",
+   "source_ndc": "68180-266",
+   "applicable": "33798a7c-c5a9-49a5-be5d-1312910ef468 v1 (2011-04-20)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color",
+    "score",
+    "size"
+   ],
+   "citing_imprint": [
+    "L006"
+   ],
+   "source_imprint": [
+    "L006"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "21695-819",
+   "citing": "9b3db659-f64c-4c48-946a-6b4f1d800eba v1 (2011-05-02)",
+   "source_ndc": "68180-267",
+   "applicable": "33798a7c-c5a9-49a5-be5d-1312910ef468 v1 (2011-04-20)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color",
+    "score"
+   ],
+   "citing_imprint": [
+    "L007"
+   ],
+   "source_imprint": [
+    "L007"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "42254-121",
+   "citing": "9c244c88-dcc4-44fb-b0d9-13732dc705f5 v1 (2012-03-16)",
+   "source_ndc": "51672-4017",
+   "applicable": "ec82b108-6a6f-4d1b-82cb-831d4ed36c80 v2 (2012-03-06)",
+   "category": "SIBLING_STRENGTH_IMPRINT",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "ETO;200;MG"
+   ],
+   "source_imprint": [
+    "ETO;300;MG"
+   ],
+   "sibling_products_with_citing_imprint": [
+    "51672-4016"
+   ],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "42254-133",
+   "citing": "bf1e7864-07c5-4c2c-a075-fad00612ee2a v3 (2013-03-29)",
+   "source_ndc": "61442-112",
+   "applicable": "a68e610a-841c-4b69-9233-673d060561e8 v2 (2012-04-11)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape",
+    "size"
+   ],
+   "citing_imprint": [
+    "CTI;112"
+   ],
+   "source_imprint": [
+    "CTI;112"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "42254-198",
+   "citing": "bf1e7864-07c5-4c2c-a075-fad00612ee2a v3 (2013-03-29)",
+   "source_ndc": "61442-113",
+   "applicable": "a68e610a-841c-4b69-9233-673d060561e8 v2 (2012-04-11)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape",
+    "size"
+   ],
+   "citing_imprint": [
+    "CTI;113"
+   ],
+   "source_imprint": [
+    "CTI;113"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "42549-513",
+   "citing": "417231e9-129a-4a47-ab2e-cda97d096950 v3 (2012-01-31)",
+   "source_ndc": "53746-102",
+   "applicable": "b11dbff5-ceee-4a63-a093-f6efebdc2f6f v2 (2009-11-30)",
+   "category": "SIBLING_STRENGTH_IMPRINT",
+   "differing": [
+    "color",
+    "imprint",
+    "size"
+   ],
+   "citing_imprint": [
+    "IP;103"
+   ],
+   "source_imprint": [
+    "IP102"
+   ],
+   "sibling_products_with_citing_imprint": [
+    "53746-103"
+   ],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "42549-615",
+   "citing": "00109d18-397a-4c10-a28b-836d56d71829 v3 (2012-03-14)",
+   "source_ndc": "0406-0522",
+   "applicable": "f2137f1a-b49a-40bd-97ac-cd6b36e295f4 v13 (2011-11-14)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape"
+   ],
+   "citing_imprint": [
+    "M522;7;5;325"
+   ],
+   "source_imprint": [
+    "M522;7;5;325"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "42549-618",
+   "citing": "a4c772dc-32d8-4a53-a7c4-80114df47642 v6 (2012-03-15)",
+   "source_ndc": "53746-203",
+   "applicable": "683d563f-0686-4964-8183-cf08758cae71 v1 (2010-10-14)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "score",
+    "shape",
+    "size"
+   ],
+   "citing_imprint": [
+    "IP203"
+   ],
+   "source_imprint": [
+    "IP;203"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "43353-870",
+   "citing": "41d4f5a7-8477-4f31-834a-29457b33ee41 v2 (2014-07-17)",
+   "source_ndc": "76282-202",
+   "applicable": "e2ff3171-a17a-456a-9272-ca1682b01d19 v2 (2014-04-15)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "score"
+   ],
+   "citing_imprint": [
+    "IG;202"
+   ],
+   "source_imprint": [
+    "IG;202"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "50090-3153",
+   "citing": "2f7dea8d-9af7-4e56-a57a-8b6f81206219 v3 (2019-06-27)",
+   "source_ndc": "69097-834",
+   "applicable": "cf71d1b9-5ebb-429f-a07f-a87cd168250f v4 (2018-12-27)",
+   "category": "IMPRINT_DISTINCT",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "I;G;213"
+   ],
+   "source_imprint": [
+    "213;IG"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "51138-056",
+   "citing": "b1b766b1-0327-48cd-ab01-e85038cf365f v2 (2012-02-08)",
+   "source_ndc": "51672-4029",
+   "applicable": "8ad881e0-ca41-42ad-9d7d-eb85b3a30af0 v2 (2011-11-23)",
+   "category": "SIBLING_STRENGTH_IMPRINT",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "2;WARFARIN;TARO"
+   ],
+   "source_imprint": [
+    "2;1;2;WARFARIN;TARO"
+   ],
+   "sibling_products_with_citing_imprint": [
+    "51672-4028"
+   ],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "51138-061",
+   "citing": "b1b766b1-0327-48cd-ab01-e85038cf365f v2 (2012-02-08)",
+   "source_ndc": "51672-4034",
+   "applicable": "8ad881e0-ca41-42ad-9d7d-eb85b3a30af0 v2 (2011-11-23)",
+   "category": "IMPRINT_MARKS_CONTAINED",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "7;WARFARIN;TARO"
+   ],
+   "source_imprint": [
+    "7;1;2;WARFARIN;TARO"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "51655-162",
+   "citing": "5a0f574e-df84-4682-83eb-87272a7f5294 v1 (2014-06-17)",
+   "source_ndc": "65162-553",
+   "applicable": "3aa9dba9-29b0-4520-a0f7-66d19d52c6bc v2 (2013-07-09)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "score"
+   ],
+   "citing_imprint": [
+    "AN;553"
+   ],
+   "source_imprint": [
+    "AN;553"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "51655-626",
+   "citing": "d90378ef-c513-4471-a132-49720ac5d3a3 v5 (2024-07-24)",
+   "source_ndc": "68462-190",
+   "applicable": "6c5bb008-e66f-4ef0-bf84-aca7eb5983e9 v11 (2024-01-04)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape"
+   ],
+   "citing_imprint": [
+    "G;32;500"
+   ],
+   "source_imprint": [
+    "G;32;500"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "51655-804",
+   "citing": "2dddb4be-83ed-0cbe-e054-00144ff88e88 v1 (2016-03-14)",
+   "source_ndc": "13107-020",
+   "applicable": "60f43308-1deb-4f05-8f17-aa49ebdcf498 v3 (2014-09-23)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "score"
+   ],
+   "citing_imprint": [
+    "U02"
+   ],
+   "source_imprint": [
+    "U02"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "53002-3010",
+   "citing": "405074f3-9c1a-46cd-889e-76ec8966a556 v9 (2023-06-09)",
+   "source_ndc": "55111-683",
+   "applicable": "24731405-219c-79b4-ecf0-7d5fbfda94ba v9 (2019-05-17)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape"
+   ],
+   "citing_imprint": [
+    "6I"
+   ],
+   "source_imprint": [
+    "6I"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": false
+  },
+  {
+   "citing_ndc": "54868-3310",
+   "citing": "084227c1-90eb-4653-807a-eb98cb3cefb8 v2 (2010-10-04)",
+   "source_ndc": "0054-4496",
+   "applicable": "33663425-4731-4977-9127-9e59b6b91497 v4 (2009-10-30)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "size"
+   ],
+   "citing_imprint": [
+    "54;293"
+   ],
+   "source_imprint": [
+    "54;293"
+   ],
+   "sibling_products_with_citing_imprint": [
+    "0054-8496"
+   ],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "54868-4135",
+   "citing": "4b5513c3-b57f-46f1-9855-dad1063aa4c9 v2 (2011-03-21)",
+   "source_ndc": "51672-4017",
+   "applicable": "ec82b108-6a6f-4d1b-82cb-831d4ed36c80 v1 (2009-03-23)",
+   "category": "SIBLING_STRENGTH_IMPRINT",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "ETO;200;MG"
+   ],
+   "source_imprint": [
+    "ETO;300;MG"
+   ],
+   "sibling_products_with_citing_imprint": [
+    "51672-4016"
+   ],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "54868-4964",
+   "citing": "9d222859-6697-47bf-98ec-91984002e0d9 v3 (2013-11-26)",
+   "source_ndc": "55111-179",
+   "applicable": "a42f3479-f2c2-8214-d547-c5cae9bfed1e v2 (2010-03-15)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape"
+   ],
+   "citing_imprint": [
+    "RDY;179"
+   ],
+   "source_imprint": [
+    "RDY;179"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "54868-5830",
+   "citing": "92919b7e-b499-4afb-8f78-1b1fff099bae v5 (2011-12-30)",
+   "source_ndc": "68462-137",
+   "applicable": "1c713b59-a628-42e6-b166-ae71c3913284 v4 (2011-06-08)",
+   "category": "IMPRINT_MARKS_CONTAINED",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "G;13;7"
+   ],
+   "source_imprint": [
+    "G;13;and;7"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "54868-5994",
+   "citing": "c3afa988-d258-4e83-89ed-d674743109c4 v1 (2010-09-14)",
+   "source_ndc": "0115-0522",
+   "applicable": "bfc6668c-3f69-4dd3-bc19-0d26c23dd04c v4 (2010-06-16)",
+   "category": "IMPRINT_ONE_CHARACTER",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "G;05222"
+   ],
+   "source_imprint": [
+    "G;0522"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "55045-3817",
+   "citing": "2e57105a-b925-4182-9f70-d0fa0e613051 v2 (2013-11-06)",
+   "source_ndc": "62756-131",
+   "applicable": "92c758a3-e749-4a15-be4b-ee30b364b2b0 v1 (2010-01-04)",
+   "category": "SIBLING_STRENGTH_IMPRINT",
+   "differing": [
+    "color",
+    "imprint",
+    "size"
+   ],
+   "citing_imprint": [
+    "130"
+   ],
+   "source_imprint": [
+    "131"
+   ],
+   "sibling_products_with_citing_imprint": [
+    "62756-130"
+   ],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "60687-230",
+   "citing": "7cdd96c4-3263-4c28-86c0-3c24bcef16c1 v8 (2024-07-09)",
+   "source_ndc": "69097-861",
+   "applicable": "e8f368cb-6a07-4178-95fa-1d5a209171ed v3 (2020-08-24)",
+   "category": "IMPRINT_AND_OTHER_FIELDS",
+   "differing": [
+    "color",
+    "imprint"
+   ],
+   "citing_imprint": [
+    "IG;228;100;mg"
+   ],
+   "source_imprint": [
+    "IG;228"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "60687-336",
+   "citing": "94d941e3-d3d8-4414-bd5c-4a92848e738f v9 (2026-10-15)",
+   "source_ndc": "13668-484",
+   "applicable": "55df55fb-18ec-4e00-9ed0-10bba0da513b v15 (2026-04-06)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color"
+   ],
+   "citing_imprint": [
+    "RX696"
+   ],
+   "source_imprint": [
+    "RX696"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "60687-716",
+   "citing": "3fbf4bb8-036e-41d3-9628-476fc05ddd31 v4 (2026-07-03)",
+   "source_ndc": "64380-180",
+   "applicable": "9e710113-f25e-46fb-8327-7a8e649613a2 v7 (2026-06-15)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color"
+   ],
+   "citing_imprint": [
+    "par;727"
+   ],
+   "source_imprint": [
+    "par;727"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "60687-777",
+   "citing": "52781229-ee82-43f9-a113-4419a611978d v2 (2025-11-21)",
+   "source_ndc": "55111-352",
+   "applicable": "0e20124c-725a-0145-996c-2ff908703162 v9 (2019-01-25)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color"
+   ],
+   "citing_imprint": [
+    "RDY;352"
+   ],
+   "source_imprint": [
+    "RDY;352"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "60687-778",
+   "citing": "9d0b5d78-63dc-4208-b590-0789d3ed5785 v3 (2025-12-22)",
+   "source_ndc": "31722-036",
+   "applicable": "8b20e850-037b-4c16-a57d-c3d4909f147a v1 (2022-11-17)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color"
+   ],
+   "citing_imprint": [
+    "V1;30"
+   ],
+   "source_imprint": [
+    "V1;30"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "60687-842",
+   "citing": "45e31a87-a8db-4dda-b94b-83535b62e8e2 v1 (2025-11-17)",
+   "source_ndc": "13107-085",
+   "applicable": "5b851f67-309d-4ef3-8b4b-ade8908256ea v8 (2024-08-21)",
+   "category": "IMPRINT_ONE_CHARACTER",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "U;34;2"
+   ],
+   "source_imprint": [
+    "U34"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "61919-614",
+   "citing": "6b6b766a-9618-4134-9187-2a8e7bdf3665 v2 (2016-10-21)",
+   "source_ndc": "53746-203",
+   "applicable": "683d563f-0686-4964-8183-cf08758cae71 v10 (2016-04-04)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "score"
+   ],
+   "citing_imprint": [
+    "IP203"
+   ],
+   "source_imprint": [
+    "IP;203"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": false
+  },
+  {
+   "citing_ndc": "67046-499",
+   "citing": "2c4f826c-e71b-4462-a025-19730701a9de v1 (2010-10-09)",
+   "source_ndc": "68462-188",
+   "applicable": "6c5bb008-e66f-4ef0-bf84-aca7eb5983e9 v1 (2009-05-29)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "size"
+   ],
+   "citing_imprint": [
+    "G;32;250"
+   ],
+   "source_imprint": [
+    "G;32;250"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "67046-501",
+   "citing": "2c4f826c-e71b-4462-a025-19730701a9de v1 (2010-10-09)",
+   "source_ndc": "68462-190",
+   "applicable": "6c5bb008-e66f-4ef0-bf84-aca7eb5983e9 v1 (2009-05-29)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "size"
+   ],
+   "citing_imprint": [
+    "G;32;500"
+   ],
+   "source_imprint": [
+    "G;32;500"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "67296-0522",
+   "citing": "72e126d5-afe4-4dd2-ab69-da135414791a v2 (2011-08-05)",
+   "source_ndc": "53746-203",
+   "applicable": "683d563f-0686-4964-8183-cf08758cae71 v1 (2010-10-14)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape"
+   ],
+   "citing_imprint": [
+    "IP;203"
+   ],
+   "source_imprint": [
+    "IP;203"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "67544-431",
+   "citing": "0524fc86-caae-4d95-8a65-551ce99637e8 v2 (2014-07-17)",
+   "source_ndc": "76282-201",
+   "applicable": "e2ff3171-a17a-456a-9272-ca1682b01d19 v2 (2014-04-15)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "score"
+   ],
+   "citing_imprint": [
+    "IG;201"
+   ],
+   "source_imprint": [
+    "IG;201"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "68071-3332",
+   "citing": "544eb47f-1622-1773-e054-00144ff8d46c v4 (2023-01-31)",
+   "source_ndc": "31722-705",
+   "applicable": "7f5e96e0-534c-47a5-bb79-926088afc73c v3 (2021-03-29)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "shape"
+   ],
+   "citing_imprint": [
+    "I;87"
+   ],
+   "source_imprint": [
+    "I;87"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "68084-411",
+   "citing": "5a65b650-ea9b-4d0d-b62f-5971df1e62b4 v10 (2025-11-21)",
+   "source_ndc": "10702-016",
+   "applicable": "dc80228c-acae-44dc-9762-19bd1669bf45 v15 (2025-03-24)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "color"
+   ],
+   "citing_imprint": [
+    "K;16"
+   ],
+   "source_imprint": [
+    "K;16"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "68084-525",
+   "citing": "75616c31-8fed-4014-a9f2-4a028eccd586 v12 (2025-11-21)",
+   "source_ndc": "55111-163",
+   "applicable": "9a57a63e-f856-aafa-037a-c08f2fea6496 v15 (2022-10-05)",
+   "category": "IMPRINT_MARKS_CONTAINED",
+   "differing": [
+    "imprint"
+   ],
+   "citing_imprint": [
+    "R;2;5;0163"
+   ],
+   "source_imprint": [
+    "0163"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": true
+  },
+  {
+   "citing_ndc": "68788-0254",
+   "citing": "506005f3-d79d-4de1-8bd2-71ade18b8d47 v11 (2013-05-01)",
+   "source_ndc": "55111-254",
+   "applicable": "1e453c21-a8a8-dc54-5591-74c972d41727 v7 (2012-06-28)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "size"
+   ],
+   "citing_imprint": [
+    "R254"
+   ],
+   "source_imprint": [
+    "R;254"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  },
+  {
+   "citing_ndc": "68788-0999",
+   "citing": "8da1445a-1d21-4c4f-aa55-da9957bf8cb1 v12 (2013-04-30)",
+   "source_ndc": "55111-252",
+   "applicable": "1e453c21-a8a8-dc54-5591-74c972d41727 v7 (2012-06-28)",
+   "category": "CODED_FIELD_ONLY",
+   "differing": [
+    "size"
+   ],
+   "citing_imprint": [
+    "R;252"
+   ],
+   "source_imprint": [
+    "R;252"
+   ],
+   "sibling_products_with_citing_imprint": [],
+   "sites_then_continue_now": null
+  }
+ ]
+}

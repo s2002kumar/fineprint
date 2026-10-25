@@ -1,0 +1,4884 @@
+{
+ "generated_at": "2026-10-25T07:59:36Z",
+ "graph_build": 8,
+ "rule": " (first that applies; the rule is fixed here, before the classes were counted):\n  EXPLAINED_REGISTRATION_CHANGED  a snapshot lists MANUFACTURE, and the snapshot nearest the label's publication date\n                                  (the latest on or before it; if none, the earliest after it) lists MANUFACTURE. The\n                                  label agreed with the registration in force near its publication; the current\n                                  registration no longer lists MANUFACTURE, so the current DIRECT edge rests on an\n                                  operation the establishment no longer registers.\n  EXPLAINED_MEDICAL_GAS_FILLER    the product's dosage form is GAS and no snapshot lists anything but TRANSFILL,\n                                  REPACK, RELABEL, LABEL or PACK. Medical gases need no source NDC (21 CFR 207.53(b));\n                                  a product without a source must list a manufacture operation (SPL IG 4.1.4.15: API\n                                  Manufacture, Manufacture or PET Drug Production; Transfill is not one); and medical-gas\n                                  CGMP counts packaging and labelling as manufacture (21 CFR 213.3(b)(11)) while naming\n                                  the gas's producer separately as the original manufacturer (213.3(b)(13)). The edge\n                                  names a filling site, not where the gas was produced.\n  EXPLAINED_PET_PRODUCTION        a snapshot lists POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION: the IG counts it as a\n                                  manufacture operation (4.1.4.15) and 21 CFR 212.1 defines PET production as including\n                                  manufacturing.\n  CONFLICTING                     no snapshot lists MANUFACTURE and none of the above applies: the label's MANUFACTURE\n                                  (C43360) contradicts every registration of the establishment (API-only, pack or label\n                                  only, or repack or relabel only). 21 CFR 207.1 and 210.3(b)(12) use \"manufacture\" in a\n                                  broad sense, but the listing vocabulary gives those operations their own codes.\n  UNRESOLVED                      anything else.\n\n",
+ "regulatory_sources": {
+  "21 CFR 207.1": "ecfr_21_207_1.xml (eCFR versioner, 2026-10-01)",
+  "21 CFR 207.53(b)": "ecfr_21_207_53.xml (eCFR versioner, 2026-10-01)",
+  "21 CFR 210.3(b)(12)": "ecfr_21_210_3.html (eCFR renderer, 2026-10-21) sha256 097f8a8d8c95453442c3b9f64a409550e6c18014c1b3125a5a3034bc7a17e677",
+  "21 CFR 212.1": "ecfr_21_212_1.html (eCFR renderer, 2026-10-21) sha256 8e67980ff4348ba52671da14f593a838d3747fab5432ba15dbee676ce0a61ebe",
+  "21 CFR 213.3(b)(11), (13)": "ecfr_21_213_3.html (eCFR renderer, 2026-10-21) sha256 8f8213829a7f0675cba0c60809ff5268fdc1ad77d856f09b71e761ef322a6089",
+  "SPL IG 4.1.4.15, 6.1.6.8": "spl_ig_84201.pdf (FDA, December 2023) sha256 9845e23cb51ee2e7f493b17ed5729b2bc946040244e6f6da2d78c9491a41f983"
+ },
+ "tally": {
+  "edges": 60,
+  "establishments": 32,
+  "products": 57,
+  "by_class": {
+   "CONFLICTING": 26,
+   "EXPLAINED_MEDICAL_GAS_FILLER": 19,
+   "EXPLAINED_PET_PRODUCTION": 2,
+   "EXPLAINED_REGISTRATION_CHANGED": 13
+  },
+  "by_class_establishments": {
+   "CONFLICTING": 10,
+   "EXPLAINED_MEDICAL_GAS_FILLER": 15,
+   "EXPLAINED_PET_PRODUCTION": 2,
+   "EXPLAINED_REGISTRATION_CHANGED": 5
+  },
+  "conflicting_by_kind": {
+   "LABEL_OR_PACK_ONLY": 13,
+   "REPACK_OR_RELABEL_REGISTERED": 1,
+   "API_MANUFACTURE_REGISTERED": 9,
+   "API_MANUFACTURE_REGISTERED_WITH_LABEL_PACK": 3
+  },
+  "conflicting_products_with_no_other_direct_edge": [
+   "11704-101",
+   "11704-104",
+   "11704-105",
+   "11704-106",
+   "11704-107",
+   "11704-600",
+   "11704-620",
+   "11704-777",
+   "24357-811",
+   "24357-911",
+   "51376-780",
+   "51754-1240",
+   "58517-001",
+   "59741-249",
+   "67877-119",
+   "67877-120",
+   "67877-121",
+   "67877-322",
+   "71709-110",
+   "71709-111",
+   "71709-112"
+  ]
+ },
+ "edges": [
+  {
+   "assertion_pk": 15598,
+   "product_ndc": "64346-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "830afc08-bf09-e83e-e053-2991aa0a4917",
+   "version": 2,
+   "document_id": "830d6e5e-c16c-36e0-e053-2a91aa0a0562",
+   "published_date": "2019-03-04",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20190302_830afc08-bf09-e83e-e053-2991aa0a4917.zip",
+   "xml_sha256": "0190dfd5f993dcf29cc910db2f38170270c2d50c866e2c779f3bdd3ceecba025",
+   "duns": "003519734",
+   "fei": "3003750771",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"64346-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3750,
+    "operations": "REPACK; TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3958,
+     "operations": "REPACK; TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3836,
+     "operations": "REPACK; TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3781,
+     "operations": "REPACK; TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3750,
+     "operations": "REPACK; TRANSFILL",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "REPACK; TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK",
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 3
+  },
+  {
+   "assertion_pk": 15072,
+   "product_ndc": "63862-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "61d0cf43-faef-2c08-e053-2a91aa0a6d62",
+   "version": 2,
+   "document_id": "7d8bebc4-ad09-388e-e053-2a91aa0a48c3",
+   "published_date": "2018-12-24",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20181222_61d0cf43-faef-2c08-e053-2a91aa0a6d62.zip",
+   "xml_sha256": "ba5e7b170e8f97794235ab6b72849daeb411b69307b95ba1bb135b711db7d7e8",
+   "duns": "006977941",
+   "fei": "1019628",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"63862-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 637,
+    "operations": "REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 676,
+     "operations": "REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 637,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 636,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 637,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 15073,
+   "product_ndc": "63862-002",
+   "product_name": "Nitrogen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "61d0ed43-6517-5aa8-e053-2a91aa0ad946",
+   "version": 2,
+   "document_id": "7d8bf56f-79bc-653c-e053-2a91aa0a3d3b",
+   "published_date": "2018-12-24",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20181222_61d0ed43-6517-5aa8-e053-2a91aa0ad946.zip",
+   "xml_sha256": "a083b823f1a572ae3096ce3d3ef22eadcd3b01e6a5dda227e175b4f1d74e9f01",
+   "duns": "006977941",
+   "fei": "1019628",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"63862-002\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 637,
+    "operations": "REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 676,
+     "operations": "REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 637,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 636,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 637,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 23127,
+   "product_ndc": "63862-011",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "9af2a134-4883-5acd-e053-2995a90a0290",
+   "version": 3,
+   "document_id": "cda016e3-e56c-1392-e053-2a95a90a2651",
+   "published_date": "2021-10-06",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20211006_9af2a134-4883-5acd-e053-2995a90a0290.zip",
+   "xml_sha256": "c2fa3b3873eebac886deda907b26f8020d44063becd032e56cabbced08ace3d3",
+   "duns": "006977941",
+   "fei": "1019628",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"63862-011\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 637,
+    "operations": "REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 676,
+     "operations": "REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 637,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 636,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 637,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 9315,
+   "product_ndc": "69044-123",
+   "product_name": "OXYGEN",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "d63962c8-58ab-4e0d-b520-d8bd5ad0e762",
+   "version": 1,
+   "document_id": "249c55d1-b693-4466-93f8-12f3835fde4c",
+   "published_date": "2014-06-16",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20140616_d63962c8-58ab-4e0d-b520-d8bd5ad0e762.zip",
+   "xml_sha256": "279db8c99cbed46eb39c853b3c79b2e7b6d04048bec603d0f170b87a1eea0b8b",
+   "duns": "015557586",
+   "fei": "3010913815",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"69044-123\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 6690,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 7079,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 6877,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 6748,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 6690,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 10838,
+   "product_ndc": "05912-015",
+   "product_name": "Inflammation Reduction Pack",
+   "dosage_form": "KIT",
+   "marketing_category": "ANDA",
+   "set_id": "25ed70b4-82d9-4351-b5fe-c503d9ae0532",
+   "version": 3,
+   "document_id": "dad58da4-25d4-40ec-b325-2458bc8de1ef",
+   "published_date": "2015-10-28",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20151028_25ed70b4-82d9-4351-b5fe-c503d9ae0532.zip",
+   "xml_sha256": "72a61121891b1a0f37d50c8ca900abe5a0e949a8fa01da38879e0bf332a49239",
+   "duns": "017665256",
+   "fei": "3009017204",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"05912-015\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 5981,
+    "operations": "LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 6323,
+     "operations": "LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 6145,
+     "operations": "LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 6036,
+     "operations": "LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 5981,
+     "operations": "LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 10981,
+   "product_ndc": "05912-017",
+   "product_name": "Inflammation Reduction Pack",
+   "dosage_form": "KIT",
+   "marketing_category": "ANDA",
+   "set_id": "f7f3dcf8-8628-467f-b195-d2dd7e11ae93",
+   "version": 4,
+   "document_id": "48f7c15c-0a00-411b-b3c2-3e57f0b6d49a",
+   "published_date": "2015-11-19",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20151119_f7f3dcf8-8628-467f-b195-d2dd7e11ae93.zip",
+   "xml_sha256": "c45c998b2d28642fd18bd96b30240342e8179cd07862482bf1b030e7651b6489",
+   "duns": "017665256",
+   "fei": "3009017204",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"05912-017\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 5981,
+    "operations": "LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 6323,
+     "operations": "LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 6145,
+     "operations": "LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 6036,
+     "operations": "LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 5981,
+     "operations": "LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 18265,
+   "product_ndc": "72258-020",
+   "product_name": "Oxygen, Refrigerated Liquid",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "edceac92-404f-4edb-87ed-4454f8c20f58",
+   "version": 6,
+   "document_id": "9ca9c705-db1c-42bf-e053-2a95a90a1f52",
+   "published_date": "2020-01-22",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20200122_edceac92-404f-4edb-87ed-4454f8c20f58.zip",
+   "xml_sha256": "3c82cfb6fc003b8f801e0df119e42211c874995ab1d8c0cd371e30ac111f18c5",
+   "duns": "025798900",
+   "fei": "3014319924",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"72258-020\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360",
+    "C73606"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 7649,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 7897,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 7708,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 7649,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 27449,
+   "product_ndc": "11704-101",
+   "product_name": "ATROPEN Auto-Injector",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "e2d4307d-da8f-49f5-aac0-02355dd9ffb7",
+   "version": 12,
+   "document_id": "f1736bb6-219c-48dd-969d-f26f6fbad350",
+   "published_date": "2022-09-21",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20220921_e2d4307d-da8f-49f5-aac0-02355dd9ffb7.zip",
+   "xml_sha256": "05db92b257262438fca39c0599cfe608e5683a67d5951e247a6e0d55576bec3e",
+   "duns": "049504624",
+   "fei": "1950222",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[21]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"11704-101\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360",
+    "C84382",
+    "C84731",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1683,
+    "operations": "ANALYSIS; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1785,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1722,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1706,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1683,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 27434,
+   "product_ndc": "11704-104",
+   "product_name": "ATROPEN Auto-Injector",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "e2d4307d-da8f-49f5-aac0-02355dd9ffb7",
+   "version": 12,
+   "document_id": "f1736bb6-219c-48dd-969d-f26f6fbad350",
+   "published_date": "2022-09-21",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20220921_e2d4307d-da8f-49f5-aac0-02355dd9ffb7.zip",
+   "xml_sha256": "05db92b257262438fca39c0599cfe608e5683a67d5951e247a6e0d55576bec3e",
+   "duns": "049504624",
+   "fei": "1950222",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"11704-104\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360",
+    "C84382",
+    "C84731",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1683,
+    "operations": "ANALYSIS; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1785,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1722,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1706,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1683,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 27439,
+   "product_ndc": "11704-105",
+   "product_name": "ATROPEN Auto-Injector",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "e2d4307d-da8f-49f5-aac0-02355dd9ffb7",
+   "version": 12,
+   "document_id": "f1736bb6-219c-48dd-969d-f26f6fbad350",
+   "published_date": "2022-09-21",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20220921_e2d4307d-da8f-49f5-aac0-02355dd9ffb7.zip",
+   "xml_sha256": "05db92b257262438fca39c0599cfe608e5683a67d5951e247a6e0d55576bec3e",
+   "duns": "049504624",
+   "fei": "1950222",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[11]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"11704-105\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360",
+    "C84382",
+    "C84731",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1683,
+    "operations": "ANALYSIS; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1785,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1722,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1706,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1683,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 27444,
+   "product_ndc": "11704-106",
+   "product_name": "ATROPEN Auto-Injector",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "e2d4307d-da8f-49f5-aac0-02355dd9ffb7",
+   "version": 12,
+   "document_id": "f1736bb6-219c-48dd-969d-f26f6fbad350",
+   "published_date": "2022-09-21",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20220921_e2d4307d-da8f-49f5-aac0-02355dd9ffb7.zip",
+   "xml_sha256": "05db92b257262438fca39c0599cfe608e5683a67d5951e247a6e0d55576bec3e",
+   "duns": "049504624",
+   "fei": "1950222",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[16]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"11704-106\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360",
+    "C84382",
+    "C84731",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1683,
+    "operations": "ANALYSIS; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1785,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1722,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1706,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1683,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 27429,
+   "product_ndc": "11704-107",
+   "product_name": "ATROPEN Auto-Injector",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "e2d4307d-da8f-49f5-aac0-02355dd9ffb7",
+   "version": 12,
+   "document_id": "f1736bb6-219c-48dd-969d-f26f6fbad350",
+   "published_date": "2022-09-21",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20220921_e2d4307d-da8f-49f5-aac0-02355dd9ffb7.zip",
+   "xml_sha256": "05db92b257262438fca39c0599cfe608e5683a67d5951e247a6e0d55576bec3e",
+   "duns": "049504624",
+   "fei": "1950222",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"11704-107\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360",
+    "C84382",
+    "C84731",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1683,
+    "operations": "ANALYSIS; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1785,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1722,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1706,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1683,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 39227,
+   "product_ndc": "11704-600",
+   "product_name": "Diazepam",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "fa352464-14c8-49e9-b8b7-5a968b1cfa93",
+   "version": 11,
+   "document_id": "9e08d47f-b706-44b2-9e2f-9ca972592050",
+   "published_date": "2023-12-22",
+   "release_part": "dm_spl_release_human_rx_part2.zip",
+   "member": "prescription/20231222_fa352464-14c8-49e9-b8b7-5a968b1cfa93.zip",
+   "xml_sha256": "f47e71854c1a4064e86c544894e6a77a05f7cb46bbdddafdf44042b57c6f0c75",
+   "duns": "049504624",
+   "fei": "1950222",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"11704-600\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360",
+    "C84382",
+    "C84731",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1683,
+    "operations": "ANALYSIS; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1785,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1722,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1706,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1683,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 26308,
+   "product_ndc": "11704-620",
+   "product_name": "DuoDote",
+   "dosage_form": "KIT",
+   "marketing_category": "NDA",
+   "set_id": "241f42a0-1a33-40e8-8221-201767d999e5",
+   "version": 17,
+   "document_id": "b301a110-424c-4a7d-9560-8fbfbbd1a557",
+   "published_date": "2022-06-30",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20220630_241f42a0-1a33-40e8-8221-201767d999e5.zip",
+   "xml_sha256": "ceb86d20c082598a40fdc7fedd81244a44525c60fcab419fc9564b4b5151257f",
+   "duns": "049504624",
+   "fei": "1950222",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"11704-620\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360",
+    "C84382",
+    "C84731",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1683,
+    "operations": "ANALYSIS; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1785,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1722,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1706,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1683,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 26640,
+   "product_ndc": "11704-777",
+   "product_name": "ATNAA atropine and pralidoxime chloride Auto-Injector",
+   "dosage_form": "KIT",
+   "marketing_category": "NDA",
+   "set_id": "596c7a8f-27cd-4de2-9491-476f43570b8b",
+   "version": 11,
+   "document_id": "ad537254-90f8-4732-9f32-bee3e1cae81a",
+   "published_date": "2022-07-26",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20220726_596c7a8f-27cd-4de2-9491-476f43570b8b.zip",
+   "xml_sha256": "f59752c6d5817fcdb138be449eb6afe02e2a7173b2710433f3dcf621b9b3f766",
+   "duns": "049504624",
+   "fei": "1950222",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"11704-777\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360",
+    "C84382",
+    "C84731",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1683,
+    "operations": "ANALYSIS; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1785,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1722,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1706,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1683,
+     "operations": "ANALYSIS; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 23864,
+   "product_ndc": "82457-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "d35c609e-07dd-1d58-e053-2a95a90a3138",
+   "version": 1,
+   "document_id": "d35c609e-07de-1d58-e053-2a95a90a3138",
+   "published_date": "2021-12-22",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20211222_d35c609e-07dd-1d58-e053-2a95a90a3138.zip",
+   "xml_sha256": "a5a7a07d7c47569b5477ba6fa8256cc4971857bd5656525b6a8865f5ed56bb8e",
+   "duns": "052740669",
+   "fei": "3004660914",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"82457-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 4317,
+    "operations": "REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 4549,
+     "operations": "REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 4418,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 4349,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 4317,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 23865,
+   "product_ndc": "82457-002",
+   "product_name": "Nitrogen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "d3b124d5-bee8-2ba8-e053-2995a90a57e4",
+   "version": 1,
+   "document_id": "d3b124d5-bee9-2ba8-e053-2995a90a57e4",
+   "published_date": "2021-12-22",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20211222_d3b124d5-bee8-2ba8-e053-2995a90a57e4.zip",
+   "xml_sha256": "d4ea0099630200d64125260d948b9a4643c867bdaa6f425e4e5940d2e3239ce7",
+   "duns": "052740669",
+   "fei": "3004660914",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"82457-002\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 4317,
+    "operations": "REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 4549,
+     "operations": "REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 4418,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 4349,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 4317,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 107879,
+   "product_ndc": "0115-1556",
+   "product_name": "OXYCODONE HYDROCHLORIDE",
+   "dosage_form": "TABLET, FILM COATED, EXTENDED RELEASE",
+   "marketing_category": "NDA AUTHORIZED GENERIC",
+   "set_id": "c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f",
+   "version": 11,
+   "document_id": "335215a2-fcba-4158-bccb-79e026e05467",
+   "published_date": "2026-05-20",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260520_c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f.zip",
+   "xml_sha256": "8f9df48f21ec75c636ac3a8d3630d4ae9ce0efa7a99f23adfeb665faa5ad0ea0",
+   "duns": "053217022",
+   "fei": "1421377",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"MANUFACTURE\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"0115-1556\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1056,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1119,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1072,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1064,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1056,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 107880,
+   "product_ndc": "0115-1557",
+   "product_name": "OXYCODONE HYDROCHLORIDE",
+   "dosage_form": "TABLET, FILM COATED, EXTENDED RELEASE",
+   "marketing_category": "NDA AUTHORIZED GENERIC",
+   "set_id": "c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f",
+   "version": 11,
+   "document_id": "335215a2-fcba-4158-bccb-79e026e05467",
+   "published_date": "2026-05-20",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260520_c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f.zip",
+   "xml_sha256": "8f9df48f21ec75c636ac3a8d3630d4ae9ce0efa7a99f23adfeb665faa5ad0ea0",
+   "duns": "053217022",
+   "fei": "1421377",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"MANUFACTURE\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"0115-1557\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1056,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1119,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1072,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1064,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1056,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 107881,
+   "product_ndc": "0115-1558",
+   "product_name": "OXYCODONE HYDROCHLORIDE",
+   "dosage_form": "TABLET, FILM COATED, EXTENDED RELEASE",
+   "marketing_category": "NDA AUTHORIZED GENERIC",
+   "set_id": "c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f",
+   "version": 11,
+   "document_id": "335215a2-fcba-4158-bccb-79e026e05467",
+   "published_date": "2026-05-20",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260520_c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f.zip",
+   "xml_sha256": "8f9df48f21ec75c636ac3a8d3630d4ae9ce0efa7a99f23adfeb665faa5ad0ea0",
+   "duns": "053217022",
+   "fei": "1421377",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"MANUFACTURE\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"0115-1558\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1056,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1119,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1072,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1064,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1056,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 107882,
+   "product_ndc": "0115-1559",
+   "product_name": "OXYCODONE HYDROCHLORIDE",
+   "dosage_form": "TABLET, FILM COATED, EXTENDED RELEASE",
+   "marketing_category": "NDA AUTHORIZED GENERIC",
+   "set_id": "c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f",
+   "version": 11,
+   "document_id": "335215a2-fcba-4158-bccb-79e026e05467",
+   "published_date": "2026-05-20",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260520_c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f.zip",
+   "xml_sha256": "8f9df48f21ec75c636ac3a8d3630d4ae9ce0efa7a99f23adfeb665faa5ad0ea0",
+   "duns": "053217022",
+   "fei": "1421377",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[4]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"MANUFACTURE\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"0115-1559\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1056,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1119,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1072,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1064,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1056,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 107885,
+   "product_ndc": "0115-1560",
+   "product_name": "OXYCODONE HYDROCHLORIDE",
+   "dosage_form": "TABLET, FILM COATED, EXTENDED RELEASE",
+   "marketing_category": "NDA AUTHORIZED GENERIC",
+   "set_id": "c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f",
+   "version": 11,
+   "document_id": "335215a2-fcba-4158-bccb-79e026e05467",
+   "published_date": "2026-05-20",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260520_c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f.zip",
+   "xml_sha256": "8f9df48f21ec75c636ac3a8d3630d4ae9ce0efa7a99f23adfeb665faa5ad0ea0",
+   "duns": "053217022",
+   "fei": "1421377",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[7]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"MANUFACTURE\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"0115-1560\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1056,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1119,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1072,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1064,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1056,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 107883,
+   "product_ndc": "0115-1561",
+   "product_name": "OXYCODONE HYDROCHLORIDE",
+   "dosage_form": "TABLET, FILM COATED, EXTENDED RELEASE",
+   "marketing_category": "NDA AUTHORIZED GENERIC",
+   "set_id": "c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f",
+   "version": 11,
+   "document_id": "335215a2-fcba-4158-bccb-79e026e05467",
+   "published_date": "2026-05-20",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260520_c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f.zip",
+   "xml_sha256": "8f9df48f21ec75c636ac3a8d3630d4ae9ce0efa7a99f23adfeb665faa5ad0ea0",
+   "duns": "053217022",
+   "fei": "1421377",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[5]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"MANUFACTURE\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"0115-1561\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1056,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1119,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1072,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1064,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1056,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 107884,
+   "product_ndc": "0115-1562",
+   "product_name": "OXYCODONE HYDROCHLORIDE",
+   "dosage_form": "TABLET, FILM COATED, EXTENDED RELEASE",
+   "marketing_category": "NDA AUTHORIZED GENERIC",
+   "set_id": "c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f",
+   "version": 11,
+   "document_id": "335215a2-fcba-4158-bccb-79e026e05467",
+   "published_date": "2026-05-20",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260520_c2c57ae7-86b9-47bb-a31b-ed1c4327ce7f.zip",
+   "xml_sha256": "8f9df48f21ec75c636ac3a8d3630d4ae9ce0efa7a99f23adfeb665faa5ad0ea0",
+   "duns": "053217022",
+   "fei": "1421377",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"MANUFACTURE\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"0115-1562\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1056,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1119,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1072,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1064,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1056,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK; RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 18338,
+   "product_ndc": "51376-780",
+   "product_name": "Doxycycline",
+   "dosage_form": "TABLET, FILM COATED",
+   "marketing_category": "Export only",
+   "set_id": "64448008-d16b-4527-81ec-85fcd6b6909d",
+   "version": 2,
+   "document_id": "dd1bb041-7b3a-4afc-9fb7-1d87ca19a59f",
+   "published_date": "2020-01-24",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20200124_64448008-d16b-4527-81ec-85fcd6b6909d.zip",
+   "xml_sha256": "fcb0a6152cdcb80cea535106619ba98ec638c2ac507e568f0cf203c9560bd2e6",
+   "duns": "064965742",
+   "fei": "1628936",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"51376-780\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1236,
+    "operations": "RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1308,
+     "operations": "RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1256,
+     "operations": "RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1244,
+     "operations": "RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1236,
+     "operations": "RELABEL; REPACK",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "REPACK_OR_RELABEL_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 13229,
+   "product_ndc": "26124-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "b145ba7a-7818-4f80-b203-bb0973a64174",
+   "version": 1,
+   "document_id": "77e13180-889a-4be7-b3b5-66fbbf67af0e",
+   "published_date": "2017-12-07",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20171207_b145ba7a-7818-4f80-b203-bb0973a64174.zip",
+   "xml_sha256": "cfb49a86443f63a6f0731df65be58a7c7a35134bd7f73f60adc24d6d31ab67a9",
+   "duns": "072922123",
+   "fei": "1922348",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"26124-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1567,
+    "operations": "RELABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1662,
+     "operations": "RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1601,
+     "operations": "RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1589,
+     "operations": "RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1567,
+     "operations": "RELABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 23698,
+   "product_ndc": "72814-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "81a48641-280f-7ee0-e053-2991aa0afbf9",
+   "version": 4,
+   "document_id": "d27ff50f-5203-cba9-e053-2995a90a0a51",
+   "published_date": "2021-12-07",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20211207_81a48641-280f-7ee0-e053-2991aa0afbf9.zip",
+   "xml_sha256": "1b04a7345e2faf47b60effde6a9ab21f791b6415c927b9323dc80fcd3ed0e276",
+   "duns": "078539516",
+   "fei": "3009854338",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"72814-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 6252,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 6415,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 6310,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 6252,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 120193,
+   "product_ndc": "71767-100",
+   "product_name": "FUROSCIX",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "eac958dd-8d43-e44e-e053-2995a90a4d5e",
+   "version": 20,
+   "document_id": "57ef4d44-0cc5-db23-e063-6294a90a50cc",
+   "published_date": "2026-08-03",
+   "release_part": "dm_spl_release_human_rx_part6.zip",
+   "member": "prescription/20260802_eac958dd-8d43-e44e-e053-2995a90a4d5e.zip",
+   "xml_sha256": "730ae26e19fe0fd3429c4165a56c17f31a2d06ed3749bfeacf38273cc72c680c",
+   "duns": "079386513",
+   "fei": "3013722099",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"71767-100\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 7481,
+    "operations": "LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 7939,
+     "operations": "MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 7723,
+     "operations": "MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 7542,
+     "operations": "MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 7481,
+     "operations": "LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL",
+    "MANUFACTURE",
+    "PACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 120194,
+   "product_ndc": "71767-111",
+   "product_name": "FUROSCIX",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "eac958dd-8d43-e44e-e053-2995a90a4d5e",
+   "version": 20,
+   "document_id": "57ef4d44-0cc5-db23-e063-6294a90a50cc",
+   "published_date": "2026-08-03",
+   "release_part": "dm_spl_release_human_rx_part6.zip",
+   "member": "prescription/20260802_eac958dd-8d43-e44e-e053-2995a90a4d5e.zip",
+   "xml_sha256": "730ae26e19fe0fd3429c4165a56c17f31a2d06ed3749bfeacf38273cc72c680c",
+   "duns": "079386513",
+   "fei": "3013722099",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"71767-111\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 7481,
+    "operations": "LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 7939,
+     "operations": "MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 7723,
+     "operations": "MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 7542,
+     "operations": "MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 7481,
+     "operations": "LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL",
+    "MANUFACTURE",
+    "PACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 69083,
+   "product_ndc": "72835-550",
+   "product_name": "Cobalefol",
+   "dosage_form": "CAPSULE",
+   "marketing_category": "unapproved drug other",
+   "set_id": "7d409065-112d-4bc7-bae6-d558aeb7c0e4",
+   "version": 1,
+   "document_id": "9a9099c2-4b67-4e39-9bd3-924ae7a4e667",
+   "published_date": "2025-05-20",
+   "release_part": "dm_spl_release_human_rx_part3.zip",
+   "member": "prescription/20250520_7d409065-112d-4bc7-bae6-d558aeb7c0e4.zip",
+   "xml_sha256": "8d2f22d64caa7a10446ba533d32bbc4aed5e5374a77e8a745cd1ed2dc472d403",
+   "duns": "102457346",
+   "fei": "3016826669",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"72835-550\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 8199,
+    "operations": "LABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 8753,
+     "operations": "LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 8489,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 8264,
+     "operations": "LABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 8199,
+     "operations": "LABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 71150,
+   "product_ndc": "72835-660",
+   "product_name": "Matervia",
+   "dosage_form": "CAPSULE",
+   "marketing_category": "unapproved drug other",
+   "set_id": "a918e273-4742-4417-8ae5-88d3870011f0",
+   "version": 1,
+   "document_id": "98e268d4-eab7-4d8f-80fc-7cbe05773fd1",
+   "published_date": "2025-06-18",
+   "release_part": "dm_spl_release_human_rx_part3.zip",
+   "member": "prescription/20250618_a918e273-4742-4417-8ae5-88d3870011f0.zip",
+   "xml_sha256": "48a4cee984c885c5a9815e35638d0abcabaeba116ed4d8b29f13666c2a521e00",
+   "duns": "102457346",
+   "fei": "3016826669",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"72835-660\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360",
+    "C84732"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 8199,
+    "operations": "LABEL; REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 8753,
+     "operations": "LABEL; MANUFACTURE; PACK; RELABEL; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 8489,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 8264,
+     "operations": "LABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 8199,
+     "operations": "LABEL; REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "LABEL; MANUFACTURE; PACK; RELABEL; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL",
+    "MANUFACTURE",
+    "PACK",
+    "RELABEL",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 103324,
+   "product_ndc": "84311-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "4ee5a5e5-115d-c8c6-e063-6294a90a6acf",
+   "version": 1,
+   "document_id": "4ee5a5f4-9948-a3eb-e063-6394a90ac708",
+   "published_date": "2026-04-16",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260416_4ee5a5e5-115d-c8c6-e063-6294a90a6acf.zip",
+   "xml_sha256": "e59b3482234f62bea3428ef905740c4d3d0abe1f731e3633099e2f6407126398",
+   "duns": "110406866",
+   "fei": "3030981346",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"84311-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 9358,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 10138,
+     "operations": "REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 9758,
+     "operations": "REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 9411,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 9358,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20251215163821.zip",
+    "as_of": "2025-12-05",
+    "operations": "REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK",
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 19223,
+   "product_ndc": "72634-001",
+   "product_name": "Fludeoxyglucose F 18",
+   "dosage_form": "INJECTION",
+   "marketing_category": "ANDA",
+   "set_id": "784c3855-0d5d-36e7-e053-2a91aa0ac1a6",
+   "version": 3,
+   "document_id": "ac453d98-2adb-d140-e053-2995a90a754e",
+   "published_date": "2020-08-07",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20200807_784c3855-0d5d-36e7-e053-2a91aa0ac1a6.zip",
+   "xml_sha256": "6142819c3dda9dd769787e4b8611d76a08fd22e93a38310760a7f2eaa1641307",
+   "duns": "116709032",
+   "fei": "3005334016",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"72634-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 4615,
+    "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 4861,
+     "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 4721,
+     "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 4649,
+     "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 4615,
+     "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION"
+   },
+   "registered_operations_any_snapshot": [
+    "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION"
+   ],
+   "class": "EXPLAINED_PET_PRODUCTION",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 23120,
+   "product_ndc": "69534-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "ec05b692-f4f8-40e6-bccb-85f37f2aed98",
+   "version": 6,
+   "document_id": "cd4c85f0-3d1c-0201-e053-2995a90a2183",
+   "published_date": "2021-10-04",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20211003_ec05b692-f4f8-40e6-bccb-85f37f2aed98.zip",
+   "xml_sha256": "c8eb1d6578b9279922a9c35fcebf72838fc32a9ea522861e6ec0c008ff7f38f6",
+   "duns": "125366778",
+   "fei": "1000034649",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"69534-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 66,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 81,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 67,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 66,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 66,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 15599,
+   "product_ndc": "64346-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "830afc08-bf09-e83e-e053-2991aa0a4917",
+   "version": 2,
+   "document_id": "830d6e5e-c16c-36e0-e053-2a91aa0a0562",
+   "published_date": "2019-03-04",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20190302_830afc08-bf09-e83e-e053-2991aa0a4917.zip",
+   "xml_sha256": "0190dfd5f993dcf29cc910db2f38170270c2d50c866e2c779f3bdd3ceecba025",
+   "duns": "144305583",
+   "fei": "3004092622",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"64346-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3991,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 4212,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 4083,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 4023,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3991,
+     "operations": "TRANSFILL",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 3
+  },
+  {
+   "assertion_pk": 103442,
+   "product_ndc": "52438-011",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "0de4fe56-80c8-06be-da02-b145e0a5dbf2",
+   "version": 21,
+   "document_id": "4f81eb61-b968-b1a6-e063-6294a90a9932",
+   "published_date": "2026-04-17",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260417_0de4fe56-80c8-06be-da02-b145e0a5dbf2.zip",
+   "xml_sha256": "a2fb2c9b124b127cd3d4d82bd25bf93660aafb9689c6c72284909650eb0ac530",
+   "duns": "144989855",
+   "fei": "3044159723",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[28]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"52438-011\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 10071,
+    "operations": "REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 10120,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 10071,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20260823071118.zip",
+    "as_of": "2026-08-21",
+    "operations": "REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 27
+  },
+  {
+   "assertion_pk": 103705,
+   "product_ndc": "52438-016",
+   "product_name": "Nitrogen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "c6f2772a-e53a-c379-b99e-a4f7c3e82f60",
+   "version": 22,
+   "document_id": "4f81da24-3510-7699-e063-6394a90a3c19",
+   "published_date": "2026-04-17",
+   "release_part": "dm_spl_release_human_rx_part5.zip",
+   "member": "prescription/20260417_c6f2772a-e53a-c379-b99e-a4f7c3e82f60.zip",
+   "xml_sha256": "ca8ff5f4599c5c8326f6ed46d63ff8dc5f8bd969b66da3ee8cdbb2678610f2d3",
+   "duns": "144989855",
+   "fei": "3044159723",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[27]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"52438-016\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 10071,
+    "operations": "REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 10120,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 10071,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20260823071118.zip",
+    "as_of": "2026-08-21",
+    "operations": "REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "REPACK"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 26
+  },
+  {
+   "assertion_pk": 15260,
+   "product_ndc": "54483-0001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "8798435b-295a-4018-97b9-3cd5b2c1eaaa",
+   "version": 3,
+   "document_id": "7ee95e03-7bfd-5821-e053-2991aa0a1196",
+   "published_date": "2019-01-08",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20190108_8798435b-295a-4018-97b9-3cd5b2c1eaaa.zip",
+   "xml_sha256": "1ffc0741a94f8a513d59bf1f2b55c0578c0e655daaa86f9a07e454065fcdd319",
+   "duns": "152829479",
+   "fei": "2938371",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"54483-0001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 2223,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 2384,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 2291,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 2255,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 2223,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 23593,
+   "product_ndc": "76318-643",
+   "product_name": "Ammonia N 13",
+   "dosage_form": "INJECTION, SOLUTION",
+   "marketing_category": "ANDA",
+   "set_id": "57947a8c-939e-4468-805c-2f2001041fe4",
+   "version": 5,
+   "document_id": "483561c7-747d-40a7-8ed7-134eac3da69c",
+   "published_date": "2021-11-26",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20211126_57947a8c-939e-4468-805c-2f2001041fe4.zip",
+   "xml_sha256": "81477c1dee0cc1aa25479281f626d017ff42933783ac84976532125b6411ca6e",
+   "duns": "156293698",
+   "fei": "3010164233",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"manufacture\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"76318-643\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 6420,
+    "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 6788,
+     "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 6590,
+     "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 6478,
+     "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 6420,
+     "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION"
+   },
+   "registered_operations_any_snapshot": [
+    "POSITRON EMISSION TOMOGRAPHY DRUG PRODUCTION"
+   ],
+   "class": "EXPLAINED_PET_PRODUCTION",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 15601,
+   "product_ndc": "64346-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "830afc08-bf09-e83e-e053-2991aa0a4917",
+   "version": 2,
+   "document_id": "830d6e5e-c16c-36e0-e053-2a91aa0a0562",
+   "published_date": "2019-03-04",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20190302_830afc08-bf09-e83e-e053-2991aa0a4917.zip",
+   "xml_sha256": "0190dfd5f993dcf29cc910db2f38170270c2d50c866e2c779f3bdd3ceecba025",
+   "duns": "189893451",
+   "fei": "2025820",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[4]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"64346-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1793,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1899,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1830,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1817,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1793,
+     "operations": "TRANSFILL",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 3
+  },
+  {
+   "assertion_pk": 8736,
+   "product_ndc": "58517-001",
+   "product_name": "ATORVASTATIN CALCIUM",
+   "dosage_form": "TABLET, FILM COATED",
+   "marketing_category": "ANDA",
+   "set_id": "01a908f1-fe8b-4bf1-bf0d-ce17040d0c4c",
+   "version": 3,
+   "document_id": "e8f80f38-13c2-4688-85d9-f99510e08d92",
+   "published_date": "2014-01-06",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20140103_01a908f1-fe8b-4bf1-bf0d-ce17040d0c4c.zip",
+   "xml_sha256": "2e63813a3da17203cd187c4b787d276d83f8336e6a138bdb4ae4d73ea2ee01cf",
+   "duns": "243805095",
+   "fei": "3002906944",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"58517-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3216,
+    "operations": "PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3408,
+     "operations": "PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3294,
+     "operations": "PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3254,
+     "operations": "PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3216,
+     "operations": "PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 21953,
+   "product_ndc": "51754-1240",
+   "product_name": "Bloxiverz",
+   "dosage_form": "INJECTION",
+   "marketing_category": "NDA",
+   "set_id": "1fb5c812-1e63-4bd9-a68e-7f9dc5e7a33a",
+   "version": 2,
+   "document_id": "2d69cd60-50c4-4ec3-926e-4d4756ad2c94",
+   "published_date": "2021-05-10",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20210508_1fb5c812-1e63-4bd9-a68e-7f9dc5e7a33a.zip",
+   "xml_sha256": "980cc8d76408c73fa7cce1cc2defc386938983b0180a799caec73c047bd3a65a",
+   "duns": "300398976",
+   "fei": "3002806853",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"51754-1240\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 2861,
+    "operations": "ANALYSIS; API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3045,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 2937,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 2896,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 2861,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 11955,
+   "product_ndc": "43478-410",
+   "product_name": "Nitroglycerin",
+   "dosage_form": "AEROSOL, METERED",
+   "marketing_category": "NDA AUTHORIZED GENERIC",
+   "set_id": "3214ddac-e068-4306-8500-0fa90c8c5842",
+   "version": 3,
+   "document_id": "905b7ddc-f00a-4303-9a62-8e4933bffc82",
+   "published_date": "2016-09-23",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20160923_3214ddac-e068-4306-8500-0fa90c8c5842.zip",
+   "xml_sha256": "7e9e1bb60f8a93e61253b4c597adfd995c92a4c7e8627bb39a82dd0b3c682155",
+   "duns": "313113144",
+   "fei": "0000001379",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/performance[2]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"MANUFACTURE\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"43478-410\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360",
+    "C82401"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 6,
+    "operations": "ANALYSIS; API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 8,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 7,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 6,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 6,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 14021,
+   "product_ndc": "59741-249",
+   "product_name": "Lactulose",
+   "dosage_form": "SOLUTION",
+   "marketing_category": "ANDA",
+   "set_id": "e9734719-07b9-4ac9-b082-be07f4e9a68f",
+   "version": 3,
+   "document_id": "fa6dda90-d429-4afa-b570-fe386ed98eb7",
+   "published_date": "2018-06-19",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20180619_e9734719-07b9-4ac9-b082-be07f4e9a68f.zip",
+   "xml_sha256": "b3a58841934ebd988afb84a1b108e0bc9b5901f0366cc88f1d90bf7d6b459b01",
+   "duns": "636596397",
+   "fei": "3003699242",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"59741-249\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3704,
+    "operations": "API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3911,
+     "operations": "API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3789,
+     "operations": "API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3735,
+     "operations": "API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3704,
+     "operations": "API MANUFACTURE",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 53142,
+   "product_ndc": "72753-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "822e90b9-8612-b370-e053-2a91aa0a7a74",
+   "version": 7,
+   "document_id": "23a88f82-9da7-2443-e063-6394a90a3100",
+   "published_date": "2024-10-07",
+   "release_part": "dm_spl_release_human_rx_part3.zip",
+   "member": "prescription/20241006_822e90b9-8612-b370-e053-2a91aa0a7a74.zip",
+   "xml_sha256": "239d5ae1ebb64abb98bda9709f02b9e3deb996379987268df7b2b01d009e5969",
+   "duns": "794041272",
+   "fei": "3012111139",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"72753-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 7033,
+    "operations": "LABEL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 7443,
+     "operations": "MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 7231,
+     "operations": "MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 7091,
+     "operations": "LABEL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 7033,
+     "operations": "LABEL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL",
+    "MANUFACTURE"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [
+    "EXPLAINED_MEDICAL_GAS_FILLER"
+   ],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 14700,
+   "product_ndc": "56130-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "NDA",
+   "set_id": "0c76609b-2dcf-4d4c-b48f-f1284f73583b",
+   "version": 4,
+   "document_id": "79ba84d9-e84b-7708-e053-2991aa0a94a9",
+   "published_date": "2018-11-05",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20181103_0c76609b-2dcf-4d4c-b48f-f1284f73583b.zip",
+   "xml_sha256": "d80a8442da19050bd2f07ec7dfb1dbc5cbde0d6fde36ed2fae59a6e8a418b465",
+   "duns": "795056985",
+   "fei": "1319368",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"56130-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 1001,
+    "operations": "REPACK",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 1060,
+     "operations": "MANUFACTURE; REPACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 1014,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 1007,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 1001,
+     "operations": "REPACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "MANUFACTURE; REPACK"
+   },
+   "registered_operations_any_snapshot": [
+    "MANUFACTURE",
+    "REPACK"
+   ],
+   "class": "EXPLAINED_REGISTRATION_CHANGED",
+   "also_applies": [
+    "EXPLAINED_MEDICAL_GAS_FILLER"
+   ],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 13772,
+   "product_ndc": "24357-811",
+   "product_name": "epinephrinesnap-v",
+   "dosage_form": "KIT",
+   "marketing_category": "unapproved drug other",
+   "set_id": "580d1baa-cfdd-f3e7-e053-2a91aa0ac059",
+   "version": 2,
+   "document_id": "6869afe0-7c68-5d50-e053-2991aa0a91c4",
+   "published_date": "2018-03-28",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20180328_580d1baa-cfdd-f3e7-e053-2a91aa0ac059.zip",
+   "xml_sha256": "f27593f6a7b2f4c13320f1cc25c33e9b61ae382218b57888aea8ad95fc5e1efa",
+   "duns": "826939949",
+   "fei": "3006802076",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"24357-811\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 5197,
+    "operations": "LABEL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 5474,
+     "operations": "LABEL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 5325,
+     "operations": "LABEL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 5232,
+     "operations": "LABEL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 5197,
+     "operations": "LABEL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "LABEL"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 13769,
+   "product_ndc": "24357-911",
+   "product_name": "EPIsnap Epinephrine Convenience Kit",
+   "dosage_form": "INJECTION",
+   "marketing_category": "unapproved drug other",
+   "set_id": "1dadc816-8d2d-2069-e054-00144ff88e88",
+   "version": 4,
+   "document_id": "686a484e-a3a4-2e97-e053-2a91aa0a9877",
+   "published_date": "2018-03-28",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20180328_1dadc816-8d2d-2069-e054-00144ff88e88.zip",
+   "xml_sha256": "b7cb64af58c4320717a22cb932f01d4172a78fe967cb55e5971de72c4d78a8f5",
+   "duns": "826939949",
+   "fei": "3006802076",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"24357-911\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 5197,
+    "operations": "LABEL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 5474,
+     "operations": "LABEL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 5325,
+     "operations": "LABEL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 5232,
+     "operations": "LABEL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 5197,
+     "operations": "LABEL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "LABEL"
+   },
+   "registered_operations_any_snapshot": [
+    "LABEL"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "LABEL_OR_PACK_ONLY",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 15413,
+   "product_ndc": "67877-119",
+   "product_name": "ibuprofen",
+   "dosage_form": "TABLET",
+   "marketing_category": "ANDA",
+   "set_id": "07506e83-e681-4225-8c65-3e8d21d69064",
+   "version": 10,
+   "document_id": "a00b2087-03c1-4810-9543-b601b0302307",
+   "published_date": "2019-02-01",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20190201_07506e83-e681-4225-8c65-3e8d21d69064.zip",
+   "xml_sha256": "e4f6ecc751533219169fbf1399361e4b82675ae4daa43cb5e72b5a4c5e1c6b45",
+   "duns": "915786829",
+   "fei": "3002808058",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"manufacture\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"67877-119\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3080,
+    "operations": "ANALYSIS; API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3265,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3156,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3115,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3080,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 15414,
+   "product_ndc": "67877-120",
+   "product_name": "ibuprofen",
+   "dosage_form": "TABLET",
+   "marketing_category": "ANDA",
+   "set_id": "07506e83-e681-4225-8c65-3e8d21d69064",
+   "version": 10,
+   "document_id": "a00b2087-03c1-4810-9543-b601b0302307",
+   "published_date": "2019-02-01",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20190201_07506e83-e681-4225-8c65-3e8d21d69064.zip",
+   "xml_sha256": "e4f6ecc751533219169fbf1399361e4b82675ae4daa43cb5e72b5a4c5e1c6b45",
+   "duns": "915786829",
+   "fei": "3002808058",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"67877-120\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3080,
+    "operations": "ANALYSIS; API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3265,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3156,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3115,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3080,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 15415,
+   "product_ndc": "67877-121",
+   "product_name": "ibuprofen",
+   "dosage_form": "TABLET",
+   "marketing_category": "ANDA",
+   "set_id": "07506e83-e681-4225-8c65-3e8d21d69064",
+   "version": 10,
+   "document_id": "a00b2087-03c1-4810-9543-b601b0302307",
+   "published_date": "2019-02-01",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20190201_07506e83-e681-4225-8c65-3e8d21d69064.zip",
+   "xml_sha256": "e4f6ecc751533219169fbf1399361e4b82675ae4daa43cb5e72b5a4c5e1c6b45",
+   "duns": "915786829",
+   "fei": "3002808058",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"67877-121\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3080,
+    "operations": "ANALYSIS; API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3265,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3156,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3115,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3080,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 11591,
+   "product_ndc": "67877-322",
+   "product_name": "Tramadol HCl and Acetaminophen",
+   "dosage_form": "TABLET, FILM COATED",
+   "marketing_category": "ANDA",
+   "set_id": "34498c95-abf4-4ff5-8b9d-2e762aab0d20",
+   "version": 1,
+   "document_id": "34498c95-abf4-4ff5-8b9d-2e762aab0d20",
+   "published_date": "2016-06-16",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20160616_34498c95-abf4-4ff5-8b9d-2e762aab0d20.zip",
+   "xml_sha256": "033e20b906a2b2c4064f312fef82780270d6e5ff0b44e59488b59d2eb81c1813",
+   "duns": "915786829",
+   "fei": "3002808058",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"67877-322\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3080,
+    "operations": "ANALYSIS; API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3265,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3156,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3115,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3080,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 10839,
+   "product_ndc": "68462-015",
+   "product_name": "Inflammation Reduction Pack",
+   "dosage_form": "KIT",
+   "marketing_category": "ANDA",
+   "set_id": "25ed70b4-82d9-4351-b5fe-c503d9ae0532",
+   "version": 3,
+   "document_id": "dad58da4-25d4-40ec-b325-2458bc8de1ef",
+   "published_date": "2015-10-28",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20151028_25ed70b4-82d9-4351-b5fe-c503d9ae0532.zip",
+   "xml_sha256": "72a61121891b1a0f37d50c8ca900abe5a0e949a8fa01da38879e0bf332a49239",
+   "duns": "915786829",
+   "fei": "3002808058",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"68462-015\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3080,
+    "operations": "ANALYSIS; API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3265,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3156,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3115,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3080,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 10982,
+   "product_ndc": "68462-017",
+   "product_name": "Inflammation Reduction Pack",
+   "dosage_form": "KIT",
+   "marketing_category": "ANDA",
+   "set_id": "f7f3dcf8-8628-467f-b195-d2dd7e11ae93",
+   "version": 4,
+   "document_id": "48f7c15c-0a00-411b-b3c2-3e57f0b6d49a",
+   "published_date": "2015-11-19",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20151119_f7f3dcf8-8628-467f-b195-d2dd7e11ae93.zip",
+   "xml_sha256": "c45c998b2d28642fd18bd96b30240342e8179cd07862482bf1b030e7651b6489",
+   "duns": "915786829",
+   "fei": "3002808058",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[3]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"68462-017\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C25391",
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3080,
+    "operations": "ANALYSIS; API MANUFACTURE",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3265,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3156,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3115,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3080,
+     "operations": "ANALYSIS; API MANUFACTURE",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED",
+   "other_direct_manufacture_edges_for_product": 1
+  },
+  {
+   "assertion_pk": 13674,
+   "product_ndc": "71709-110",
+   "product_name": "Metformin Hydrochloride",
+   "dosage_form": "TABLET, FILM COATED",
+   "marketing_category": "ANDA",
+   "set_id": "5df6adc9-79fd-66ef-e053-2991aa0a75ce",
+   "version": 2,
+   "document_id": "63699815-ee85-645d-e053-2a91aa0a7c4f",
+   "published_date": "2018-02-28",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20180228_5df6adc9-79fd-66ef-e053-2991aa0a75ce.zip",
+   "xml_sha256": "638693fbc4e659a5a469cf3984d5ff34c54e896088a23e48e9491d4fb5dc2f25",
+   "duns": "918457644",
+   "fei": "3001319869",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"71709-110\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 2458,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 2634,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 2533,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 2491,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 2458,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED_WITH_LABEL_PACK",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 13675,
+   "product_ndc": "71709-111",
+   "product_name": "Metformin Hydrochloride",
+   "dosage_form": "TABLET, FILM COATED",
+   "marketing_category": "ANDA",
+   "set_id": "5df6adc9-79fd-66ef-e053-2991aa0a75ce",
+   "version": 2,
+   "document_id": "63699815-ee85-645d-e053-2a91aa0a7c4f",
+   "published_date": "2018-02-28",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20180228_5df6adc9-79fd-66ef-e053-2991aa0a75ce.zip",
+   "xml_sha256": "638693fbc4e659a5a469cf3984d5ff34c54e896088a23e48e9491d4fb5dc2f25",
+   "duns": "918457644",
+   "fei": "3001319869",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"71709-111\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 2458,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 2634,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 2533,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 2491,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 2458,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED_WITH_LABEL_PACK",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 13676,
+   "product_ndc": "71709-112",
+   "product_name": "Metformin Hydrochloride",
+   "dosage_form": "TABLET, FILM COATED",
+   "marketing_category": "ANDA",
+   "set_id": "5df6adc9-79fd-66ef-e053-2991aa0a75ce",
+   "version": 2,
+   "document_id": "63699815-ee85-645d-e053-2a91aa0a7c4f",
+   "published_date": "2018-02-28",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20180228_5df6adc9-79fd-66ef-e053-2991aa0a75ce.zip",
+   "xml_sha256": "638693fbc4e659a5a469cf3984d5ff34c54e896088a23e48e9491d4fb5dc2f25",
+   "duns": "918457644",
+   "fei": "3001319869",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"71709-112\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 2458,
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 2634,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 2533,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 2491,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 2458,
+     "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "ANALYSIS; API MANUFACTURE; LABEL; PACK"
+   },
+   "registered_operations_any_snapshot": [
+    "ANALYSIS",
+    "API MANUFACTURE",
+    "LABEL",
+    "PACK"
+   ],
+   "class": "CONFLICTING",
+   "also_applies": [],
+   "conflict_kind": "API_MANUFACTURE_REGISTERED_WITH_LABEL_PACK",
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 20767,
+   "product_ndc": "62715-0001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "80c61144-b0f3-486c-9369-4897c3e2b65b",
+   "version": 12,
+   "document_id": "b96c51cf-6840-f1ae-e053-2995a90afc14",
+   "published_date": "2021-01-25",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20210123_80c61144-b0f3-486c-9369-4897c3e2b65b.zip",
+   "xml_sha256": "40e3c6da49fce5034bd66868a6ddd46016b32e923959c12fe855fcc4e40092c8",
+   "duns": "941303620",
+   "fei": "3000207168",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"62715-0001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 2285,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2026-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 2450,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 2354,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 2316,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 2285,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 0
+  },
+  {
+   "assertion_pk": 15604,
+   "product_ndc": "64346-001",
+   "product_name": "Oxygen",
+   "dosage_form": "GAS",
+   "marketing_category": "unapproved medical gas",
+   "set_id": "830afc08-bf09-e83e-e053-2991aa0a4917",
+   "version": 2,
+   "document_id": "830d6e5e-c16c-36e0-e053-2a91aa0a0562",
+   "published_date": "2019-03-04",
+   "release_part": "dm_spl_release_human_rx_part1.zip",
+   "member": "prescription/20190302_830afc08-bf09-e83e-e053-2991aa0a4917.zip",
+   "xml_sha256": "0190dfd5f993dcf29cc910db2f38170270c2d50c866e2c779f3bdd3ceecba025",
+   "duns": "963617840",
+   "fei": "3003295888",
+   "spl_operation_code": "C43360",
+   "spl_element_loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[7]/performance[1]",
+   "spl_element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"64346-001\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>",
+   "establishment_operations_for_product_in_label": [
+    "C43360"
+   ],
+   "evidence_registration": {
+    "file": "drls_reg.zip",
+    "line_no": 3474,
+    "operations": "TRANSFILL",
+    "as_of": "2026-10-19",
+    "expiration": "2027-12-31"
+   },
+   "registration_snapshots": [
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20241224060947.zip",
+     "as_of": "2024-12-23",
+     "line_no": 3671,
+     "operations": "TRANSFILL",
+     "expiration": "2025-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20251215163821.zip",
+     "as_of": "2025-12-05",
+     "line_no": 3556,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration_archived",
+     "file": "drls_reg_20260823071118.zip",
+     "as_of": "2026-08-21",
+     "line_no": 3508,
+     "operations": "TRANSFILL",
+     "expiration": "2026-12-31",
+     "exclusion_flag": "N"
+    },
+    {
+     "kind": "fda_decrs_registration",
+     "file": "drls_reg.zip",
+     "as_of": "2026-10-19",
+     "line_no": 3474,
+     "operations": "TRANSFILL",
+     "expiration": "2027-12-31",
+     "exclusion_flag": "N"
+    }
+   ],
+   "snapshot_nearest_label": {
+    "file": "drls_reg_20241224060947.zip",
+    "as_of": "2024-12-23",
+    "operations": "TRANSFILL"
+   },
+   "registered_operations_any_snapshot": [
+    "TRANSFILL"
+   ],
+   "class": "EXPLAINED_MEDICAL_GAS_FILLER",
+   "also_applies": [],
+   "conflict_kind": null,
+   "other_direct_manufacture_edges_for_product": 3
+  }
+ ]
+}

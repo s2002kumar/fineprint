@@ -1,0 +1,1153 @@
+{
+ "lineage_build": {
+  "build_id": 1,
+  "rule_version": "dst08-lineage-v1",
+  "graph_build": 8,
+  "code_commit": "9cd9c5efdc841452978c02ba9bf123511e5332e3",
+  "finished_at": "2026-10-25 04:41:29.518198-04:00"
+ },
+ "products": {
+  "60760-661": {
+   "why_chosen": "v2 eligible on the v1 basis: no physical conflict (sample R9-01)",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 32618,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "60760-661",
+      "set_id": "c6b3f4d8-5fcf-2278-e053-2a95a90ab139",
+      "version": 5,
+      "document_id": "54cf1e68-62f3-0d64-e063-6294a90a6a38",
+      "published_date": "2026-06-23",
+      "xml_sha256": "8af7fda81ccf276f3870cb8ac985eab01c04ca1519bbd46aa6742baee66771aa",
+      "release_part": "dm_spl_release_human_rx_part5.zip",
+      "member": "prescription/20260623_c6b3f4d8-5fcf-2278-e053-2a95a90ab139.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"16571-661\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "16571-661",
+     "source": {
+      "product_ndc": "16571-661",
+      "set_id": "c9ddc39c-bc6b-42f1-8c5f-5aff2d79c4bd",
+      "version": 3,
+      "document_id": "2be27ea6-3d0a-4036-ab42-fea4720daa34",
+      "published_date": "2025-06-09",
+      "xml_sha256": "d8e12e547eb16855869622fefd47f5582ceaa371516662f7f12090114362b7fd",
+      "release_part": "dm_spl_release_human_rx_part3.zip",
+      "member": "prescription/20250608_c9ddc39c-bc6b-42f1-8c5f-5aff2d79c4bd.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 70401,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]",
+      "duns": "650381903",
+      "fei": "3007373532",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"16571-661\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 5361,
+      "line_no": 5362,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "ELIGIBLE",
+      "reasons": [],
+      "basis": "v1",
+      "evidence_sites": [
+       "650381903"
+      ],
+      "this_site_kept_by_v2": true
+     }
+    }
+   ]
+  },
+  "53002-3202": {
+   "why_chosen": "v2 eligible after the version check: drift resolved (E160 in the 2019 source label, 160 now), site continues",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 10711,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "53002-3202",
+      "set_id": "88eb5829-b49f-45bd-b0e9-05dd5ac903d4",
+      "version": 1,
+      "document_id": "339f1feb-f19a-47e2-9ac0-eedd72461f01",
+      "published_date": "2020-12-22",
+      "xml_sha256": "5e7bff98c6d592265a5494f9f5eda74d84da9ce7e149c2d0c814c5ba7575f540",
+      "release_part": "dm_spl_release_human_rx_part1.zip",
+      "member": "prescription/20201222_88eb5829-b49f-45bd-b0e9-05dd5ac903d4.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"42806-160\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "42806-160",
+     "source": {
+      "product_ndc": "42806-160",
+      "set_id": "82b015dc-999c-46a4-bcaa-a4c81a193b68",
+      "version": 12,
+      "document_id": "5e33c30d-cf33-4d61-98ca-eab9aab2ddf3",
+      "published_date": "2025-02-10",
+      "xml_sha256": "2bd3842da48fb4e91f2d1e4a61a1693ce750bdfb30c21fcae98178075a5c55d4",
+      "release_part": "dm_spl_release_human_rx_part3.zip",
+      "member": "prescription/20250209_82b015dc-999c-46a4-bcaa-a4c81a193b68.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 62755,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+      "duns": "827915443",
+      "fei": "2431929",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"42806-160\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 2040,
+      "line_no": 2041,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "ELIGIBLE",
+      "reasons": [],
+      "basis": "version_check",
+      "evidence_sites": [
+       "827915443"
+      ],
+      "version_check": {
+       "citing_published_at": "2020-12-22",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 12,
+       "source_published_now": "2025-02-10",
+       "applicable_version": 9,
+       "applicable_published_at": "2019-04-23",
+       "applicable_document_id": "73d3e189-a838-4ffe-8c38-89268562cc1f",
+       "applicable_xml_sha256": "f8cd0a18c0aee2158f1a984bb1f0207a07c444655098b727364bbb399a057f19",
+       "conflicting": [
+        "imprint"
+       ],
+       "at_applicable": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "SAME"
+       },
+       "at_current": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "DIFFERS"
+       },
+       "sites_at_applicable": [
+        "827915443"
+       ],
+       "sites_now_direct": [
+        "827915443"
+       ],
+       "continuing_sites": [
+        "827915443"
+       ],
+       "versions_matching": [
+        3,
+        4,
+        6,
+        7,
+        8,
+        11
+       ],
+       "classification": "VERSION_DRIFT_RESOLVED",
+       "detail": "matches the applicable version; the source label changed later: imprint"
+      },
+      "this_site_kept_by_v2": true
+     }
+    }
+   ]
+  },
+  "50090-7007": {
+   "why_chosen": "v2 eligible after the version check: notation only (RX692 against RX692;RX692), sites continue",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 16235,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "50090-7007",
+      "set_id": "337870c6-11e0-4d1a-a26e-afe042ee08c3",
+      "version": 12,
+      "document_id": "2807f1f8-832c-41f3-b727-50d0e086f471",
+      "published_date": "2024-01-08",
+      "xml_sha256": "c3e78c25f02928b624000ff21cd9da9480be7b2fe6ce2287d216326d0a410931",
+      "release_part": "dm_spl_release_human_rx_part2.zip",
+      "member": "prescription/20240108_337870c6-11e0-4d1a-a26e-afe042ee08c3.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"63304-692\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "63304-692",
+     "source": {
+      "product_ndc": "63304-692",
+      "set_id": "1dbd8448-c1e5-46df-8060-50ef82380445",
+      "version": 19,
+      "document_id": "5497511e-22f2-c613-e063-6394a90ac56c",
+      "published_date": "2026-06-22",
+      "xml_sha256": "75df6aa4d5bcbf68958dcd2fe14825a4d83eb77b412a8679037d2c0aea77c980",
+      "release_part": "dm_spl_release_human_rx_part5.zip",
+      "member": "prescription/20260620_1dbd8448-c1e5-46df-8060-50ef82380445.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 113434,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[1]",
+      "duns": "051565745",
+      "fei": "3004132058",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"63304-692\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 4020,
+      "line_no": 4021,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "ELIGIBLE",
+      "reasons": [],
+      "basis": "version_check",
+      "evidence_sites": [
+       "051565745",
+       "725959238"
+      ],
+      "version_check": {
+       "citing_published_at": "2024-01-08",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 19,
+       "source_published_now": "2026-06-22",
+       "applicable_version": 14,
+       "applicable_published_at": "2022-07-06",
+       "applicable_document_id": "d418323e-f235-443e-81b1-ce60d8c0b4b9",
+       "applicable_xml_sha256": "b7a81145278a9f151925420346e6018358b998792a060d381d0e1f29072e699c",
+       "conflicting": [
+        "imprint"
+       ],
+       "at_applicable": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "SAME"
+       },
+       "at_current": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "SAME_MARKS"
+       },
+       "sites_at_applicable": [
+        "051565745",
+        "725959238"
+       ],
+       "sites_now_direct": [
+        "051565745",
+        "725959238"
+       ],
+       "continuing_sites": [
+        "051565745",
+        "725959238"
+       ],
+       "versions_matching": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17,
+        18,
+        19
+       ],
+       "classification": "NOTATION_ONLY",
+       "detail": "the same marks written differently: imprint"
+      },
+      "this_site_kept_by_v2": true
+     }
+    },
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 16235,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "50090-7007",
+      "set_id": "337870c6-11e0-4d1a-a26e-afe042ee08c3",
+      "version": 12,
+      "document_id": "2807f1f8-832c-41f3-b727-50d0e086f471",
+      "published_date": "2024-01-08",
+      "xml_sha256": "c3e78c25f02928b624000ff21cd9da9480be7b2fe6ce2287d216326d0a410931",
+      "release_part": "dm_spl_release_human_rx_part2.zip",
+      "member": "prescription/20240108_337870c6-11e0-4d1a-a26e-afe042ee08c3.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"63304-692\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "63304-692",
+     "source": {
+      "product_ndc": "63304-692",
+      "set_id": "1dbd8448-c1e5-46df-8060-50ef82380445",
+      "version": 19,
+      "document_id": "5497511e-22f2-c613-e063-6394a90ac56c",
+      "published_date": "2026-06-22",
+      "xml_sha256": "75df6aa4d5bcbf68958dcd2fe14825a4d83eb77b412a8679037d2c0aea77c980",
+      "release_part": "dm_spl_release_human_rx_part5.zip",
+      "member": "prescription/20260620_1dbd8448-c1e5-46df-8060-50ef82380445.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 113436,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/performance[1]",
+      "duns": "725959238",
+      "fei": "3002809586",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"63304-692\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 3169,
+      "line_no": 3170,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "ELIGIBLE",
+      "reasons": [],
+      "basis": "version_check",
+      "evidence_sites": [
+       "051565745",
+       "725959238"
+      ],
+      "version_check": {
+       "citing_published_at": "2024-01-08",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 19,
+       "source_published_now": "2026-06-22",
+       "applicable_version": 14,
+       "applicable_published_at": "2022-07-06",
+       "applicable_document_id": "d418323e-f235-443e-81b1-ce60d8c0b4b9",
+       "applicable_xml_sha256": "b7a81145278a9f151925420346e6018358b998792a060d381d0e1f29072e699c",
+       "conflicting": [
+        "imprint"
+       ],
+       "at_applicable": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "SAME"
+       },
+       "at_current": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "SAME_MARKS"
+       },
+       "sites_at_applicable": [
+        "051565745",
+        "725959238"
+       ],
+       "sites_now_direct": [
+        "051565745",
+        "725959238"
+       ],
+       "continuing_sites": [
+        "051565745",
+        "725959238"
+       ],
+       "versions_matching": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17,
+        18,
+        19
+       ],
+       "classification": "NOTATION_ONLY",
+       "detail": "the same marks written differently: imprint"
+      },
+      "this_site_kept_by_v2": true
+     }
+    }
+   ]
+  },
+  "53808-0858": {
+   "why_chosen": "v2 eligible after the version check: one of two flavours the source lists; one of two sites continues",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 5315,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "53808-0858",
+      "set_id": "1d6698da-dacd-44e3-8af1-976bc7427de1",
+      "version": 2,
+      "document_id": "a1e16d44-3bdd-4efd-bad2-9416a826be83",
+      "published_date": "2014-04-02",
+      "xml_sha256": "89eb096a9969eb36c47dba00a1c28b91ff41cdfe6ed652cf6825d374eac9a5ac",
+      "release_part": "dm_spl_release_human_rx_part1.zip",
+      "member": "prescription/20140402_1d6698da-dacd-44e3-8af1-976bc7427de1.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"13668-271\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "13668-271",
+     "source": {
+      "product_ndc": "13668-271",
+      "set_id": "97e6e175-75e8-437b-b457-ddb1ae4e857d",
+      "version": 25,
+      "document_id": "fd96ee4b-4ce4-4179-9b0b-37073b20c217",
+      "published_date": "2026-08-06",
+      "xml_sha256": "e4bad3f479bde5717ee57028a94b3b19500bd47709eb00b31c51d887c05988ab",
+      "release_part": "dm_spl_release_human_rx_part6.zip",
+      "member": "prescription/20260806_97e6e175-75e8-437b-b457-ddb1ae4e857d.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 120493,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[6]",
+      "duns": "864147745",
+      "fei": "3010228235",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"13668-271\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 6523,
+      "line_no": 6524,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "ELIGIBLE",
+      "reasons": [],
+      "basis": "version_check",
+      "evidence_sites": [
+       "916488547"
+      ],
+      "version_check": {
+       "citing_published_at": "2014-04-02",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 25,
+       "source_published_now": "2026-08-06",
+       "applicable_version": 7,
+       "applicable_published_at": "2013-05-09",
+       "applicable_document_id": "7bfa92a9-7543-4c51-9d8a-481c6bd31a84",
+       "applicable_xml_sha256": "85d6427eb84aaddaefabef8d69c0e8caaee595142336ef36d85f5fd3f7fccae9",
+       "conflicting": [
+        "flavor"
+       ],
+       "at_applicable": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "flavor": "ONE_OF_SEVERAL",
+        "imprint": "SAME"
+       },
+       "at_current": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "flavor": "ONE_OF_SEVERAL",
+        "imprint": "SAME"
+       },
+       "sites_at_applicable": [
+        "916488547"
+       ],
+       "sites_now_direct": [
+        "864147745",
+        "916488547"
+       ],
+       "continuing_sites": [
+        "916488547"
+       ],
+       "versions_matching": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+       ],
+       "classification": "MULTIPLE_VALID_PRESENTATIONS",
+       "detail": "the applicable version states several values for: flavor"
+      },
+      "this_site_kept_by_v2": false
+     }
+    },
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 5315,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "53808-0858",
+      "set_id": "1d6698da-dacd-44e3-8af1-976bc7427de1",
+      "version": 2,
+      "document_id": "a1e16d44-3bdd-4efd-bad2-9416a826be83",
+      "published_date": "2014-04-02",
+      "xml_sha256": "89eb096a9969eb36c47dba00a1c28b91ff41cdfe6ed652cf6825d374eac9a5ac",
+      "release_part": "dm_spl_release_human_rx_part1.zip",
+      "member": "prescription/20140402_1d6698da-dacd-44e3-8af1-976bc7427de1.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"13668-271\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "13668-271",
+     "source": {
+      "product_ndc": "13668-271",
+      "set_id": "97e6e175-75e8-437b-b457-ddb1ae4e857d",
+      "version": 25,
+      "document_id": "fd96ee4b-4ce4-4179-9b0b-37073b20c217",
+      "published_date": "2026-08-06",
+      "xml_sha256": "e4bad3f479bde5717ee57028a94b3b19500bd47709eb00b31c51d887c05988ab",
+      "release_part": "dm_spl_release_human_rx_part6.zip",
+      "member": "prescription/20260806_97e6e175-75e8-437b-b457-ddb1ae4e857d.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 120495,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[2]/performance[2]",
+      "duns": "916488547",
+      "fei": "3005029956",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"13668-271\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 4503,
+      "line_no": 4504,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "ELIGIBLE",
+      "reasons": [],
+      "basis": "version_check",
+      "evidence_sites": [
+       "916488547"
+      ],
+      "version_check": {
+       "citing_published_at": "2014-04-02",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 25,
+       "source_published_now": "2026-08-06",
+       "applicable_version": 7,
+       "applicable_published_at": "2013-05-09",
+       "applicable_document_id": "7bfa92a9-7543-4c51-9d8a-481c6bd31a84",
+       "applicable_xml_sha256": "85d6427eb84aaddaefabef8d69c0e8caaee595142336ef36d85f5fd3f7fccae9",
+       "conflicting": [
+        "flavor"
+       ],
+       "at_applicable": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "flavor": "ONE_OF_SEVERAL",
+        "imprint": "SAME"
+       },
+       "at_current": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "flavor": "ONE_OF_SEVERAL",
+        "imprint": "SAME"
+       },
+       "sites_at_applicable": [
+        "916488547"
+       ],
+       "sites_now_direct": [
+        "864147745",
+        "916488547"
+       ],
+       "continuing_sites": [
+        "916488547"
+       ],
+       "versions_matching": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+       ],
+       "classification": "MULTIPLE_VALID_PRESENTATIONS",
+       "detail": "the applicable version states several values for: flavor"
+      },
+      "this_site_kept_by_v2": true
+     }
+    }
+   ]
+  },
+  "54868-4102": {
+   "why_chosen": "v2 excluded: drift resolved (GG931 then, NL4 now) but the source label then named no product-scoped site",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 2076,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "54868-4102",
+      "set_id": "28d5753e-862a-4811-8b9f-6707361f8475",
+      "version": 1,
+      "document_id": "712d75b9-67f4-4009-9c9e-8a9512b167e8",
+      "published_date": "2011-05-17",
+      "xml_sha256": "934cc8e5d525c469b5319b7fa6e4343bcab520ac5cb0efa601e9b86dd29a86d3",
+      "release_part": "dm_spl_release_human_rx_part1.zip",
+      "member": "prescription/20110517_28d5753e-862a-4811-8b9f-6707361f8475.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"43386-480\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "43386-480",
+     "source": {
+      "product_ndc": "43386-480",
+      "set_id": "7b76c8a7-dd0c-481c-8299-26dfd38ce066",
+      "version": 15,
+      "document_id": "e80ecc89-bd45-4796-850b-c379a79ac7ab",
+      "published_date": "2025-09-12",
+      "xml_sha256": "b986a488e501637b48fd66d2f96b3a1695452b28294c1fbd75229ff851e4450b",
+      "release_part": "dm_spl_release_human_rx_part4.zip",
+      "member": "prescription/20250912_7b76c8a7-dd0c-481c-8299-26dfd38ce066.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 77670,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+      "duns": "793518643",
+      "fei": "3006271438",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"43386-480\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 4984,
+      "line_no": 4985,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "EXCLUDED",
+      "reasons": [
+       "version:no_site_named_at_applicable_version"
+      ],
+      "basis": "version_check",
+      "evidence_sites": [],
+      "version_check": {
+       "citing_published_at": "2011-05-17",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 15,
+       "source_published_now": "2025-09-12",
+       "applicable_version": 10,
+       "applicable_published_at": "2010-05-26",
+       "applicable_document_id": "7b76c8a7-dd0c-481c-8299-26dfd38ce066",
+       "applicable_xml_sha256": "813f3c8df1704220e7bdc1404da9f92bcff8eaa66817a6f922c53c5cba10ee88",
+       "conflicting": [
+        "imprint"
+       ],
+       "at_applicable": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "SAME"
+       },
+       "at_current": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "DIFFERS"
+       },
+       "sites_at_applicable": [],
+       "sites_now_direct": [
+        "793518643"
+       ],
+       "continuing_sites": [],
+       "versions_matching": [
+        11
+       ],
+       "classification": "VERSION_DRIFT_RESOLVED",
+       "detail": "matches the applicable version; the source label changed later: imprint"
+      },
+      "this_site_kept_by_v2": false
+     }
+    }
+   ]
+  },
+  "21695-630": {
+   "why_chosen": "v2 excluded: confirmed conflict, a different tablet (IG;209 against D;74 at the relevant date)",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 1777,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "21695-630",
+      "set_id": "dfb8fc2d-4899-4891-a985-755fbdf1d525",
+      "version": 1,
+      "document_id": "dfb8fc2d-4899-4891-a985-755fbdf1d525",
+      "published_date": "2011-02-11",
+      "xml_sha256": "93b430671ac943355951614e364d6841834f76a137a11d4739df18401f0cd7ed",
+      "release_part": "dm_spl_release_human_rx_part1.zip",
+      "member": "prescription/20110210_dfb8fc2d-4899-4891-a985-755fbdf1d525.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"65862-079\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "65862-079",
+     "source": {
+      "product_ndc": "65862-079",
+      "set_id": "6600e2b3-65df-4fc3-8081-d574537d27e3",
+      "version": 20,
+      "document_id": "8f6e6ae9-4903-4823-b788-de387e8c6fb2",
+      "published_date": "2024-04-22",
+      "xml_sha256": "d74b8a4987ad8a56ea4b4a2a51477a791805c5864ee3687a2178f253361ae423",
+      "release_part": "dm_spl_release_human_rx_part2.zip",
+      "member": "prescription/20240421_6600e2b3-65df-4fc3-8081-d574537d27e3.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 44059,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+      "duns": "918917642",
+      "fei": "3004021229",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"65862-079\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 3928,
+      "line_no": 3929,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "EXCLUDED",
+      "reasons": [
+       "version:CONFIRMED_CONFLICT"
+      ],
+      "basis": "version_check",
+      "evidence_sites": [],
+      "version_check": {
+       "citing_published_at": "2011-02-11",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 20,
+       "source_published_now": "2024-04-22",
+       "applicable_version": 6,
+       "applicable_published_at": "2010-07-13",
+       "applicable_document_id": "6a1bf572-4485-464a-b23d-3485734529ad",
+       "applicable_xml_sha256": "d122d4b04300ba007110325c4ae7a2e7a40b1c0872fbc00ad423df29097504ee",
+       "conflicting": [
+        "imprint"
+       ],
+       "at_applicable": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "DIFFERS"
+       },
+       "at_current": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "DIFFERS"
+       },
+       "sites_at_applicable": [],
+       "sites_now_direct": [
+        "918917642"
+       ],
+       "continuing_sites": null,
+       "versions_matching": [],
+       "classification": "CONFIRMED_CONFLICT",
+       "detail": "differs at the applicable version: imprint"
+      },
+      "this_site_kept_by_v2": false
+     }
+    }
+   ]
+  },
+  "42254-121": {
+   "why_chosen": "v2 excluded: confirmed conflict, the citing label carries the source's other-strength imprint",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 3524,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "42254-121",
+      "set_id": "9c244c88-dcc4-44fb-b0d9-13732dc705f5",
+      "version": 1,
+      "document_id": "9c244c88-dcc4-44fb-b0d9-13732dc705f5",
+      "published_date": "2012-03-16",
+      "xml_sha256": "84f6f6b8e7da131ea1484f4f287a96d1df33e4534243c46fca9f2161678049ee",
+      "release_part": "dm_spl_release_human_rx_part1.zip",
+      "member": "prescription/20120316_9c244c88-dcc4-44fb-b0d9-13732dc705f5.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"51672-4017\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "51672-4017",
+     "source": {
+      "product_ndc": "51672-4017",
+      "set_id": "ec82b108-6a6f-4d1b-82cb-831d4ed36c80",
+      "version": 11,
+      "document_id": "56a612ca-5035-8653-e063-6394a90acb15",
+      "published_date": "2026-07-16",
+      "xml_sha256": "d7876d743f2b47bf5727212671bbe1f7a58bf7e6620b6a7ac502cd2c8fc54ea0",
+      "release_part": "dm_spl_release_human_rx_part5.zip",
+      "member": "prescription/20260716_ec82b108-6a6f-4d1b-82cb-831d4ed36c80.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 117726,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[2]",
+      "duns": "600072078",
+      "fei": "3002808385",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"51672-4017\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 3135,
+      "line_no": 3136,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "EXCLUDED",
+      "reasons": [
+       "version:CONFIRMED_CONFLICT"
+      ],
+      "basis": "version_check",
+      "evidence_sites": [],
+      "version_check": {
+       "citing_published_at": "2012-03-16",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 11,
+       "source_published_now": "2026-07-16",
+       "applicable_version": 2,
+       "applicable_published_at": "2012-03-06",
+       "applicable_document_id": "ac22b86c-e17f-4dd9-a6c7-b51e6626a150",
+       "applicable_xml_sha256": "99a1c291c2329a886ab28000fcf3ad4420afeb71bc09f6bec36bb1f24326d2c0",
+       "conflicting": [
+        "imprint"
+       ],
+       "at_applicable": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "DIFFERS"
+       },
+       "at_current": {
+        "size": "SAME",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "DIFFERS"
+       },
+       "sites_at_applicable": [
+        "600072078"
+       ],
+       "sites_now_direct": [
+        "600072078"
+       ],
+       "continuing_sites": null,
+       "versions_matching": [],
+       "classification": "CONFIRMED_CONFLICT",
+       "detail": "differs at the applicable version: imprint"
+      },
+      "this_site_kept_by_v2": false
+     }
+    }
+   ]
+  },
+  "53808-0311": {
+   "why_chosen": "v2 excluded: unresolved, the source set was first published after the citing label",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 771,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "53808-0311",
+      "set_id": "66abc5e3-4a7c-447a-8daa-91b872b88094",
+      "version": 1,
+      "document_id": "9e1fb9de-7a5e-4878-af41-2efe32d8f9ad",
+      "published_date": "2010-08-04",
+      "xml_sha256": "251b70f485d72bf3fff44cf333a628d70c11eeee445242190dfefd44d1de4743",
+      "release_part": "dm_spl_release_human_rx_part1.zip",
+      "member": "prescription/20100804_66abc5e3-4a7c-447a-8daa-91b872b88094.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[3]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"59746-385\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "59746-385",
+     "source": {
+      "product_ndc": "59746-385",
+      "set_id": "43e92495-2cf2-46dd-a80c-f0c3c88c7b73",
+      "version": 8,
+      "document_id": "cc58b113-b1c4-4147-a20b-473c30aa7041",
+      "published_date": "2026-05-06",
+      "xml_sha256": "71f091ea07246249136fa3f9575c9e8247d662a901c3d2a5b0a00545815c2963",
+      "release_part": "dm_spl_release_human_rx_part5.zip",
+      "member": "prescription/20260506_43e92495-2cf2-46dd-a80c-f0c3c88c7b73.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 105795,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[3]",
+      "duns": "650369221",
+      "fei": "3006895982",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" displayName=\"MANUFACTURE\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"59746-385\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 5210,
+      "line_no": 5211,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "EXCLUDED",
+      "reasons": [
+       "version:UNRESOLVED_AMBIGUITY"
+      ],
+      "basis": "version_check",
+      "evidence_sites": [],
+      "version_check": {
+       "citing_published_at": "2010-08-04",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 8,
+       "source_published_now": "2026-05-06",
+       "applicable_version": null,
+       "applicable_published_at": null,
+       "applicable_document_id": null,
+       "applicable_xml_sha256": null,
+       "conflicting": [
+        "size"
+       ],
+       "at_applicable": null,
+       "at_current": {
+        "size": "DIFFERS",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "SAME"
+       },
+       "sites_at_applicable": null,
+       "sites_now_direct": [
+        "650369221"
+       ],
+       "continuing_sites": null,
+       "versions_matching": [],
+       "classification": "UNRESOLVED_AMBIGUITY",
+       "detail": "source_set_not_published_by_citing_date"
+      },
+      "this_site_kept_by_v2": false
+     }
+    }
+   ]
+  },
+  "21695-494": {
+   "why_chosen": "v2 excluded: missing evidence, the archive returns 404 for every version of the source set",
+   "chain": [
+    {
+     "relationship": "SOURCE_LINKED_MANUFACTURING_EVIDENCE",
+     "reference_pk": 2781,
+     "status": "ELIGIBLE",
+     "reasons": [],
+     "resolution": "RESOLVED",
+     "chain": "SINGLE_HOP",
+     "consistency": "CONSISTENT",
+     "citing": {
+      "product_ndc": "21695-494",
+      "set_id": "8ff18a70-965a-4d3e-ae3e-b599c4e6763c",
+      "version": 1,
+      "document_id": "8ff18a70-965a-4d3e-ae3e-b599c4e6763c",
+      "published_date": "2011-11-18",
+      "xml_sha256": "e5fb40181d85cc5a18c0a010b4cc03f53f30d957c3a4fbcfe23ebae2964f6c6b",
+      "release_part": "dm_spl_release_human_rx_part1.zip",
+      "member": "prescription/20111118_8ff18a70-965a-4d3e-ae3e-b599c4e6763c.zip",
+      "element_loc": "/document/component[1]/structuredBody[1]/component[1]/section[1]/subject[1]/manufacturedProduct/manufacturedProduct/asEquivalentEntity[1]",
+      "element": "<asEquivalentEntity classCode=\"EQUIV\"> <code code=\"C64637\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <definingMaterialKind> <code code=\"57664-506\" codeSystem=\"2.16.840.1.113883.6.69\" /> </definingMaterialKind> </asEquivalentEntity>"
+     },
+     "source_code_cited": "57664-506",
+     "source": {
+      "product_ndc": "57664-506",
+      "set_id": "6ae551f6-b6cc-46df-b3d7-eb2963295e0a",
+      "version": 20,
+      "document_id": "0f88791d-f756-8415-e063-6294a90a54b0",
+      "published_date": null,
+      "xml_sha256": "f5967d9b5ae5fc4926839cf03c33ee1cc1d54b0da156a51fcadbd6dd7f4eb1cd",
+      "release_part": "dm_spl_release_human_rx_part2.zip",
+      "member": "prescription/20240201_6ae551f6-b6cc-46df-b3d7-eb2963295e0a.zip"
+     },
+     "source_direct_manufacture": {
+      "assertion_pk": 41223,
+      "loc": "/document/author[1]/assignedEntity[1]/representedOrganization/assignedEntity[1]/assignedOrganization/assignedEntity[1]/performance[5]",
+      "duns": "650445203",
+      "fei": "3004561553",
+      "identity_status": "CURRENT_REGISTERED",
+      "confidence": "DIRECT",
+      "element": "<performance xmlns:ns0=\"urn:hl7-org:v3\"> <actDefinition> <code code=\"C43360\" displayName=\"manufacture\" codeSystem=\"2.16.840.1.113883.3.26.1.1\" /> <product> <manufacturedProduct classCode=\"MANU\"> <manufacturedMaterialKind> <code code=\"57664-506\" codeSystem=\"2.16.840.1.113883.6.69\" /> </manufacturedMaterialKind> </manufacturedProduct> </product> </actDefinition> </performance>"
+     },
+     "registration": {
+      "registration_pk": 4251,
+      "line_no": 4252,
+      "file": "drls_reg.zip",
+      "sha256": "d225e7b76f211ca62713f89926de6180bf451d93289ab10f0c154b9f410cc2bd",
+      "generated_at": "2026-10-19T03:00:34-04:00"
+     },
+     "v2": {
+      "rule": "dst08-lineage-v2",
+      "status": "EXCLUDED",
+      "reasons": [
+       "version:MISSING_COMPARISON_EVIDENCE"
+      ],
+      "basis": "version_check",
+      "evidence_sites": [],
+      "version_check": {
+       "citing_published_at": "2011-11-18",
+       "citing_date_basis": "dailymed_history",
+       "source_version_now": 20,
+       "source_published_now": null,
+       "applicable_version": 5,
+       "applicable_published_at": "2010-03-18",
+       "applicable_document_id": null,
+       "applicable_xml_sha256": null,
+       "conflicting": [
+        "size"
+       ],
+       "at_applicable": null,
+       "at_current": {
+        "size": "DIFFERS",
+        "color": "SAME",
+        "score": "SAME",
+        "shape": "SAME",
+        "imprint": "SAME"
+       },
+       "sites_at_applicable": null,
+       "sites_now_direct": [
+        "650445203"
+       ],
+       "continuing_sites": null,
+       "versions_matching": [],
+       "classification": "MISSING_COMPARISON_EVIDENCE",
+       "detail": "applicable_version_not_retrievable"
+      },
+      "this_site_kept_by_v2": false
+     }
+    }
+   ]
+  }
+ }
+}
