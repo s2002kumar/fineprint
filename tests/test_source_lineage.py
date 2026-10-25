@@ -128,6 +128,8 @@ V2 = {
     "unstated": ("OLD8", "C48325", [(1, "2020-01-01", [(None, "C48325")], X), (2, "2023-01-01", [("NEW8", "C48325")], X)]),
     "postdates": ("S0", None, [(1, "2023-01-01", [("S9", None)], X)]),
     "agree": ("OK1", None, [(1, "2020-01-01", [("OK1", None)], X)]),
+    # the applicable version names no establishment at all (DUNS None): no site continuity, but not a change of sites
+    "nosite": ("OLD9", None, [(1, "2020-01-01", [("OLD9", None)], None), (2, "2023-01-01", [("NEW9", None)], X)]),
 }
 
 
@@ -144,8 +146,8 @@ def v2_source(key):
 def v2_source_xml(key, version):
     s, code = v2_source(key)
     _, _, presentations, duns = next(h for h in V2[key][2] if h[0] == version)
-    return doc_xml(s, version, [product_xml(code) + chars(i, c) for i, c in presentations], [(duns, [(*MFG, [code])])],
-                   labeler="333333333")
+    return doc_xml(s, version, [product_xml(code) + chars(i, c) for i, c in presentations],
+                   [(duns, [(*MFG, [code])])] if duns else [], labeler="333333333")
 
 
 def v2_documents():
@@ -538,6 +540,7 @@ class LineageV2Db(unittest.TestCase):
             "earlier": ("UNRESOLVED_AMBIGUITY", "EXCLUDED", ["version:UNRESOLVED_AMBIGUITY"], None, 2),
             "unstated": ("MISSING_COMPARISON_EVIDENCE", "EXCLUDED", ["version:MISSING_COMPARISON_EVIDENCE"], None, 1),
             "postdates": ("UNRESOLVED_AMBIGUITY", "EXCLUDED", ["version:UNRESOLVED_AMBIGUITY"], None, None),
+            "nosite": ("VERSION_DRIFT_RESOLVED", "EXCLUDED", ["version:no_site_named_at_applicable_version"], [], 1),
         }
         for key, (cls, status, reasons, sites, app) in expect.items():
             got = self.check(key)
@@ -556,7 +559,7 @@ class LineageV2Db(unittest.TestCase):
 
     def test_v2_only_removes_links_and_keeps_only_continuing_sites(self):
         self.assertEqual(self.tiers(v2_citing("drift")[1]), ("SOURCE_LINKED", "SOURCE_LINKED"))
-        for key in ("conflict", "sitechg", "earlier", "nohist", "unstated", "postdates"):
+        for key in ("conflict", "sitechg", "earlier", "nohist", "unstated", "postdates", "nosite"):
             self.assertEqual(self.tiers(v2_citing(key)[1]), ("SOURCE_LINKED", "NO_MANUFACTURE_EVIDENCE"), key)
         added = self.conn.execute(
             """SELECT count(*) FROM lineage.source_linked_evidence_v2 e2 WHERE NOT EXISTS (

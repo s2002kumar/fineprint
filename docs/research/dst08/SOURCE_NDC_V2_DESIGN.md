@@ -99,6 +99,20 @@ current release is stated on both sides and consistent. Each checked reference g
 - The source's current DIRECT edge stays the only manufacturing evidence. A site named only in a historical version
   never becomes evidence, because DIRECT requires the current label and the current registration.
 
+### Amendment A1 (2026-10-25, after the first v2 run; labels only)
+
+Of the 88 accepted-class references excluded for lack of site continuity, 79 have an applicable version that names no
+MANUFACTURE site scoped to the cited code at all:
+- 39 state MANUFACTURE without a product scope;
+- 31 have no establishment block;
+- 5 list establishments without MANUFACTURE;
+- 4 scope MANUFACTURE only to other products.
+
+None is a package-code scope. "The sites changed" does not describe them, so they carry the reason
+`version:no_site_named_at_applicable_version` instead of `version:sites_changed_since_citing`. The rule, every class and
+every eligibility decision are unchanged: in both cases no site continuity can be shown and the reference is
+excluded.
+
 ## 7. What v2 does not do
 
 - It does not compare characteristics with a tolerance, or use names, companies, addresses or product similarity.

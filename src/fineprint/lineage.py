@@ -833,7 +833,11 @@ def _version_check(t, history: dict, label) -> dict:
     row.update(classification=cls, detail=detail)
     if cls in ACCEPTABLE:
         row["continuing_sites"] = sorted(set(row["sites_at_applicable"] or ()) & set(sites_now))
-        row["v2"] = ("ELIGIBLE", []) if row["continuing_sites"] else ("EXCLUDED", ["version:sites_changed_since_citing"])
+        # amendment A1 (labels only): an applicable version that names no product-scoped MANUFACTURE site is not a
+        # change of sites; either way no site continuity can be shown and the reference is excluded
+        row["v2"] = (("ELIGIBLE", []) if row["continuing_sites"] else
+                     ("EXCLUDED", ["version:sites_changed_since_citing" if row["sites_at_applicable"]
+                                   else "version:no_site_named_at_applicable_version"]))
     else:
         row["v2"] = ("EXCLUDED", [f"version:{cls}"])
     return row

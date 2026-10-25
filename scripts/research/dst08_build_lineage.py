@@ -12,7 +12,11 @@ the production database is only read. The script
      on validity, resolution, resolved source set and chain, and explains each consistency difference;
   5. reports coverage before and after with the DIRECT tier separate, and times the main queries.
 
-Output: docs/research/dst08/lineage_build.json.
+With ``--manifest`` (rule v2) each build is followed by lineage.validate_v2 over the frozen history manifest; both v2
+runs must give identical fingerprints, and the v1 tables must still equal the v1 record at c8ded0f
+(lineage_build.json), so v1's counts and evidence stay measurable beside v2.
+
+Output: docs/research/dst08/lineage_build.json (v1), or lineage_build_v2.json with ``--manifest``.
 """
 
 from __future__ import annotations
@@ -109,21 +113,33 @@ def coverage(c) -> dict:
             "source_linked_products_by_number_of_direct_source_sites": sites}
 
 
+V1_TABLES = ("source_reference", "source_resolution", "source_linked_evidence")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--db", default="fineprint_dst08")
     ap.add_argument("--production", default="fineprint")
+    ap.add_argument("--manifest", type=Path, help="rule v2: the frozen source history manifest")
+    ap.add_argument("--cache", type=Path, default=raw.DATA / "research" / "dst08" / "history")
     a = ap.parse_args()
     commit, dirty = ingest.code_version()
+    v1_record = json.loads(OUT.read_text(encoding="utf-8"))["build"]["fingerprint"] if a.manifest else None
     with db.connect(a.production) as p:
         prod = national_state(p)
     with db.connect(a.db, autocommit=True) as c:
         before = national_state(c)
         if before != prod:
             raise SystemExit("the scratch database is not an exact copy of production; recreate it from the template")
-        builds = [lineage.build(c, code_commit=commit, code_dirty=dirty, log=print) for _ in range(2)]
+        builds, v2 = [], []
+        for _ in range(2):
+            builds.append(lineage.build(c, code_commit=commit, code_dirty=dirty, log=print))
+            if a.manifest:
+                v2.append(lineage.validate_v2(c, a.manifest, a.cache, log=print))
         after = national_state(c)
-        repro = builds[0]["fingerprint"] == builds[1]["fingerprint"]
+        repro = builds[0]["fingerprint"] == builds[1]["fingerprint"] and (not v2 or v2[0]["fingerprint"] == v2[1]["fingerprint"])
+        v1_preserved = (all(builds[-1]["fingerprint"][k] == v1_record[k] for k in V1_TABLES) and
+                        lineage.fingerprint(c) == builds[-1]["fingerprint"]) if a.manifest else None
         n54 = c.execute("SELECT r.product_ndc_5_4 FROM lineage.source_linked_evidence e JOIN lineage.source_reference r "
                         "USING (reference_pk) ORDER BY r.reference_pk LIMIT 1").fetchone()[0]
         perf = {"build_seconds": [b["seconds"] for b in builds],
@@ -142,10 +158,17 @@ def main():
             "national_state": prod, "reproducible": repro, "build": builds[1], "coverage": coverage(c),
             "inventory_comparison": compare_inventory(c), "performance": perf,
         }
+        if a.manifest:
+            perf["v2_seconds"] = [r["seconds"] for r in v2]
+            result.update(rule_version_v2=lineage.V2_RULE_VERSION, v1_tables_equal_c8ded0f_record=v1_preserved,
+                          manifest=a.manifest.name, manifest_sha256=hashlib.sha256(a.manifest.read_bytes()).hexdigest(),
+                          v2=v2[1])
     text = json.dumps(result, indent=1, default=str) + "\n"
-    OUT.write_text(text, encoding="utf-8", newline="\n")
-    print(json.dumps({k: result[k] for k in ("scratch_equals_production_before", "national_unchanged_after", "reproducible")}))
-    return 0 if result["national_unchanged_after"] and repro else 1
+    (OUT.with_name("lineage_build_v2.json") if a.manifest else OUT).write_text(text, encoding="utf-8", newline="\n")
+    keys = ("scratch_equals_production_before", "national_unchanged_after", "reproducible") + (
+        ("v1_tables_equal_c8ded0f_record",) if a.manifest else ())
+    print(json.dumps({k: result[k] for k in keys}))
+    return 0 if result["national_unchanged_after"] and repro and v1_preserved is not False else 1
 
 
 if __name__ == "__main__":
