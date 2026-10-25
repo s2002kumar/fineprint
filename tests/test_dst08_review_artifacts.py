@@ -78,6 +78,17 @@ class DST08ReviewArtifactIntegrity(unittest.TestCase):
                 self.assertIn(item_id, self.runbook)
         self.assertIn("not a human sign-off", self.runbook.lower())
 
+    def test_review_status_links_resolve_inside_the_repository(self):
+        status_path = DST08 / "DST_08_REVIEW_STATUS.md"
+        status_text = status_path.read_text(encoding="utf-8")
+        targets = re.findall(r"\\[[^\\]]+\\]\\(([^)]+)\\)", status_text)
+        local_targets = [target for target in targets if "://" not in target]
+        self.assertTrue(local_targets)
+        for target in local_targets:
+            with self.subTest(target=target):
+                resolved = (status_path.parent / target.split("#", 1)[0]).resolve()
+                self.assertTrue(resolved.is_file(), target)
+
     def test_random_r9_sample_matches_frozen_manifest_and_rederived_checks(self):
         expected_ids = {f"R9-{number:02d}" for number in range(1, 31)}
         manifest = {row["sample_id"]: row for row in self.manifest["sample"]}
