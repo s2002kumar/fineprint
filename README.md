@@ -82,7 +82,7 @@ python -I scripts/fp.py facility 030606222
 python -I scripts/fp.py evidence 105515 --raw
 ```
 
-Run the released test suite with `python -I -m unittest discover -s tests -t .`. The main-branch suite contains **84 tests**, including **20 PostgreSQL-backed tests**; CI runs with PostgreSQL 18. A full ingest requires the separate source archives described in the [reproduction guide](docs/REPRODUCIBILITY.md).
+Run the released test suite with `python -I -m unittest discover -s tests -t .`. The full PostgreSQL 18 CI run executed **87 tests** on October 26, 2026; CI also runs database-free jobs on Python 3.11 and 3.14. A full ingest requires the separate source archives described in the [reproduction guide](docs/REPRODUCIBILITY.md).
 
 ## What fineprint cannot tell you
 
