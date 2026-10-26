@@ -35,13 +35,13 @@ The explorer is a **published snapshot**, not a live FDA API or an inventory mon
 
 ## How fineprint works
 
-\`\`\`mermaid
+```mermaid
 flowchart LR
     A["DailyMed drug labels<br/>products + manufacturing claims"] --> C["Python ingestion<br/>PostgreSQL evidence graph"]
     B["FDA establishment registry<br/>facility IDs + addresses"] --> C
     C --> D["Product-to-facility links<br/>with evidence + uncertainty"]
     D --> E["Searchable web explorer<br/>and Python CLI"]
-\`\`\`
+```
 
 For each reported manufacturing relationship, the project:
 
@@ -67,22 +67,22 @@ These are **measured runs on the documented reference machine**, not simulated t
 
 | Start here | What's inside |
 | --- | --- |
-| [\`src/fineprint/\`](src/fineprint/) | SPL parsing, streaming ingest, graph rules, identity resolution, historical replay |
-| [\`scripts/fp.py\`](scripts/fp.py) | CLI for products, facilities and raw source evidence |
-| [\`migrations/\`](migrations/) | PostgreSQL schema and additive changes |
-| [\`site/\`](site/) | Static explorer, datasets and client-side CSV exports |
-| [\`tests/\`](tests/) | Parsing, PostgreSQL integration, recovery, historical guards, export checks |
-| [\`evidence/\`](evidence/) | Reproducible run manifests, benchmarks and frozen evaluation outputs |
+| [`src/fineprint/`](src/fineprint/) | SPL parsing, streaming ingest, graph rules, identity resolution, historical replay |
+| [`scripts/fp.py`](scripts/fp.py) | CLI for products, facilities and raw source evidence |
+| [`migrations/`](migrations/) | PostgreSQL schema and additive changes |
+| [`site/`](site/) | Static explorer, datasets and client-side CSV exports |
+| [`tests/`](tests/) | Parsing, PostgreSQL integration, recovery, historical guards, export checks |
+| [`evidence/`](evidence/) | Reproducible run manifests, benchmarks and frozen evaluation outputs |
 
 Example CLI commands after [local data setup](docs/REPRODUCIBILITY.md):
 
-\`\`\`sh
+```sh
 python -I scripts/fp.py product 0409-4346
 python -I scripts/fp.py facility 030606222
 python -I scripts/fp.py evidence 105515 --raw
-\`\`\`
+```
 
-Run the released test suite with \`python -I -m unittest discover -s tests -t .\`. The main-branch suite contains **84 tests**, including **20 PostgreSQL-backed tests**; CI runs with PostgreSQL 18. A full ingest requires the separate source archives described in the [reproduction guide](docs/REPRODUCIBILITY.md).
+Run the released test suite with `python -I -m unittest discover -s tests -t .`. The main-branch suite contains **84 tests**, including **20 PostgreSQL-backed tests**; CI runs with PostgreSQL 18. A full ingest requires the separate source archives described in the [reproduction guide](docs/REPRODUCIBILITY.md).
 
 ## What fineprint cannot tell you
 
