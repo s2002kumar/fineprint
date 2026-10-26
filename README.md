@@ -1,141 +1,100 @@
 # fineprint
 
-**Which factory actually makes your medicine?**
+**When a drug factory is disrupted, which medicines should investigators check first?**
 
-fineprint turns fragmented FDA manufacturing records into an auditable facility-to-drug graph. In a historical evaluation of Pfizer's 2023 Rocky Mount disruption, it identified the same 63 publicly flagged NDCs as a company-wide search using a 46% shorter investigation list.
+Public FDA records contain clues, but the pieces live in different places: drug labels describe products and sometimes list manufacturing establishments; a separate registry identifies those establishments. **fineprint connects the records into a searchable, source-backed map of products and manufacturing sites.** It shows what the published records say, when they said it, and when the evidence is missing.
 
-Concretely:
-- Using only labels published before the tornado, the graph listed **480** Hospira packages with a documented Rocky Mount manufacturing link. **63** of the **65** NDCs on Pfizer's July 21, 2023 warning list were among them.
-- The company-wide baseline (every Hospira `00409` package) needed **890** candidates to reach the same 63.
+[**Explore the live project**](https://s2002kumar.github.io/fineprint/) · [**See the 2023 case study**](https://s2002kumar.github.io/fineprint/#/rocky-mount-2023) · [How it works](docs/ARCHITECTURE.md) · [Source code](src/fineprint/)
 
-The result measures recall of a known warning list and the size of the list to investigate. It does not measure precision, and it is not shortage prediction.
+[![Python and PostgreSQL tests](https://github.com/s2002kumar/fineprint/actions/workflows/ci.yml/badge.svg)](https://github.com/s2002kumar/fineprint/actions/workflows/ci.yml)
 
-**[Open the Facility Evidence Explorer](https://s2002kumar.github.io/fineprint/)** · [Case study](docs/CASE_STUDY.md) ·
-[Evaluation report](docs/EVALUATION_REPORT.md) · [Example queries](docs/EXAMPLE_QUERIES.md) · [Metrics](docs/METRICS.md)
+## The result
 
-![Explorer view of Hospira Rocky Mount: identity from the FDA registration file, then one row per documented manufacturing assertion with its label version and source](docs/img/explorer-rocky-mount.png)
+In July 2023, a tornado disrupted Pfizer's Hospira facility in **Rocky Mount, North Carolina**. Two days later, Pfizer published a list of 65 product-package codes it expected to run low.
 
-## Why the records are hard to connect
-- **Labels name companies, not factories.** A drug label (SPL) names the *labeler*: the company on the box. Factories
-  appear only in an optional establishment section. There, each one is a DUNS number with operation codes
-  (manufacture, pack, label, test) and the product codes they cover.
-- **Identity lives elsewhere.** Turning a DUNS into a physical site takes FDA's establishment registration file
-  (DECRS). FDA regenerates that file daily and does not keep old versions, and many DUNS in labels never appear in it.
-- **Labels change.** A label is a versioned set. Old versions are retired, so reconstructing what was on record on a
-  past date takes archive work.
-- **NDC formats collide.** Product codes (5-4) and package codes (5-4-2) are easy to conflate.
+I tested whether fineprint could narrow the list of products worth investigating **using only drug-label records published before the tornado**.
 
-In the current release, **67.6%** of 80,508 products have no product-level MANUFACTURE statement in their label.
-**19.7%** of the 3,333 DUNS named as manufacturers match no record in any loaded FDA registration file.
+| Approach | Packages to investigate | Items recovered from Pfizer's 65-item warning list |
+| --- | ---: | ---: |
+| Search every Hospira package in the study cohort | 890 | 63 |
+| **Filter for documented Rocky Mount manufacturing links** | **480** | **63** |
 
-## How the evidence graph works
-```mermaid
+**46.1% fewer candidates, with the same 63 of 65 warning-list items recovered.**
+
+This is a **historical list-reduction experiment**, not a shortage prediction. Pfizer's warning list is not a complete list of everything the plant manufactured; the two missed items were sterile empty vials, which had no drug labels. [Read the evaluation and its limitations](docs/EVALUATION_REPORT.md).
+
+![Fineprint facility explorer showing manufacturing evidence for the Rocky Mount site](docs/img/explorer-rocky-mount.png)
+
+## Try it in 30 seconds
+
+1. [**Open the Rocky Mount facility**](https://s2002kumar.github.io/fineprint/#/facility/093132819). Inspect the product links, manufacturing operations and cited label versions.
+2. [**Open the historical 2023 comparison**](https://s2002kumar.github.io/fineprint/#/rocky-mount-2023). See the 480-versus-890 shortlist and exactly what it measures.
+3. [**Search other establishments**](https://s2002kumar.github.io/fineprint/). Browse the public snapshot and export results as CSV.
+
+The explorer is a **published snapshot**, not a live FDA API or an inventory monitoring service.
+
+## How fineprint works
+
+\`\`\`mermaid
 flowchart LR
-  subgraph cur[Current-release graph · PostgreSQL]
-    R[DailyMed full release<br/>6 parts, 18 GB, MD5 + SHA-256] --> I[Streaming ingest<br/>savepoint per label]
-    I --> N[(labels · products · packages<br/>operation assertions + XPath)]
-    D[FDA registration files<br/>current + dated archives] --> G
-    N --> G[Graph build<br/>version selection · DUNS → FEI]
-    G --> E[(edges: DIRECT · TENTATIVE · UNKNOWN)]
-    E --> C[CLI fp.py]
-    E --> X[export_explorer.py] --> P[Static explorer<br/>GitHub Pages]
-  end
-  subgraph hist[Historical replay · files only]
-    H[Label versions published ≤ 2023-07-18<br/>DailyMed · FDA by document ID · monthly archives] --> F[Frozen cohort<br/>tag dst04b-freeze]
-    F --> S[Scored after unsealing<br/>Pfizer's 2023-07-21 list]
-    S --> P
-  end
-```
-- **One edge per assertion.** An edge is a single `<performance>` element in a single label version: product code →
-  operation code → DUNS → FEI and address in a dated FDA file.
-- **Every edge cites its source:** set ID, version, document ID, XML location, XML SHA-256 and release part.
-  `fp.py evidence <id> --raw` re-opens the archive, re-checks both hashes and prints the element.
-- **Status:**
-  - **DIRECT**: a product-scoped link to a currently registered FEI.
-  - **TENTATIVE**: stale or partial identity, or an ambiguous label version.
-  - **UNKNOWN**: no registration evidence, or the label does not say which product the operation covers.
-  - The reason is stored with each edge.
-- **Nothing is inferred.** No site comes from a company name, an address string or a product name. A labeler is never
-  treated as a factory, and PACK or LABEL never counts as MANUFACTURE.
-- **The two datasets never mix.** The historical replay is file-based, with no database import and no 2026 data, and
-  its frozen inputs are pinned by a git tag.
+    A["DailyMed drug labels<br/>products + manufacturing claims"] --> C["Python ingestion<br/>PostgreSQL evidence graph"]
+    B["FDA establishment registry<br/>facility IDs + addresses"] --> C
+    C --> D["Product-to-facility links<br/>with evidence + uncertainty"]
+    D --> E["Searchable web explorer<br/>and Python CLI"]
+\`\`\`
 
-Details: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+For each reported manufacturing relationship, the project:
 
-## Rocky Mount, July 2023
-A tornado hit Pfizer's Hospira plant in Rocky Mount, NC (DUNS `093132819`) on 2023-07-19, and Pfizer published a
-low-inventory warning list two days later. The method was pre-registered and the cohort frozen before that list was
-retrieved.
+1. **Reads the original label.** It identifies the specific drug product and its manufacturing operation, rather than assuming the company marketing a medicine also manufactured it.
+2. **Resolves the establishment.** It matches the label's facility identifier (DUNS) against dated FDA registration data to locate the corresponding registered facility (FEI), when available.
+3. **Keeps the proof.** Results link to the exact label version, source document, XML location and recorded hashes. Missing or ambiguous evidence stays visible instead of being guessed.
 
-| Method (labels published ≤ 2023-07-18) | Candidates | Flagged NDCs recovered | List size vs company-wide |
-|---|---|---|---|
-| Company-wide: every Hospira `00409` package | 890 | 63 / 65 | — |
-| Injectables only | 886 | 62 / 65 | −0.4% |
-| **fineprint: DIRECT Rocky Mount MANUFACTURE link** | **480** | **63 / 65** | **−46.1%** |
-| Same comparison on FDA's May 2023 NDC directory cohort | 235 vs 469 | 63 / 65 each | −49.9% |
-| "Already short before the event" | not evaluable: no package-level pre-event data | | |
+The released graph labels evidence **DIRECT**, **TENTATIVE** or **UNKNOWN**. DIRECT means a product-scoped manufacturing statement appears in the label and its facility identity passes the graph's checks. It is **not** independent confirmation that a particular lot was manufactured there.
 
-- **The 2 misses are sterile empty vials,** which have no drug label at all.
-- **The 417 flagged packages that are not on the list are not false positives.** The list reflects low inventory
-  after warehouse damage, not a census of what the plant made.
-- **No human has audited the links yet.** A pre-unsealing check of 40 links was done by the AI assistant that built
-  the project. A [worksheet for an independent human audit](docs/HUMAN_AUDIT_WORKSHEET.md) is provided.
+## What I engineered
 
-Full write-up: [docs/CASE_STUDY.md](docs/CASE_STUDY.md).
+| Engineering problem | Implemented approach | Recorded result |
+| --- | --- | --- |
+| Process a large public dataset without loading it into memory | Streaming ZIP/XML ingest into PostgreSQL, with per-document savepoints | **18 GB**, **55,064 label files**, **23.1 minutes**, **73 MB peak memory** |
+| Recover safely from interrupted runs | Resumable downloads, idempotent ingest, bounded parsing and atomic graph rebuilds | Real crash, process kill and out-of-memory recovery produced **identical table fingerprints** to a clean run |
+| Make every graph relationship explainable | Versioned records, facility identity history, source locations and hash-verified evidence lookup | Rebuilds reproduced identical graph fingerprints; source-evidence lookup measured at **81 ms** |
+| Let anyone inspect the outcome | Deterministic JSON/CSV exports powering a static site | Public explorer across **4,314 establishment identifiers** mentioned in current labels |
+| Evaluate without peeking into the future | Separate 2023 file-based replay with a frozen pre-event cohort | **480 vs. 890** candidates, both recovering **63/65** warning-list items |
 
-## Explore or run it
-- **Browse:** the [explorer](https://s2002kumar.github.io/fineprint/) is a static export with no server.
-  - Rocky Mount and McPherson are worked examples with every operation.
-  - All 4,314 establishment DUNS in the current labels can be searched, each with its MANUFACTURE assertions.
-  - Every table downloads as CSV. Its data files and checksums are in `site/data/manifest.json`.
-- **Query locally** after building the database ([docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)):
-  ```sh
-  python -I scripts/fp.py product 0409-4346          # which registered sites manufacture this product
-  python -I scripts/fp.py facility 030606222         # what a site is documented to make
-  python -I scripts/fp.py evidence 105515 --raw      # re-read the cited XML element from the archive
-  ```
-  [Five worked examples with real output](docs/EXAMPLE_QUERIES.md).
-- **Test:** `python -I -m unittest discover -s tests -t .` runs 84 tests. 20 of them need PostgreSQL and skip without it;
-  CI runs all of them against PostgreSQL 18.
+These are **measured runs on the documented reference machine**, not simulated throughput or claims of production traffic. [Metrics and evidence files](docs/METRICS.md) · [Design and data model](docs/ARCHITECTURE.md).
 
-## Scale (measured, reference machine)
-| | |
-|---|---|
-| Ingest | 55,064 label files from 18 GB in 23.1 min, 0 failed, peak memory 73 MB |
-| Crash, kill and resume on real data | table fingerprints identical to a clean run |
-| Graph rebuild | 9.6–12.5 s, byte-identical fingerprints on rebuild and on a clean-clone reproduction |
-| Lookups | 3–32 ms median; `evidence --raw` re-reads and re-hashes the source in 81 ms |
-| Daily update (2026-10-19) | 207 labels ingested in 4.2 s; +80 / −89 edges; re-applying it changes nothing |
+## Explore the code
 
-Sources and the full list: [docs/METRICS.md](docs/METRICS.md).
+| Start here | What's inside |
+| --- | --- |
+| [\`src/fineprint/\`](src/fineprint/) | SPL parsing, streaming ingest, graph rules, identity resolution, historical replay |
+| [\`scripts/fp.py\`](scripts/fp.py) | CLI for products, facilities and raw source evidence |
+| [\`migrations/\`](migrations/) | PostgreSQL schema and additive changes |
+| [\`site/\`](site/) | Static explorer, datasets and client-side CSV exports |
+| [\`tests/\`](tests/) | Parsing, PostgreSQL integration, recovery, historical guards, export checks |
+| [\`evidence/\`](evidence/) | Reproducible run manifests, benchmarks and frozen evaluation outputs |
 
-## Limitations
-- **Archival incompleteness.** The 2023 label universe is not proven complete: DailyMed's all-labels-on-a-date export
-  was not obtained, and one label's pre-cutoff version could not be retrieved. Five recovered NDCs exist only in
-  retired labels found through FDA and archive retrieval.
-- **Coverage gaps.** Many labels state no manufacturing site, and unregistered DUNS stay UNKNOWN. The graph can show
-  what the records assert, not everything a plant makes.
-- **Exposure is not shortage.** A documented link says a site is on record for a product. It says nothing about
-  volume, inventory, other sites or whether the product will run short.
-- **Dated snapshots.** The current graph reflects the DailyMed release of 2026-10-16 and FDA registration files of
-  2026-10-19. Rocky Mount's 2023 identity rests on 2015 and 2022 records.
+Example CLI commands after [local data setup](docs/REPRODUCIBILITY.md):
 
-## Repository map
-| Path | Contents |
-|---|---|
-| `src/fineprint/` | SPL parser, ingest, graph rules, identity, CLI, historical replay, safe ZIP and download code |
-| `migrations/` | PostgreSQL schema (additive) |
-| `scripts/` | Pipeline steps, CLI `fp.py`, explorer export and verification, reproduction and audit tools |
-| `site/` | Static explorer and its data exports (`site/data/manifest.json` lists every file with SHA-256) |
-| `evidence/` | Committed run evidence: manifests, coverage, benchmarks, frozen historical cohorts, results |
-| `docs/` | Case study, architecture, evaluation report, pre-registered plan, metrics, audit worksheet |
-| `tests/` | Unit, PostgreSQL integration, crash/resume, historical rules, site data and privacy guards |
+\`\`\`sh
+python -I scripts/fp.py product 0409-4346
+python -I scripts/fp.py facility 030606222
+python -I scripts/fp.py evidence 105515 --raw
+\`\`\`
 
-## License, data and attribution
-- **Code:** [MIT](LICENSE). The data keeps its own terms; see [NOTICE.md](NOTICE.md).
-- **DailyMed data:** courtesy of the U.S. National Library of Medicine. The snapshots used here do not reflect the
-  most current/accurate data available from NLM.
-- **FDA data:** registration and NDC data are from the U.S. Food and Drug Administration.
-- **Not redistributed:** personal contact fields in FDA files (dropped at parse time), raw archives and label text.
-- **Independence:** fineprint is an independent project. It is not affiliated with or endorsed by NLM, NIH, FDA,
-  HHS, Pfizer or Hospira, and it is not medical advice.
+Run the released test suite with \`python -I -m unittest discover -s tests -t .\`. The main-branch suite contains **84 tests**, including **20 PostgreSQL-backed tests**; CI runs with PostgreSQL 18. A full ingest requires the separate source archives described in the [reproduction guide](docs/REPRODUCIBILITY.md).
+
+## What fineprint cannot tell you
+
+- **It does not predict shortages.** A label connection is not evidence of inventory, production volume, alternate suppliers or a future shortage.
+- **Public records are incomplete.** Some labels have no product-specific manufacturing statement; others name a site that cannot be resolved in the available registration snapshots.
+- **These are dated records.** The released national graph uses DailyMed data from **October 16, 2026**, and FDA registration files through **October 19, 2026**. The historical archive is incomplete, and the study covers one disruption.
+- **Validation has limits.** Automated tests, source re-extraction and AI-assisted evidence checks are documented, but an **independent human source audit has not been completed**. Draft follow-up research also identifies label-versus-registration-operation conflicts that are not yet resolved in the released graph.
+
+The experimental [accuracy/coverage review (PR #2)](https://github.com/s2002kumar/fineprint/pull/2) and [source-NDC lineage research (PR #3)](https://github.com/s2002kumar/fineprint/pull/3) are **draft, not part of this released explorer**. In particular, SOURCE_LINKED relationships in PR #3 must not be presented as verified facilities for specific repackaged lots.
+
+**Deeper reading:** [Case study](docs/CASE_STUDY.md) · [Evaluation report](docs/EVALUATION_REPORT.md) · [Reproducibility](docs/REPRODUCIBILITY.md) · [Example queries](docs/EXAMPLE_QUERIES.md) · [Full metrics](docs/METRICS.md).
+
+## Data and attribution
+
+Code is [MIT-licensed](LICENSE); source datasets retain their own terms ([NOTICE](NOTICE.md)). Drug-label data is courtesy of the U.S. National Library of Medicine's DailyMed, and establishment records are from the U.S. FDA. Raw archives and personal contact data are not published here. fineprint is independent and is **not affiliated with or endorsed by FDA, NLM, NIH, HHS, Pfizer or Hospira**. It is not medical advice.
