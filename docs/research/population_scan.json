@@ -1,0 +1,100 @@
+{
+ "generated_at": "2026-10-22T09:45:23Z",
+ "documents_scanned": 52747,
+ "documents_in_scope": 52747,
+ "seconds": 1032,
+ "per_product_csv_outside_repo": "FINEPRINT_DATA/research/population_scan_products.csv",
+ "tally_by_stratum": {
+  "DIRECT": {
+   "products": 24614,
+   "label_has_free_text_role_statement": 22431,
+   "label_says_manufactured_by": 15947,
+   "label_says_manufactured_for": 7815,
+   "label_says_distributed_by": 9805,
+   "has_source_ndc": 76,
+   "source_ndc_not_in_graph": 9,
+   "source_ndc_is_DIRECT_in_graph": 58,
+   "label_says_made_in": 3185,
+   "source_ndc_has_NO_MANUFACTURE_EVIDENCE": 9
+  },
+  "ESTABLISHMENTS_LISTED_NOT_FOR_THIS_PRODUCT": {
+   "products": 119,
+   "label_has_free_text_role_statement": 112,
+   "label_says_manufactured_by": 45,
+   "has_source_ndc": 21,
+   "source_ndc_is_DIRECT_in_graph": 3,
+   "label_says_distributed_by": 41,
+   "label_says_manufactured_for": 28,
+   "source_ndc_not_in_graph": 11,
+   "source_ndc_has_NO_MANUFACTURE_EVIDENCE": 7,
+   "label_says_made_in": 29
+  },
+  "NO_ESTABLISHMENT_BLOCK": {
+   "products": 18453,
+   "label_has_free_text_role_statement": 16812,
+   "label_says_distributed_by": 7855,
+   "label_says_manufactured_by": 6532,
+   "label_says_made_in": 2333,
+   "label_says_manufactured_for": 7543,
+   "has_source_ndc": 5002,
+   "source_ndc_not_in_graph": 456,
+   "source_ndc_is_TENTATIVE_in_graph": 15,
+   "source_ndc_has_NO_MANUFACTURE_EVIDENCE": 1638,
+   "source_ndc_is_DIRECT_in_graph": 2877,
+   "source_ndc_is_UNKNOWN_SITE_in_graph": 16
+  },
+  "ONLY_UNSCOPED_OPERATIONS_IN_DOCUMENT": {
+   "products": 7762,
+   "label_has_unscoped_manufacture": 4317,
+   "label_has_unscoped_manufacture_and_single_product": 680,
+   "label_has_free_text_role_statement": 3383,
+   "label_says_manufactured_by": 2020,
+   "label_says_manufactured_for": 1170,
+   "has_source_ndc": 3679,
+   "source_ndc_not_in_graph": 2055,
+   "label_says_distributed_by": 998,
+   "source_ndc_has_NO_MANUFACTURE_EVIDENCE": 856,
+   "source_ndc_is_DIRECT_in_graph": 725,
+   "source_ndc_is_UNKNOWN_SITE_in_graph": 30,
+   "label_says_made_in": 130,
+   "source_ndc_is_TENTATIVE_in_graph": 13
+  },
+  "OTHER_OPERATIONS_ONLY": {
+   "products": 28123,
+   "has_source_ndc": 27557,
+   "source_ndc_not_in_graph": 3232,
+   "label_has_free_text_role_statement": 25056,
+   "label_says_manufactured_for": 9144,
+   "source_ndc_has_NO_MANUFACTURE_EVIDENCE": 7228,
+   "label_says_manufactured_by": 15687,
+   "source_ndc_is_DIRECT_in_graph": 16791,
+   "label_says_distributed_by": 10938,
+   "source_ndc_is_UNKNOWN_SITE_in_graph": 128,
+   "label_says_made_in": 2322,
+   "source_ndc_is_TENTATIVE_in_graph": 178
+  },
+  "TENTATIVE": {
+   "products": 435,
+   "label_has_free_text_role_statement": 284,
+   "label_says_manufactured_by": 210,
+   "label_says_distributed_by": 78,
+   "label_says_manufactured_for": 62,
+   "has_source_ndc": 4,
+   "source_ndc_not_in_graph": 2,
+   "label_says_made_in": 24,
+   "source_ndc_is_DIRECT_in_graph": 2
+  },
+  "UNKNOWN_SITE": {
+   "products": 1002,
+   "label_has_free_text_role_statement": 618,
+   "label_says_manufactured_by": 498,
+   "label_says_distributed_by": 246,
+   "label_says_manufactured_for": 101,
+   "has_source_ndc": 15,
+   "source_ndc_not_in_graph": 7,
+   "label_says_made_in": 17,
+   "source_ndc_has_NO_MANUFACTURE_EVIDENCE": 4,
+   "source_ndc_is_DIRECT_in_graph": 4
+  }
+ }
+}

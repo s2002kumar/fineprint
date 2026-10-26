@@ -1,0 +1,51 @@
+# Audit evidence table (AI-assisted verification, not a human audit)
+
+Generated 2026-10-22T09:20:46Z by `scripts/research/verify_audit_sample.py` from `docs/HUMAN_AUDIT_WORKSHEET.md` (SHA-256 `9ba457a6350f3d7f…`). Machine-readable detail for every check: `docs/research/audit_results.json`.
+
+| Case | Stratum | Verdict | Basis | Source checked | Source version | Observation |
+|---|---|---|---|---|---|---|
+| C01 | DIRECT MANUFACTURE, national | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `b4c1ae97…`; DECRS 2026-10-19 | set `c71371a7…` v23, XML `d42746365887…` | C43360 (MANUFACTURE) by DUNS ['918603338'] for ['36000-283']; identity CURRENT_REGISTERED, FEI 3004610460 |
+| C02 | DIRECT MANUFACTURE, national | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `a85661b9…`; DECRS 2026-10-19 | set `22d4817c…` v5, XML `6c9bd5f0bcd0…` | C43360 (MANUFACTURE) by DUNS ['862199968'] for ['27241-222']; identity CURRENT_REGISTERED, FEI 3012664809 |
+| C03 | DIRECT MANUFACTURE, national | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `fd69f24e…`; DECRS 2026-10-19 | set `a8e8fde2…` v15, XML `da91eadfb099…` | C43360 (manufacture) by DUNS ['165104469'] for ['76282-208']; identity CURRENT_REGISTERED, FEI 3003950641 |
+| C04 | DIRECT MANUFACTURE, national | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `38ef297e…`; DECRS 2026-10-19 | set `2b0c8ee4…` v3, XML `346f0aeccd64…` | C43360 (manufacture) by DUNS ['243339023'] for ['51672-1394']; identity CURRENT_REGISTERED, FEI 3002808384 |
+| C05 | DIRECT MANUFACTURE, national | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `e3ac80f9…`; DECRS 2026-10-19 | set `ea1d4a37…` v8, XML `e7e5cdbc4263…` | C43360 (manufacture) by DUNS ['079389286'] for ['69238-2031']; identity CURRENT_REGISTERED, FEI 3008861605 |
+| C06 | DIRECT MANUFACTURE, national | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `f1736bb6…`; DECRS 2026-10-19 | set `e2d4307d…` v12, XML `05db92b25726…` | C43360 (MANUFACTURE) by DUNS ['049504624'] for ['11704-105']; identity CURRENT_REGISTERED, FEI 1950222 |
+| C07 | DIRECT MANUFACTURE, national | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `74923cbc…`; DECRS 2026-10-19 | set `776a8dbc…` v8, XML `dc6c9fb0a416…` | C43360 (MANUFACTURE) by DUNS ['918917639'] for ['65862-084']; identity CURRENT_REGISTERED, FEI 3004021263 |
+| C08 | DIRECT MANUFACTURE, national | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `53dd7857…`; DECRS 2026-10-19 | set `737eef3b…` v4, XML `fc10c73b622b…` | C43360 (MANUFACTURE) by DUNS ['829084461'] for ['13107-105']; identity CURRENT_REGISTERED, FEI 3005796917 |
+| C09 | DIRECT MANUFACTURE, Rocky Mount | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `0e632089…`; DECRS 2026-10-19 | set `c58f8112…` v10, XML `e9d314ff5c51…` | C43360 (MANUFACTURE) by DUNS ['093132819'] for ['0409-3294']; identity CURRENT_REGISTERED, FEI 1021343 |
+| C10 | DIRECT MANUFACTURE, Rocky Mount | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `2f400934…`; DECRS 2026-10-19 | set `20293943…` v32, XML `9265a16b144d…` | C43360 (MANUFACTURE) by DUNS ['093132819'] for ['0409-3382']; identity CURRENT_REGISTERED, FEI 1021343 |
+| C11 | DIRECT MANUFACTURE, McPherson | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `0280cc35…`; DECRS 2026-10-19 | set `20140b19…` v28, XML `39452b05f26d…` | C43360 (MANUFACTURE) by DUNS ['030606222'] for ['0409-1985']; identity CURRENT_REGISTERED, FEI 1925262 |
+| C12 | DIRECT MANUFACTURE, McPherson | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `5626304b…`; DECRS 2026-10-19 | set `e6e4dd0c…` v14, XML `a523559b9b93…` | C43360 (MANUFACTURE) by DUNS ['030606222'] for ['59353-010']; identity CURRENT_REGISTERED, FEI 1925262 |
+| C13 | TENTATIVE MANUFACTURE | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `0e7688ae…`; DECRS 2026-10-19 | set `81e639d7…` v9, XML `1117081499b1…` | C43360 (manufacture) by DUNS ['927726893'] for ['0178-0821']; identity CURRENT_REGISTERED, FEI 3000204446 |
+| C14 | TENTATIVE MANUFACTURE | **VERIFIED** | 23/23 checks passed | release part member + FDA SPL by document ID `ffaaf46e…`; DECRS 2026-10-19 | set `8494bec5…` v12, XML `f162c63f27c5…` | C43360 (manufacture) by DUNS ['965167955'] for ['62250-802']; identity STALE_REGISTERED, FEI 1000526113 |
+| C15 | TENTATIVE MANUFACTURE | **VERIFIED** | 23/23 checks passed | release part member + FDA SPL by document ID `3ef13c12…`; DECRS 2026-10-19 | set `104be9f2…` v13, XML `99e503850e84…` | C43360 (manufacture) by DUNS ['051762268'] for ['50261-104']; identity STALE_REGISTERED, FEI 1811396 |
+| C16 | UNKNOWN MANUFACTURE | **VERIFIED** | 19/19 checks passed | release part member + FDA SPL by document ID `e310afbc…`; DECRS 2026-10-19 | set `5fcaa2df…` v2, XML `e5479e17d297…` | C43360 (manufacture) by DUNS ['085613073'] for []; identity CURRENT_REGISTERED, FEI 1219530 |
+| C17 | UNKNOWN MANUFACTURE | **VERIFIED** | 21/21 checks passed | release part member + FDA SPL by document ID `3ff17740…`; DECRS 2026-10-19 | set `7ad38e3b…` v2, XML `ced131cf5b6a…` | C43360 (manufacture) by DUNS ['832847995'] for ['65727-067']; identity NOT_FOUND |
+| C18 | UNKNOWN MANUFACTURE | **VERIFIED** | 21/21 checks passed | release part member + FDA SPL by document ID `87c24197…`; DECRS 2026-10-19 | set `273dcb3a…` v1, XML `aad60d9063d3…` | C43360 (manufacture) by DUNS ['035545763'] for ['52533-042']; identity NOT_FOUND |
+| C19 | Control: PACK or LABEL is not MANUFACTURE | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `b62d8928…`; DECRS 2026-10-19 | set `92b7ddaa…` v6, XML `f4b7bb026ef5…` | C84732 (LABEL) by DUNS ['093132819'] for ['0409-4596']; identity CURRENT_REGISTERED, FEI 1021343 |
+| C20 | Control: PACK or LABEL is not MANUFACTURE | **VERIFIED** | 22/22 checks passed | release part member + FDA SPL by document ID `689ec2ad…`; DECRS 2026-10-19 | set `e8808230…` v23, XML `f6a1d2b3a551…` | C84731 (PACK) by DUNS ['093132819'] for ['0409-9158']; identity CURRENT_REGISTERED, FEI 1021343 |
+| H01 | DIRECT, on Pfizer's list | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `9822ca3f…` v21 published 2023-02-02 | class DIRECT; MANUFACTURE DUNS ['093132819']; RM ops ['C25391', 'C43360', 'C84731', 'C84732'] |
+| H02 | DIRECT, on Pfizer's list | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `559a0a8c…` v20 published 2022-10-17 | class DIRECT; MANUFACTURE DUNS ['093132819', '860037912']; RM ops ['C25391', 'C43360', 'C84731', 'C84732'] |
+| H03 | DIRECT, not on Pfizer's list | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `c5a005b0…` v19 published 2022-11-15 | class DIRECT; MANUFACTURE DUNS ['093132819']; RM ops ['C25391', 'C43360', 'C84731', 'C84732'] |
+| H04 | DIRECT, not on Pfizer's list | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `2b9ea23a…` v8 published 2021-05-24 | class DIRECT; MANUFACTURE DUNS ['093132819', '860037912']; RM ops ['C25391', 'C43360', 'C84731', 'C84732'] |
+| H05 | OTHER_SITE | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `b598c237…` v23 published 2023-06-07 | class OTHER_SITE; MANUFACTURE DUNS ['030606222']; RM ops [] |
+| H06 | OTHER_SITE | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `93cf0914…` v3 published 2023-03-07 | class OTHER_SITE; MANUFACTURE DUNS ['030606222']; RM ops [] |
+| H07 | OTHER_SITE | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `de1c2dcd…` v11 published 2022-11-09 | class OTHER_SITE; MANUFACTURE DUNS ['918601238']; RM ops [] |
+| H08 | RM_SECONDARY_ONLY | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `fc79700c…` v19 published 2023-02-16 | class RM_SECONDARY_ONLY; MANUFACTURE DUNS []; RM ops ['C25391'] |
+| H09 | UNKNOWN_NO_ESTABLISHMENT | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `290c3e9c…` v1 published 2007-03-01 | class UNKNOWN_NO_ESTABLISHMENT; MANUFACTURE DUNS []; RM ops [] |
+| H10 | UNKNOWN_NO_MANUFACTURE_OP | **VERIFIED** | 17/17 checks passed | cached pre-cutoff zip (provenance + frozen hash) + DailyMed history (cached and live) + appendix PDF | set `0413f511…` v23 published 2023-02-28 | class UNKNOWN_NO_MANUFACTURE_OP; MANUFACTURE DUNS []; RM ops [] |
+| H11 | Uncovered warning-list NDC | **VERIFIED** | 3/3 checks passed | appendix PDF + live DailyMed NDC lookup | n/a | no admissible SPL; list membership checked |
+| I01 | Rocky Mount, 2022 identity used by the historical replay | **VERIFIED** | 7/7 checks passed | archived 2022 DECRS (cached + web.archive.org) | 2022-10-13T06:15:16 | FEI 1021343, Highway 301 North, Rocky Mount, North Carolina (NC) 27801, United States (USA) |
+| I02 | McPherson, current identity | **VERIFIED** | 3/3 checks passed | dated current DECRS | 2026-10-19T03:00:34 | FEI 1925262, 1776 North Centennial Drive, McPherson, Kansas (KS) 67460, United States (USA) |
+
+## Tally
+
+| Part | VERIFIED | FAILED | CANNOT_TELL |
+|---|---|---|---|
+| Current graph links | 20 | 0 | 0 |
+| Historical replay packages | 11 | 0 | 0 |
+| Facility identity | 2 | 0 | 0 |
+
+## Registration drift (informational, not part of any verdict)
+
+Today's live DECRS (generated 2026-10-21T03:01:00) versus the dated file: 0 of 16 sampled DUNS changed status or FEI.
