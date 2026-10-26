@@ -102,7 +102,7 @@ On the reference database, `--verify` reported all 101 data files identical. 34,
 28 fields (`evidence/explorer/csv_verification.json`).
 
 ## 4. Tests and CI
-- `python -I -m unittest discover -s tests -t .` runs 84 tests. Without a database, the 20 database tests skip.
+- `python -I -m unittest discover -s tests -t .` ran **87 tests** against PostgreSQL 18 in CI on 2026-10-26. Without a database, PostgreSQL-dependent tests skip.
 - With psycopg and a test database, the same command runs the full suite. It covers:
   - real ingest semantics and crash/kill/resume;
   - graph rules, CLI answers and historical rules;
