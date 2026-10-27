@@ -87,7 +87,7 @@ issues" and "Still needs a human".
    to disk, so the saved-file path itself was not exercised.
 
 ## 5. Still needs a human
-- **Run the independent audit.** Work through [docs/HUMAN_AUDIT_WORKSHEET.md](docs/HUMAN_AUDIT_WORKSHEET.md): 20
+- **Run the independent audit.** Work through [docs/HUMAN_AUDIT_WORKSHEET.md](../../HUMAN_AUDIT_WORKSHEET.md): 20
   current links, 11 historical packages and 2 identities, each with public source URLs. Record verdicts in
   `docs/human_audit_verdicts.csv`.
   - No human has audited any record yet. The existing 40/40 audit was done by the AI assistant that built the

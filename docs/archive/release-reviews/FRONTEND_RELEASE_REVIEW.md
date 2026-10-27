@@ -145,27 +145,27 @@ The comparisons put the approved design (left; Lovable `f8fb3e4`, with its own l
 production v1.2.0 (right; real exported data). Captured in headless Chrome with `scripts/screenshot_explorer.mjs`.
 
 **Home, 1440 px**
-![Home: design vs production at 1440 px](docs/img/v1.2.0/compare-home-desktop.jpg)
+![Home: design vs production at 1440 px](../../img/v1.2.0/compare-home-desktop.jpg)
 
 **Facility, 1440 px**
-![Facility: design vs production at 1440 px](docs/img/v1.2.0/compare-facility-desktop.jpg)
+![Facility: design vs production at 1440 px](../../img/v1.2.0/compare-facility-desktop.jpg)
 
 **Evidence drawer, 1440 px**
-![Evidence drawer: design vs production at 1440 px](docs/img/v1.2.0/compare-drawer-desktop.jpg)
+![Evidence drawer: design vs production at 1440 px](../../img/v1.2.0/compare-drawer-desktop.jpg)
 
 **2023 case, 1440 px**
-![2023 case: design vs production at 1440 px](docs/img/v1.2.0/compare-history-desktop.jpg)
+![2023 case: design vs production at 1440 px](../../img/v1.2.0/compare-history-desktop.jpg)
 
 **Phone, 390 px**
 
 | Home | Facility | Drawer | 2023 case |
 |---|---|---|---|
-| ![Home at 390 px](docs/img/v1.2.0/compare-home-phone.jpg) | ![Facility at 390 px](docs/img/v1.2.0/compare-facility-phone.jpg) | ![Drawer at 390 px](docs/img/v1.2.0/compare-drawer-phone.jpg) | ![2023 case at 390 px](docs/img/v1.2.0/compare-history-phone.jpg) |
+| ![Home at 390 px](../../img/v1.2.0/compare-home-phone.jpg) | ![Facility at 390 px](../../img/v1.2.0/compare-facility-phone.jpg) | ![Drawer at 390 px](../../img/v1.2.0/compare-drawer-phone.jpg) | ![2023 case at 390 px](../../img/v1.2.0/compare-history-phone.jpg) |
 
 **Production at 768, 390 and 320 px**
-![Home at 768, 390 and 320 px](docs/img/v1.2.0/responsive-home.jpg)
-![Facility at 768, 390 and 320 px](docs/img/v1.2.0/responsive-facility.jpg)
-![2023 case at 768, 390 and 320 px](docs/img/v1.2.0/responsive-history.jpg)
+![Home at 768, 390 and 320 px](../../img/v1.2.0/responsive-home.jpg)
+![Facility at 768, 390 and 320 px](../../img/v1.2.0/responsive-facility.jpg)
+![2023 case at 768, 390 and 320 px](../../img/v1.2.0/responsive-history.jpg)
 
 ## 4. Public URLs
 - **Explorer:** <https://s2002kumar.github.io/fineprint/>
@@ -211,7 +211,7 @@ production v1.2.0 (right; real exported data). Captured in headless Chrome with 
 - Read the new page copy, which was corrected against `docs/EVALUATION_REPORT.md`, for accuracy and tone.
 - Optionally, enable GitHub email privacy (known issue 1).
 - Open items from v1.1.0:
-  - the independent audit in [docs/HUMAN_AUDIT_WORKSHEET.md](docs/HUMAN_AUDIT_WORKSHEET.md), not yet performed;
+  - the independent audit in [docs/HUMAN_AUDIT_WORKSHEET.md](../../HUMAN_AUDIT_WORKSHEET.md), not yet performed;
   - deletion decisions for local backups and scratch databases.
 
 No forecasting, AI or research features were added. Work stopped after this release.
