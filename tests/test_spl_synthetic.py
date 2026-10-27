@@ -39,6 +39,23 @@ class Unsafe(unittest.TestCase):
         with self.assertRaises(spl.SplRejected):
             parse(bomb)
 
+    def test_late_dtd_after_prologue_scan_is_rejected(self):
+        # Valid XML with a DOCTYPE after 64 KiB of legal prologue whitespace.
+        # The old fixed-size first-chunk scan accepted and expanded its entity.
+        prefix = b'<?xml version="1.0"?>' + b' ' * (spl.PROLOGUE_SCAN_BYTES + 64)
+        xml = prefix + (b'<!DOCTYPE document [<!ENTITY demo "EXPANDED">]>'
+                        b'<document xmlns="urn:hl7-org:v3"><title>&demo;</title></document>')
+        with self.assertRaises(spl.SplRejected):
+            parse(xml)
+
+    def test_dtd_marker_split_across_initial_read_is_rejected(self):
+        prefix = b'<?xml version="1.0"?>'
+        xml = (prefix + b' ' * (spl.PROLOGUE_SCAN_BYTES - len(prefix) - 4)
+               + b'<!DOCTYPE document [<!ENTITY demo "x">]>'
+               + b'<document xmlns="urn:hl7-org:v3"/>')
+        with self.assertRaises(spl.SplRejected):
+            parse(xml)
+
     def test_wrong_root_rejected(self):
         with self.assertRaises(spl.SplRejected):
             parse(b'<?xml version="1.0"?><notspl xmlns="urn:hl7-org:v3"/>')
