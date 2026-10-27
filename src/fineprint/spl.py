@@ -85,7 +85,7 @@ def _indexed_children(elem):
 
 
 class _GuardedReader(io.RawIOBase):
-    """Hash + byte-cap the XML stream and reject DTD/entity declarations up front."""
+    """Hash + byte-cap the XML stream and reject DTD/entity declarations throughout."""
 
     def __init__(self, raw, max_bytes: int):
         super().__init__()
@@ -93,9 +93,10 @@ class _GuardedReader(io.RawIOBase):
         self._max = max_bytes
         self.count = 0
         self.sha256 = hashlib.sha256()
+        # Check every byte, including declarations beyond the first 64 KiB or
+        # split across reads. Retain only the longest marker's prefix.
+        self._declaration_tail = b""
         head = raw.read(PROLOGUE_SCAN_BYTES)
-        if b"<!DOCTYPE" in head or b"<!ENTITY" in head:
-            raise SplRejected("xml_dtd_or_entity_declaration")
         self._pending = head
         self._account(head)
 
@@ -103,6 +104,10 @@ class _GuardedReader(io.RawIOBase):
         self.count += len(data)
         if self.count > self._max:
             raise SplRejected(f"xml_exceeds_{self._max}_bytes")
+        scanned = self._declaration_tail + data
+        if b"<!DOCTYPE" in scanned or b"<!ENTITY" in scanned:
+            raise SplRejected("xml_dtd_or_entity_declaration")
+        self._declaration_tail = scanned[-8:]
         self.sha256.update(data)
 
     def readable(self):
