@@ -17,7 +17,7 @@ Linux is covered by CI on PostgreSQL 18; CI runs the tests, not the 18 GB build.
 | Daily update 2026-10-19 (on a copy of the database) | 207 prescription labels ingested in 4.19 s (90 MB); 196 retractions applied; edges +80 / −89 / 0 modified / 624 carried forward; second application: 0 labels loaded, 0 changes | `evidence/dst06/refresh_10192026_pass1.json`, `…_pass2.json` |
 | Historical replay | P = 65 validated outcome NDCs; graph 480 candidates, 63 recovered; all-Hospira 890, 63 recovered; 0 leakage violations; seal verified | `evidence/historical/evaluation_results.json`, `evidence/historical/frozen/` |
 | Explorer export | 101 data files, 21.2 MB raw; a second export was byte-identical; 34,494 CSV rows produced by the site's JavaScript matched the database on all 28 fields | `site/data/manifest.json`, `evidence/explorer/csv_verification.json` |
-| Tests | 84 tests: 64 need only the standard library; 20 need PostgreSQL. All pass locally and in GitHub Actions | `.github/workflows/ci.yml` |
+| Tests | **87 tests** passed in the PostgreSQL 18 CI job on 2026-10-26 ([run 40345956194](https://github.com/s2002kumar/fineprint/actions/runs/40345956194)); separate standard-library-only jobs run on Python 3.11 and 3.14. The count is a dated measurement, not an invariant. | `.github/workflows/ci.yml` |
 
 ## Observed but not recorded in an evidence file
 - **Daily-update wall time.** The first application of the 2026-10-19 daily update took about 42 s end to end, and
