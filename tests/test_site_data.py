@@ -153,6 +153,17 @@ class SiteData(unittest.TestCase):
         self.assertIn("snapshot is separate from the 2023 historical test", app)
         self.assertIn("it is not an independently verified production record", app)
 
+    def test_unresolved_guided_example_has_no_registered_site(self):
+        idx = _load("current/facilities.json")
+        rows = {r[0]: dict(zip(idx["columns"], r)) for r in idx["rows"]}
+        unresolved = rows["080105003"]
+        self.assertEqual(unresolved["status"], "NOT_FOUND")
+        self.assertIsNone(unresolved["fei"])
+        self.assertGreater(unresolved["mfg_unknown"], 0)
+        app = (SITE / "app.js").read_text(encoding="utf-8")
+        self.assertIn('fac.get("080105003")', app)
+        self.assertIn("no registered physical site resolved", app)
+
     @unittest.skipUnless(shutil.which("node"), "node not installed")
     def test_browser_csv_code_reproduces_exported_rows(self):
         out = json.loads(subprocess.run(["node", str(ROOT / "scripts" / "explorer_csv.mjs"), str(SITE)],
