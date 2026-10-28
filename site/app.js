@@ -159,10 +159,16 @@ function evidencePath() {
 }
 
 async function home() {
-  const [m, idx] = await Promise.all([load("manifest.json"), load("current/facilities.json")]);
+  const [m, idx, historical] = await Promise.all([
+    load("manifest.json"), load("current/facilities.json"), load("historical/rocky_mount_2023.json"),
+  ]);
   const fac = facilityIndex(idx);
   const find = searchIndex(fac);
   const c = m.datasets.current;
+  const baseline = historical.metrics.E.B1_all_hospira_00409;
+  const shortlist = historical.metrics.E.graph_rocky_mount_direct;
+  const reduction = (100 * (1 - shortlist.N / baseline.N)).toFixed(1);
+  const warnings = historical.outcome.distinct_package_ndc_11;
   setTitle("");
   const results = h("div", { class: "results" });
   const live = h("p", { class: "sr-only", role: "status", "aria-live": "polite" });
@@ -196,8 +202,8 @@ async function home() {
   input.addEventListener("input", () => { lastQuery = input.value; render(input.value, false); });
 
   const form = h("form", { class: "search", role: "search", onsubmit: (e) => { e.preventDefault(); lastQuery = input.value; render(input.value, true); } },
-    h("label", { for: "q", class: "eyebrow" }, "Search by facility, city, DUNS or FEI"),
-    h("div", { class: "search-box" }, input, h("button", { type: "submit" }, "Trace", h("span", { "aria-hidden": "true" }, " →"))),
+    h("label", { for: "q", class: "eyebrow" }, "Search factories by name, city, DUNS or FEI"),
+    h("div", { class: "search-box" }, input, h("button", { type: "submit" }, "Find site", h("span", { "aria-hidden": "true" }, " →"))),
     h("div", { class: "try" }, h("span", {}, "Try"), PROMPTS.map((p) => h("button", { type: "button", class: "link",
       onclick: () => { input.value = p; lastQuery = p; render(p, true); } }, p))),
     h("p", { class: "search-help small muted", id: "q-help" }, `All ${fmt(fac.size)} establishment DUNS named in the current `
@@ -205,35 +211,77 @@ async function home() {
       + "town does not mean the same facility: identity comes only from DUNS and FEI."));
 
   const ex = EXAMPLES.map((d) => fac.get(d));
-  const examples = h("div", { class: "examples" },
-    h("div", { class: "list-head" }, h("h2", { class: "eyebrow" }, "Guided examples"),
-      h("span", { class: "eyebrow" }, "All operations exported")),
-    h("ul", {}, ex.map((f) => h("li", {}, h("a", { class: "row-link", href: `#/facility/${f.duns}` },
+  const unresolved = fac.get("080105003"); // NOT_FOUND identity, never treated as a confirmed physical site
+  const exampleRows = ex.map((f) => h("li", {},
+    h("a", { class: "row-link", href: `#/facility/${f.duns}` },
       h("div", { class: "row-main" },
         h("p", { class: "row-title" }, placeOf(f.address).short),
-        h("p", { class: "row-sub" }, `${f.firm_name} · ${plural(mfgTotal(f), "MANUFACTURE assertion")} · ${fmt(f.mfg_direct)} direct`)),
-      h("span", { class: "row-meta" }, `DUNS ${f.duns}`), arrow())))));
+        h("p", { class: "row-sub" },
+          `${f.firm_name} · ${fmt(f.mfg_products)} products with documented manufacturing assertions`)),
+      h("span", { class: "row-meta" }, "Explore evidence"), arrow())));
+  if (unresolved) {
+    exampleRows.push(h("li", {},
+      h("a", { class: "row-link", href: `#/facility/${unresolved.duns}` },
+        h("div", { class: "row-main" },
+          h("p", { class: "row-title" }, "Unresolved manufacturing site"),
+          h("p", { class: "row-sub" },
+            `${fmt(unresolved.mfg_unknown)} UNKNOWN assertions · DUNS ${unresolved.duns}; no registered physical site resolved`)),
+        h("span", { class: "row-meta" }, "Inspect missing evidence"), arrow())));
+  }
+  const examples = h("div", { class: "examples" },
+    h("div", { class: "list-head" },
+      h("h3", { class: "eyebrow" }, "Guided evidence examples"),
+      h("span", { class: "eyebrow" }, "2026 label snapshot")),
+    h("ul", {}, exampleRows));
 
   show(
-    h("section", { class: "wrap hero" },
+    h("section", { class: "wrap hero story" },
       h("div", {},
-        h("p", { class: "eyebrow" }, "Evidence Explorer · FDA / DailyMed"),
-        h("h1", { class: "display" }, "Trace a medicine to the ", h("em", {}, "factory"), " behind it."),
-        h("p", { class: "lede" }, "fineprint rebuilds documented manufacturing links from versioned drug labels and FDA "
-          + "facility registration. Every claim links back to its source."),
-        form, results, live, examples),
-      h("div", { class: "hero-aside" }, evidencePath())),
+        h("p", { class: "eyebrow" }, "Factory evidence · A real investigation"),
+        h("h1", { class: "display story-title" }, "A drug factory is disrupted. ", h("em", {}, "What should we check?")),
+        h("p", { class: "lede" },
+          "Drug labels and FDA factory registrations contain clues about which medicines are linked to a site, ",
+          "but the records are scattered. Fineprint connects them and shows the original evidence—including what is missing."),
+        h("a", { class: "story-action", href: "#/rocky-mount-2023" },
+          "See the 2023 Rocky Mount investigation", arrow()),
+        h("p", { class: "story-note" },
+          "Historical replay using records published by ", historical.cutoff,
+          ". This is an investigation shortlist, not a shortage forecast.")),
+      h("aside", { class: "story-results", "aria-label": "Rocky Mount historical evaluation results" },
+        h("p", { class: "eyebrow" }, "2023 factory disruption · historical test"),
+        h("p", { class: "story-question" }, "How many packages would an investigator need to check?"),
+        h("div", { class: "story-comparison" },
+          h("div", {}, h("span", { class: "story-number" }, fmt(baseline.N)),
+            h("span", { class: "story-label" }, "Company-wide shortlist")),
+          h("div", {}, h("span", { class: "story-number pine" }, fmt(shortlist.N)),
+            h("span", { class: "story-label" }, "Facility-linked shortlist"))),
+        h("p", { class: "story-improvement" }, `${reduction}%`, " fewer candidates to investigate"),
+        h("p", { class: "story-recall" },
+          "Both approaches recovered ", h("b", {}, `${shortlist.X} of ${warnings}`),
+          " package codes on Pfizer's later low-inventory warning list."),
+        h("p", { class: "story-disclosure" },
+          "Measured on one historical event, not validated shortage predictions or proof of production."))),
+    h("section", { class: "wrap explore-section", "aria-labelledby": "explore-title" },
+      h("div", { class: "explore-heading" },
+        h("p", { class: "eyebrow" }, "Explore the evidence · " + c.dailymed_release),
+        h("h2", { class: "section-title", id: "explore-title" }, "Which medicines do published labels connect to a factory?"),
+        h("p", { class: "explore-intro" },
+          "Find a manufacturing establishment to see the medicines its labels name, the type of operation, ",
+          "and the supporting FDA records. This ", c.dailymed_release,
+          " snapshot is separate from the 2023 historical test.")),
+      h("div", { class: "explore-grid" },
+        h("div", {}, form, results, live, examples),
+        h("details", { class: "explore-method" },
+          h("summary", {}, "How does Fineprint connect a medicine and a factory?"),
+          evidencePath()))),
     h("section", { class: "wrap", "aria-label": "Corpus and sources" },
       h("div", { class: "stats" },
         h("div", { class: "stat" }, h("p", { class: "stat-n" }, fmt(c.fingerprints.spl_document.rows)), h("p", { class: "stat-l" }, "label documents parsed")),
-        h("div", { class: "stat" }, h("p", { class: "stat-n" }, fmt(fac.size)), h("p", { class: "stat-l" }, "establishments found in current labels")),
-        h("div", { class: "sources" }, h("p", { class: "eyebrow" }, "Sources"),
+        h("div", { class: "stat" }, h("p", { class: "stat-n" }, fmt(fac.size)), h("p", { class: "stat-l" }, "establishments named in current labels")),
+        h("div", { class: "sources" }, h("p", { class: "eyebrow" }, "Sources and limits"),
           h("p", {}, `Current-label snapshot of DailyMed human prescription SPL (${c.dailymed_release}) and FDA establishment `
-            + `registration (${c.fda_registration_as_of}). Counts describe the parsed corpus, not the US drug supply. `,
-            h("a", { class: "link", href: "#/about" }, "About the data →")))),
-      h("a", { class: "hist-link", href: "#/rocky-mount-2023" },
-        h("span", { class: "when" }, `Historical · ${m.datasets.historical.cutoff}`),
-        h("span", { class: "what" }, "Read the Rocky Mount tornado investigation"), arrow())),
+            + `registration (${c.fda_registration_as_of}). The graph represents published statements, not verified lot manufacture, inventory or shortage risk. `,
+            h("a", { class: "link", href: "#/about" }, "Read the data limitations →"))))),
   );
   if (lastQuery) render(lastQuery, false);
 }
@@ -256,25 +304,37 @@ async function facility(duns) {
   const heading = byCity ? place.short : name || `DUNS ${duns}`;
   setTitle(byCity ? `${place.short} — ${f.firm_name}` : heading);
 
+  const siteCount = mfgTotal(f);
   const head = h("section", { class: "wrap fac-head" },
     h("p", { class: "eyebrow" }, `Facility · ${place ? place.region : STATUS_SHORT[f.status] || f.status}`),
     h("h1", {}, heading, byCity ? h("span", { class: "sub" }, h("span", { class: "dash" }, " — "), f.firm_name) : null),
-    h("dl", { class: "meta" },
-      h("div", {}, h("dt", { class: "eyebrow" }, "DUNS"), h("dd", {}, duns)),
-      h("div", {}, h("dt", { class: "eyebrow" }, "FEI"), h("dd", {}, f.fei || "none resolved")),
-      h("div", {}, h("dt", { class: "eyebrow" }, "Site status"), h("dd", {}, f.status)),
-      h("div", { class: "src" }, h("dt", { class: "eyebrow" }, "Sources"), h("dd", {}, h("ul", {},
-        src ? h("li", {}, ext(src.url, "FDA registration")) : null,
-        h("li", {}, ext("https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm", "DailyMed SPL")))))),
-    identityRecord(f, src, place));
+    h("p", { class: "fac-intro" }, siteCount
+      ? `In this dated snapshot, ${fmt(f.mfg_products)} distinct products have ${fmt(siteCount)} manufacturing statements naming this establishment.`
+      : "This establishment is named in drug labels, but none of the exported statements names it for MANUFACTURE."),
+    h("p", { class: "fac-scope" },
+      "These are statements from labels in the ", m.datasets.current.dailymed_release,
+      " release, not confirmation of current production, inventory or shortage risk.",
+      duns === ROCKY_MOUNT ? [" ", h("a", { class: "link", href: "#/rocky-mount-2023" },
+        "See the separate 2023 historical investigation →")] : null));
 
   const body = h("section", { class: "wrap fac-body" },
-    h("p", { class: "counts" }, h("span", { class: "mono" }, fmt(mfgTotal(f))), " manufacturing assertions in current labels: ",
+    h("h2", { class: "section-title" }, "What do these drug labels say?"),
+    h("p", { class: "counts" },
       summary("DIRECT", f.mfg_direct), " · ", summary("TENTATIVE", f.mfg_tentative), " · ", summary("UNKNOWN", f.mfg_unknown),
-      `, covering ${plural(f.mfg_products, "product")}.`,
-      h("span", { class: "other" }, "Other operations: " + (Object.entries(f.other_operations).map(([k, v]) => `${k} ${fmt(v)}`).join(" · ") || "none") + "."
-        + (isExample ? " All operations are listed below." : ""))),
+      h("span", { class: "other" },
+        "DIRECT means the label makes a product-specific manufacturing statement and the facility identity passes Fineprint's checks; "
+        + "it is not an independently verified production record.")),
     all.length ? assertionTable(f, all, isExample) : noManufacture(f),
+    h("details", { class: "technical-details" },
+      h("summary", {}, "Inspect registration identity, source records and caveats"),
+      h("dl", { class: "meta" },
+        h("div", {}, h("dt", { class: "eyebrow" }, "DUNS"), h("dd", {}, duns)),
+        h("div", {}, h("dt", { class: "eyebrow" }, "FEI"), h("dd", {}, f.fei || "none resolved")),
+        h("div", {}, h("dt", { class: "eyebrow" }, "Site status"), h("dd", {}, f.status)),
+        h("div", { class: "src" }, h("dt", { class: "eyebrow" }, "Sources"), h("dd", {}, h("ul", {},
+          src ? h("li", {}, ext(src.url, "FDA registration")) : null,
+          h("li", {}, ext("https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm", "DailyMed SPL")))))),
+      identityRecord(f, src, place)),
     h("div", { class: "legend" }, ["DIRECT", "TENTATIVE", "UNKNOWN"].map((k) => h("p", {},
       h("span", { class: "dw" }, dot(k)), h("span", {}, h("b", {}, CONF_LABEL[k]), `: ${CONFIDENCE[k]}`)))),
     unresolvedSection(f, all, isExample));

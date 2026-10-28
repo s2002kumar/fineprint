@@ -130,6 +130,41 @@ class SiteData(unittest.TestCase):
         self.assertEqual(hits, [])
 
     @unittest.skipUnless(shutil.which("node"), "node not installed")
+    def test_frontend_modules_pass_node_syntax_check(self):
+        # CI must parse the actual shipped browser modules, not only the Python tests.
+        for name in ("app.js", "explorer-core.js"):
+            result = subprocess.run(["node", "--check", str(SITE / name)],
+                                    capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, f"{name}: {result.stderr}")
+
+    def test_investigation_story_uses_frozen_historical_export(self):
+        # The home story loads the frozen replay, never copies values into JS.
+        app = (SITE / "app.js").read_text(encoding="utf-8")
+        historical = _load("historical/rocky_mount_2023.json")
+        self.assertEqual(historical["metrics"]["E"]["B1_all_hospira_00409"]["N"], 890)
+        self.assertEqual(historical["metrics"]["E"]["graph_rocky_mount_direct"]["N"], 480)
+        self.assertEqual(historical["metrics"]["E"]["graph_rocky_mount_direct"]["X"], 63)
+        self.assertEqual(historical["outcome"]["distinct_package_ndc_11"], 65)
+        self.assertIn('load("historical/rocky_mount_2023.json")', app)
+        self.assertIn("historical.metrics.E.B1_all_hospira_00409", app)
+        self.assertIn("historical.metrics.E.graph_rocky_mount_direct", app)
+        self.assertIn("historical.outcome.distinct_package_ndc_11", app)
+        self.assertIn("not a shortage forecast", app)
+        self.assertIn("snapshot is separate from the 2023 historical test", app)
+        self.assertIn("it is not an independently verified production record", app)
+
+    def test_unresolved_guided_example_has_no_registered_site(self):
+        idx = _load("current/facilities.json")
+        rows = {r[0]: dict(zip(idx["columns"], r)) for r in idx["rows"]}
+        unresolved = rows["080105003"]
+        self.assertEqual(unresolved["status"], "NOT_FOUND")
+        self.assertIsNone(unresolved["fei"])
+        self.assertGreater(unresolved["mfg_unknown"], 0)
+        app = (SITE / "app.js").read_text(encoding="utf-8")
+        self.assertIn('fac.get("080105003")', app)
+        self.assertIn("no registered physical site resolved", app)
+
+    @unittest.skipUnless(shutil.which("node"), "node not installed")
     def test_browser_csv_code_reproduces_exported_rows(self):
         out = json.loads(subprocess.run(["node", str(ROOT / "scripts" / "explorer_csv.mjs"), str(SITE)],
                                         capture_output=True, check=True, encoding="utf-8").stdout)
