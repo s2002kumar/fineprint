@@ -290,25 +290,37 @@ async function facility(duns) {
   const heading = byCity ? place.short : name || `DUNS ${duns}`;
   setTitle(byCity ? `${place.short} — ${f.firm_name}` : heading);
 
+  const siteCount = mfgTotal(f);
   const head = h("section", { class: "wrap fac-head" },
     h("p", { class: "eyebrow" }, `Facility · ${place ? place.region : STATUS_SHORT[f.status] || f.status}`),
     h("h1", {}, heading, byCity ? h("span", { class: "sub" }, h("span", { class: "dash" }, " — "), f.firm_name) : null),
-    h("dl", { class: "meta" },
-      h("div", {}, h("dt", { class: "eyebrow" }, "DUNS"), h("dd", {}, duns)),
-      h("div", {}, h("dt", { class: "eyebrow" }, "FEI"), h("dd", {}, f.fei || "none resolved")),
-      h("div", {}, h("dt", { class: "eyebrow" }, "Site status"), h("dd", {}, f.status)),
-      h("div", { class: "src" }, h("dt", { class: "eyebrow" }, "Sources"), h("dd", {}, h("ul", {},
-        src ? h("li", {}, ext(src.url, "FDA registration")) : null,
-        h("li", {}, ext("https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm", "DailyMed SPL")))))),
-    identityRecord(f, src, place));
+    h("p", { class: "fac-intro" }, siteCount
+      ? `In this dated snapshot, ${fmt(f.mfg_products)} distinct products have ${fmt(siteCount)} manufacturing statements naming this establishment.`
+      : "This establishment is named in drug labels, but none of the exported statements names it for MANUFACTURE."),
+    h("p", { class: "fac-scope" },
+      "These are statements from labels in the ", m.datasets.current.dailymed_release,
+      " release, not confirmation of current production, inventory or shortage risk.",
+      duns === ROCKY_MOUNT ? [" ", h("a", { class: "link", href: "#/rocky-mount-2023" },
+        "See the separate 2023 historical investigation →")] : null));
 
   const body = h("section", { class: "wrap fac-body" },
-    h("p", { class: "counts" }, h("span", { class: "mono" }, fmt(mfgTotal(f))), " manufacturing assertions in current labels: ",
+    h("h2", { class: "section-title" }, "What do these drug labels say?"),
+    h("p", { class: "counts" },
       summary("DIRECT", f.mfg_direct), " · ", summary("TENTATIVE", f.mfg_tentative), " · ", summary("UNKNOWN", f.mfg_unknown),
-      `, covering ${plural(f.mfg_products, "product")}.`,
-      h("span", { class: "other" }, "Other operations: " + (Object.entries(f.other_operations).map(([k, v]) => `${k} ${fmt(v)}`).join(" · ") || "none") + "."
-        + (isExample ? " All operations are listed below." : ""))),
+      h("span", { class: "other" },
+        "DIRECT means the label makes a product-specific manufacturing statement and the facility identity passes Fineprint's checks; "
+        + "it is not an independently verified production record.")),
     all.length ? assertionTable(f, all, isExample) : noManufacture(f),
+    h("details", { class: "technical-details" },
+      h("summary", {}, "Inspect registration identity, source records and caveats"),
+      h("dl", { class: "meta" },
+        h("div", {}, h("dt", { class: "eyebrow" }, "DUNS"), h("dd", {}, duns)),
+        h("div", {}, h("dt", { class: "eyebrow" }, "FEI"), h("dd", {}, f.fei || "none resolved")),
+        h("div", {}, h("dt", { class: "eyebrow" }, "Site status"), h("dd", {}, f.status)),
+        h("div", { class: "src" }, h("dt", { class: "eyebrow" }, "Sources"), h("dd", {}, h("ul", {},
+          src ? h("li", {}, ext(src.url, "FDA registration")) : null,
+          h("li", {}, ext("https://dailymed.nlm.nih.gov/dailymed/spl-resources-all-drug-labels.cfm", "DailyMed SPL")))))),
+      identityRecord(f, src, place)),
     h("div", { class: "legend" }, ["DIRECT", "TENTATIVE", "UNKNOWN"].map((k) => h("p", {},
       h("span", { class: "dw" }, dot(k)), h("span", {}, h("b", {}, CONF_LABEL[k]), `: ${CONFIDENCE[k]}`)))),
     unresolvedSection(f, all, isExample));
