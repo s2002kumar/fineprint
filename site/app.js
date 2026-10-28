@@ -211,21 +211,28 @@ async function home() {
       + "town does not mean the same facility: identity comes only from DUNS and FEI."));
 
   const ex = EXAMPLES.map((d) => fac.get(d));
-  const unresolved = fac.get("080105003"); // a documented NOT_FOUND identity, not a confirmed physical factory
-  const examples = h("div", { class: "examples" },
-    h("div", { class: "list-head" }, h("h3", { class: "eyebrow" }, "Guided evidence examples"),
-      h("span", { class: "eyebrow" }, "2026 label snapshot")),
-    h("ul", {}, ex.map((f) => h("li", {}, h("a", { class: "row-link", href: `#/facility/${f.duns}` },
+  const unresolved = fac.get("080105003"); // NOT_FOUND identity, never treated as a confirmed physical site
+  const exampleRows = ex.map((f) => h("li", {},
+    h("a", { class: "row-link", href: `#/facility/${f.duns}` },
       h("div", { class: "row-main" },
         h("p", { class: "row-title" }, placeOf(f.address).short),
-        h("p", { class: "row-sub" }, `${f.firm_name} · ${fmt(f.mfg_products)} products with documented manufacturing assertions`)),
-      h("span", { class: "row-meta" }, "Explore evidence"), arrow())))),
-      unresolved ? h("li", {}, h("a", { class: "row-link", href: `#/facility/${unresolved.duns}` },
+        h("p", { class: "row-sub" },
+          `${f.firm_name} · ${fmt(f.mfg_products)} products with documented manufacturing assertions`)),
+      h("span", { class: "row-meta" }, "Explore evidence"), arrow())));
+  if (unresolved) {
+    exampleRows.push(h("li", {},
+      h("a", { class: "row-link", href: `#/facility/${unresolved.duns}` },
         h("div", { class: "row-main" },
           h("p", { class: "row-title" }, "Unresolved manufacturing site"),
           h("p", { class: "row-sub" },
             `${fmt(unresolved.mfg_unknown)} UNKNOWN assertions · DUNS ${unresolved.duns}; no registered physical site resolved`)),
-        h("span", { class: "row-meta" }, "Inspect missing evidence"), arrow())) : null));
+        h("span", { class: "row-meta" }, "Inspect missing evidence"), arrow())));
+  }
+  const examples = h("div", { class: "examples" },
+    h("div", { class: "list-head" },
+      h("h3", { class: "eyebrow" }, "Guided evidence examples"),
+      h("span", { class: "eyebrow" }, "2026 label snapshot")),
+    h("ul", {}, exampleRows));
 
   show(
     h("section", { class: "wrap hero story" },
